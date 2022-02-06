@@ -1,8 +1,13 @@
 import Head from "next/head";
+import React from "react";
 
 import Header from "../components/Header";
 
-const Layout = ({ children }) => {
+interface LayoutProps {
+  children: React.ReactChildren;
+}
+
+const Layout = (props: LayoutProps) => {
   return (
     <>
       <Head>
@@ -14,7 +19,7 @@ const Layout = ({ children }) => {
       <Header />
 
       <main>
-        <div className="px-6 py-4">{children}</div>
+        <div className="px-6 py-4">{props.children}</div>
       </main>
 
       {/* <footer>
