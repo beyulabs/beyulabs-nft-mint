@@ -1,5 +1,8 @@
+import React, { useEffect, useState } from "react";
 import Head from "next/head";
-import React from "react";
+import { ethers } from "ethers";
+import Web3Modal from "web3modal";
+import WalletConnectProvider from "@walletconnect/web3-provider";
 
 import Header from "../components/Header";
 
@@ -8,6 +11,35 @@ interface LayoutProps {
 }
 
 const Layout = (props: LayoutProps) => {
+  // const [connectedContract, setConnectedContract] = useState(null);
+
+  useEffect(() => {
+    const connectWallet = async () => {
+      const providerOptions = {
+        walletconnect: {
+          package: WalletConnectProvider, // required
+          options: {
+            infuraId: process.env.INFURA_ID, // required
+          },
+        },
+      };
+
+      const web3Modal = new Web3Modal({
+        network: "rinkeby", // optional
+        cacheProvider: true, // optional
+        providerOptions, // required
+      });
+
+      const instance = await web3Modal.connect();
+      console.log("instance", instance);
+      const provider = new ethers.providers.Web3Provider(instance);
+      console.log("provider", provider);
+      const signer = provider.getSigner();
+      console.log("signer", signer);
+    };
+    connectWallet();
+  });
+
   return (
     <>
       <Head>
