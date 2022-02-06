@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 import { ethers } from "ethers";
 import Web3Modal from "web3modal";
@@ -50,19 +50,9 @@ const Layout = (props: LayoutProps) => {
 
       <Header />
 
-      <main>
+      <main className="bg-indigo-500 min-h-screen">
         <div className="px-6 py-4">{props.children}</div>
       </main>
-
-      {/* <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by coffee
-        </a>
-      </footer> */}
     </>
   );
 };

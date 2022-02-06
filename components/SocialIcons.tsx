@@ -16,6 +16,7 @@ const SocialIcons = () => {
               alt="Discord logo"
               width={28}
               height={28}
+              className="hover:shadow"
             />
           }
         </a>
@@ -28,6 +29,7 @@ const SocialIcons = () => {
               alt="Twitter logo"
               width={28}
               height={28}
+              className="hover:shadow"
             />
           }
         </a>
@@ -40,6 +42,7 @@ const SocialIcons = () => {
               alt="Etherscan logo"
               width={28}
               height={28}
+              className="hover:shadow hover:fill-twitter"
             />
           }
         </a>
@@ -52,6 +55,7 @@ const SocialIcons = () => {
               alt="OpenSea logo"
               width={28}
               height={28}
+              className="hover:shadow"
             />
           }
         </a>
