@@ -42,7 +42,7 @@ const SocialIcons = () => {
               alt="Etherscan logo"
               width={28}
               height={28}
-              className="hover:shadow hover:fill-twitter"
+              className="hover:shadow"
             />
           }
         </a>
