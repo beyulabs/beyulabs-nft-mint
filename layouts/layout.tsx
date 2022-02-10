@@ -26,7 +26,8 @@ const Layout = (props: LayoutProps) => {
 
       const web3Modal = new Web3Modal({
         network: "rinkeby", // optional
-        cacheProvider: true, // optional
+        // cacheProvider: true, // optional
+        disableInjectedProvider: true,
         providerOptions, // required
       });
 
@@ -50,8 +51,8 @@ const Layout = (props: LayoutProps) => {
 
       <Header />
 
-      <main className="bg-indigo-500 min-h-screen">
-        <div className="px-6 py-4">{props.children}</div>
+      <main className="min-h-screen bg-[url('../public/charles-etoroma.jpg')] bg-cover bg-top">
+        <div className="bg-gray-700/30">{props.children}</div>
       </main>
     </>
   );

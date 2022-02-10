@@ -17,6 +17,7 @@ const SocialIcons = () => {
               width={28}
               height={28}
               className="hover:shadow"
+              quality={100}
             />
           }
         </a>
@@ -30,6 +31,7 @@ const SocialIcons = () => {
               width={28}
               height={28}
               className="hover:shadow"
+              quality={100}
             />
           }
         </a>
@@ -43,6 +45,7 @@ const SocialIcons = () => {
               width={28}
               height={28}
               className="hover:shadow"
+              quality={100}
             />
           }
         </a>
@@ -56,6 +59,7 @@ const SocialIcons = () => {
               width={28}
               height={28}
               className="hover:shadow"
+              quality={100}
             />
           }
         </a>

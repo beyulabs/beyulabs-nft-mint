@@ -5,7 +5,7 @@ interface HeaderProps {}
 
 const Header = (props: HeaderProps) => {
   return (
-    <header className="flex flex-row justify-between items-center w-100 bg-indigo-500 px-6 py-4">
+    <header className="flex flex-row justify-between items-center w-100 bg-transparent px-6 py-4 absolute w-full text-xl">
       <Nav />
       <SocialIcons />
     </header>
