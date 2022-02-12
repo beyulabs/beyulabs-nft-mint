@@ -7,10 +7,10 @@ function Nav() {
         <Link href="/">Mint</Link>
       </li>
       <li className="pr-6">
-        <Link href="/gallery">Gallery</Link>
+        <Link href="/team">Team</Link>
       </li>
       <li className="pr-6">
-        <Link href="/team">Team</Link>
+        <Link href="/gallery">Gallery</Link>
       </li>
       <li className="pr-6">
         <Link href="/wallet">Wallet</Link>

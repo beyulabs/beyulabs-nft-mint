@@ -13,33 +13,33 @@ interface LayoutProps {
 const Layout = (props: LayoutProps) => {
   // const [connectedContract, setConnectedContract] = useState(null);
 
-  useEffect(() => {
-    const connectWallet = async () => {
-      const providerOptions = {
-        walletconnect: {
-          package: WalletConnectProvider, // required
-          options: {
-            infuraId: process.env.INFURA_ID, // required
-          },
-        },
-      };
+  // useEffect(() => {
+  //   const connectWallet = async () => {
+  //     const providerOptions = {
+  //       walletconnect: {
+  //         package: WalletConnectProvider, // required
+  //         options: {
+  //           infuraId: process.env.INFURA_ID, // required
+  //         },
+  //       },
+  //     };
 
-      const web3Modal = new Web3Modal({
-        network: "rinkeby", // optional
-        // cacheProvider: true, // optional
-        disableInjectedProvider: true,
-        providerOptions, // required
-      });
+  //     const web3Modal = new Web3Modal({
+  //       network: "rinkeby", // optional
+  //       // cacheProvider: true, // optional
+  //       disableInjectedProvider: true,
+  //       providerOptions, // required
+  //     });
 
-      const instance = await web3Modal.connect();
-      console.log("instance", instance);
-      const provider = new ethers.providers.Web3Provider(instance);
-      console.log("provider", provider);
-      const signer = provider.getSigner();
-      console.log("signer", signer);
-    };
-    connectWallet();
-  });
+  //     const instance = await web3Modal.connect();
+  //     console.log("instance", instance);
+  //     const provider = new ethers.providers.Web3Provider(instance);
+  //     console.log("provider", provider);
+  //     const signer = provider.getSigner();
+  //     console.log("signer", signer);
+  //   };
+  //   connectWallet();
+  // });
 
   return (
     <>
@@ -51,9 +51,16 @@ const Layout = (props: LayoutProps) => {
 
       <Header />
 
-      <main className="min-h-screen bg-[url('../public/charles-etoroma.jpg')] bg-cover bg-top">
+      <main className="min-h-screen">
         <div className="bg-gray-700/30">{props.children}</div>
       </main>
+
+      <footer className="py-4 text-center">
+        <span className="block mb-2 text-lg">
+          Copyright &copy; BeYu Labs 2022
+        </span>
+        <span className="block text-sm">From the metaverse with &hearts;</span>
+      </footer>
     </>
   );
 };
