@@ -1,22 +1,41 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
+
+import { NavRoutes } from "../types/common";
 
 function Nav() {
-  return (
-    <ul className="flex text-white">
-      <li className="pr-6">
-        <Link href="/">Mint</Link>
+  const nextRouter = useRouter();
+  console.log("nextRouter", nextRouter);
+
+  const routes: NavRoutes[] = [
+    {
+      path: "/",
+      title: "mint",
+    },
+    {
+      path: "/team",
+      title: "team",
+    },
+    {
+      path: "/gallery",
+      title: "gallery",
+    },
+    {
+      path: "/wallet",
+      title: "wallet",
+    },
+  ];
+
+  const routeLinks = routes.map((route: NavRoutes, index) => {
+    const cn = nextRouter.pathname === route.path ? "pr-6 underline" : "pr-6";
+    return (
+      <li key={`route-${index}`} className={cn}>
+        <Link href={route.path}>{route.title}</Link>
       </li>
-      <li className="pr-6">
-        <Link href="/team">Team</Link>
-      </li>
-      <li className="pr-6">
-        <Link href="/gallery">Gallery</Link>
-      </li>
-      <li className="pr-6">
-        <Link href="/wallet">Wallet</Link>
-      </li>
-    </ul>
-  );
+    );
+  });
+
+  return <ul className="flex text-white">{routeLinks}</ul>;
 }
 
 export default Nav;

@@ -1,3 +1,8 @@
+export interface NavRoutes {
+  path: string;
+  title: string;
+}
+
 export enum SocialPlatform {
   twitter = "twitter",
   github = "github",
