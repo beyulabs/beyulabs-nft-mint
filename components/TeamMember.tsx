@@ -24,7 +24,6 @@ const TeamMember = ({ teamMember }: TeamMemberProps) => {
             width={18}
             height={18}
             alt={social.platform}
-            className="hover:fill-sky-700"
           />
         );
         baseUrl = "https://twitter.com";
@@ -37,7 +36,6 @@ const TeamMember = ({ teamMember }: TeamMemberProps) => {
             width={18}
             height={18}
             alt={social.platform}
-            className="hover:fill-sky-700"
           />
         );
         baseUrl = "https://github.com";
@@ -47,7 +45,10 @@ const TeamMember = ({ teamMember }: TeamMemberProps) => {
     }
 
     return (
-      <li key={social.platform} className="mr-2 last:mr-0">
+      <li
+        key={social.platform}
+        className="mr-2 last:mr-0 origin-center hover:scale-150 hover:rotate-12"
+      >
         <a
           href={`${baseUrl}/${social.username}`}
           rel="nofollow noreferrer"
