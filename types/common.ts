@@ -1,3 +1,12 @@
+export interface FilterCategory {
+  name: string;
+  options: FilterOption[];
+}
+
+export interface FilterOption {
+  value: string;
+  display: string;
+}
 export interface NavRoutes {
   path: string;
   title: string;

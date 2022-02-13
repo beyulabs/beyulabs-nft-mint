@@ -8,7 +8,7 @@ import twitterLogo from "../public/twitter-logo.svg";
 const SocialIcons = () => {
   return (
     <ul className="flex">
-      <li className="px-4 origin-center hover:scale-150 hover:rotate-12">
+      <li className="pl-8 origin-center hover:scale-150 hover:rotate-12">
         <a href="" rel="nofollow noreferrer" target="_blank">
           {
             <Image
@@ -22,7 +22,7 @@ const SocialIcons = () => {
           }
         </a>
       </li>
-      <li className="px-4 origin-center hover:scale-150 hover:rotate-12">
+      <li className="pl-8 origin-center hover:scale-150 hover:rotate-12">
         <a href="" rel="nofollow noreferrer" target="_blank">
           {
             <Image
@@ -36,7 +36,7 @@ const SocialIcons = () => {
           }
         </a>
       </li>
-      <li className="px-4 origin-center hover:scale-150 hover:rotate-12">
+      <li className="pl-8 origin-center hover:scale-150 hover:rotate-12">
         <a href="" rel="nofollow noreferrer" target="_blank">
           {
             <Image
@@ -50,7 +50,7 @@ const SocialIcons = () => {
           }
         </a>
       </li>
-      <li className="px-4 origin-center hover:scale-150 hover:rotate-12">
+      <li className="pl-8 origin-center hover:scale-150 hover:rotate-12">
         <a href="" rel="nofollow noreferrer" target="_blank">
           {
             <Image
