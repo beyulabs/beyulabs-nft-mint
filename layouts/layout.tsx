@@ -51,9 +51,7 @@ const Layout = (props: LayoutProps) => {
 
       <Header />
 
-      <main className="min-h-screen">
-        <div className="bg-gray-700/30">{props.children}</div>
-      </main>
+      <main className="min-h-screen">{props.children}</main>
 
       <footer className="py-4 text-center">
         <span className="block mb-2 text-lg">

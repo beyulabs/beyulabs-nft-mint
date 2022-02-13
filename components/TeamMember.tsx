@@ -21,8 +21,8 @@ const TeamMember = ({ teamMember }: TeamMemberProps) => {
         icon = (
           <Image
             src={twitterLogo}
-            width={24}
-            height={24}
+            width={18}
+            height={18}
             alt={social.platform}
             className="hover:fill-sky-700"
           />
@@ -34,8 +34,8 @@ const TeamMember = ({ teamMember }: TeamMemberProps) => {
         icon = (
           <Image
             src={githubLogo}
-            width={24}
-            height={24}
+            width={18}
+            height={18}
             alt={social.platform}
             className="hover:fill-sky-700"
           />
@@ -61,12 +61,16 @@ const TeamMember = ({ teamMember }: TeamMemberProps) => {
 
   return (
     <div className="flex flex-row items-center">
-      <div className="shrink-0">{image}</div>
+      <div className="flex flex-col items-center w-1/4">
+        <div className="w-full mb-4 border-8 border-stone-50 rounded-full shadow-xl">
+          {image}
+        </div>
+        <ul className="flex justify-evenly w-1/3">{socialIcons}</ul>
+      </div>
       <div className="ml-12">
         <p className="mb-1 text-4xl">{name}</p>
         <p className="mb-2 text-xl">{job}</p>
         <p className="mb-2 max-w-2xl">{description}</p>
-        <ul className="flex">{socialIcons}</ul>
       </div>
     </div>
   );
