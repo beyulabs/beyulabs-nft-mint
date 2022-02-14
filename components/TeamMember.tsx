@@ -63,7 +63,7 @@ const TeamMember = ({ teamMember }: TeamMemberProps) => {
   return (
     <div className="flex flex-row items-center">
       <div className="flex flex-col items-center w-1/4">
-        <div className="w-full mb-4 border-8 border-stone-50 rounded-full shadow-xl">
+        <div className="w-full mb-4 border-8 border-teal-400 rounded-full shadow-xl">
           {image}
         </div>
         <ul className="flex justify-evenly w-1/3">{socialIcons}</ul>

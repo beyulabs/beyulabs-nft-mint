@@ -85,14 +85,17 @@ const Team: NextPage = () => {
 
   const profiles = projectTeam.map((member, index) => {
     return (
-      <div key={`member-wrapper-${index}`} className="mb-16 last:mb-0">
+      <div
+        key={`member-wrapper-${index}`}
+        className="bg-stone-50 rounded-xl shadow p-4 mb-10 last:mb-0"
+      >
         <TeamMember key={`member-${index}`} teamMember={member} />
       </div>
     );
   });
 
   return (
-    <section className="bg-teal-500 flex flex-col content-center justify-evenly items-center px-8 pt-12 min-h-screen">
+    <section className="min-h-screen">
       <div>{profiles}</div>
     </section>
   );

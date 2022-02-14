@@ -3,6 +3,9 @@ import Head from "next/head";
 import { ethers } from "ethers";
 import Web3Modal from "web3modal";
 import WalletConnectProvider from "@walletconnect/web3-provider";
+import { useRouter } from "next/router";
+
+import { NavRoutes } from "../types/common";
 
 import Header from "../components/Header";
 
@@ -11,6 +14,8 @@ interface LayoutProps {
 }
 
 const Layout = (props: LayoutProps) => {
+  const nextRouter = useRouter();
+  const isHome: boolean = nextRouter.pathname === "/";
   // const [connectedContract, setConnectedContract] = useState(null);
 
   // useEffect(() => {
@@ -51,7 +56,13 @@ const Layout = (props: LayoutProps) => {
 
       <Header />
 
-      <main className="min-h-screen">{props.children}</main>
+      <main className="min-h-screen bg-teal-500">
+        {isHome ? (
+          props.children
+        ) : (
+          <div className="pt-16 pb-12 px-8">{props.children}</div>
+        )}
+      </main>
 
       <footer className="py-4 text-center">
         <span className="block mb-2 text-lg">

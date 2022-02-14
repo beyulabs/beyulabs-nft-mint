@@ -141,7 +141,7 @@ const Gallery: NextPage = () => {
   };
 
   return (
-    <section className="flex flex-row px-8  bg-teal-500 min-h-screen pt-16">
+    <section className="flex flex-row min-h-screen">
       <div className="w-1/4 ">
         <GalleryFilters
           filters={filters}
