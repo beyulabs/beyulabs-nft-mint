@@ -1,18 +1,18 @@
-import { FilterCategory, FilterOption } from "../types/common";
+import { FilterCategory, FilterOption, SelectedFilter } from "../types/common";
 import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
-import {
-  ChevronDownIcon,
-  FilterIcon,
-  MinusSmIcon,
-  PlusSmIcon,
-  ViewGridIcon,
-} from "@heroicons/react/solid";
+import { FilterIcon, MinusSmIcon, PlusSmIcon } from "@heroicons/react/solid";
 
 interface GalleryFiltersProps {
   filters: FilterCategory[];
+  selectedFilters: SelectedFilter[];
+  setSelectedFilters: (selectedFilters: SelectedFilter[]) => void;
 }
 
-const GalleryFilters = ({ filters }: GalleryFiltersProps) => {
+const GalleryFilters = ({
+  filters,
+  selectedFilters,
+  setSelectedFilters,
+}: GalleryFiltersProps) => {
   const filterComponents = () => {
     return filters.map((filter: FilterCategory) => {
       const { options } = filter;
@@ -35,14 +35,53 @@ const GalleryFilters = ({ filters }: GalleryFiltersProps) => {
                 <div className="space-y-4">
                   {options.map((option: FilterOption, index: number) => {
                     return (
-                      <div key={option.value} className="flex items-center">
+                      <div key={option.display} className="flex items-center">
                         <input
                           id={`filter-${filter.name}-${index}`}
-                          name={`${filter.name}[]`}
-                          defaultValue={option.value}
+                          name={`${filter.name}-${option.display}`}
+                          defaultValue={option.display}
                           type="checkbox"
-                          defaultChecked={false}
+                          defaultChecked={option.checked}
                           className="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
+                          onClick={(e) => {
+                            const categoryAndOption: string[] =
+                              e.currentTarget.name.split("-");
+
+                            const existingFilterIndex: number =
+                              selectedFilters.findIndex(
+                                (filter: SelectedFilter) => {
+                                  return (
+                                    filter.category === categoryAndOption[0] &&
+                                    filter.option === categoryAndOption[1]
+                                  );
+                                }
+                              );
+
+                            let newSelectedFilters: SelectedFilter[] = [];
+                            if (existingFilterIndex === -1) {
+                              const newEntry: SelectedFilter = {
+                                category: categoryAndOption[0],
+                                option: categoryAndOption[1],
+                              };
+
+                              newSelectedFilters = [
+                                ...selectedFilters,
+                                newEntry,
+                              ];
+                            } else {
+                              newSelectedFilters = [
+                                ...selectedFilters.slice(
+                                  0,
+                                  existingFilterIndex
+                                ),
+                                ...selectedFilters.slice(
+                                  existingFilterIndex + 1
+                                ),
+                              ];
+                            }
+
+                            setSelectedFilters(newSelectedFilters);
+                          }}
                         />
                         <label
                           htmlFor={`filter-${filter.name}-${index}`}

@@ -4,9 +4,15 @@ export interface FilterCategory {
 }
 
 export interface FilterOption {
-  value: string;
   display: string;
+  checked: boolean;
 }
+
+export interface SelectedFilter {
+  category: string;
+  option: string;
+}
+
 export interface NavRoutes {
   path: string;
   title: string;
