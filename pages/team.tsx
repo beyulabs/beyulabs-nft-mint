@@ -4,6 +4,7 @@ import Image from "next/image";
 import ryanProfile from "../public/ryan-profile.png";
 import benProfile from "../public/ben-profile.png";
 import milesProfile from "../public/miles-profile.png";
+import beyuLabsLogotype from "../public/beyu-labs-logotype.png";
 
 import { SocialPlatform, TeamMemberInfo } from "../types/common";
 
@@ -96,7 +97,19 @@ const Team: NextPage = () => {
 
   return (
     <section className="min-h-screen">
-      <div>{profiles}</div>
+      <div className="m-auto w-4/5">
+        <div className="flex justify-center mb-8">
+          <Image
+            width={500}
+            height={150}
+            quality={85}
+            src={beyuLabsLogotype}
+            alt="Ben's profile pic"
+            className="drop-shadow-lg"
+          />
+        </div>
+        {profiles}
+      </div>
     </section>
   );
 };

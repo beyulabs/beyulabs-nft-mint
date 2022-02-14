@@ -61,8 +61,8 @@ const TeamMember = ({ teamMember }: TeamMemberProps) => {
   });
 
   return (
-    <div className="flex flex-row items-center">
-      <div className="flex flex-col items-center w-1/4">
+    <div className="flex flex-row">
+      <div className="flex flex-col items-center w-2/5">
         <div className="w-full mb-4 border-8 border-teal-400 rounded-full shadow-xl">
           {image}
         </div>

@@ -11,7 +11,7 @@ const FilterTag = ({ filter, remove }: FilterTagProps) => {
   return (
     <div
       key={`select-filter-${filter.category}-${filter.option}`}
-      className="flex flex-row justify-between items-center my-2 mr-2 px-2 py-1 bg-gray-400 rounded-lg"
+      className="flex flex-row justify-between items-center my-2 mx-1 px-2 py-1 bg-gray-400 rounded-lg"
     >
       <span className="text-sm text-white font-medium">{filter.option}</span>
       <div className="px-1 py-1">

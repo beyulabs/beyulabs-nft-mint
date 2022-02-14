@@ -5,7 +5,6 @@ import { NavRoutes } from "../types/common";
 
 function Nav() {
   const nextRouter = useRouter();
-  console.log("nextRouter", nextRouter);
 
   const routes: NavRoutes[] = [
     {
