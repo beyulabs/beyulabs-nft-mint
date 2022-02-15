@@ -1,7 +1,5 @@
-import Image from "next/image";
-
-import githubLogo from "../public/github-logo.svg";
-import twitterLogo from "../public/twitter-logo.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 import { SocialInfo, SocialPlatform, TeamMemberInfo } from "../types/common";
 
@@ -19,24 +17,14 @@ const TeamMember = ({ teamMember }: TeamMemberProps) => {
     switch (social.platform) {
       case SocialPlatform.twitter:
         icon = (
-          <Image
-            src={twitterLogo}
-            width={18}
-            height={18}
-            alt={social.platform}
-          />
+          <FontAwesomeIcon icon={faTwitter} className="hover:text-teal-400" />
         );
         baseUrl = "https://twitter.com";
         break;
 
       case SocialPlatform.github:
         icon = (
-          <Image
-            src={githubLogo}
-            width={18}
-            height={18}
-            alt={social.platform}
-          />
+          <FontAwesomeIcon icon={faGithub} className="hover:text-teal-400" />
         );
         baseUrl = "https://github.com";
 
@@ -63,7 +51,7 @@ const TeamMember = ({ teamMember }: TeamMemberProps) => {
   return (
     <div className="flex flex-row">
       <div className="flex flex-col items-center w-2/5">
-        <div className="w-full mb-4 border-8 border-teal-400 rounded-full shadow-xl">
+        <div className="w-full mb-2 border-8 border-teal-400 rounded-full shadow-xl">
           {image}
         </div>
         <ul className="flex justify-evenly w-1/3">{socialIcons}</ul>

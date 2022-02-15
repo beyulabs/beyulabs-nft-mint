@@ -1,6 +1,8 @@
 import { FilterCategory, FilterOption, SelectedFilter } from "../types/common";
 import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
-import { FilterIcon, MinusSmIcon, PlusSmIcon } from "@heroicons/react/solid";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 
 interface GalleryFiltersProps {
   filters: FilterCategory[];
@@ -25,9 +27,9 @@ const GalleryFilters = ({
                 <h3>{filter.name}</h3>
                 <span className="font-medx-rowium text-gray-900">
                   {open ? (
-                    <MinusSmIcon className="h-5 w-5" aria-hidden="true" />
+                    <FontAwesomeIcon width={12} height={12} icon={faMinus} />
                   ) : (
-                    <PlusSmIcon className="h-5 w-5" aria-hidden="true" />
+                    <FontAwesomeIcon width={12} height={12} icon={faPlus} />
                   )}
                 </span>
               </Disclosure.Button>
@@ -105,7 +107,7 @@ const GalleryFilters = ({
     <div className="bg-stone-50 px-2">
       <div className="flex items-center justify-between mb-4 border-b border-gray-200 pt-2 pb-1">
         <h2 className="text-xl uppercase">Filters</h2>
-        <FilterIcon className="w-4 h-4" />
+        <FontAwesomeIcon width={12} height={12} icon={faBars} />
       </div>
       <form className="flex flex-col min-h-screen">{filterComponents()}</form>
     </div>

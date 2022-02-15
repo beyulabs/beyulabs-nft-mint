@@ -32,7 +32,7 @@ const Team: NextPage = () => {
         },
       ],
       description:
-        "Curabitur at magna nec nisi scelerisque vulputate. Nam id magna vitae diam semper feugiat. Nulla a efficitur lorem. Nam id magna vitae diam semper feugiat. Curabitur at magna nec nisi scelerisque vulputate. Nam id magna vitae diam semper feugiat. ",
+        "Ben is a serial entrepreneur with a background in engineering and a passion for creating community through fun, value-packed events. As founder of BeYu Labs - a web3 startup focused on empowering web3 entrepreneurship through connections and events - Ben aims to explore the unique opportunities and potential presented by the rise of NFT culture and the future of the internet as we know it. Ben spends his free time playing guitar, skateboarding, traveling and researching overpriced JPEGs.",
     },
     {
       name: "Miles",

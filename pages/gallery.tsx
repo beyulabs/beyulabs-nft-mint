@@ -1,7 +1,6 @@
 import { useState } from "react";
 import type { NextPage } from "next";
 import Image from "next/image";
-import { XIcon } from "@heroicons/react/solid";
 
 import GalleryFilters from "../components/GalleryFilters";
 import FilterTag from "../components/FilterTag";

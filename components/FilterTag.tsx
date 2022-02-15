@@ -1,6 +1,7 @@
-import { XIcon } from "@heroicons/react/solid";
-
 import { SelectedFilter } from "../types/common";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 interface FilterTagProps {
   filter: SelectedFilter;
@@ -14,13 +15,13 @@ const FilterTag = ({ filter, remove }: FilterTagProps) => {
       className="flex flex-row justify-between items-center my-2 mx-1 px-2 py-1 bg-gray-400 rounded-lg"
     >
       <span className="text-sm text-white font-medium">{filter.option}</span>
-      <div className="px-1 py-1">
-        <XIcon
-          className="h-4 w-4  ml-2 fill-white cursor-pointer"
-          aria-hidden="true"
-          onClick={() => remove(filter)}
-        />
-      </div>
+      <FontAwesomeIcon
+        className="ml-2"
+        width={16}
+        height={16}
+        icon={faXmark}
+        onClick={() => remove(filter)}
+      />
     </div>
   );
 };
