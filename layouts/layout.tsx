@@ -56,7 +56,7 @@ const Layout = (props: LayoutProps) => {
 
       {/* <Header /> */}
 
-      <main className="min-h-screen bg-teal-500">
+      <main className="min-h-screen bg-gradient-to-r from-cyan-500 to-teal-500">
         {isHome ? (
           props.children
         ) : (

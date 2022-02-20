@@ -100,8 +100,8 @@ const EmailSignup = () => {
   return (
     <>
       <div className="flex items-center justify-center w-full sm:max-w-3/4">
-        <div className="bg-stone-50 rounded-xl max-w-xl w-full space-y-8 py-8 px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+        <div className="bg-stone-50 rounded-xl max-w-xl w-full space-y-8 pb-8 px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
             <Image
               width={175}
               height={175}
@@ -112,7 +112,7 @@ const EmailSignup = () => {
               Get news from the lab...
             </h2>
             <div className="px-8">
-              <p className="leading-loose">
+              <p className="leading-relaxed">
                 Subscribe to our newsletter to learn more about our upcoming NFT
                 drop and see how we&apos;re building a web3 community for
                 entrepreneurs.
@@ -120,7 +120,6 @@ const EmailSignup = () => {
             </div>
           </div>
           <form
-            className="mt-8"
             action="#"
             method="POST"
             onSubmit={handleSubmit(onSubmit, onError)}
