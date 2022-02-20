@@ -54,7 +54,7 @@ const Layout = (props: LayoutProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      {/* <Header /> */}
 
       <main className="min-h-screen bg-teal-500">
         {isHome ? (
@@ -64,11 +64,13 @@ const Layout = (props: LayoutProps) => {
         )}
       </main>
 
-      <footer className="py-4 text-center">
-        <span className="block mb-2 text-lg">
+      <footer className="w-full py-4 text-center absolute bottom-0">
+        <span className="block mb-0 text-md text-slate-700">
           Copyright &copy; BeYu Labs 2022
         </span>
-        <span className="block text-sm">From the metaverse with &hearts;</span>
+        <span className="block text-sm text-slate-700">
+          &hearts; from the metaverse
+        </span>
       </footer>
     </>
   );

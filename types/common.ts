@@ -1,3 +1,9 @@
+export interface EmailSignupCharacterTypes {
+  id: number;
+  name: string;
+  icon: React.ReactNode;
+}
+
 export interface FilterCategory {
   name: string;
   options: FilterOption[];
