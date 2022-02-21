@@ -32,6 +32,7 @@ export default async function handler(
           merge_fields: {
             FNAME: req.body.first_name,
             LNAME: req.body.last_name,
+            PERSONA: req.body.persona,
           },
         }
       );

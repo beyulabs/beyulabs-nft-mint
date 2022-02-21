@@ -30,6 +30,7 @@ interface EmailSignupSubmitPayload {
   first_name: string;
   last_name: string;
   status: string;
+  persona?: string;
 }
 
 enum AlertType {
@@ -144,6 +145,7 @@ const EmailSignup = () => {
       email: email,
       first_name: firstName,
       last_name: lastName,
+      persona: selectedCharacter.name,
       status: "subscribed",
     };
 
