@@ -1,11 +1,14 @@
 import { useState } from "react";
+import axios from "axios";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
+import { useMutation } from "react-query";
 import {
   faPalette,
   faScrewdriverWrench,
   faBriefcase,
   faBinoculars,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { faEthereum } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,6 +17,25 @@ import beyuLabs from "../public/beyulabs-logo.png";
 
 import { EmailSignupCharacterTypes } from "../types/common";
 import CharacterSelect from "./CharacterSelect";
+import classNames from "classnames";
+
+interface EmailSignupFormValues {
+  email: string;
+  firstName: string;
+  lastName: string;
+}
+
+interface EmailSignupSubmitPayload {
+  email: string;
+  first_name: string;
+  last_name: string;
+  status: string;
+}
+
+enum AlertType {
+  error = "error",
+  success = "success",
+}
 
 export const characterTypes: EmailSignupCharacterTypes[] = [
   {
@@ -80,6 +102,34 @@ export const characterTypes: EmailSignupCharacterTypes[] = [
 
 const EmailSignup = () => {
   const [selectedCharacter, setSelectedCharacter] = useState(characterTypes[0]);
+  const [showAlert, setShowAlert] = useState<boolean>(false);
+  const [alertType, setAlertType] = useState<AlertType>(AlertType.error);
+
+  const alertCn = classNames(
+    "flex flex-row justify-between items-center text-sm mb-4 px-4 py-2 rounded border-2",
+    {
+      "bg-green-200 border-green-500": alertType === AlertType.success,
+      "bg-red-200 border-red-500": alertType === AlertType.error,
+    }
+  );
+
+  const { mutate: submitEmailForm } = useMutation(
+    (data: EmailSignupSubmitPayload) => {
+      return axios
+        .post("/api/mailchimp", data)
+        .then((res) => {
+          if (res.status === 200) {
+            setAlertType(AlertType.success);
+          }
+        })
+        .catch((err) => {
+          setAlertType(AlertType.error);
+        })
+        .finally(() => {
+          setShowAlert(true);
+        });
+    }
+  );
 
   const {
     register,
@@ -87,9 +137,17 @@ const EmailSignup = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data, e) => {
-    console.log("data", data);
-    console.log("e", e);
+  const onSubmit = (data: EmailSignupFormValues, e) => {
+    const { email, firstName, lastName } = data;
+
+    const payload: EmailSignupSubmitPayload = {
+      email: email,
+      first_name: firstName,
+      last_name: lastName,
+      status: "subscribed",
+    };
+
+    submitEmailForm(payload);
   };
 
   const onError = (errors, e) => {
@@ -124,8 +182,28 @@ const EmailSignup = () => {
             method="POST"
             onSubmit={handleSubmit(onSubmit, onError)}
           >
+            {showAlert && (
+              <div className={alertCn}>
+                {alertType === AlertType.error && (
+                  <span className="font-bold">Error!</span>
+                )}
+                {alertType === AlertType.success && (
+                  <span>
+                    <span className="font-bold">Success!</span>
+                    <span> Confirmation email sent.</span>
+                  </span>
+                )}
+                <FontAwesomeIcon
+                  className="ml-2 cursor-pointer"
+                  width={16}
+                  height={16}
+                  icon={faXmark}
+                  onClick={() => setShowAlert(false)}
+                />
+              </div>
+            )}
             <div className="mb-6">
-              <div className="rounded-md shadow-sm -space-y-px mb-8">
+              <div className="rounded-md -space-y-px mb-6">
                 <div className="flex flex-row mb-4">
                   <div className="w-1/2 mr-2">
                     <label htmlFor="email-address" className="sr-only">
@@ -158,7 +236,7 @@ const EmailSignup = () => {
                     />
                   </div>
                 </div>
-                <div>
+                <div className="shadow-sm">
                   <label htmlFor="email-address" className="sr-only">
                     Email address
                   </label>
@@ -175,6 +253,11 @@ const EmailSignup = () => {
                     aria-invalid={errors.email ? "true" : "false"}
                   />
                 </div>
+                {errors && errors.email && (
+                  <div className="mt-0 px-1 text-red-400">
+                    <span className="text-sm">An email is required.</span>
+                  </div>
+                )}
               </div>
 
               <div>
@@ -183,12 +266,6 @@ const EmailSignup = () => {
                   setSelectedCharacter={setSelectedCharacter}
                 />
               </div>
-
-              {errors && errors.email && (
-                <div className="mt-0 px-1 text-red-400">
-                  <span className="text-sm">An email is required.</span>
-                </div>
-              )}
             </div>
 
             <div>
