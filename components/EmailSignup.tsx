@@ -182,7 +182,7 @@ const EmailSignup = () => {
           <form
             action="#"
             method="POST"
-            onSubmit={handleSubmit(onSubmit, onError)}
+            onSubmit={handleSubmit(onSubmit as any, onError)}
           >
             {showAlert && (
               <div className={alertCn}>
