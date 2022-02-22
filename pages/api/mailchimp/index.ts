@@ -41,7 +41,7 @@ export default async function handler(
       break;
   }
 
-  if (!response.id || response.status !== "subscribed") {
+  if (!response.id) {
     res.status(500).json(response);
   }
 

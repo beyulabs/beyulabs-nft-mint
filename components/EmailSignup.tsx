@@ -146,7 +146,7 @@ const EmailSignup = () => {
       first_name: firstName,
       last_name: lastName,
       persona: selectedCharacter.name,
-      status: "subscribed",
+      status: "pending",
     };
 
     submitEmailForm(payload);
@@ -270,10 +270,10 @@ const EmailSignup = () => {
               </div>
             </div>
 
-            <div>
+            <div className="flex justify-center">
               <button
                 type="submit"
-                className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="group relative w-1/2 flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 Subscribe
               </button>
