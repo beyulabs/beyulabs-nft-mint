@@ -9,6 +9,7 @@ import {
   faBriefcase,
   faBinoculars,
   faXmark,
+  faListSquares,
 } from "@fortawesome/free-solid-svg-icons";
 import { faEthereum } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -30,7 +31,7 @@ interface EmailSignupSubmitPayload {
   first_name: string;
   last_name: string;
   status: string;
-  persona?: string;
+  persona: string | null;
 }
 
 enum AlertType {
@@ -39,6 +40,18 @@ enum AlertType {
 }
 
 export const characterTypes: EmailSignupCharacterTypes[] = [
+  {
+    id: 0,
+    name: "Select one...",
+    icon: (
+      <FontAwesomeIcon
+        className="mr-2"
+        width={16}
+        height={16}
+        icon={faListSquares}
+      />
+    ),
+  },
   {
     id: 1,
     name: "Engineer",
@@ -141,11 +154,16 @@ const EmailSignup = () => {
   const onSubmit = (data: EmailSignupFormValues) => {
     const { email, firstName, lastName } = data;
 
+    const personaToSubmit =
+      selectedCharacter.name === "Select one..."
+        ? null
+        : selectedCharacter.name;
+
     const payload: EmailSignupSubmitPayload = {
       email: email,
       first_name: firstName,
       last_name: lastName,
-      persona: selectedCharacter.name,
+      persona: personaToSubmit,
       status: "pending",
     };
 
@@ -205,7 +223,7 @@ const EmailSignup = () => {
               </div>
             )}
             <div className="mb-6">
-              <div className="rounded-md -space-y-px mb-6">
+              <div className="rounded-md -space-y-px mb-4">
                 <div className="flex flex-row mb-4">
                   <div className="w-1/2 mr-2">
                     <label htmlFor="email-address" className="sr-only">
