@@ -138,7 +138,7 @@ const EmailSignup = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data: EmailSignupFormValues, e) => {
+  const onSubmit = (data: EmailSignupFormValues) => {
     const { email, firstName, lastName } = data;
 
     const payload: EmailSignupSubmitPayload = {
@@ -152,7 +152,7 @@ const EmailSignup = () => {
     submitEmailForm(payload);
   };
 
-  const onError = (errors, e) => {
+  const onError = (errors: any, e: any) => {
     console.log("errors", errors);
     console.log("e", e);
   };
