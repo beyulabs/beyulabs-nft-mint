@@ -187,13 +187,13 @@ const EmailSignup = () => {
               alt="BeYu Labs logo"
             />
             <h2 className="text-center text-3xl font-medium text-gray-900 mb-8">
-              Get news from the lab...
+              News from the Lab
             </h2>
             <div className="px-8">
               <p className="leading-relaxed">
-                Subscribe to our newsletter to learn more about our upcoming NFT
-                drop and see how we&apos;re building a web3 community for
-                entrepreneurs.
+                Join us on our mission to empower web3 entrepreneurship.
+                Subscribe to stay up to date on our weekly events, upcoming NFT
+                drop and more.
               </p>
             </div>
           </div>
