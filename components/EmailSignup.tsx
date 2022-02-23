@@ -178,7 +178,7 @@ const EmailSignup = () => {
   return (
     <>
       <div className="flex items-center justify-center w-full sm:max-w-3/4">
-        <div className="bg-stone-50 rounded-xl max-w-xl w-full space-y-8 pt-4 pb-8 px-4 sm:px-6 lg:px-8">
+        <div className="bg-slate-100 rounded-xl max-w-xl w-full space-y-8 pt-4 pb-8 px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <div className="m-auto w-3/4 mb-8">
               <Image
