@@ -14,7 +14,7 @@ import {
 import { faEthereum } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import beyuLabs from "../public/beyulabs-logo.png";
+import beyuLabs from "../public/beyu-labs-logotype.png";
 
 import { EmailSignupCharacterTypes } from "../types/common";
 import CharacterSelect from "./CharacterSelect";
@@ -178,19 +178,21 @@ const EmailSignup = () => {
   return (
     <>
       <div className="flex items-center justify-center w-full sm:max-w-3/4">
-        <div className="bg-stone-50 rounded-xl max-w-xl w-full space-y-8 pb-8 px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <Image
-              width={175}
-              height={175}
-              src={beyuLabs}
-              alt="BeYu Labs logo"
-            />
-            <h2 className="text-center text-3xl font-medium text-gray-900 mb-8">
+        <div className="bg-stone-50 rounded-xl max-w-xl w-full space-y-8 pt-4 pb-8 px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <div className="m-auto w-3/4 mb-8">
+              <Image
+                src={beyuLabs}
+                alt="BeYu Labs logo"
+                objectFit="scale-down"
+                className="drop-shadow-md"
+              />
+            </div>
+            <h2 className="text-center text-3xl font-medium text-gray-900 mb-4">
               News from the Lab
             </h2>
-            <div className="px-8">
-              <p className="leading-relaxed">
+            <div className="px-4">
+              <p className="leading-snug">
                 Join us on our mission to empower web3 entrepreneurship.
                 Subscribe to stay up to date on our weekly events, upcoming NFT
                 drop and more.
