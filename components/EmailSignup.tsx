@@ -167,9 +167,7 @@ const EmailSignup = () => {
       status: "pending",
     };
 
-    console.log(payload);
-
-    // submitEmailForm(payload);
+    submitEmailForm(payload);
   };
 
   const onError = (errors: any, e: any) => {
