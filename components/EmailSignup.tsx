@@ -156,7 +156,7 @@ const EmailSignup = () => {
 
     const personaToSubmit =
       selectedCharacter.name === "Select one..."
-        ? null
+        ? "General"
         : selectedCharacter.name;
 
     const payload: EmailSignupSubmitPayload = {
@@ -167,7 +167,9 @@ const EmailSignup = () => {
       status: "pending",
     };
 
-    submitEmailForm(payload);
+    console.log(payload);
+
+    // submitEmailForm(payload);
   };
 
   const onError = (errors: any, e: any) => {
