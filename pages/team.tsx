@@ -14,7 +14,7 @@ const Team: NextPage = () => {
   const projectTeam: TeamMemberInfo[] = [
     {
       name: "Ben",
-      job: "business | product",
+      job: "business & product",
       image: (
         <Image
           className="rounded-full"
@@ -36,7 +36,7 @@ const Team: NextPage = () => {
     },
     {
       name: "Miles",
-      job: "product | community",
+      job: "product & community",
       image: (
         <Image
           className="rounded-full"
@@ -96,7 +96,7 @@ const Team: NextPage = () => {
   });
 
   return (
-    <section className="min-h-screen">
+    <section className="min-h-screen max-w-4xl m-auto">
       <div className="m-auto w-4/5">
         <div className="flex justify-center mb-8">
           <Image
