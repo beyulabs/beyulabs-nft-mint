@@ -26,7 +26,9 @@ const Layout = (props: LayoutProps) => {
         {isHome ? (
           props.children
         ) : (
-          <div className="pt-16 pb-12 px-8">{props.children}</div>
+          <div className="pt-16 pb-12 px-8 max-w-4xl m-auto">
+            {props.children}
+          </div>
         )}
       </main>
 

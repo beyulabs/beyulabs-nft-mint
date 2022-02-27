@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -26,7 +27,14 @@ function Nav() {
   ];
 
   const routeLinks = routes.map((route: NavRoutes, index) => {
-    const cn = nextRouter.pathname === route.path ? "pr-6 underline" : "pr-6";
+    const cn = classNames(
+      {
+        "font-bold": nextRouter.pathname === route.path,
+        "font-thin": nextRouter.pathname !== route.path,
+      },
+      "pr-6"
+    );
+
     return (
       <li key={`route-${index}`} className={cn}>
         <Link href={route.path}>{route.title}</Link>

@@ -17,7 +17,7 @@ const Team: NextPage = () => {
       job: "business & product",
       image: (
         <Image
-          className="rounded-full"
+          className="rounded-full min-w-xs"
           width={175}
           height={175}
           src={benProfile}
@@ -39,7 +39,7 @@ const Team: NextPage = () => {
       job: "product & community",
       image: (
         <Image
-          className="rounded-full"
+          className="rounded-full min-w-xs"
           width={175}
           height={175}
           src={milesProfile}
@@ -61,7 +61,7 @@ const Team: NextPage = () => {
       job: "code",
       image: (
         <Image
-          className="rounded-full"
+          className="rounded-full min-w-xs"
           width={175}
           height={175}
           src={ryanProfile}
@@ -80,7 +80,7 @@ const Team: NextPage = () => {
         },
       ],
       description:
-        "Donec semper a urna eu ornare. Sed id accumsan metus. Pellentesque id lectus et leo laoreet pellentesque. Nulla id mi at metus elementum mattis quis in tortor. ",
+        "Ryan is currently a Senior Engineer at dbt Labs and has worked with some of Philadelphia’s most successful startups. As a filmmaker turned engineer, he is passionate about helping others transition into tech and creates educational content on Egghead. When he’s not coding, Ryan enjoys making music and playing with his dog, Banjo.",
     },
   ];
 
@@ -96,8 +96,8 @@ const Team: NextPage = () => {
   });
 
   return (
-    <section className="min-h-screen max-w-4xl m-auto">
-      <div className="m-auto w-4/5">
+    <section className="min-h-screen">
+      <div className="m-auto">
         <div className="flex justify-center mb-8">
           <Image
             width={500}
