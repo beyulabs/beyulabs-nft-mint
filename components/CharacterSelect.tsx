@@ -1,10 +1,6 @@
 import { Dispatch, Fragment, SetStateAction } from "react";
 import { Listbox, Transition } from "@headlessui/react";
-import {
-  faCheck,
-  faSort,
-  faListSquares,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faSort } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "classnames";
 
@@ -25,6 +21,9 @@ const CharacterSelect = ({
       {({ open }) => (
         <>
           <div className="mt-1 relative">
+            <Listbox.Label className="text-sm text-slate-500">
+              Optional
+            </Listbox.Label>
             <Listbox.Button className="relative w-full bg-white border border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
               <span className="flex items-center">
                 {selectedCharacter.icon}
