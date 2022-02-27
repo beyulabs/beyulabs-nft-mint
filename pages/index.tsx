@@ -15,7 +15,7 @@ const Mint: NextPage = () => {
       <Transition.Root show={open} as={Fragment}>
         <Dialog
           as="div"
-          className="fixed z-10 inset-0 overflow-y-auto"
+          className="fixed z-10 inset-0 overflow-y-visible"
           initialFocus={cancelButtonRef}
           onClose={setOpen}
         >
@@ -48,7 +48,7 @@ const Mint: NextPage = () => {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+              <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-y-visible shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
                 <div className="py-2 px-4 absolute right-0">
                   <FontAwesomeIcon
                     className="text-gray-500 ml-2 text-xl cursor-pointer"
