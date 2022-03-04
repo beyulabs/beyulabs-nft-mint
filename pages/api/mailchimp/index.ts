@@ -41,9 +41,15 @@ export default async function handler(
       break;
   }
 
+  // Handle response when user is already on the list
+  if (response.status === 400 && response.title === "Member Exists") {
+    res.status(200).json(response);
+  }
+
+  // Handle error case
   if (!response.id) {
     res.status(500).json(response);
   }
 
-  res.status(200).json(response);
+  res.status(201).json(response);
 }
