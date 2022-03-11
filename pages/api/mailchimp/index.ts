@@ -49,7 +49,7 @@ export default async function handler(
   }
 
   // Handle error case
-  if (!response.id) {
+  if (!response?.id) {
     res.status(500).json(response);
   }
 
