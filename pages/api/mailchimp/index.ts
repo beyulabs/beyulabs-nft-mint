@@ -40,6 +40,10 @@ export default async function handler(
     default:
       break;
   }
+
+  console.log("************** response.body");
+  console.log(response.body);
+
   console.log("************** response.statusCode");
   console.log(response.statusCode);
 
