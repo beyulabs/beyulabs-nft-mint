@@ -15,7 +15,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  let response;
+  let response: any;
 
   switch (req.method) {
     case "GET":
