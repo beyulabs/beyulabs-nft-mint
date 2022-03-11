@@ -37,7 +37,7 @@ export default async function handler(
             },
           }
         );
-      } catch((err: any) => {
+      } catch (err: any) {
         // Handle response when user is already on the list
         if (err.response.statusCode === 400 && err.response.body.title === "Member Exists") {
           res.status(200).json(response);
