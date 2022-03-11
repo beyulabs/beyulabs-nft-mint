@@ -40,6 +40,11 @@ export default async function handler(
     default:
       break;
   }
+  console.log("************** response.statusCode");
+  console.log(response.statusCode);
+
+  console.log("************** response.body");
+  console.log(response.body);
 
   // Handle response when user is already on the list
   if (response.status === 400 && response.title === "Member Exists") {
