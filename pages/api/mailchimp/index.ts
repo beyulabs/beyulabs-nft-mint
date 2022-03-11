@@ -16,7 +16,7 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   let response: any;
-  let userAlreadyExists: bool = false;
+  let userAlreadyExists: boolean = false;
 
   switch (req.method) {
     case "GET":
