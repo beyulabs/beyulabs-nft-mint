@@ -222,7 +222,7 @@ const EmailSignup = () => {
                   {alertType === AlertType.error && (
                     <span className="font-bold">Error!</span>
                   )}
-                  {alertType === AlertType.success && (
+                  {alertType === AlertType.success || alertType === AlertType.exists && (
                     <span className="font-bold">Success!</span>
                   )}
                   <FontAwesomeIcon
