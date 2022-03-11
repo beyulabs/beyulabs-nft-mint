@@ -16,6 +16,7 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   let response: any;
+  let userAlreadyExists: bool = false;
 
   switch (req.method) {
     case "GET":
@@ -40,6 +41,7 @@ export default async function handler(
       } catch (err: any) {
         // Handle response when user is already on the list
         if (err.response.statusCode === 400 && err.response.body.title === "Member Exists") {
+          userAlreadyExists = true;
           res.status(200).json(response);
         }
       }
@@ -49,9 +51,11 @@ export default async function handler(
   }
 
   // Handle error case
-  if (!response?.id) {
+  if (!response?.id && !userAlreadyExists) {
     res.status(500).json(response);
   }
 
-  res.status(201).json(response);
+  if (!userAlreadyExists) {
+    res.status(201).json(response);
+  }
 }
