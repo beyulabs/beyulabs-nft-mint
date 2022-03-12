@@ -15,7 +15,8 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  let response;
+  let response: any;
+  let userAlreadyExists: boolean = false;
 
   switch (req.method) {
     case "GET":
@@ -24,26 +25,37 @@ export default async function handler(
       );
       break;
     case "POST":
-      response = await mailchimp.lists.addListMember(
-        process.env.MAILCHIMP_LIST_ID,
-        {
-          email_address: req.body.email,
-          status: req.body.status,
-          merge_fields: {
-            FNAME: req.body.first_name,
-            LNAME: req.body.last_name,
-            PERSONA: req.body.persona,
-          },
+      try {
+        response = await mailchimp.lists.addListMember(
+          process.env.MAILCHIMP_LIST_ID,
+          {
+            email_address: req.body.email,
+            status: req.body.status,
+            merge_fields: {
+              FNAME: req.body.first_name,
+              LNAME: req.body.last_name,
+              PERSONA: req.body.persona,
+            },
+          }
+        );
+      } catch (err: any) {
+        // Handle response when user is already on the list
+        if (err.response.statusCode === 400 && err.response.body.title === "Member Exists") {
+          userAlreadyExists = true;
+          res.status(200).json(response);
         }
-      );
+      }
       break;
     default:
       break;
   }
 
-  if (!response.id) {
+  // Handle error case
+  if (!response?.id && !userAlreadyExists) {
     res.status(500).json(response);
   }
 
-  res.status(200).json(response);
+  if (!userAlreadyExists) {
+    res.status(201).json(response);
+  }
 }

@@ -27,6 +27,7 @@ export interface NavRoutes {
 export enum SocialPlatform {
   twitter = "twitter",
   github = "github",
+  linkedIn = "linkedin",
 }
 
 export interface SocialInfo {

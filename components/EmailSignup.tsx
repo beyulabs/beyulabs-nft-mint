@@ -22,6 +22,7 @@ import classNames from "classnames";
 
 import EmailSignupSuccess from "./EmailSignupSuccess";
 import EmailSignupFailure from "./EmailSignupFailure";
+import EmailSignupExists from "./EmailSignupExists";
 interface EmailSignupFormValues {
   email: string;
   firstName: string;
@@ -39,6 +40,7 @@ interface EmailSignupSubmitPayload {
 enum AlertType {
   error = "error",
   success = "success",
+  exists = "exists",
 }
 
 export const characterTypes: EmailSignupCharacterTypes[] = [
@@ -124,7 +126,8 @@ const EmailSignup = () => {
   const alertCn = classNames(
     "flex flex-row justify-between items-center text-sm mb-4 px-4 py-2 rounded border-2",
     {
-      "bg-green-200 border-green-500": alertType === AlertType.success,
+      "bg-green-200 border-green-500":
+        alertType === AlertType.success || alertType === AlertType.exists,
       "bg-red-200 border-red-500": alertType === AlertType.error,
     }
   );
@@ -134,8 +137,10 @@ const EmailSignup = () => {
       return axios
         .post("/api/mailchimp", data)
         .then((res) => {
-          if (res.status === 200) {
+          if (res.status === 201) {
             setAlertType(AlertType.success);
+          } else if (res.status === 200) {
+            setAlertType(AlertType.exists);
           }
         })
         .catch((err) => {
@@ -217,7 +222,7 @@ const EmailSignup = () => {
                   {alertType === AlertType.error && (
                     <span className="font-bold">Error!</span>
                   )}
-                  {alertType === AlertType.success && (
+                  {alertType === AlertType.success || alertType === AlertType.exists && (
                     <span className="font-bold">Success!</span>
                   )}
                   <FontAwesomeIcon
@@ -229,6 +234,7 @@ const EmailSignup = () => {
                   />
                 </div>
                 {alertType === AlertType.success && <EmailSignupSuccess />}
+                {alertType === AlertType.exists && <EmailSignupExists />}
                 {alertType === AlertType.error && <EmailSignupFailure />}
               </>
             )}
