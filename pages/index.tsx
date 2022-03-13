@@ -63,13 +63,13 @@ const Mint: NextPage = () => {
         </Dialog>
       </Transition.Root>
 
-      <section className="h-screen flex flex-col justify-center px-8">
-        <h2 className="text-8xl mb-14 text-white drop-shadow-2xl">
-          Life on Terra
+      <section className="h-screen flex flex-col justify-center items-center px-8">
+        <h2 className="text-8xl mb-14 text-white font-medium drop-shadow-2xl">
+         BenNFTs 
         </h2>
-        <div className="flex flex-row">
+        <div className="flex flex-col">
           <button
-            className="bg-white mr-6 px-8 py-4 rounded-lg capitalize font-semibold max-w-xs shadow-lg hover:shadow-xl hover:bg-sky-500"
+            className="bg-white mb-4 px-8 py-4 rounded-lg capitalize font-semibold max-w-xs shadow-lg hover:shadow-xl hover:bg-violet-500 hover:text-white"
             onClick={() => setOpen(true)}
           >
             Get the newsletter
