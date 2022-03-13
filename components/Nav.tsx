@@ -12,11 +12,6 @@ function Nav() {
 
   const routes: NavRoute[] = [
     {
-      path: "/",
-      title: "home",
-      enabled: true,
-    },
-    {
       path: "/team",
       title: "team",
       enabled: true,
@@ -34,9 +29,6 @@ function Nav() {
   ];
 
   const routeLinks = routes
-    .filter((route: NavRoute) => {
-      return !(route.title === "home" && nextRouter.pathname === "/");
-    })
     .map((route: NavRoute, index) => {
       const cn = classNames(
         {
