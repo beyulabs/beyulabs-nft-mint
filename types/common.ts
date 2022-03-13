@@ -19,9 +19,10 @@ export interface SelectedFilter {
   option: string;
 }
 
-export interface NavRoutes {
+export interface NavRoute {
   path: string;
   title: string;
+  enabled: boolean;
 }
 
 export enum SocialPlatform {

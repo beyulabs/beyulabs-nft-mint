@@ -63,22 +63,24 @@ const Mint: NextPage = () => {
         </Dialog>
       </Transition.Root>
 
-      <section className="bg-[url('../public/charles-etoroma.jpg')] bg-cover bg-top h-screen flex flex-col justify-center px-8">
+      <section className="h-screen flex flex-col justify-center px-8">
         <h2 className="text-8xl mb-14 text-white drop-shadow-2xl">
           Life on Terra
         </h2>
-        <button
-          disabled
-          className="bg-white px-8 py-4 mb-4 rounded-lg capitalize font-semibold max-w-xs shadow-lg hover:shadow-xl hover:cursor-not-allowed"
-        >
-          Connect Wallet
-        </button>
-        <button
-          className="bg-white px-8 py-4 rounded-lg capitalize font-semibold max-w-xs shadow-lg hover:shadow-xl hover:bg-sky-500"
-          onClick={() => setOpen(true)}
-        >
-          Get the newsletter
-        </button>
+        <div className="flex flex-row">
+          <button
+            className="bg-white mr-6 px-8 py-4 rounded-lg capitalize font-semibold max-w-xs shadow-lg hover:shadow-xl hover:bg-sky-500"
+            onClick={() => setOpen(true)}
+          >
+            Get the newsletter
+          </button>
+          <button
+            disabled
+            className="bg-white px-8 py-4 rounded-lg capitalize font-semibold max-w-xs shadow-lg hover:shadow-xl hover:cursor-not-allowed disabled:bg-gray-100 disabled:opacity-75 disabled:text-gray-400"
+          >
+            Connect Wallet
+          </button>
+        </div>
       </section>
       <section className="h-screen bg-yellow-200">
         <h2>Backstory</h2>

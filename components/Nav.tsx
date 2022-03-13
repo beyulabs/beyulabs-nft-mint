@@ -1,48 +1,77 @@
 import classNames from "classnames";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import { NavRoutes } from "../types/common";
+import { NavRoute } from "../types/common";
+
+import beyuLabs from "../public/beyulabs-logo.png";
 
 function Nav() {
   const nextRouter = useRouter();
 
-  const routes: NavRoutes[] = [
+  const routes: NavRoute[] = [
     {
       path: "/",
-      title: "mint",
+      title: "home",
+      enabled: true,
     },
     {
       path: "/team",
       title: "team",
+      enabled: true,
     },
     {
       path: "/gallery",
       title: "gallery",
+      enabled: false,
     },
     {
       path: "/wallet",
       title: "wallet",
+      enabled: false,
     },
   ];
 
-  const routeLinks = routes.map((route: NavRoutes, index) => {
-    const cn = classNames(
-      {
-        "font-bold": nextRouter.pathname === route.path,
-        "font-thin": nextRouter.pathname !== route.path,
-      },
-      "pr-6"
-    );
+  const routeLinks = routes
+    .filter((route: NavRoute) => {
+      return !(route.title === "home" && nextRouter.pathname === "/");
+    })
+    .map((route: NavRoute, index) => {
+      const cn = classNames(
+        {
+          "font-bold drop-shadow-md": nextRouter.pathname === route.path,
+          "font-normal": nextRouter.pathname !== route.path,
+          "opacity-50": !route.enabled,
+        },
+        "mr-6"
+      );
 
-    return (
-      <li key={`route-${index}`} className={cn}>
-        <Link href={route.path}>{route.title}</Link>
-      </li>
-    );
-  });
+      return (
+        <li key={`route-${index}`} className={cn}>
+          {route.enabled ? (
+            <Link href={route.path}>{route.title}</Link>
+          ) : (
+            route.title
+          )}
+        </li>
+      );
+    });
 
-  return <ul className="flex text-white">{routeLinks}</ul>;
+  return (
+    <div className="flex items-center">
+      <Link href="/" passHref>
+        <Image
+          src={beyuLabs}
+          alt="BeYu Labs logo"
+          className="cursor-pointer drop-shadow-md"
+          width={48}
+          height={48}
+        />
+      </Link>
+      <ul className="ml-4 flex flex-row text-white">{routeLinks}</ul>
+    </div>
+  );
 }
 
 export default Nav;
