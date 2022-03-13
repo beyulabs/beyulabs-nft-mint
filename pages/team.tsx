@@ -54,7 +54,7 @@ const Team: NextPage = () => {
         },
       ],
       description:
-        "Nullam eget facilisis libero. Donec a fringilla sapien, tempor vulputate tortor. Nunc sit amet magna purus. Donec nisi ante, vestibulum vel lectus id, semper efficitur mauris.",
+        "Product Manager & Brand Evangelist. Miles is a serial Startup contributor with over 5 years in driving high performing teams. Already a miner, gamer, and FunkoFan; it was digital horse racing that hooked him into NFTs *cough* Zed Run.",
     },
     {
       name: "Ryan",
@@ -96,7 +96,7 @@ const Team: NextPage = () => {
   });
 
   return (
-    <section className="min-h-screen">
+    <section className="mt-4 min-h-screen">
       <div className="m-auto">
         <div className="flex justify-center mb-8">
           <Image
