@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 import EmailSignup from "../components/EmailSignup";
+import MiniTeam from "../components/MiniTeam";
 
 const Mint: NextPage = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -84,6 +85,10 @@ const Mint: NextPage = () => {
       </section>
       <section className="h-screen bg-yellow-200">
         <h2>Backstory</h2>
+      </section>
+      <section className="p-8 bg-pink-200">
+        <h2 className="text-4xl mb-4 text-center">Team</h2>
+        <MiniTeam />
       </section>
       <section className="h-screen bg-emerald-200">
         <h2>Roadmap</h2>

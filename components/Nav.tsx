@@ -28,27 +28,27 @@ function Nav() {
     },
   ];
 
-  const routeLinks = routes
-    .map((route: NavRoute, index) => {
-      const cn = classNames(
-        {
-          "font-bold drop-shadow-md": nextRouter.pathname === route.path,
-          "font-normal": nextRouter.pathname !== route.path,
-          "opacity-50": !route.enabled,
-        },
-        "mr-6"
-      );
+  const routeLinks = routes.map((route: NavRoute, index) => {
+    const cn = classNames(
+      {
+        "font-bold drop-shadow-md": nextRouter.pathname === route.path,
+        "font-normal": nextRouter.pathname !== route.path,
+        "opacity-50 hover:cursor-not-allowed": !route.enabled,
+        "hover:text-purple-500": route.enabled,
+      },
+      "mr-6"
+    );
 
-      return (
-        <li key={`route-${index}`} className={cn}>
-          {route.enabled ? (
-            <Link href={route.path}>{route.title}</Link>
-          ) : (
-            route.title
-          )}
-        </li>
-      );
-    });
+    return (
+      <li key={`route-${index}`} className={cn}>
+        {route.enabled ? (
+          <Link href={route.path}>{route.title}</Link>
+        ) : (
+          route.title
+        )}
+      </li>
+    );
+  });
 
   return (
     <div className="flex items-center">
