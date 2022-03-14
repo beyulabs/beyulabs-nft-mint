@@ -1,5 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faLinkedinIn,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 import { projectTeam } from "../pages/team";
 import { SocialInfo, SocialPlatform, TeamMemberInfo } from "../types/common";
@@ -29,6 +33,17 @@ const MiniTeam = () => {
             />
           );
           baseUrl = "https://github.com";
+          break;
+
+        case SocialPlatform.linkedin:
+          icon = (
+            <FontAwesomeIcon
+              icon={faLinkedinIn}
+              className="w-4 sm:w-6 hover:text-teal-400"
+            />
+          );
+          baseUrl = "https://www.linkedin.com/in/";
+          break;
 
         default:
           break;
@@ -72,7 +87,7 @@ const MiniTeam = () => {
   };
 
   return (
-    <div className="m-auto p-4 flex flex-col items-center max-w-xs md:max-w-xl md:flex-row md:items-start md:justify-around md:flex-wrap lg:max-w-full">
+    <div className="m-auto p-4 flex flex-col items-center max-w-xs md:max-w-screen-sm md:flex-row md:items-start md:justify-around md:flex-wrap lg:max-w-full">
       {displayTeam()}
     </div>
   );

@@ -87,8 +87,10 @@ const Mint: NextPage = () => {
         <h2>Backstory</h2>
       </section>
       <section className="p-8 bg-pink-200">
-        <h2 className="text-4xl mb-4 text-center">Team</h2>
-        <MiniTeam />
+        <div className="lg:m-auto lg:max-w-screen-lg">
+          <h2 className="text-4xl mb-4 text-center lg:mb-8">Team</h2>
+          <MiniTeam />
+        </div>
       </section>
       <section className="h-screen bg-emerald-200">
         <h2>Roadmap</h2>

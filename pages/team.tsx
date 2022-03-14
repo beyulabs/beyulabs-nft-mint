@@ -30,6 +30,10 @@ export const projectTeam: TeamMemberInfo[] = [
         platform: SocialPlatform.twitter,
         username: "beyuworldwide",
       },
+      {
+        platform: SocialPlatform.linkedin,
+        username: "benyurcisin",
+      },
     ],
     description:
       "Ben is a serial entrepreneur with a background in engineering and a passion for creating community through fun, value-packed events. As founder of BeYu Labs - a web3 startup focused on empowering web3 entrepreneurship through connections and events - Ben aims to explore the unique opportunities and potential presented by the rise of NFT culture and the future of the internet as we know it. Ben spends his free time playing guitar, skateboarding, traveling and researching overpriced JPEGs.",
@@ -51,6 +55,10 @@ export const projectTeam: TeamMemberInfo[] = [
       {
         platform: SocialPlatform.twitter,
         username: "MusingsOf_Miles",
+      },
+      {
+        platform: SocialPlatform.linkedin,
+        username: "milescolon",
       },
     ],
     description:
@@ -76,6 +84,10 @@ export const projectTeam: TeamMemberInfo[] = [
       },
       {
         platform: SocialPlatform.github,
+        username: "ryancharris",
+      },
+      {
+        platform: SocialPlatform.linkedin,
         username: "ryancharris",
       },
     ],

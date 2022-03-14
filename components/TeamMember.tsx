@@ -1,5 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faLinkedinIn,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 import { SocialInfo, SocialPlatform, TeamMemberInfo } from "../types/common";
 
@@ -13,6 +17,7 @@ const TeamMember = ({ teamMember }: TeamMemberProps) => {
   const socialIcons = socialMedia.map((social: SocialInfo) => {
     let icon = null;
     let baseUrl = null;
+    console.log(social.platform);
 
     switch (social.platform) {
       case SocialPlatform.twitter:
@@ -34,6 +39,14 @@ const TeamMember = ({ teamMember }: TeamMemberProps) => {
         );
         baseUrl = "https://github.com";
 
+      case SocialPlatform.linkedin:
+        icon = (
+          <FontAwesomeIcon
+            icon={faLinkedinIn}
+            className="w-4 sm:w-6 hover:text-teal-400"
+          />
+        );
+        baseUrl = "https://www.linkedin.com/in/";
       default:
         break;
     }
