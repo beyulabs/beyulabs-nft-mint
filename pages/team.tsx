@@ -4,6 +4,7 @@ import Image from "next/image";
 import ryanProfile from "../public/ryan-profile.png";
 import benProfile from "../public/ben-profile.png";
 import milesProfile from "../public/miles-profile.png";
+import beeProfile from "../public/bee-profile.jpg";
 import beyuLabsLogotype from "../public/beyu-labs-logotype.png";
 
 import { SocialPlatform, TeamMemberInfo } from "../types/common";
@@ -13,7 +14,7 @@ import TeamMember from "../components/TeamMember";
 export const projectTeam: TeamMemberInfo[] = [
   {
     name: "Ben",
-    job: "business & product",
+    job: "biz",
     image: (
       <Image
         className="rounded-full min-w-xs"
@@ -35,7 +36,7 @@ export const projectTeam: TeamMemberInfo[] = [
   },
   {
     name: "Miles",
-    job: "product & community",
+    job: "product",
     image: (
       <Image
         className="rounded-full min-w-xs"
@@ -80,6 +81,26 @@ export const projectTeam: TeamMemberInfo[] = [
     ],
     description:
       "Ryan is currently a Senior Engineer at dbt Labs and has worked with some of Philadelphia’s most successful startups. As a filmmaker turned engineer, he is passionate about helping others transition into tech and creates educational content on Egghead. When he’s not coding, Ryan enjoys making music and playing with his dog, Banjo.",
+  },
+  {
+    name: "Bee",
+    job: "art",
+    image: (
+      <Image
+        className="rounded-full min-w-xs"
+        width={175}
+        height={175}
+        src={beeProfile}
+        alt="Bee's profile pic"
+        layout="responsive"
+      />
+    ),
+    socialMedia: [
+      {
+        platform: SocialPlatform.twitter,
+        username: "thenftbee",
+      },
+    ],
   },
 ];
 

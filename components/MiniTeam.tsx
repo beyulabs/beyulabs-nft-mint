@@ -54,13 +54,16 @@ const MiniTeam = () => {
   const displayTeam = () => {
     return projectTeam.map((member: TeamMemberInfo) => {
       return (
-        <div key={member.name} className="w-1/4 text-center">
-          <div className="mb-6 border-4 border-teal-400 rounded-full shadow-xl">
+        <div
+          key={member.name}
+          className="text-center mb-8 px-12 w-full md:w-1/2 lg:w-1/4 lg:px-6"
+        >
+          <div className="mb-4 border-4 border-teal-400 rounded-full shadow-xl">
             {member.image}
           </div>
           <h3 className="text-2xl font-medium mb-0">{member.name}</h3>
           <p className="text-lg mb-4">{member.job}</p>
-          <ul className="flex justify-center">
+          <ul className="mb-4 flex justify-center">
             {socialIcons(member.socialMedia)}
           </ul>
         </div>
@@ -69,7 +72,7 @@ const MiniTeam = () => {
   };
 
   return (
-    <div className="px-4 py-8 flex flex-col md:flex-row justify-around">
+    <div className="m-auto p-4 flex flex-col items-center max-w-xs md:max-w-xl md:flex-row md:items-start md:justify-around md:flex-wrap lg:max-w-full">
       {displayTeam()}
     </div>
   );
