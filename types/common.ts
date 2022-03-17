@@ -36,6 +36,13 @@ export interface SocialInfo {
   username: string;
 }
 
+export interface SocialIcon {
+  name: string;
+  image: StaticImageData;
+  enabled: boolean;
+  url: string;
+}
+
 export interface TeamMemberInfo {
   name: string;
   job: string;

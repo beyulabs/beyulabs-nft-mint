@@ -17,7 +17,6 @@ const TeamMember = ({ teamMember }: TeamMemberProps) => {
   const socialIcons = socialMedia.map((social: SocialInfo) => {
     let icon = null;
     let baseUrl = null;
-    console.log(social.platform);
 
     switch (social.platform) {
       case SocialPlatform.twitter:

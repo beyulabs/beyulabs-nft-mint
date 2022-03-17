@@ -6,6 +6,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { NavRoute } from "../types/common";
+import { routes } from "../constants";
 
 import beyuLabs from "../public/beyulabs-logo.png";
 
@@ -15,24 +16,6 @@ interface NavProps {
 
 function Nav({ setMenuOpen }: NavProps) {
   const nextRouter = useRouter();
-
-  const routes: NavRoute[] = [
-    {
-      path: "/team",
-      title: "team",
-      enabled: true,
-    },
-    {
-      path: "/gallery",
-      title: "gallery",
-      enabled: false,
-    },
-    {
-      path: "/wallet",
-      title: "wallet",
-      enabled: false,
-    },
-  ];
 
   const routeLinks = routes.map((route: NavRoute, index) => {
     const cn = classNames(
