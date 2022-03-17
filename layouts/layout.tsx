@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 import Header from "../components/Header";
+import MobileMenu from "../components/MobileMenu";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -11,6 +12,8 @@ interface LayoutProps {
 const Layout = (props: LayoutProps) => {
   const nextRouter = useRouter();
   const isHome: boolean = nextRouter.pathname === "/";
+
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   return (
     <div className="bg-gradient-to-r from-cyan-500 to-teal-500">
@@ -23,9 +26,11 @@ const Layout = (props: LayoutProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      <Header setMenuOpen={setMenuOpen} />
 
-      <main className="min-h-screen">
+      <main>
+        {menuOpen && <MobileMenu setMenuOpen={setMenuOpen} />}
+
         {isHome ? (
           props.children
         ) : (

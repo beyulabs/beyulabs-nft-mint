@@ -1,5 +1,5 @@
 import Image from "next/image";
-import classNames from 'classnames';
+import classNames from "classnames";
 
 import openSeaLogo from "../public/opensea-logo.svg";
 import etherscanLogo from "../public/etherscan-logo.svg";
@@ -27,7 +27,7 @@ const icons: SocialIcon[] = [
       />
     ),
     enabled: true,
-    url: '',
+    url: "",
   },
   {
     name: "twitter",
@@ -42,7 +42,7 @@ const icons: SocialIcon[] = [
       />
     ),
     enabled: true,
-    url: '',
+    url: "",
   },
   {
     name: "opensea",
@@ -57,7 +57,7 @@ const icons: SocialIcon[] = [
       />
     ),
     enabled: false,
-    url: '',
+    url: "",
   },
   {
     name: "etherscan",
@@ -72,30 +72,24 @@ const icons: SocialIcon[] = [
       />
     ),
     enabled: false,
-    url: '',
+    url: "",
   },
 ];
 
 const SocialIcons = () => {
   return (
     <ul className="flex">
-      {icons.map(icon => {
-        const liClass = classNames(
-          "ml-8",
-          {
-            "opacity-50 hover:cursor-not-allowed": !icon.enabled,
-            "origin-center hover:scale-150 hover:rotate-12": icon.enabled,
-          }
-        );
+      {icons.map((icon) => {
+        const liClass = classNames("ml-4 sm:ml-4 md:ml-8", {
+          "opacity-50 hover:cursor-not-allowed": !icon.enabled,
+          "origin-center hover:scale-150 hover:rotate-12": icon.enabled,
+        });
         const aClass = classNames({
           "hover:cursor-not-allowed": !icon.enabled,
-        })
+        });
 
         return (
-          <li
-            key={`icon-${icon.name}`}
-            className={liClass}
-          >
+          <li key={`icon-${icon.name}`} className={liClass}>
             <a
               href={icon.url}
               rel="nofollow noreferrer"
@@ -105,7 +99,7 @@ const SocialIcons = () => {
               {icon.image}
             </a>
           </li>
-        )
+        );
       })}
     </ul>
   );
