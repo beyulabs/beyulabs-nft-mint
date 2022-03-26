@@ -7,7 +7,7 @@ const SocialIcons = () => {
   return (
     <ul className="flex">
       {beyuSocialIcons.map((icon) => {
-        const liClass = classNames("m-2 sm:m-2 md:m-4", {
+        const liClass = classNames("mx-2 sm:mx-2 md:mx-4", {
           "opacity-50 hover:cursor-not-allowed": !icon.enabled,
           "origin-center hover:scale-150 hover:rotate-12": icon.enabled,
         });
