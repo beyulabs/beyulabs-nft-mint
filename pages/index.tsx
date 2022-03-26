@@ -6,6 +6,7 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 import EmailSignup from "../components/EmailSignup";
 import MiniTeam from "../components/MiniTeam";
+import BackstoryTLDR from "../components/BackstoryTLDR";
 
 const Mint: NextPage = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -83,8 +84,8 @@ const Mint: NextPage = () => {
           </button>
         </div>
       </section>
-      <section className="h-screen bg-yellow-200">
-        <h2>Backstory</h2>
+      <section className="h-screen bg-[url('/stars.jpg')] bg-blend-multiply bg-gray-600 bg-bottom bg-cover flex flex-col justify-center items-center bg-violet-300">
+        <BackstoryTLDR />
       </section>
       <section className="p-8 bg-pink-200">
         <div className="lg:m-auto lg:max-w-screen-lg">
