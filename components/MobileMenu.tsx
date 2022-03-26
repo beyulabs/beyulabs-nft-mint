@@ -27,6 +27,7 @@ const MobileMenu = ({ setMenuOpen }: MobileMenuProps) => {
           key={route.path}
           className={cn}
           onClick={() => {
+            document.body.style.overflow = "auto";
             setMenuOpen(false);
           }}
         >

@@ -66,8 +66,8 @@ const Mint: NextPage = () => {
       </Transition.Root>
 
       <section className="h-screen flex flex-col justify-center items-center px-8">
-        <h2 className="text-8xl mb-14 text-white font-medium drop-shadow-2xl">
-          BenNFTs
+        <h2 className="text-center text-8xl mb-14 text-white font-medium drop-shadow-2xl">
+          Genesis Project
         </h2>
         <div className="flex flex-col">
           <button
@@ -84,12 +84,12 @@ const Mint: NextPage = () => {
           </button>
         </div>
       </section>
-      <section className="h-screen bg-[url('/stars.jpg')] bg-blend-multiply bg-gray-600 bg-bottom bg-cover flex flex-col justify-center items-center bg-violet-300">
+      <section className="min-h-screen bg-[url('/stars.jpg')] bg-blend-multiply bg-gray-600 bg-bottom bg-cover flex flex-col justify-center items-center bg-violet-300">
         <BackstoryTLDR />
       </section>
-      <section className="p-8 bg-pink-200">
+      <section className="min-h-screen px-8 pt-16 pb-8 bg-pink-200">
         <div className="lg:m-auto lg:max-w-screen-lg">
-          <h2 className="text-4xl mb-4 text-center lg:mb-8">Team</h2>
+          <h2 className="text-6xl drop-shadow-xl mb-12 text-center">Team</h2>
           <MiniTeam />
         </div>
       </section>
