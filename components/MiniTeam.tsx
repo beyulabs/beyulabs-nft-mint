@@ -77,7 +77,16 @@ const MiniTeam = () => {
             {member.image}
           </div>
           <h3 className="text-2xl font-medium mb-0">{member.name}</h3>
-          <p className="text-lg mb-4">{member.job}</p>
+          <p className="text-lg mb-1">{member.job}</p>
+          <ul className="flex flex-row mb-8 justify-center">
+            {member.skills.map((skill) => {
+              return (
+                <li key={skill} className="px-2 py-1 mx-1 rounded bg-pink-200">
+                  {skill}
+                </li>
+              );
+            })}
+          </ul>
           <ul className="mb-4 flex justify-center">
             {socialIcons(member.socialMedia)}
           </ul>

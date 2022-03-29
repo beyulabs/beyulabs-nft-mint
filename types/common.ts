@@ -46,6 +46,7 @@ export interface SocialIcon {
 export interface TeamMemberInfo {
   name: string;
   job: string;
+  skills: string[];
   socialMedia: SocialInfo[];
   image: React.ReactNode;
   description?: string;

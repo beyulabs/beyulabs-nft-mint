@@ -15,6 +15,7 @@ export const projectTeam: TeamMemberInfo[] = [
   {
     name: "Ben",
     job: "commander (founder)",
+    skills: ["biz dev"],
     image: (
       <Image
         className="rounded-full min-w-xs"
@@ -41,6 +42,7 @@ export const projectTeam: TeamMemberInfo[] = [
   {
     name: "Miles",
     job: "co-commander (product)",
+    skills: ["marketing"],
     image: (
       <Image
         className="rounded-full min-w-xs"
@@ -67,6 +69,7 @@ export const projectTeam: TeamMemberInfo[] = [
   {
     name: "Ryan",
     job: "engineering (code)",
+    skills: ["typescript", "solidity"],
     image: (
       <Image
         className="rounded-full min-w-xs"
@@ -97,6 +100,7 @@ export const projectTeam: TeamMemberInfo[] = [
   {
     name: "Bee",
     job: "architecture (art)",
+    skills: ["concept art"],
     image: (
       <Image
         className="rounded-full min-w-xs"
