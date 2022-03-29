@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
-  faLinkedinIn,
+  faLinkedin,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
@@ -41,7 +41,7 @@ const TeamMember = ({ teamMember }: TeamMemberProps) => {
       case SocialPlatform.linkedin:
         icon = (
           <FontAwesomeIcon
-            icon={faLinkedinIn}
+            icon={faLinkedin}
             className="w-4 sm:w-6 hover:text-teal-400"
           />
         );

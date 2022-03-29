@@ -14,7 +14,7 @@ import TeamMember from "../components/TeamMember";
 export const projectTeam: TeamMemberInfo[] = [
   {
     name: "Ben",
-    job: "biz",
+    job: "commander (founder)",
     image: (
       <Image
         className="rounded-full min-w-xs"
@@ -40,7 +40,7 @@ export const projectTeam: TeamMemberInfo[] = [
   },
   {
     name: "Miles",
-    job: "product",
+    job: "co-commander (product)",
     image: (
       <Image
         className="rounded-full min-w-xs"
@@ -66,7 +66,7 @@ export const projectTeam: TeamMemberInfo[] = [
   },
   {
     name: "Ryan",
-    job: "code",
+    job: "engineering (code)",
     image: (
       <Image
         className="rounded-full min-w-xs"
@@ -96,7 +96,7 @@ export const projectTeam: TeamMemberInfo[] = [
   },
   {
     name: "Bee",
-    job: "art",
+    job: "architecture (art)",
     image: (
       <Image
         className="rounded-full min-w-xs"
@@ -113,6 +113,8 @@ export const projectTeam: TeamMemberInfo[] = [
         username: "thenftbee",
       },
     ],
+    description:
+      "NFTBee is digital artist specialized in graphic design and illustration. She is a graduate of SCAD and got into NFTs in late 2020. Bee is a full stack artist, owning the art process end to end. Beyond her 1/1 works she is the artist behind several NFT projects including @Dogepunks, @Spacebums and @EcoBotsNFT.",
   },
 ];
 
