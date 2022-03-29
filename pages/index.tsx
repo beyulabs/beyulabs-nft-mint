@@ -7,6 +7,7 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import EmailSignup from "../components/EmailSignup";
 import MiniTeam from "../components/MiniTeam";
 import BackstoryTLDR from "../components/BackstoryTLDR";
+import RoadmapTLDR from "../components/RoadmapTLDR";
 
 const Mint: NextPage = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -87,14 +88,19 @@ const Mint: NextPage = () => {
       <section className="min-h-screen bg-[url('/stars.jpg')] bg-blend-multiply bg-gray-600 bg-bottom bg-cover flex flex-col justify-center items-center bg-violet-300">
         <BackstoryTLDR />
       </section>
-      <section className="min-h-screen px-8 pt-16 pb-8 bg-pink-200">
+      <section className="min-h-screen px-8 pt-16 pb-8 bg-violet-200">
         <div className="lg:m-auto lg:max-w-screen-lg">
-          <h2 className="text-6xl drop-shadow-xl mb-12 text-center">Team</h2>
+          <h2 className="text-6xl font-semibold drop-shadow-xl mb-12 text-center">
+            Team
+          </h2>
           <MiniTeam />
         </div>
       </section>
-      <section className="h-screen bg-emerald-200">
-        <h2>Roadmap</h2>
+      <section className="min-h-screen px-8 pt-16 flex flex-col justify-center items-center">
+        <h2 className="text-white font-semibold text-6xl drop-shadow-xl mb-12 text-center">
+          Roadmap
+        </h2>
+        <RoadmapTLDR />
       </section>
     </>
   );
