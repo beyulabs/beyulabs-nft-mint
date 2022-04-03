@@ -49,5 +49,5 @@ export interface TeamMemberInfo {
   skills: string[];
   socialMedia: SocialInfo[];
   image: React.ReactNode;
-  description?: string;
+  description?: string | React.ReactNode;
 }

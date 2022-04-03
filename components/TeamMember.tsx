@@ -52,7 +52,7 @@ const TeamMember = ({ teamMember }: TeamMemberProps) => {
 
     return (
       <li
-        key={social.platform}
+        key={`${name}-${social.platform}`}
         className="mr-2 last:mr-0 origin-center hover:scale-150 hover:rotate-12"
       >
         <a

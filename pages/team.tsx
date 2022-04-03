@@ -117,8 +117,38 @@ export const projectTeam: TeamMemberInfo[] = [
         username: "thenftbee",
       },
     ],
-    description:
-      "NFTBee is digital artist specialized in graphic design and illustration. She is a graduate of SCAD and got into NFTs in late 2020. Bee is a full stack artist, owning the art process end to end. Beyond her 1/1 works she is the artist behind several NFT projects including @Dogepunks, @Spacebums and @EcoBotsNFT.",
+    description: (
+      <span>
+        NFTBee is digital artist specialized in graphic design and illustration.
+        She is a graduate of SCAD and got into NFTs in late 2020. Bee is a full
+        stack artist, owning the art process end to end. Beyond her 1/1 works
+        she is the artist behind several NFT projects including{" "}
+        <a
+          className="text-violet-400"
+          href="https://twitter.com/dogepunks"
+          rel="nofollow noreferrer"
+        >
+          @Dogepunks
+        </a>
+        ,{" "}
+        <a
+          className="text-violet-400"
+          href="https://twitter.com/spacebums"
+          rel="nofollow noreferrer"
+        >
+          @Spacebums
+        </a>{" "}
+        and{" "}
+        <a
+          className="text-violet-400"
+          href="https://twitter.com/ecobotsnft"
+          rel="nofollow noreferrer"
+        >
+          @EcoBotsNFT
+        </a>
+        .
+      </span>
+    ),
   },
 ];
 
