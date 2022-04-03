@@ -133,10 +133,10 @@ export const projectTeam: TeamMemberInfo[] = [
         ,{" "}
         <a
           className="text-violet-400"
-          href="https://twitter.com/spacebums"
+          href="https://twitter.com/space_bums"
           rel="nofollow noreferrer"
         >
-          @Spacebums
+          @space_bums
         </a>{" "}
         and{" "}
         <a
