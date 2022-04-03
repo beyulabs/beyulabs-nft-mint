@@ -13,32 +13,34 @@ interface MobileMenuProps {
 
 const MobileMenu = ({ setMenuOpen }: MobileMenuProps) => {
   const createMenuItems = () => {
-    return routes.map((route: NavRoute) => {
-      const cn = classNames(
-        {
-          "opacity-50 hover:cursor-not-allowed": !route.enabled,
-          "hover:text-purple-500": route.enabled,
-        },
-        "mb-8 text-4xl"
-      );
+    return routes
+      .filter((route: NavRoute) => route.enabled)
+      .map((route: NavRoute) => {
+        const cn = classNames(
+          {
+            "opacity-50 hover:cursor-not-allowed": !route.enabled,
+            "hover:text-purple-400": route.enabled,
+          },
+          "mb-8 text-4xl"
+        );
 
-      return (
-        <li
-          key={route.path}
-          className={cn}
-          onClick={() => {
-            document.body.style.overflow = "auto";
-            setMenuOpen(false);
-          }}
-        >
-          {route.enabled ? (
-            <Link href={route.path}>{route.title}</Link>
-          ) : (
-            route.title
-          )}
-        </li>
-      );
-    });
+        return (
+          <li
+            key={route.path}
+            className={cn}
+            onClick={() => {
+              document.body.style.overflow = "auto";
+              setMenuOpen(false);
+            }}
+          >
+            {route.enabled ? (
+              <Link href={route.path}>{route.title}</Link>
+            ) : (
+              route.title
+            )}
+          </li>
+        );
+      });
   };
 
   return (

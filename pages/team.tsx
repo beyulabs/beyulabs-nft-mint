@@ -14,8 +14,8 @@ import TeamMember from "../components/TeamMember";
 export const projectTeam: TeamMemberInfo[] = [
   {
     name: "Ben",
-    job: "commander (founder)",
-    skills: ["biz dev"],
+    job: "commander",
+    skills: ["founder", "biz dev"],
     image: (
       <Image
         className="rounded-full min-w-xs"
@@ -41,8 +41,8 @@ export const projectTeam: TeamMemberInfo[] = [
   },
   {
     name: "Miles",
-    job: "co-commander (product)",
-    skills: ["marketing"],
+    job: "co-commander",
+    skills: ["product", "marketing"],
     image: (
       <Image
         className="rounded-full min-w-xs"
@@ -68,8 +68,8 @@ export const projectTeam: TeamMemberInfo[] = [
   },
   {
     name: "Ryan",
-    job: "engineering (code)",
-    skills: ["typescript", "solidity"],
+    job: "engineering",
+    skills: ["tech", "typescript", "solidity"],
     image: (
       <Image
         className="rounded-full min-w-xs"
@@ -99,8 +99,8 @@ export const projectTeam: TeamMemberInfo[] = [
   },
   {
     name: "Bee",
-    job: "architecture (art)",
-    skills: ["concept art"],
+    job: "architecture",
+    skills: ["concepts", "art"],
     image: (
       <Image
         className="rounded-full min-w-xs"

@@ -77,7 +77,10 @@ const MiniTeam = () => {
             {member.image}
           </div>
           <h3 className="text-2xl font-medium mb-0">{member.name}</h3>
-          <p className="text-lg mb-1">{member.job}</p>
+          <p className="text-lg mb-2">{member.job}</p>
+          <ul className="mb-6 flex justify-center">
+            {socialIcons(member.socialMedia)}
+          </ul>
           <ul className="flex flex-row mb-8 justify-center">
             {member.skills.map((skill) => {
               return (
@@ -86,9 +89,6 @@ const MiniTeam = () => {
                 </li>
               );
             })}
-          </ul>
-          <ul className="mb-4 flex justify-center">
-            {socialIcons(member.socialMedia)}
           </ul>
         </div>
       );
