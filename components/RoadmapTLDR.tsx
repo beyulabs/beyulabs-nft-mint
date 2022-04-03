@@ -1,10 +1,10 @@
 interface RoadmapItem {
-  title: str;
-  description: str;
+  title: string;
+  description: string;
 }
 
 interface RoadmapQuarter {
-  name: str;
+  name: string;
   items: RoadmapItem[];
 }
 
