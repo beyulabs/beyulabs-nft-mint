@@ -37,6 +37,7 @@ const TeamMember = ({ teamMember }: TeamMemberProps) => {
           />
         );
         baseUrl = "https://github.com";
+        break;
 
       case SocialPlatform.linkedin:
         icon = (
@@ -46,6 +47,8 @@ const TeamMember = ({ teamMember }: TeamMemberProps) => {
           />
         );
         baseUrl = "https://www.linkedin.com/in/";
+        break;
+
       default:
         break;
     }

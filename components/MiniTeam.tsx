@@ -19,7 +19,7 @@ const MiniTeam = () => {
           icon = (
             <FontAwesomeIcon
               icon={faTwitter}
-              className="w-4 sm:w-6 hover:text-teal-400"
+              className="w-4 sm:w-4 hover:text-teal-400"
             />
           );
           baseUrl = "https://twitter.com";
@@ -29,7 +29,7 @@ const MiniTeam = () => {
           icon = (
             <FontAwesomeIcon
               icon={faGithub}
-              className="w-4 sm:w-6 hover:text-teal-400"
+              className="w-4 sm:w-4 hover:text-teal-400"
             />
           );
           baseUrl = "https://github.com";
@@ -39,7 +39,7 @@ const MiniTeam = () => {
           icon = (
             <FontAwesomeIcon
               icon={faLinkedin}
-              className="w-4 sm:w-6 hover:text-teal-400"
+              className="w-4 sm:w-4 hover:text-teal-400"
             />
           );
           baseUrl = "https://www.linkedin.com/in/";
@@ -78,7 +78,7 @@ const MiniTeam = () => {
           </div>
           <h3 className="text-2xl font-medium mb-0">{member.name}</h3>
           <p className="text-lg mb-2">{member.job}</p>
-          <ul className="mb-6 flex justify-center">
+          <ul className="mb-6 flex justify-center items-center">
             {socialIcons(member.socialMedia)}
           </ul>
           <ul className="flex flex-row mb-8 justify-center">
