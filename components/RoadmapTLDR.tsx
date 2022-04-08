@@ -110,9 +110,9 @@ const roadmapItems: RoadmapItem[] = [
 
 const RoadmapTLDR = () => {
   const createRoadmap = () => {
-    return roadmapItems.map((item: RoadmapItem) => {
+    return roadmapItems.map((item: RoadmapItem, index: number) => {
       return (
-        <div key={item} className="flex flex-row mt-4">
+        <div key={`roadmap-item-${index}`} className="flex flex-row mt-4">
           <div className="text-violet-600 w-6 mt-1">{item.icon}</div>
           <div key={item.title} className="w-full ml-1 mb-6">
             <h3 className="text-white text-xl font-semibold pl-2 mb-4">
