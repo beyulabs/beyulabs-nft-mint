@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 import Header from "../components/Header";
 import MobileMenu from "../components/MobileMenu";
+
+import beyuLabsLogo from "../public/beyu-labs-logotype-white.png";
+import nexusVoyagersLogo from "../public/nexus-voyagers-logotype.png";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -40,13 +44,33 @@ const Layout = (props: LayoutProps) => {
         )}
       </main>
 
-      <footer className="w-full py-4 text-center">
-        <span className="block mb-0 text-md text-slate-700">
-          Copyright &copy; BeYu Labs 2022
-        </span>
-        <span className="block text-sm text-slate-700">
-          &hearts; from the metaverse
-        </span>
+      <footer className="w-full text-center bg-nexusGreen text-white">
+        <div className="flex flex-row justify-center mt-8">
+          <div className="flex flex-row w-1/2">
+            <div className="w-1/2 m-8">
+              <Image
+                className=""
+                // width={auto}
+                // height={175}
+                src={nexusVoyagersLogo}
+                alt="Nexus Voyagers logo"
+                layout="responsive"
+              />
+            </div>
+            <div className="w-1/2 m-8">
+              <Image
+                className=""
+                // width={auto}
+                // height={175}
+                src={beyuLabsLogo}
+                alt="BeYu Labs logo"
+                layout="responsive"
+              />
+            </div>
+          </div>
+        </div>
+        <hr className="border-nexusDivider opacity-30" />
+        <p className="py-2 text-md">Nexus Voyagers &copy; 2022</p>
       </footer>
     </div>
   );

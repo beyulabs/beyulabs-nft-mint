@@ -5,7 +5,14 @@ module.exports = {
     "./layouts/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        nexusGreen: "#41A380",
+        nexusBlack: "#202020",
+        nexusGray: "#4F4F4F",
+        nexusDivider: "#FCF9F9",
+      },
+    },
   },
   plugins: [],
 };
