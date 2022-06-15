@@ -7,7 +7,7 @@ import Header from "../components/Header";
 import MobileMenu from "../components/MobileMenu";
 
 import beyuLabsLogo from "../public/beyu-labs-logotype-white.png";
-import nexusVoyagersLogo from "../public/nexus-voyagers-logotype.png";
+import nexusVoyagersLogo from "../public/nexus-voyagers-logotype-white.png";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -20,7 +20,7 @@ const Layout = (props: LayoutProps) => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   return (
-    <div className="bg-gradient-to-r from-cyan-500 to-teal-500">
+    <div className="bg-white">
       <Head>
         <title>BeYu Labs</title>
         <meta
@@ -30,9 +30,8 @@ const Layout = (props: LayoutProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header setMenuOpen={setMenuOpen} />
-
-      <main>
+      <main className="m-auto max-w-screen-xl">
+        <Header setMenuOpen={setMenuOpen} />
         {menuOpen && <MobileMenu setMenuOpen={setMenuOpen} />}
 
         {isHome ? (
@@ -49,9 +48,6 @@ const Layout = (props: LayoutProps) => {
           <div className="flex flex-row w-1/2">
             <div className="w-1/2 m-8">
               <Image
-                className=""
-                // width={auto}
-                // height={175}
                 src={nexusVoyagersLogo}
                 alt="Nexus Voyagers logo"
                 layout="responsive"
@@ -59,9 +55,6 @@ const Layout = (props: LayoutProps) => {
             </div>
             <div className="w-1/2 m-8">
               <Image
-                className=""
-                // width={auto}
-                // height={175}
                 src={beyuLabsLogo}
                 alt="BeYu Labs logo"
                 layout="responsive"
@@ -69,7 +62,7 @@ const Layout = (props: LayoutProps) => {
             </div>
           </div>
         </div>
-        <hr className="border-nexusDivider opacity-30" />
+        <hr className="border-nexusFooterDivider opacity-30" />
         <p className="py-2 text-md">Nexus Voyagers &copy; 2022</p>
       </footer>
     </div>

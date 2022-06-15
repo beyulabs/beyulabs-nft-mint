@@ -5,13 +5,13 @@ import { beyuSocialIcons } from "../constants";
 
 const SocialIcons = () => {
   return (
-    <ul className="flex">
+    <ul className="flex mt-2.5">
       {beyuSocialIcons
         .filter((icon) => icon.enabled)
         .map((icon) => {
           const liClass = classNames("mx-2 sm:mx-2 md:mx-4", {
             "opacity-50 hover:cursor-not-allowed": !icon.enabled,
-            "origin-center hover:scale-150 hover:rotate-12": icon.enabled,
+            "origin-center fill-nexusGreen": icon.enabled,
           });
           const aClass = classNames({
             "hover:cursor-not-allowed": !icon.enabled,

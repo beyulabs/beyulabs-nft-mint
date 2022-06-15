@@ -12,11 +12,16 @@ export const routes: NavRoute[] = [
   {
     path: "/",
     title: "home",
+    enabled: false,
+  },
+  {
+    path: "/astro-nao",
+    title: "Astromap",
     enabled: true,
   },
   {
     path: "/team",
-    title: "team",
+    title: "Our team",
     enabled: true,
   },
   {

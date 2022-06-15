@@ -8,8 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavRoute } from "../types/common";
 import { routes } from "../constants";
 
-import beyuLabs from "../public/beyulabs-logo.png";
-
 interface NavProps {
   setMenuOpen: (open: boolean) => void;
 }
@@ -27,7 +25,7 @@ function Nav({ setMenuOpen }: NavProps) {
           "font-bold drop-shadow-md": nextRouter.pathname === route.path,
           "font-normal": nextRouter.pathname !== route.path,
           "opacity-50 hover:cursor-not-allowed": !route.enabled,
-          "hover:text-purple-400": route.enabled,
+          "hover:drop-shadow": route.enabled,
         },
         "mr-6"
       );
@@ -57,18 +55,7 @@ function Nav({ setMenuOpen }: NavProps) {
           }}
         />
       </div>
-      <div className="hidden md:block">
-        <Link href="/" passHref>
-          <Image
-            src={beyuLabs}
-            alt="BeYu Labs logo"
-            className="cursor-pointer drop-shadow-md"
-            width={48}
-            height={48}
-          />
-        </Link>
-      </div>
-      <ul className="hidden sm:hidden md:ml-4 md:flex md:flex-row text-white">
+      <ul className="hidden sm:hidden md:ml-4 md:flex md:flex-row text-black">
         {routeLinks}
       </ul>
     </div>
