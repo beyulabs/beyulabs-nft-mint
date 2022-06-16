@@ -15,7 +15,7 @@ export const routes: NavRoute[] = [
     enabled: false,
   },
   {
-    path: "/astro-nao",
+    path: "/astro-map",
     title: "Astromap",
     enabled: true,
   },

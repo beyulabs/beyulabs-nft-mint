@@ -20,7 +20,7 @@ const Layout = (props: LayoutProps) => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   return (
-    <div className="bg-white">
+    <div className="bg-nexusDarkBg">
       <Head>
         <title>BeYu Labs</title>
         <meta

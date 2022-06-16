@@ -27,7 +27,7 @@ function Nav({ setMenuOpen }: NavProps) {
           "opacity-50 hover:cursor-not-allowed": !route.enabled,
           "hover:drop-shadow": route.enabled,
         },
-        "mr-6"
+        "mr-6 text-white"
       );
 
       return (

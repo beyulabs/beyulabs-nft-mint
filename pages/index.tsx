@@ -1,4 +1,5 @@
 import { Fragment, useRef, useState } from "react";
+import Image from "next/image";
 import type { NextPage } from "next";
 import { Dialog, Transition } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,6 +10,8 @@ import MiniTeam from "../components/MiniTeam";
 import BackstoryTLDR from "../components/BackstoryTLDR";
 import RoadmapTLDR from "../components/RoadmapTLDR";
 import FAQList from "../components/FAQList";
+
+import voyagersImage from "../public/voyagers-main.svg";
 
 const Mint: NextPage = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -67,26 +70,30 @@ const Mint: NextPage = () => {
         </Dialog>
       </Transition.Root>
 
-      <section className="h-screen flex flex-col justify-center items-center px-8">
-        <h2 className="text-center text-8xl mb-14 text-white font-medium drop-shadow-2xl">
-          Genesis Project
-        </h2>
-        <div className="flex flex-col">
-          <button
+      <section className="h-screen flex flex-col justify-center items-center">
+        <div className="flex flex-row items-center">
+          <div className="w-3/4 z-10">
+            <h2 className="text-8xl mb-10 text-white font-medium drop-shadow-2xl">
+              <span>Become</span> a member of the{" "}
+              <span className="text-nexusGreen">Voyager</span> space mission
+            </h2>
+            <p className="text-nexusGrayText">
+              Unforgettable adventures await you during the flight! Find friends
+              and develop together creating, buying and selling NFTs collection!
+            </p>
+          </div>
+
+          <Image alt="Nexus Voyagers" src={voyagersImage} />
+        </div>
+
+        {/* <button
             className="bg-white mb-4 px-8 py-4 rounded-lg capitalize font-semibold max-w-xs shadow-lg hover:shadow-xl hover:bg-gradient-to-r  hover:from-violet-600 hover:to-violet-400 hover:text-white"
             onClick={() => setOpen(true)}
           >
             Get the newsletter
-          </button>
-          <button
-            disabled
-            className="bg-white px-8 py-4 rounded-lg capitalize font-semibold max-w-xs shadow-lg hover:shadow-xl hover:cursor-not-allowed disabled:bg-gray-100 disabled:opacity-75 disabled:text-gray-400"
-          >
-            Connect Wallet
-          </button>
-        </div>
+          </button> */}
       </section>
-      <section className="min-h-screen bg-[url('/stars.jpg')] bg-blend-multiply bg-gray-600 bg-bottom bg-cover flex flex-col justify-center items-center bg-violet-300">
+      <section className="min-h-screen bg-[url('/stars.jpg')] bg-blend-multiply bg-gray-600 bg-bottom bg-cover flex flex-col justify-center items-center">
         <BackstoryTLDR />
       </section>
       <section className="min-h-screen px-8 pt-16 pb-8 bg-violet-200">

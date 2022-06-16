@@ -7,7 +7,7 @@ import SocialIcons from "./SocialIcons";
 import coinsSVG from "../public/coins.svg";
 import walletSVG from "../public/wallet.svg";
 
-import nexusVoyagersLogo from "../public/nexus-voyagers-logotype.png";
+import nexusVoyagersLogo from "../public/nexus-voyagers-logotype-green-white.svg";
 interface HeaderProps {
   setMenuOpen: (open: boolean) => void;
 }
@@ -27,11 +27,11 @@ const Header = ({ setMenuOpen }: HeaderProps) => {
       <Nav setMenuOpen={setMenuOpen} />
       <SocialIcons />
       <div className="flex flex-row">
-        <button className="flex flex-row border mx-2 rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2">
+        <button className="flex flex-row mx-2 rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2">
           <Image alt="Coins" src={coinsSVG} />
           <span className="inline-block ml-2">Mint</span>
         </button>
-        <button className="flex flex-row border mx-2 rounded-lg text-nexusGreen bg-transparent px-4 py-2">
+        <button className="flex flex-row border mx-2 rounded-lg text-white bg-transparent px-4 py-2">
           <Image alt="Coins" src={walletSVG} />
           <span className="inline-block ml-2">Connect</span>
         </button>
