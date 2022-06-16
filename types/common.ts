@@ -51,3 +51,13 @@ export interface TeamMemberInfo {
   image: React.ReactNode;
   description?: string | React.ReactNode;
 }
+
+export interface FAQ {
+  question: string;
+  answer: string;
+}
+
+export interface FAQProps {
+  question: string;
+  answer: string;
+}

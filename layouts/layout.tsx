@@ -33,14 +33,7 @@ const Layout = (props: LayoutProps) => {
       <main className="m-auto max-w-screen-xl">
         <Header setMenuOpen={setMenuOpen} />
         {menuOpen && <MobileMenu setMenuOpen={setMenuOpen} />}
-
-        {isHome ? (
-          props.children
-        ) : (
-          <div className="pt-16 pb-12 px-8 max-w-4xl m-auto">
-            {props.children}
-          </div>
-        )}
+        {props.children}
       </main>
 
       <footer className="w-full text-center bg-nexusGreen text-white">

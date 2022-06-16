@@ -8,6 +8,7 @@ import EmailSignup from "../components/EmailSignup";
 import MiniTeam from "../components/MiniTeam";
 import BackstoryTLDR from "../components/BackstoryTLDR";
 import RoadmapTLDR from "../components/RoadmapTLDR";
+import FAQList from "../components/FAQList";
 
 const Mint: NextPage = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -102,6 +103,7 @@ const Mint: NextPage = () => {
         </h2>
         <RoadmapTLDR />
       </section>
+      <FAQList />
     </>
   );
 };

@@ -1,4 +1,4 @@
-import { NavRoute, SocialIcon } from "./types/common";
+import { FAQ, NavRoute, SocialIcon } from "./types/common";
 
 import openSeaLogo from "./public/opensea-logo.svg";
 import etherscanLogo from "./public/etherscan-logo.svg";
@@ -60,5 +60,46 @@ export const beyuSocialIcons: SocialIcon[] = [
     image: etherscanLogo,
     enabled: false,
     url: "",
+  },
+];
+
+export const faqs: FAQ[] = [
+  {
+    question: "What is BeYu Labs?",
+    answer:
+      "The driving force behind the Nexus Voyagers NFT drop. A digital hub of creators, developers and investors to collaborate on and build web3 projects. Our mission is to empower web3 entrepreneurship by bringing together project teams and investors, facilitating epic shared experiences, and dropping a one-of-a-kind NFT collection to tie the whole ecosystem together.",
+  },
+  {
+    question: "What is Nexus Voyagers?",
+    answer:
+      "The genesis NFT drop by BeYu Labs. A collection of 10,119 crew members, primed for the genesis mission launch. On this voyage, crew members will have access to epic shared experiences, meaningful  collabs, one of a kind NFT drops, and a future built for the community over time. With the focus on empowering Web3 entrepreneurship the ecosystem will fill the underlying gaps on contribution with incentivized exchange of utility. Each of us will have a role to play.",
+  },
+  {
+    question: "What is the supply of this collection?",
+    answer: "10,119 NFTs.",
+  },
+  {
+    question: "Why this supply number?",
+    answer:
+      "1/01/19 is the date that the farthest object (2014 MU69) was discovered by a spacecraft in human history. We aim to extend beyond these limits on our journey through web3. Buckle up.",
+  },
+  {
+    question: "When is the drop date?",
+    answer:
+      "TBA - be sure to tune into the #announcements channel for updates.",
+  },
+  {
+    question: "How much for a Nexus Voyager NFT?",
+    answer:
+      "TBA - be sure to tune into the #announcements channel for updates.",
+  },
+  {
+    question: "Wen reveal?",
+    answer: "24 hours after sellout.",
+  },
+  {
+    question: "How to get presale access?",
+    answer:
+      "See #boarding-pass channel for a briefing on how to access our presale launch. We will be sporadically posting challenges in this channel - be sure to stay active in the community so you don’t miss out! The BeYu team is always watching the Discord, and contributors to this mission will be rewarded.",
   },
 ];
