@@ -107,7 +107,7 @@ const Mint: NextPage = () => {
       </section>
       <section className="min-h-screen px-4 pt-16 flex flex-col justify-center items-center">
         <h2 className="text-white font-semibold text-6xl drop-shadow-xl mb-12 text-center">
-          Roadmap
+          Astromap
         </h2>
         <RoadmapTLDR />
       </section>

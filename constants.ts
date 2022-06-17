@@ -1,9 +1,17 @@
-import { FAQ, NavRoute, SocialIcon } from "./types/common";
+import { AstromapItem, FAQ, NavRoute, SocialIcon } from "./types/common";
+import Image from "next/image";
 
 import openSeaLogo from "./public/opensea-logo.svg";
 import etherscanLogo from "./public/etherscan-logo.svg";
 import discordLogo from "./public/discord-logo.svg";
 import twitterLogo from "./public/twitter-logo.svg";
+
+import astromapOne from "./public/astromap-1.svg";
+import astromapTwo from "./public/astromap-2.svg";
+import astromapThree from "./public/astromap-3.svg";
+import astromapFour from "./public/astromap-4.svg";
+import astromapFive from "./public/astromap-5.svg";
+import astromapSix from "./public/astromap-6.svg";
 
 export const beyuLabsTwitterURL: string = "https://twitter.com/Beyu_labs";
 export const discordInviteURL: string = "https://discord.gg/Ye6pQqJes7";
@@ -101,5 +109,50 @@ export const faqs: FAQ[] = [
     question: "How to get presale access?",
     answer:
       "See #boarding-pass channel for a briefing on how to access our presale launch. We will be sporadically posting challenges in this channel - be sure to stay active in the community so you don’t miss out! The BeYu team is always watching the Discord, and contributors to this mission will be rewarded.",
+  },
+];
+
+export const astromap: AstromapItem[] = [
+  {
+    title: "NFT",
+    description:
+      "To terraform Web3. An ecosystem cultivated by developers, artists, enthusiasts, and investors.",
+    imagePath: "/astromap-1.svg",
+  },
+  {
+    title: "Community Chest",
+    description:
+      "To terraform Web3. An ecosystem cultivated by developers, artists, enthusiasts, and investors.",
+    imagePath: "/astromap-2.svg",
+  },
+  {
+    title: "Mission Board",
+    description:
+      "To terraform Web3. An ecosystem cultivated by developers, artists, enthusiasts, and investors.",
+    imagePath: "/astromap-3.svg",
+  },
+  {
+    title: "Launchpad",
+    description:
+      "To terraform Web3. An ecosystem cultivated by developers, artists, enthusiasts, and investors.",
+    imagePath: "/astromap-4.svg",
+  },
+  {
+    title: "Project Showcase",
+    description:
+      "To terraform Web3. An ecosystem cultivated by developers, artists, enthusiasts, and investors.",
+    imagePath: "/astromap-5.svg",
+  },
+  {
+    title: "The Experience",
+    description:
+      "To terraform Web3. An ecosystem cultivated by developers, artists, enthusiasts, and investors.",
+    imagePath: "/astromap-6.svg",
+  },
+  {
+    title: "Charity",
+    description:
+      "To terraform Web3. An ecosystem cultivated by developers, artists, enthusiasts, and investors.",
+    imagePath: "/astromap-1.svg",
   },
 ];

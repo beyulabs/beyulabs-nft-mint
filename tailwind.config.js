@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        astromapGrayText: "#BBBBBB",
         nexusGreen: "#41A380",
         nexusGradientGreen: "#63D4AC",
         nexusBlack: "#202020",

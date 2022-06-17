@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface EmailSignupCharacterTypes {
   id: number;
   name: string;
@@ -60,4 +62,10 @@ export interface FAQ {
 export interface FAQProps {
   question: string;
   answer: string;
+}
+
+export interface AstromapItem {
+  title: string;
+  description: string;
+  imagePath: string;
 }

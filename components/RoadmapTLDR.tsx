@@ -1,5 +1,12 @@
+import Image from "next/image";
+import classNames from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMeteor } from "@fortawesome/free-solid-svg-icons";
+
+import { AstromapItem } from "../types/common";
+import { astromap } from "../constants";
+
+import astroDot from "../public/astromap-dot.svg";
 
 interface RoadmapItem {
   title: string;
@@ -110,17 +117,44 @@ const roadmapItems: RoadmapItem[] = [
 
 const RoadmapTLDR = () => {
   const createRoadmap = () => {
-    return roadmapItems.map((item: RoadmapItem, index: number) => {
+    return astromap.map((item: AstromapItem, index: number) => {
+      const roadmapItemCn = classNames("flex flex-row items-center mb-20", {
+        "flex-row-reverse mr-[50%]": index % 2 === 0,
+        "ml-[50%]": index % 2 !== 0,
+      });
+
+      const itemNumberWrapperCn = classNames(
+        "flex flex-row items-center text-nexusGreen",
+        {
+          "mr-10": index % 2 !== 0,
+          "flex-row-reverse ml-10": index % 2 === 0,
+        }
+      );
+
       return (
-        <div key={`roadmap-item-${index}`} className="flex flex-row mt-4">
-          <div className="text-violet-600 w-6 mt-1">{item.icon}</div>
-          <div key={item.title} className="w-full ml-1 mb-6">
-            <h3 className="text-white text-xl font-semibold pl-2 mb-4">
-              {item.title}
-            </h3>
-            <p className="bg-stone-50 rounded-xl shadow p-4">
-              {item.description}
-            </p>
+        <div key={`roadmap-item-${index}`} className="w-full">
+          <div className={roadmapItemCn}>
+            <div className={itemNumberWrapperCn}>
+              <div className="-mt-2">{`0${index + 1}`}</div>
+              <Image alt="Astromap" src={astroDot} width={48} height={48} />
+            </div>
+            <div className="bg-nexusBlack p-4 rounded-xl w-96 text-white">
+              <div className="flex flex-row justify-center">
+                <Image
+                  alt="Astromap"
+                  src={item.imagePath}
+                  width={164}
+                  height={164}
+                />
+
+                <div key={item.title} className="w-full ml-4">
+                  <h3 className="text-white text-xl font-semibold">
+                    {item.title}
+                  </h3>
+                  <p className="text-astromapGrayText">{item.description}</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       );
