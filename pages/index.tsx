@@ -70,9 +70,9 @@ const Mint: NextPage = () => {
         </Dialog>
       </Transition.Root>
 
-      <section className="h-screen flex flex-col justify-center items-center">
-        <div className="flex flex-row items-center">
-          <div className="w-3/4 z-10">
+      <section className="flex flex-col justify-center items-center">
+        <div className="my-20 flex flex-row items-center">
+          <div className="w-3/5">
             <h2 className="text-8xl mb-10 text-white font-medium drop-shadow-2xl">
               <span>Become</span> a member of the{" "}
               <span className="text-nexusGreen">Voyager</span> space mission
@@ -82,8 +82,9 @@ const Mint: NextPage = () => {
               and develop together creating, buying and selling NFTs collection!
             </p>
           </div>
-
-          <Image alt="Nexus Voyagers" src={voyagersImage} />
+          <div className="w-2/5">
+            <Image alt="Nexus Voyagers" src={voyagersImage} />
+          </div>
         </div>
 
         {/* <button
