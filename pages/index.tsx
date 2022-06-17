@@ -109,7 +109,9 @@ const Mint: NextPage = () => {
         <h2 className="text-white font-semibold text-6xl drop-shadow-xl mb-12 text-center">
           Astromap
         </h2>
-        <RoadmapTLDR />
+        <div className="bg-[url('/astromap-line.svg')] bg-no-repeat w-full bg-center">
+          <RoadmapTLDR />
+        </div>
       </section>
       <section className="w-4/6 mx-auto mb-32">
         <FAQList />
