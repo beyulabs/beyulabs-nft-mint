@@ -111,7 +111,9 @@ const Mint: NextPage = () => {
         </h2>
         <RoadmapTLDR />
       </section>
-      <FAQList />
+      <section className="w-4/6 mx-auto mb-32">
+        <FAQList />
+      </section>
     </>
   );
 };

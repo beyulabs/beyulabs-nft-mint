@@ -7,37 +7,43 @@ import { FAQProps } from "../types/common";
 
 const FAQ = ({ question, answer }: FAQProps) => {
   return (
-    <div className="py-6 px-9 mb-5 rounded-xl bg-nexusFooterDivider">
-      <Disclosure>
-        {({ open }) => (
-          <>
-            <div
-              className={`flex flex-row justify-between ${open ? "mb-6" : ""}`}
-            >
-              <Disclosure.Button>{question}</Disclosure.Button>
-              <Disclosure.Button>
+    <Disclosure>
+      {({ open }) => (
+        <div
+          className={`py-6 px-9 mb-5 rounded-xl bg-nexusBlack ${
+            open ? "border border-nexusGreen" : ""
+          }`}
+        >
+          <div
+            className={`flex flex-row text-white text-2xl font-bold justify-between ${
+              open ? "mb-6" : ""
+            }`}
+          >
+            <Disclosure.Button>{question}</Disclosure.Button>
+            <Disclosure.Button>
+              <span className="text-nexusGreen">
                 {open ? (
                   <FontAwesomeIcon icon={faMinus} width={24} />
                 ) : (
                   <FontAwesomeIcon icon={faPlus} width={24} />
                 )}
-              </Disclosure.Button>
-            </div>
+              </span>
+            </Disclosure.Button>
+          </div>
 
-            <Disclosure.Panel className="text-gray-500">
-              {answer}
-            </Disclosure.Panel>
-          </>
-        )}
-      </Disclosure>
-    </div>
+          <Disclosure.Panel className="text-gray-500">
+            {answer}
+          </Disclosure.Panel>
+        </div>
+      )}
+    </Disclosure>
   );
 };
 
 const FAQList = () => {
   return (
-    <div>
-      <h2 className="text-center text-5xl mb-20">FAQ</h2>
+    <>
+      <h2 className="text-center text-5xl mb-20 text-white">FAQ</h2>
       {faqs.map((faq, index) => {
         return (
           <FAQ
@@ -47,7 +53,7 @@ const FAQList = () => {
           />
         );
       })}
-    </div>
+    </>
   );
 };
 
