@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 import { Disclosure } from "@headlessui/react";
 
 import { faqs } from "../constants";
@@ -16,7 +16,11 @@ const FAQ = ({ question, answer }: FAQProps) => {
             >
               <Disclosure.Button>{question}</Disclosure.Button>
               <Disclosure.Button>
-                <FontAwesomeIcon icon={faPlus} width={24} />
+                {open ? (
+                  <FontAwesomeIcon icon={faMinus} width={24} />
+                ) : (
+                  <FontAwesomeIcon icon={faPlus} width={24} />
+                )}
               </Disclosure.Button>
             </div>
 
