@@ -175,7 +175,7 @@ const Mint: NextPage = () => {
         }
       />
 
-      <section className="min-h-screen px-8 pt-16 pb-8 bg-violet-200">
+      <section>
         <VoyagerCharacters />
       </section>
 
