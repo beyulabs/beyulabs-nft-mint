@@ -1,4 +1,10 @@
-import { AstromapItem, FAQ, NavRoute, SocialIcon } from "./types/common";
+import {
+  AstromapItem,
+  FAQ,
+  NavRoute,
+  SocialIcon,
+  Voyager,
+} from "./types/common";
 
 import openSeaLogo from "./public/opensea-logo.svg";
 import etherscanLogo from "./public/etherscan-logo.svg";
