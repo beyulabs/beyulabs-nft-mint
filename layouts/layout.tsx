@@ -38,20 +38,22 @@ const Layout = (props: LayoutProps) => {
 
       <footer className="w-full text-center bg-nexusGreen text-white">
         <div className="flex flex-row justify-center mt-8">
-          <div className="flex flex-row w-1/2">
-            <div className="w-1/2 m-8">
-              <Image
-                src={nexusVoyagersLogo}
-                alt="Nexus Voyagers logo"
-                layout="responsive"
-              />
-            </div>
-            <div className="w-1/2 m-8">
-              <Image
-                src={beyuLabsLogo}
-                alt="BeYu Labs logo"
-                layout="responsive"
-              />
+          <div className="w-1/2">
+            <div className="flex flex-row max-w-96">
+              <div className="w-1/2 m-8">
+                <Image
+                  src={nexusVoyagersLogo}
+                  alt="Nexus Voyagers logo"
+                  layout="responsive"
+                />
+              </div>
+              <div className="w-1/2 m-8">
+                <Image
+                  src={beyuLabsLogo}
+                  alt="BeYu Labs logo"
+                  layout="responsive"
+                />
+              </div>
             </div>
           </div>
         </div>

@@ -6,8 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 import EmailSignup from "../components/EmailSignup";
-import MiniTeam from "../components/MiniTeam";
-// import BackstoryTLDR from "../components/BackstoryTLDR";
+import VoyagerCharacters from "../components/VoyagerCharacters";
 import RoadmapTLDR from "../components/RoadmapTLDR";
 import FAQList from "../components/FAQList";
 import CalloutSection from "../components/CalloutSection";
@@ -98,6 +97,7 @@ const Mint: NextPage = () => {
             Get the newsletter
           </button> */}
       </section>
+
       <CalloutSection
         title="The Nexus Voyagers mission"
         image={<Image src={nexusMissionImage} alt="Nexus Mission" />}
@@ -132,15 +132,8 @@ const Mint: NextPage = () => {
           </>
         }
       />
-      <section className="min-h-screen px-8 pt-16 pb-8 bg-violet-200">
-        <div className="lg:m-auto lg:max-w-screen-lg">
-          <h2 className="text-6xl font-semibold drop-shadow-xl mb-12 text-center">
-            Team
-          </h2>
-          <MiniTeam />
-        </div>
-      </section>
-      <section className="min-h-screen mb-28 px-4 pt-16 flex flex-col justify-center items-center">
+
+      <section className="min-h-screen mb-20 px-4 pt-16 flex flex-col justify-center items-center">
         <div className="bg-[url('/astromap-line.svg')] bg-no-repeat w-full bg-center">
           <h2 className="text-white font-semibold text-6xl drop-shadow-xl mb-12 text-center">
             Astromap
@@ -153,6 +146,7 @@ const Mint: NextPage = () => {
           </div>
         </div>
       </section>
+
       <CalloutSection
         title="Boarding pass"
         image={<Image src={nexusTicketsImage} alt="Boarding Pass" />}
@@ -180,6 +174,11 @@ const Mint: NextPage = () => {
           </>
         }
       />
+
+      <section className="min-h-screen px-8 pt-16 pb-8 bg-violet-200">
+        <VoyagerCharacters />
+      </section>
+
       <section className="w-4/6 mx-auto mb-32">
         <FAQList />
       </section>

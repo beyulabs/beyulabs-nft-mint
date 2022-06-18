@@ -69,3 +69,10 @@ export interface AstromapItem {
   description: string;
   imagePath: string;
 }
+
+export interface Voyager {
+  nexusName: string;
+  irlName: string;
+  description: string;
+  image?: React.ReactNode;
+}
