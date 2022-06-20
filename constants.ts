@@ -22,31 +22,31 @@ export const beyuLabsTwitterURL: string = "https://twitter.com/Beyu_labs";
 export const discordInviteURL: string = "https://discord.gg/Ye6pQqJes7";
 
 export const routes: NavRoute[] = [
-  {
-    path: "/",
-    title: "home",
-    enabled: false,
-  },
+  // {
+  //   path: "/",
+  //   title: "home",
+  //   enabled: false,
+  // },
   {
     path: "/astro-map",
     title: "Astromap",
-    enabled: true,
+    enabled: false,
   },
   {
     path: "/team",
     title: "Our team",
-    enabled: true,
-  },
-  {
-    path: "/gallery",
-    title: "gallery",
     enabled: false,
   },
-  {
-    path: "/wallet",
-    title: "wallet",
-    enabled: false,
-  },
+  // {
+  //   path: "/gallery",
+  //   title: "gallery",
+  //   enabled: false,
+  // },
+  // {
+  //   path: "/wallet",
+  //   title: "wallet",
+  //   enabled: false,
+  // },
 ];
 
 export const beyuSocialIcons: SocialIcon[] = [
@@ -54,13 +54,13 @@ export const beyuSocialIcons: SocialIcon[] = [
     name: "discord",
     image: discordLogo,
     enabled: true,
-    url: "",
+    url: "https://discord.gg/3NXV2J3S7M",
   },
   {
     name: "twitter",
     image: twitterLogo,
     enabled: true,
-    url: "",
+    url: "https://twitter.com/beyu_labs",
   },
   {
     name: "opensea",

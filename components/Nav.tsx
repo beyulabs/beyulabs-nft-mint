@@ -15,31 +15,27 @@ interface NavProps {
 function Nav({ setMenuOpen }: NavProps) {
   const nextRouter = useRouter();
 
-  const routeLinks = routes
-    .filter((route: NavRoute) => {
-      return route.enabled;
-    })
-    .map((route: NavRoute, index) => {
-      const cn = classNames(
-        {
-          "font-bold drop-shadow-md": nextRouter.pathname === route.path,
-          "font-normal": nextRouter.pathname !== route.path,
-          "opacity-50 hover:cursor-not-allowed": !route.enabled,
-          "hover:drop-shadow": route.enabled,
-        },
-        "mr-6 text-white"
-      );
+  const routeLinks = routes.map((route: NavRoute, index) => {
+    const cn = classNames(
+      {
+        "font-bold drop-shadow-md": nextRouter.pathname === route.path,
+        "font-normal": nextRouter.pathname !== route.path,
+        "opacity-50 hover:cursor-not-allowed": !route.enabled,
+        "hover:drop-shadow": route.enabled,
+      },
+      "mr-6 text-white"
+    );
 
-      return (
-        <li key={`route-${index}`} className={cn}>
-          {route.enabled ? (
-            <Link href={route.path}>{route.title}</Link>
-          ) : (
-            route.title
-          )}
-        </li>
-      );
-    });
+    return (
+      <li key={`route-${index}`} className={cn}>
+        {route.enabled ? (
+          <Link href={route.path}>{route.title}</Link>
+        ) : (
+          route.title
+        )}
+      </li>
+    );
+  });
 
   return (
     <div className="flex items-center">
