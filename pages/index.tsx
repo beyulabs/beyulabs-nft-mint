@@ -15,6 +15,7 @@ import voyagersImage from "../public/voyagers-main.svg";
 import nexusMissionImage from "../public/nexus-mission.svg";
 import nexusTicketsImage from "../public/nexus-tickets.svg";
 import coinsSVG from "../public/coins.svg";
+import planetSVG from "../public/planet.svg";
 
 const Mint: NextPage = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -98,40 +99,46 @@ const Mint: NextPage = () => {
           </button> */}
       </section>
 
-      <CalloutSection
-        title="The Nexus Voyagers mission"
-        image={<Image src={nexusMissionImage} alt="Nexus Mission" />}
-        description={
-          <>
-            <p className="mb-5">
-              To terraform Web3. An ecosystem cultivated by developers, artists,
-              enthusiasts, and investors. A Solarpunk utopia powered by BeYu
-              Labs and driven by radical optimism and sustainability.
-            </p>
-            <p className="mb-5">
-              A collection of 10,119 crew members, primed for the genesis
-              mission launch. On this voyage, crew members will have access to
-              epic shared experiences, meaningful collabs, one of a kind NFT
-              drops, and a future built for the community over time. With the
-              focus on empowering Web3 entrepreneurship the ecosystem will fill
-              the underlying gaps on contribution with incentivized exchange of
-              utility. Each of us will have a role to play.
-            </p>
-            <p className="uppercase font-medium mb-5">
-              Bridging the gap between dream and reality, virtual and real, we
-              build a regenerative vision of the future.
-            </p>
-            <p className="uppercase bold mb-5">
-              Are you mission ready?{" "}
-              <span className="text-nexusGreen">Join now!</span>
-            </p>
-            <button className="flex flex-row rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2">
-              <Image alt="Coins" src={coinsSVG} />
-              <span className="inline-block ml-2">Mint</span>
-            </button>
-          </>
-        }
-      />
+      <section className="pb-20 pt-14">
+        <div className="py-14 bg-[url('/mission-bg.svg')] bg-no-repeat bg-center bg-contain relative">
+          <CalloutSection
+            title="The Nexus Voyagers mission"
+            image={<Image src={nexusMissionImage} alt="Nexus Mission" />}
+            description={
+              <div className="pr-6">
+                <p className="mb-5">
+                  To terraform Web3. An ecosystem cultivated by developers,
+                  artists, enthusiasts, and investors. A Solarpunk utopia
+                  powered by BeYu Labs and driven by radical optimism and
+                  sustainability.
+                </p>
+                <p className="mb-5">
+                  A collection of 10,119 crew members, primed for the genesis
+                  mission launch. On this voyage, crew members will have access
+                  to epic shared experiences, meaningful collabs, one of a kind
+                  NFT drops, and a future built for the community over time.
+                  With the focus on empowering Web3 entrepreneurship the
+                  ecosystem will fill the underlying gaps on contribution with
+                  incentivized exchange of utility. Each of us will have a role
+                  to play.
+                </p>
+                <p className="uppercase font-medium mb-5">
+                  Bridging the gap between dream and reality, virtual and real,
+                  we build a regenerative vision of the future.
+                </p>
+                <p className="uppercase bold mb-5">
+                  Are you mission ready?{" "}
+                  <span className="text-nexusGreen">Join now!</span>
+                </p>
+                <button className="flex flex-row rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2">
+                  <Image alt="Coins" src={coinsSVG} />
+                  <span className="inline-block ml-2">Mint</span>
+                </button>
+              </div>
+            }
+          />
+        </div>
+      </section>
 
       <section className="min-h-screen mb-20 px-4 pt-16 flex flex-col justify-center items-center">
         <div className="bg-[url('/astromap-line.svg')] bg-no-repeat w-full bg-center">
@@ -147,33 +154,40 @@ const Mint: NextPage = () => {
         </div>
       </section>
 
-      <CalloutSection
-        title="Boarding pass"
-        image={<Image src={nexusTicketsImage} alt="Boarding Pass" />}
-        description={
-          <>
-            <p className="mb-5 uppercase font-medium">
-              The Boarding Passes are separated by their contribution to the new
-              world of web3. Each character type will have a unique challenge in
-              order to ensure you align with that character,and that you will be
-              able to mint them during our presale.
-            </p>
-            <p className="mb-5">
-              Keep your eyes on the #announcements and #boarding-pass channels
-              for these challenges, they will essentially guarantee your seat on
-              the rocket to the new world. These challenges will be presented
-              sporadically and closed off in short sprints of time, so stay
-              active in the Discord to make sure you lock down your respective
-              boarding pass and don’t get left behind in the deteriorating space
-              of Web2.
-            </p>
+      <section className="mb-20 mt-10">
+        <div className="py-14 bg-[url('/boarding-pass-bg.svg')] bg-no-repeat bg-contain relative">
+          <div className="w-36 absolute top-0 right-0 -mt-6 -mr-12">
+            <Image alt="Planet icon" src={planetSVG} layout="responsive" />
+          </div>
+          <CalloutSection
+            title="Boarding pass"
+            image={<Image src={nexusTicketsImage} alt="Boarding Pass" />}
+            description={
+              <>
+                <p className="mb-5 uppercase font-medium">
+                  The Boarding Passes are separated by their contribution to the
+                  new world of web3. Each character type will have a unique
+                  challenge in order to ensure you align with that character,and
+                  that you will be able to mint them during our presale.
+                </p>
+                <p className="mb-5">
+                  Keep your eyes on the #announcements and #boarding-pass
+                  channels for these challenges, they will essentially guarantee
+                  your seat on the rocket to the new world. These challenges
+                  will be presented sporadically and closed off in short sprints
+                  of time, so stay active in the Discord to make sure you lock
+                  down your respective boarding pass and don’t get left behind
+                  in the deteriorating space of Web2.
+                </p>
 
-            <button className="rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2">
-              Get it
-            </button>
-          </>
-        }
-      />
+                <button className="rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2">
+                  Get it
+                </button>
+              </>
+            }
+          />
+        </div>
+      </section>
 
       <section>
         <VoyagerCharacters />
