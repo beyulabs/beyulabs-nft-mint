@@ -46,7 +46,7 @@ const FAQList = () => {
   return (
     <>
       <h2 className="text-center text-5xl mb-20 text-white font-semibold">
-        FAQ
+        FAQs
       </h2>
       {faqs.map((faq, index) => {
         return (
