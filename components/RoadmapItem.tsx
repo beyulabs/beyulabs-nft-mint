@@ -39,7 +39,7 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
   });
 
   return (
-    <div className="w-full">
+    <div className="w-full cursor-pointer">
       <div className={roadmapItemCn}>
         <div className={itemNumberWrapperCn}>
           <div className="-mt-2">{`0${itemIndex + 1}`}</div>

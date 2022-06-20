@@ -104,46 +104,50 @@ export const faqs: FAQ[] = [
 
 export const astromap: AstromapItem[] = [
   {
-    title: "NFT",
+    title: "Events",
     description:
-      "To terraform Web3. An ecosystem cultivated by developers, artists, enthusiasts, and investors.",
+      "It takes more than just grinding behind the scenes to grow an ecosystem.",
     imagePath: "/astromap-1.svg",
   },
   {
-    title: "Community Chest",
+    title: "Bounty Board",
     description:
-      "To terraform Web3. An ecosystem cultivated by developers, artists, enthusiasts, and investors.",
+      "A bounty hub empowering freelancers, project teams, and agencies alike.",
     imagePath: "/astromap-2.svg",
   },
   {
-    title: "Mission Board",
-    description:
-      "To terraform Web3. An ecosystem cultivated by developers, artists, enthusiasts, and investors.",
-    imagePath: "/astromap-3.svg",
-  },
-  {
     title: "Launchpad",
-    description:
-      "To terraform Web3. An ecosystem cultivated by developers, artists, enthusiasts, and investors.",
-    imagePath: "/astromap-4.svg",
+    description: "A navigation system to launch your own mission.",
+    imagePath: "/astromap-3.svg",
   },
   {
     title: "Project Showcase",
     description:
-      "To terraform Web3. An ecosystem cultivated by developers, artists, enthusiasts, and investors.",
+      "A spotlight on some of our Holder's Top Projects via Panels, Interviews, Podcast, Collabs, and Dedicated Discord channels.",
+    imagePath: "/astromap-4.svg",
+  },
+  {
+    title: "Partnerships",
+    description: "The power of community goes a long way on the Nexus Voyage.",
     imagePath: "/astromap-5.svg",
   },
   {
-    title: "The Experience",
+    title: "Community Chest",
     description:
-      "To terraform Web3. An ecosystem cultivated by developers, artists, enthusiasts, and investors.",
+      "13% goes to Community Chest to be re-invested as decided by our Holders.",
     imagePath: "/astromap-6.svg",
+  },
+  {
+    title: "Commercial Rights",
+    description:
+      "Holders are granted commercial rights to the Nexus Voyagers NFTs and can get creative with derivative projects, collaborations, and more.",
+    imagePath: "/astromap-1.svg",
   },
   {
     title: "Charity",
     description:
-      "To terraform Web3. An ecosystem cultivated by developers, artists, enthusiasts, and investors.",
-    imagePath: "/astromap-1.svg",
+      "We’ll be donating x% of proceeds from mint to a charity that’s aligned with our overall vision: NY PACE (https://www.nypace.org/), supporting under-represented, under-resourced entrepreneurs to get their business endeavors off the ground.",
+    imagePath: "/astromap-2.svg",
   },
 ];
 

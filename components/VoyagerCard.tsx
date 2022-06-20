@@ -13,7 +13,7 @@ const VoyagerCard = ({ voyager }: VoyagerCardProps) => {
   const [isHover, setIsHover] = useState<boolean>(false);
 
   return (
-    <div className="w-80 mx-4 relative">
+    <div className="w-80 mx-4 relative cursor-pointer">
       <div
         className="w-80 bg-nexusDarkBg rounded-xl mb-6 p-4 border border-nexusGreen relative hover:scale-110 hover:z-10 hover:shadow-voyagerCard voyager-card-wrapper"
         onMouseEnter={() => setIsHover(true)}

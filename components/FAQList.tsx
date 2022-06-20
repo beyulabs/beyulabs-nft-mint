@@ -19,15 +19,17 @@ const FAQ = ({ question, answer }: FAQProps) => {
               open ? "mb-6" : ""
             }`}
           >
-            <Disclosure.Button>{question}</Disclosure.Button>
-            <Disclosure.Button>
-              <span className="text-nexusGreen">
-                {open ? (
-                  <FontAwesomeIcon icon={faMinus} width={24} />
-                ) : (
-                  <FontAwesomeIcon icon={faPlus} width={24} />
-                )}
-              </span>
+            <Disclosure.Button className="w-full">
+              <div className="flex flex-row justify-between w-full">
+                {question}
+                <span className="text-nexusGreen">
+                  {open ? (
+                    <FontAwesomeIcon icon={faMinus} width={24} />
+                  ) : (
+                    <FontAwesomeIcon icon={faPlus} width={24} />
+                  )}
+                </span>
+              </div>
             </Disclosure.Button>
           </div>
 

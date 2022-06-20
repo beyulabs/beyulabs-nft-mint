@@ -76,8 +76,8 @@ const Mint: NextPage = () => {
         </Dialog>
       </Transition.Root>
 
-      <section className="flex flex-col justify-center items-center">
-        <div className="my-20 flex flex-row items-center">
+      <section className="flex flex-col justify-center items-center mb-80">
+        <div className="mt-20 flex flex-row items-center">
           <div className="w-3/5">
             <h2 className="text-8xl mb-10 text-white font-medium drop-shadow-2xl">
               <span>Become</span> a member of the{" "}
@@ -95,7 +95,7 @@ const Mint: NextPage = () => {
       </section>
 
       <section className="mt-20 mb-10">
-        <div className="bg-[url('/mission-bg.svg')] bg-no-repeat bg-center bg-contain relative">
+        <div className="bg-[url('/mission-bg.svg')] bg-no-repeat bg-center bg-contain relative p-20">
           <CalloutSection
             title="The Nexus Voyagers mission"
             image={<Image src={nexusMissionImage} alt="Nexus Mission" />}
@@ -144,7 +144,7 @@ const Mint: NextPage = () => {
       </section>
 
       <section className="min-h-screen mb-20 px-4 pt-16 flex flex-col justify-center items-center">
-        <div className="bg-[url('/astromap-line.svg')] bg-no-repeat w-full bg-center">
+        <div className="bg-[url('/astromap-line.svg')] bg-no-repeat bg-contain w-full bg-center">
           <h2 className="text-white font-semibold text-6xl drop-shadow-xl mb-12 text-center">
             Astromap
           </h2>
@@ -161,13 +161,17 @@ const Mint: NextPage = () => {
       </section>
 
       <section className="mb-20 mt-10">
-        <div className="py-14 bg-[url('/boarding-pass-bg.svg')] bg-no-repeat bg-contain relative">
+        <div className="pt-14 pb-20 bg-[url('/boarding-pass-ellipsis.svg')] bg-right-bottom bg-no-repeat relative border border-calloutBorderGreen rounded-calloutSection">
           <div className="w-36 absolute top-0 right-0 -mt-6 -mr-12">
             <Image alt="Planet icon" src={planetSVG} layout="responsive" />
           </div>
           <CalloutSection
             title="Boarding pass"
-            image={<Image src={nexusTicketsImage} alt="Boarding Pass" />}
+            image={
+              <div className="absolute scale-110 -top-4 -left-4">
+                <Image src={nexusTicketsImage} alt="Boarding Pass" />
+              </div>
+            }
             description={
               <>
                 <p className="mb-5 uppercase font-medium">

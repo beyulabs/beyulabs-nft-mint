@@ -1,8 +1,3 @@
-import Image from "next/image";
-import classNames from "classnames";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMeteor } from "@fortawesome/free-solid-svg-icons";
-
 import { AstromapItem } from "../types/common";
 import { astromap } from "../constants";
 import RoadmapItem from "./RoadmapItem";
