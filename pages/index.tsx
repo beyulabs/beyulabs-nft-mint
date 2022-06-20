@@ -95,7 +95,7 @@ const Mint: NextPage = () => {
       </section>
 
       <section className="mt-20 mb-10">
-        <div className="py-14 bg-[url('/mission-bg.svg')] bg-no-repeat bg-center bg-contain relative">
+        <div className="bg-[url('/mission-bg.svg')] bg-no-repeat bg-center bg-contain relative">
           <CalloutSection
             title="The Nexus Voyagers mission"
             image={<Image src={nexusMissionImage} alt="Nexus Mission" />}
@@ -130,7 +130,10 @@ const Mint: NextPage = () => {
                     Join now!
                   </span>
                 </p>
-                <button className="flex flex-row rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2">
+                <button
+                  disabled
+                  className="cursor-not-allowed flex flex-row rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2 disabled:opacity-50"
+                >
                   <Image alt="Coins" src={coinsSVG} />
                   <span className="inline-block ml-2">Mint</span>
                 </button>
@@ -147,7 +150,10 @@ const Mint: NextPage = () => {
           </h2>
           <RoadmapTLDR />
           <div className="flex flex-row justify-center">
-            <button className="rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-9 py-5 text-xl">
+            <button
+              disabled
+              className="cursor-not-allowed rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-9 py-5 text-xl disabled:opacity-50"
+            >
               Explore Astromap
             </button>
           </div>
