@@ -19,6 +19,9 @@ module.exports = {
         discordBlue: "#7289da",
         twitterBlue: "#1da1f2",
       },
+      boxShadow: {
+        voyagerCard: "0px 15px 20px rgba(95, 192, 157, 0.15)",
+      },
     },
   },
   plugins: [],

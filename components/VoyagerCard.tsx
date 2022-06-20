@@ -13,7 +13,7 @@ const VoyagerCard = ({ voyager }: VoyagerCardProps) => {
 
   return (
     <div
-      className="w-80 mx-4 bg-nexusDarkBg rounded-xl shrink-0 grow-0 mb-6 p-4 border border-nexusGreen relative"
+      className="w-80 mx-4 bg-nexusDarkBg rounded-xl mb-6 p-4 border border-nexusGreen relative hover:scale-105 hover:z-10 hover:shadow-voyagerCard"
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
