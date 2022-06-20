@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -25,6 +27,10 @@ module.exports = {
       },
       borderRadius: {
         calloutSection: "48px",
+      },
+      fontFamily: {
+        sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
+        raleway: ["Raleway", "sans-serif"],
       },
     },
   },

@@ -45,7 +45,9 @@ const FAQ = ({ question, answer }: FAQProps) => {
 const FAQList = () => {
   return (
     <>
-      <h2 className="text-center text-5xl mb-20 text-white">FAQ</h2>
+      <h2 className="text-center text-5xl mb-20 text-white font-semibold">
+        FAQ
+      </h2>
       {faqs.map((faq, index) => {
         return (
           <FAQ

@@ -83,7 +83,7 @@ const Mint: NextPage = () => {
               <span>Become</span> a member of the{" "}
               <span className="text-nexusGreen">Voyager</span> space mission
             </h2>
-            <p className="text-nexusGrayText">
+            <p className="text-nexusGrayText font-raleway">
               Unforgettable adventures await you during the flight! Find friends
               and develop together creating, buying and selling NFTs collection!
             </p>
@@ -143,7 +143,7 @@ const Mint: NextPage = () => {
         </div>
       </section>
 
-      <section className="min-h-screen mb-20 px-4 pt-16 flex flex-col justify-center items-center">
+      <section className="min-h-screen mb-40 px-4 pt-16 flex flex-col justify-center items-center">
         <div className="bg-[url('/astromap-line.svg')] bg-no-repeat bg-contain w-full bg-center">
           <h2 className="text-white font-semibold text-6xl drop-shadow-xl mb-12 text-center">
             Astromap
@@ -160,7 +160,7 @@ const Mint: NextPage = () => {
         </div>
       </section>
 
-      <section className="mb-20 mt-10">
+      <section className="mb-40 mt-10">
         <div className="pt-14 pb-20 bg-[url('/boarding-pass-ellipsis.svg')] bg-right-bottom bg-no-repeat relative border border-calloutBorderGreen rounded-calloutSection">
           <div className="w-36 absolute top-0 right-0 -mt-6 -mr-12">
             <Image alt="Planet icon" src={planetSVG} layout="responsive" />
