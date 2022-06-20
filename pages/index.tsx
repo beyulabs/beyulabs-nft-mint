@@ -65,6 +65,8 @@ const Mint: NextPage = () => {
                     className="text-gray-500 ml-2 text-xl cursor-pointer"
                     icon={faXmark}
                     onClick={() => setOpen(false)}
+                    width={24}
+                    height={24}
                   />
                 </div>
                 <EmailSignup />
@@ -90,16 +92,9 @@ const Mint: NextPage = () => {
             <Image alt="Nexus Voyagers" src={voyagersImage} />
           </div>
         </div>
-
-        {/* <button
-            className="bg-white mb-4 px-8 py-4 rounded-lg capitalize font-semibold max-w-xs shadow-lg hover:shadow-xl hover:bg-gradient-to-r  hover:from-violet-600 hover:to-violet-400 hover:text-white"
-            onClick={() => setOpen(true)}
-          >
-            Get the newsletter
-          </button> */}
       </section>
 
-      <section className="pb-20 pt-14">
+      <section className="mt-20 mb-10">
         <div className="py-14 bg-[url('/mission-bg.svg')] bg-no-repeat bg-center bg-contain relative">
           <CalloutSection
             title="The Nexus Voyagers mission"
@@ -128,7 +123,12 @@ const Mint: NextPage = () => {
                 </p>
                 <p className="uppercase bold mb-5">
                   Are you mission ready?{" "}
-                  <span className="text-nexusGreen">Join now!</span>
+                  <span
+                    className="text-nexusGreen cursor-pointer"
+                    onClick={() => setOpen(true)}
+                  >
+                    Join now!
+                  </span>
                 </p>
                 <button className="flex flex-row rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2">
                   <Image alt="Coins" src={coinsSVG} />
@@ -189,7 +189,7 @@ const Mint: NextPage = () => {
         </div>
       </section>
 
-      <section>
+      <section className="mb-20">
         <VoyagerCharacters />
       </section>
 

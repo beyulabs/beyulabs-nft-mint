@@ -30,10 +30,12 @@ const Layout = (props: LayoutProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="m-auto max-w-screen-xl">
-        <Header setMenuOpen={setMenuOpen} />
-        {menuOpen && <MobileMenu setMenuOpen={setMenuOpen} />}
-        {props.children}
+      <main className=" bg-[url('/home-bg.svg')] bg-cover">
+        <div className="m-auto max-w-screen-xl">
+          <Header setMenuOpen={setMenuOpen} />
+          {menuOpen && <MobileMenu setMenuOpen={setMenuOpen} />}
+          {props.children}
+        </div>
       </main>
 
       <footer className="w-full text-center bg-nexusGreen text-white">
