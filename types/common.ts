@@ -76,3 +76,9 @@ export interface Voyager {
   description: string;
   image: StaticImageData;
 }
+
+export interface RoadmapItem {
+  title: string;
+  description: string | React.ReactNode;
+  icon: React.ReactNode;
+}
