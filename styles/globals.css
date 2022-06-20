@@ -5,3 +5,11 @@
 * {
   box-sizing: border-box;
 }
+
+.voyager-card-wrapper:hover {
+  position: absolute;
+}
+
+.voyager-card-wrapper:hover > p {
+  display: block;
+}

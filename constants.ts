@@ -22,11 +22,6 @@ export const beyuLabsTwitterURL: string = "https://twitter.com/Beyu_labs";
 export const discordInviteURL: string = "https://discord.gg/Ye6pQqJes7";
 
 export const routes: NavRoute[] = [
-  // {
-  //   path: "/",
-  //   title: "home",
-  //   enabled: false,
-  // },
   {
     path: "/astro-map",
     title: "Astromap",
@@ -37,16 +32,6 @@ export const routes: NavRoute[] = [
     title: "Our team",
     enabled: false,
   },
-  // {
-  //   path: "/gallery",
-  //   title: "gallery",
-  //   enabled: false,
-  // },
-  // {
-  //   path: "/wallet",
-  //   title: "wallet",
-  //   enabled: false,
-  // },
 ];
 
 export const beyuSocialIcons: SocialIcon[] = [
