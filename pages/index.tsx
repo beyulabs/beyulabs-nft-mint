@@ -3,7 +3,7 @@ import Image from "next/image";
 import type { NextPage } from "next";
 import { Dialog, Transition } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faXmark, faMeteor } from "@fortawesome/free-solid-svg-icons";
 
 import EmailSignup from "../components/EmailSignup";
 import VoyagerCharacters from "../components/VoyagerCharacters";
@@ -26,7 +26,7 @@ const Mint: NextPage = () => {
       <Transition.Root show={open} as={Fragment}>
         <Dialog
           as="div"
-          className="fixed z-10 inset-0 overflow-y-visible"
+          className="fixed z-50 inset-0 overflow-y-visible"
           initialFocus={cancelButtonRef}
           onClose={setOpen}
         >
@@ -79,16 +79,23 @@ const Mint: NextPage = () => {
       <div className="absolute top-0 left-0 right-0 bottom-0 h-[100vh] w-full opacity-20 bg-black"></div>
 
       <section className="flex flex-col justify-center items-center mb-80">
-        <div className="mt-20 flex flex-row items-center z-40">
+        <div className="mt-20 flex flex-row items-center z-30">
           <div className="w-3/5">
             <h2 className="text-8xl mb-10 text-white font-medium drop-shadow-2xl">
               <span>Become</span> a member of the{" "}
               <span className="text-nexusGreen">Voyager</span> space mission
             </h2>
-            <p className="text-nexusGrayText font-raleway text-xl">
+            <p className="text-nexusGrayText font-raleway text-xl mb-12">
               Unforgettable adventures await you during the flight! Find friends
               and develop together creating, buying and selling NFTs collection!
             </p>
+            <button
+              className="flex flex-row items-center rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-6 py-4 text-2xl"
+              onClick={() => setOpen(true)}
+            >
+              <FontAwesomeIcon icon={faMeteor} width={24} />
+              <span className="inline-block ml-2">Join the mission</span>
+            </button>
           </div>
           <div className="w-2/5">
             <Image alt="Nexus Voyagers" src={voyagersImage} />
