@@ -76,14 +76,16 @@ const Mint: NextPage = () => {
         </Dialog>
       </Transition.Root>
 
+      <div className="absolute top-0 left-0 right-0 bottom-0 h-[100vh] w-full opacity-20 bg-black"></div>
+
       <section className="flex flex-col justify-center items-center mb-80">
-        <div className="mt-20 flex flex-row items-center">
+        <div className="mt-20 flex flex-row items-center z-40">
           <div className="w-3/5">
             <h2 className="text-8xl mb-10 text-white font-medium drop-shadow-2xl">
               <span>Become</span> a member of the{" "}
               <span className="text-nexusGreen">Voyager</span> space mission
             </h2>
-            <p className="text-nexusGrayText font-raleway">
+            <p className="text-nexusGrayText font-raleway text-xl">
               Unforgettable adventures await you during the flight! Find friends
               and develop together creating, buying and selling NFTs collection!
             </p>
@@ -94,7 +96,7 @@ const Mint: NextPage = () => {
         </div>
       </section>
 
-      <section className="mt-20 mb-10">
+      <section className="mb-10">
         <div className="bg-[url('/mission-bg.svg')] bg-no-repeat bg-center bg-contain relative p-20">
           <CalloutSection
             title="The Nexus Voyagers mission"

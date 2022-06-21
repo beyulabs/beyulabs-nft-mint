@@ -14,7 +14,7 @@ interface HeaderProps {
 
 const Header = ({ setMenuOpen }: HeaderProps) => {
   return (
-    <header className="flex flex-row items-center justify-between w-100 w-full text-xl py-6 border-b border-nexusHeaderDivider border-opacity-40">
+    <header className="flex flex-row items-center justify-between w-100 w-full text-xl py-6 border-b border-nexusHeaderDivider border-opacity-40 z-50">
       <div className="hidden md:block w-1/5">
         <Link href="/" passHref>
           <Image

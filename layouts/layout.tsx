@@ -20,7 +20,7 @@ const Layout = (props: LayoutProps) => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   return (
-    <div className="bg-nexusDarkBg">
+    <div>
       <Head>
         <title>BeYu Labs</title>
         <meta
@@ -30,7 +30,7 @@ const Layout = (props: LayoutProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className=" bg-[url('/home-bg.svg')] bg-cover">
+      <main className="bg-[url('/home-bg.svg')] bg-cover">
         <div className="m-auto max-w-screen-xl">
           <Header setMenuOpen={setMenuOpen} />
           {menuOpen && <MobileMenu setMenuOpen={setMenuOpen} />}
