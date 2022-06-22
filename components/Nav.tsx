@@ -38,7 +38,7 @@ function Nav({ setMenuOpen }: NavProps) {
   });
 
   return (
-    <div className="flex items-center">
+    <div className="flex items-center z-50">
       <div className="text-white cursor-pointer md:hidden">
         <FontAwesomeIcon
           className="mr-2"

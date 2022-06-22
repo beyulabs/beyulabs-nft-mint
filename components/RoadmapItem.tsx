@@ -13,21 +13,24 @@ interface RoadmapItemProps {
 const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
   const [isHover, setIsHover] = useState<boolean>(false);
 
-  const roadmapItemCn = classNames("flex flex-row items-center mb-20", {
-    "flex-row-reverse mr-[50%]": itemIndex % 2 === 0,
-    "ml-[50%]": itemIndex % 2 !== 0,
-  });
+  const roadmapItemCn = classNames(
+    "flex flex-row items-center mb-10 md:mb-20",
+    {
+      "md:flex-row-reverse md:mr-[50%]": itemIndex % 2 === 0,
+      "md:ml-[50%]": itemIndex % 2 !== 0,
+    }
+  );
 
   const itemNumberWrapperCn = classNames(
     "flex flex-row items-center text-nexusGreen",
     {
-      "mr-10": itemIndex % 2 !== 0,
-      "flex-row-reverse ml-10": itemIndex % 2 === 0,
+      "md:mr-10": itemIndex % 2 !== 0,
+      "md:flex-row-reverse md:ml-10": itemIndex % 2 === 0,
     }
   );
 
   const roadmapItemCardCn = classNames(
-    "bg-nexusBlack p-4 rounded-xl w-96 text-white",
+    "bg-nexusBlack p-4 rounded-xl w-96 text-white grow md:grow-0",
     {
       "text-white bg-nexusGreen": isHover,
     }

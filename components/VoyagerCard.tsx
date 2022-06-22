@@ -15,7 +15,7 @@ const VoyagerCard = ({ voyager }: VoyagerCardProps) => {
   return (
     <div className="w-80 mx-4 relative cursor-pointer">
       <div
-        className="w-80 bg-nexusDarkBg rounded-xl mb-6 p-4 border border-nexusGreen relative hover:scale-110 hover:z-10 hover:shadow-voyagerCard voyager-card-wrapper"
+        className="w-80 bg-nexusDarkBg rounded-xl mb-6 p-4 border border-nexusGreen relative sm:hover:scale-110 sm:hover:z-10 sm:hover:shadow-voyagerCard voyager-card-wrapper"
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
@@ -31,7 +31,11 @@ const VoyagerCard = ({ voyager }: VoyagerCardProps) => {
           {voyager.irlName}
         </span>
 
-        <p className="text-astromapGrayText rounded-lg hidden">
+        <p
+          className={`text-astromapGrayText rounded-lg hidden ${
+            isHover ? "sm:block" : ""
+          }`}
+        >
           {voyager.description}
         </p>
 

@@ -6,10 +6,12 @@
   box-sizing: border-box;
 }
 
-.voyager-card-wrapper:hover {
-  position: absolute;
-}
+@media screen and (min-width: 976px) {
+  .voyager-card-wrapper:hover {
+    position: absolute;
+  }
 
-.voyager-card-wrapper:hover > p {
-  display: block;
+  .voyager-card-wrapper:hover > p {
+    display: block;
+  }
 }

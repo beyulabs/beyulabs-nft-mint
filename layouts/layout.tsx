@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Head from "next/head";
-import { useRouter } from "next/router";
 import Image from "next/image";
 
 import Header from "../components/Header";
@@ -14,13 +13,10 @@ interface LayoutProps {
 }
 
 const Layout = (props: LayoutProps) => {
-  const nextRouter = useRouter();
-  const isHome: boolean = nextRouter.pathname === "/";
-
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   return (
-    <div>
+    <>
       <Head>
         <title>BeYu Labs</title>
         <meta
@@ -30,7 +26,7 @@ const Layout = (props: LayoutProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-[url('/home-bg.svg')] bg-cover">
+      <main className="bg-[url('/home-bg.svg')] bg-cover overflow-hidden">
         <div className="m-auto max-w-screen-xl">
           <Header setMenuOpen={setMenuOpen} />
           {menuOpen && <MobileMenu setMenuOpen={setMenuOpen} />}
@@ -40,29 +36,27 @@ const Layout = (props: LayoutProps) => {
 
       <footer className="w-full text-center bg-nexusGreen text-white">
         <div className="flex flex-row justify-center mt-8">
-          <div className="w-1/2">
-            <div className="flex flex-row max-w-96">
-              <div className="w-1/2 m-8">
-                <Image
-                  src={nexusVoyagersLogo}
-                  alt="Nexus Voyagers logo"
-                  layout="responsive"
-                />
-              </div>
-              <div className="w-1/2 m-8">
-                <Image
-                  src={beyuLabsLogo}
-                  alt="BeYu Labs logo"
-                  layout="responsive"
-                />
-              </div>
+          <div className="flex flex-row max-w-96">
+            <div className="w-1/2 m-8">
+              <Image
+                src={nexusVoyagersLogo}
+                alt="Nexus Voyagers logo"
+                layout="responsive"
+              />
+            </div>
+            <div className="w-1/2 m-8">
+              <Image
+                src={beyuLabsLogo}
+                alt="BeYu Labs logo"
+                layout="responsive"
+              />
             </div>
           </div>
         </div>
         <hr className="border-nexusFooterDivider opacity-30" />
         <p className="py-2 text-md">Nexus Voyagers &copy; 2022</p>
       </footer>
-    </div>
+    </>
   );
 };
 

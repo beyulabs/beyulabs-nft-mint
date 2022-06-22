@@ -14,7 +14,7 @@ interface HeaderProps {
 
 const Header = ({ setMenuOpen }: HeaderProps) => {
   return (
-    <header className="flex flex-row items-center justify-between w-100 w-full text-xl py-6 border-b border-nexusHeaderDivider border-opacity-40 z-50">
+    <header className="px-4 py-4 flex flex-row items-center justify-between w-100 w-full text-xl border-b border-nexusHeaderDivider border-opacity-40 z-50">
       <div className="hidden md:block w-1/5">
         <Link href="/" passHref>
           <Image
@@ -25,8 +25,10 @@ const Header = ({ setMenuOpen }: HeaderProps) => {
         </Link>
       </div>
       <Nav setMenuOpen={setMenuOpen} />
-      <SocialIcons />
-      <div className="flex flex-row">
+      <div className="z-50">
+        <SocialIcons />
+      </div>
+      <div className="hidden md:flex md:flex-row">
         <button
           disabled
           className="flex flex-row mx-2 rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2 cursor-not-allowed disabled:opacity-50"

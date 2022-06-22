@@ -15,13 +15,13 @@ const FAQ = ({ question, answer }: FAQProps) => {
           }`}
         >
           <div
-            className={`flex flex-row text-white text-2xl font-bold justify-between ${
+            className={`flex flex-row text-white text-xl md:text-2xl font-bold justify-between ${
               open ? "mb-6" : ""
             }`}
           >
             <Disclosure.Button className="w-full">
-              <div className="flex flex-row justify-between w-full">
-                {question}
+              <div className="flex flex-row justify-between w-full text-left">
+                <span className="pr-2">{question}</span>
                 <span className="text-nexusGreen">
                   {open ? (
                     <FontAwesomeIcon icon={faMinus} width={24} />
