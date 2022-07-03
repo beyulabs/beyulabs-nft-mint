@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
-import { useRouter } from "next/router";
+import Image from "next/image";
+
+import Header from "../components/Header";
+import MobileMenu from "../components/MobileMenu";
+
+import beyuLabsLogo from "../public/beyu-labs-logotype-white.png";
+import nexusVoyagersLogo from "../public/nexus-voyagers-logotype-white.png";
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 const Layout = (props: LayoutProps) => {
-  const nextRouter = useRouter();
-  const isHome: boolean = nextRouter.pathname === "/";
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   return (
-    <div className="bg-gradient-to-r from-cyan-500 to-teal-500">
+    <>
       <Head>
         <title>BeYu Labs</title>
         <meta
@@ -21,23 +26,37 @@ const Layout = (props: LayoutProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="min-h-screen">
-        {isHome ? (
-          props.children
-        ) : (
-          <div className="pt-16 pb-12 px-8">{props.children}</div>
-        )}
+      <main className="bg-[url('/home-bg.svg')] bg-cover overflow-hidden">
+        <div className="m-auto max-w-screen-xl">
+          <Header setMenuOpen={setMenuOpen} />
+          {menuOpen && <MobileMenu setMenuOpen={setMenuOpen} />}
+          {props.children}
+        </div>
       </main>
 
-      <footer className="w-full py-4 text-center">
-        <span className="block mb-0 text-md text-slate-700">
-          Copyright &copy; BeYu Labs 2022
-        </span>
-        <span className="block text-sm text-slate-700">
-          &hearts; from the metaverse
-        </span>
+      <footer className="w-full text-center bg-nexusGreen text-white">
+        <div className="flex flex-row justify-center mt-8">
+          <div className="flex flex-row max-w-96">
+            <div className="w-1/2 m-8">
+              <Image
+                src={nexusVoyagersLogo}
+                alt="Nexus Voyagers logo"
+                layout="responsive"
+              />
+            </div>
+            <div className="w-1/2 m-8">
+              <Image
+                src={beyuLabsLogo}
+                alt="BeYu Labs logo"
+                layout="responsive"
+              />
+            </div>
+          </div>
+        </div>
+        <hr className="border-nexusFooterDivider opacity-30" />
+        <p className="py-2 text-md">Nexus Voyagers &copy; 2022</p>
       </footer>
-    </div>
+    </>
   );
 };
 

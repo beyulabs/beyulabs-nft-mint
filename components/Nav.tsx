@@ -1,40 +1,61 @@
+import classNames from "classnames";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { NavRoutes } from "../types/common";
+import { NavRoute } from "../types/common";
+import { routes } from "../constants";
 
-function Nav() {
+interface NavProps {
+  setMenuOpen: (open: boolean) => void;
+}
+
+function Nav({ setMenuOpen }: NavProps) {
   const nextRouter = useRouter();
 
-  const routes: NavRoutes[] = [
-    {
-      path: "/",
-      title: "mint",
-    },
-    {
-      path: "/team",
-      title: "team",
-    },
-    {
-      path: "/gallery",
-      title: "gallery",
-    },
-    {
-      path: "/wallet",
-      title: "wallet",
-    },
-  ];
+  const routeLinks = routes.map((route: NavRoute, index) => {
+    const cn = classNames(
+      {
+        "font-bold drop-shadow-md": nextRouter.pathname === route.path,
+        "font-normal": nextRouter.pathname !== route.path,
+        "opacity-50 hover:cursor-not-allowed": !route.enabled,
+        "hover:drop-shadow": route.enabled,
+      },
+      "mr-6 text-white"
+    );
 
-  const routeLinks = routes.map((route: NavRoutes, index) => {
-    const cn = nextRouter.pathname === route.path ? "pr-6 underline" : "pr-6";
     return (
       <li key={`route-${index}`} className={cn}>
-        <Link href={route.path}>{route.title}</Link>
+        {route.enabled ? (
+          <Link href={route.path}>{route.title}</Link>
+        ) : (
+          route.title
+        )}
       </li>
     );
   });
 
-  return <ul className="flex text-white">{routeLinks}</ul>;
+  return (
+    <div className="flex items-center z-50">
+      <div className="text-white cursor-pointer md:hidden">
+        <FontAwesomeIcon
+          className="mr-2"
+          width={24}
+          height={24}
+          icon={faBars}
+          onClick={() => {
+            setMenuOpen(true);
+            document.body.style.overflow = "hidden";
+          }}
+        />
+      </div>
+      <ul className="hidden sm:hidden md:ml-4 md:flex md:flex-row text-black">
+        {routeLinks}
+      </ul>
+    </div>
+  );
 }
 
 export default Nav;

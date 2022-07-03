@@ -1,69 +1,42 @@
 import Image from "next/image";
+import classNames from "classnames";
 
-import openSeaLogo from "../public/opensea-logo.svg";
-import etherscanLogo from "../public/etherscan-logo.svg";
-import discordLogo from "../public/discord-logo.svg";
-import twitterLogo from "../public/twitter-logo.svg";
+import { beyuSocialIcons } from "../constants";
 
 const SocialIcons = () => {
   return (
-    <ul className="flex">
-      <li className="ml-8 origin-center hover:scale-150 hover:rotate-12">
-        <a href="" rel="nofollow noreferrer" target="_blank">
-          {
-            <Image
-              src={discordLogo}
-              alt="Discord logo"
-              width={28}
-              height={28}
-              className="hover:shadow"
-              quality={100}
-            />
-          }
-        </a>
-      </li>
-      <li className="ml-8 origin-center hover:scale-150 hover:rotate-12">
-        <a href="" rel="nofollow noreferrer" target="_blank">
-          {
-            <Image
-              src={twitterLogo}
-              alt="Twitter logo"
-              width={28}
-              height={28}
-              className="hover:shadow"
-              quality={100}
-            />
-          }
-        </a>
-      </li>
-      <li className="ml-8 origin-center hover:scale-150 hover:rotate-12">
-        <a href="" rel="nofollow noreferrer" target="_blank">
-          {
-            <Image
-              src={etherscanLogo}
-              alt="Etherscan logo"
-              width={28}
-              height={28}
-              className="hover:shadow"
-              quality={100}
-            />
-          }
-        </a>
-      </li>
-      <li className="ml-8 origin-center hover:scale-150 hover:rotate-12">
-        <a href="" rel="nofollow noreferrer" target="_blank">
-          {
-            <Image
-              src={openSeaLogo}
-              alt="OpenSea logo"
-              width={28}
-              height={28}
-              className="hover:shadow"
-              quality={100}
-            />
-          }
-        </a>
-      </li>
+    <ul className="flex mt-2.5">
+      {beyuSocialIcons
+        .filter((icon) => icon.enabled)
+        .map((icon) => {
+          const liClass = classNames("mx-2 sm:mx-2 md:mx-4", {
+            "opacity-50 hover:cursor-not-allowed": !icon.enabled,
+            "origin-center fill-nexusGreen": icon.enabled,
+          });
+          const aClass = classNames({
+            "hover:cursor-not-allowed": !icon.enabled,
+          });
+
+          return (
+            <li key={`icon-${icon.name}`} className={liClass}>
+              <a
+                href={icon.url}
+                rel="nofollow noreferrer"
+                target="_blank"
+                className={aClass}
+              >
+                <Image
+                  src={icon.image}
+                  alt={`${icon.name} logo`}
+                  width={28}
+                  height={28}
+                  className="hover:shadow"
+                  quality={100}
+                />
+              </a>
+            </li>
+          );
+        })}
     </ul>
   );
 };

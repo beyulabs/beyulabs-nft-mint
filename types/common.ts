@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface EmailSignupCharacterTypes {
   id: number;
   name: string;
@@ -19,15 +21,16 @@ export interface SelectedFilter {
   option: string;
 }
 
-export interface NavRoutes {
+export interface NavRoute {
   path: string;
   title: string;
+  enabled: boolean;
 }
 
 export enum SocialPlatform {
   twitter = "twitter",
   github = "github",
-  linkedIn = "linkedin",
+  linkedin = "linkedin",
 }
 
 export interface SocialInfo {
@@ -35,10 +38,47 @@ export interface SocialInfo {
   username: string;
 }
 
+export interface SocialIcon {
+  name: string;
+  image: StaticImageData;
+  enabled: boolean;
+  url: string;
+}
+
 export interface TeamMemberInfo {
   name: string;
   job: string;
+  skills: string[];
   socialMedia: SocialInfo[];
   image: React.ReactNode;
+  description?: string | React.ReactNode;
+}
+
+export interface FAQ {
+  question: string;
+  answer: string;
+}
+
+export interface FAQProps {
+  question: string;
+  answer: string;
+}
+
+export interface AstromapItem {
+  title: string;
   description: string;
+  imagePath: string;
+}
+
+export interface Voyager {
+  nexusName: string;
+  irlName: string;
+  description: string;
+  image: StaticImageData;
+}
+
+export interface RoadmapItem {
+  title: string;
+  description: string | React.ReactNode;
+  icon: React.ReactNode;
 }

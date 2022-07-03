@@ -222,11 +222,12 @@ const EmailSignup = () => {
                   {alertType === AlertType.error && (
                     <span className="font-bold">Error!</span>
                   )}
-                  {alertType === AlertType.success || alertType === AlertType.exists && (
-                    <span className="font-bold">Success!</span>
-                  )}
+                  {alertType === AlertType.success ||
+                    (alertType === AlertType.exists && (
+                      <span className="font-bold">Success!</span>
+                    ))}
                   <FontAwesomeIcon
-                    className="ml-2 cursor-pointer"
+                    className="ml-2 cursor-pointer w-4"
                     width={16}
                     height={16}
                     icon={faXmark}
