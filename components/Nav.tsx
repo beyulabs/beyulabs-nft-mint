@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { NavRoute } from "../types/common";
 import { routes } from "../constants";
+import hamburgerSVG from "../public/hamburger.svg";
 
 interface NavProps {
   menuOpen: boolean;
@@ -53,11 +54,10 @@ function Nav({ menuOpen, setMenuOpen }: NavProps) {
             }}
           />
         ) : (
-          <FontAwesomeIcon
+          <Image
             className="mr-2"
-            width={24}
-            height={24}
-            icon={faBars}
+            alt="Menu"
+            src={hamburgerSVG}
             onClick={() => {
               setMenuOpen(true);
               document.body.style.overflow = "hidden";
