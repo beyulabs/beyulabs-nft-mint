@@ -11,7 +11,7 @@ import RoadmapTLDR from "../components/RoadmapTLDR";
 import FAQList from "../components/FAQList";
 import CalloutSection from "../components/CalloutSection";
 
-import voyagersImage from "../public/voyagers-main.svg";
+import voyagersImage from "../public/voyagers-main-white.svg";
 import nexusMissionImage from "../public/nexus-mission.svg";
 import nexusTicketsImage from "../public/nexus-tickets.svg";
 import coinsSVG from "../public/coins.svg";
@@ -78,28 +78,28 @@ const Mint: NextPage = () => {
 
       <div className="absolute top-0 left-0 right-0 bottom-0 h-[100vh] w-full opacity-20 bg-black z-30"></div>
 
-      <section className="px-6 md:px-4 flex flex-col justify-center items-center mb-52 md:mb-24 xl:mb-72">
+      <section className="px-4 md:px-4 flex flex-col justify-center items-center mb-28 md:mb-24 xl:mb-72 text-center">
         <div className="mt-10 sm:mt-20 md:mt-12 lg:mt-16 md:flex-row-reverse flex flex-col items-center z-30">
-          <div className="w-72 md:w-2/5">
-            <Image alt="Nexus Voyagers" src={voyagersImage} />
-          </div>
           <div className="md:w-3/5">
-            <h2 className="text-6xl md:text-8xl mb-10 text-white font-medium drop-shadow-2xl">
+            <h2 className="text-5xl md:text-8xl mb-4 text-white font-medium drop-shadow-2xl">
               <span>Become</span> a member of the{" "}
               <span className="text-nexusGreen">Voyager</span> space mission
             </h2>
-            <p className="text-nexusGrayText font-raleway text-xl mb-12">
+            <p className="text-md text-astromapGrayText font-raleway mb-4">
               Unforgettable adventures await you during the flight! Find friends
               and develop together creating, buying and selling NFTs collection!
             </p>
-            <button
-              className="flex flex-row items-center rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-6 py-4 text-2xl"
-              onClick={() => setOpen(true)}
-            >
-              <FontAwesomeIcon icon={faMeteor} width={24} />
-              <span className="inline-block ml-2">Join the mission</span>
-            </button>
           </div>
+          <div className="md:w-2/5">
+            <Image alt="Nexus Voyagers" src={voyagersImage} />
+          </div>
+          {/* <button
+            className="text-lg flex flex-row items-center rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2 mx-auto mb-4"
+            onClick={() => setOpen(true)}
+          >
+            <FontAwesomeIcon icon={faMeteor} width={24} />
+            <span className="inline-block ml-2">Join the mission</span>
+          </button> */}
         </div>
       </section>
 

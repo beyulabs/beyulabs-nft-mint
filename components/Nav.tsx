@@ -44,7 +44,6 @@ function Nav({ menuOpen, setMenuOpen }: NavProps) {
       <div className="text-white cursor-pointer md:hidden">
         {menuOpen ? (
           <FontAwesomeIcon
-            className="mr-2"
             width={24}
             height={24}
             icon={faX}
