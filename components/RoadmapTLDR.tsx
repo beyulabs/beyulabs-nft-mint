@@ -15,7 +15,7 @@ const RoadmapTLDR = () => {
     });
   };
 
-  return <>{createRoadmap()}</>;
+  return <div className="relative">{createRoadmap()}</div>;
 };
 
 export default RoadmapTLDR;

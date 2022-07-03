@@ -14,7 +14,7 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
   const [isHover, setIsHover] = useState<boolean>(false);
 
   const roadmapItemCn = classNames(
-    "flex flex-row items-center mb-10 md:mb-20",
+    "flex flex-row items-center mb-10 md:mb-20 bg-[url('/astromap-item-bg.svg')] bg-cover",
     {
       "md:flex-row-reverse md:mr-[50%]": itemIndex % 2 === 0,
       "md:ml-[50%]": itemIndex % 2 !== 0,
@@ -22,7 +22,7 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
   );
 
   const itemNumberWrapperCn = classNames(
-    "flex flex-row items-center text-nexusGreen",
+    "hidden flex flex-row items-center text-nexusGreen",
     {
       "md:mr-10": itemIndex % 2 !== 0,
       "md:flex-row-reverse md:ml-10": itemIndex % 2 === 0,
@@ -47,6 +47,9 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
         <div className={itemNumberWrapperCn}>
           <div className="-mt-2">{`0${itemIndex + 1}`}</div>
           <Image alt="Astromap" src={astroDot} width={48} height={48} />
+        </div>
+        <div className="flex justify-center items-center rounded-full bg-calloutBorderGreen w-8 h-8 absolute -left-4 z-40 text-nexusGradientGreen">
+          <span>{`0${itemIndex + 1}`}</span>
         </div>
         <div
           className={roadmapItemCardCn}

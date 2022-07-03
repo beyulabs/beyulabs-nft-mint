@@ -78,14 +78,14 @@ const Mint: NextPage = () => {
 
       <div className="absolute top-0 left-0 right-0 bottom-0 h-[100vh] w-full opacity-20 bg-black z-30"></div>
 
-      <section className="px-4 md:px-4 flex flex-col justify-center items-center mb-28 md:mb-24 xl:mb-72 text-center">
+      <section className="px-4 md:px-4 flex flex-col justify-center items-center mb-8 md:mb-24 xl:mb-72 text-center">
         <div className="mt-10 sm:mt-20 md:mt-12 lg:mt-16 md:flex-row-reverse flex flex-col items-center z-30">
           <div className="md:w-3/5">
-            <h2 className="text-5xl md:text-8xl mb-4 text-white font-medium drop-shadow-2xl">
+            <h2 className="text-5xl md:text-8xl mb-5 text-white font-medium drop-shadow-2xl">
               <span>Become</span> a member of the{" "}
               <span className="text-nexusGreen">Voyager</span> space mission
             </h2>
-            <p className="text-md text-astromapGrayText font-raleway mb-4">
+            <p className="text-md text-astromapGrayText font-raleway mb-5">
               Unforgettable adventures await you during the flight! Find friends
               and develop together creating, buying and selling NFTs collection!
             </p>
@@ -93,22 +93,15 @@ const Mint: NextPage = () => {
           <div className="md:w-2/5">
             <Image alt="Nexus Voyagers" src={voyagersImage} />
           </div>
-          {/* <button
-            className="text-lg flex flex-row items-center rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2 mx-auto mb-4"
-            onClick={() => setOpen(true)}
-          >
-            <FontAwesomeIcon icon={faMeteor} width={24} />
-            <span className="inline-block ml-2">Join the mission</span>
-          </button> */}
         </div>
       </section>
 
-      <section className="px-6 lg:px-0 mb-24 lg:mt-12">
-        <div className="py-12 lg:bg-[url('/mission-bg.svg')] lg:bg-no-repeat lg:bg-center lg:bg-contain relative lg:p-20 border  border-calloutBorderGreen bg-nexusDarkBg rounded-calloutSection lg:border-0 lg:bg-transparent">
+      <section className="px-6 lg:px-0 mb-8 lg:mt-12">
+        <div className="pb-6 lg:bg-[url('/mission-bg.svg')] lg:bg-no-repeat lg:bg-center lg:bg-contain relative lg:p-20 border  border-calloutBorderGreen bg-nexusDarkBg rounded-calloutSection lg:border-0 lg:bg-transparent text-center">
           <CalloutSection
             title="The Nexus Voyagers mission"
             image={
-              <div className="p-8 lg:p-0">
+              <div className="p-5 lg:p-0">
                 <Image src={nexusMissionImage} alt="Nexus Mission" />
               </div>
             }
@@ -145,7 +138,7 @@ const Mint: NextPage = () => {
                 </p>
                 <button
                   disabled
-                  className="mb-6 md:mb-0 cursor-not-allowed flex flex-row rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2 disabled:opacity-50"
+                  className="mb-6 md:mb-0 cursor-not-allowed flex flex-row rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2 disabled:opacity-50 m-auto"
                 >
                   <Image alt="Coins" src={coinsSVG} />
                   <span className="inline-block ml-2">Mint</span>
