@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavRoute } from "../types/common";
 import { routes } from "../constants";
 import SocialIcons from "./SocialIcons";
+import Header from "./Header";
 
 import coinsSVG from "../public/coins.svg";
 import walletSVG from "../public/wallet.svg";
@@ -47,19 +48,7 @@ const MobileMenu = ({ setMenuOpen }: MobileMenuProps) => {
   };
 
   return (
-    <div className="fixed h-full w-full px-6 py-6 bg-nexusDarkBg z-50 top-0 left-0">
-      <div className="absolute text-white cursor-pointer z-50 top-6 left-2">
-        <FontAwesomeIcon
-          className="mr-2"
-          width={36}
-          height={36}
-          icon={faX}
-          onClick={() => {
-            document.body.style.overflow = "auto";
-            setMenuOpen(false);
-          }}
-        />
-      </div>
+    <div className="fixed h-full w-full px-6 py-6 bg-nexusDarkBg top-0 left-0 z-40">
       <div className="flex flex-col justify-center h-full">
         <div className="mb-10">
           <Image
