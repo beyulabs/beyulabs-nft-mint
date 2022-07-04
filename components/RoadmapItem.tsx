@@ -29,9 +29,12 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
     }
   );
 
-  const roadmapItemCardCn = classNames("p-2 w-96 text-white grow md:grow-0", {
-    "text-white bg-nexusGreen": isHover,
-  });
+  const roadmapItemCardCn = classNames(
+    "p-2 w-96 text-white grow md:grow-0 rounded-xl",
+    {
+      "text-white bg-nexusGreen ": isHover,
+    }
+  );
 
   const descriptionCn = classNames("text-xs", {
     "text-astromapGrayText": !isHover,
