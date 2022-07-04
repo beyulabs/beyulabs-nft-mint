@@ -158,7 +158,7 @@ const Mint: NextPage = () => {
           <div className="flex-row justify-center flex">
             <button
               disabled
-              className="cursor-not-allowed rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-9 py-5 text-xl disabled:opacity-50"
+              className="w-full cursor-not-allowed rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen py-4 text-xl disabled:opacity-50"
             >
               Explore Astromap
             </button>

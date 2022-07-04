@@ -14,7 +14,7 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
   const [isHover, setIsHover] = useState<boolean>(false);
 
   const roadmapItemCn = classNames(
-    "flex flex-row items-center mb-10 md:mb-20 bg-[url('/astromap-item-bg.svg')] bg-cover",
+    "rounded-xl bg-[url('/astromap-item-bg.svg')] bg-cover bg-no-repeat bg-top-center bg-nexusDarkBg flex flex-row items-center mb-10 md:mb-20",
     {
       "md:flex-row-reverse md:mr-[50%]": itemIndex % 2 === 0,
       "md:ml-[50%]": itemIndex % 2 !== 0,
@@ -29,12 +29,9 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
     }
   );
 
-  const roadmapItemCardCn = classNames(
-    "bg-nexusBlack p-4 rounded-xl w-96 text-white grow md:grow-0",
-    {
-      "text-white bg-nexusGreen": isHover,
-    }
-  );
+  const roadmapItemCardCn = classNames("p-2 w-96 text-white grow md:grow-0", {
+    "text-white bg-nexusGreen": isHover,
+  });
 
   const descriptionCn = classNames({
     "text-astromapGrayText": !isHover,
