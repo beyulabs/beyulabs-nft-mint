@@ -77,15 +77,15 @@ const Mint: NextPage = () => {
 
       <div className="absolute top-0 left-0 right-0 bottom-0 h-screen w-full opacity-20 bg-black z-30"></div>
 
-      <section className="h-screen px-2 flex flex-col justify-center items-center mb-8 text-center">
-        <div className="mt-10 sm:mt-20 md:mt-12 lg:mt-16 md:flex-row-reverse flex flex-col items-center z-30">
-          <div className="px-2">
-            <h2 className="text-4xl md:text-8xl mb-5 text-white font-medium drop-shadow-2xl">
+      <section className="h-screen px-2 flex flex-col justify-center items-center mb-8 md:mb-0 text-center">
+        <div className="mt-10 flex flex-col items-center z-30">
+          <div className="px-2 md:px-6">
+            <h2 className="text-4xl md:text-6xl mb-5 text-white font-medium drop-shadow-2xl">
               <span className="highlight">Become</span> a member of the{" "}
               <span className="text-nexusGreen">Voyager</span> space{" "}
               <span className="highlight">mission</span>
             </h2>
-            <p className="text-sm text-astromapGrayText font-raleway mb-5">
+            <p className="text-sm text-astromapGrayText font-raleway mb-5 md:text-base">
               Unforgettable adventures await you during the flight! Find friends
               and develop together creating, buying and selling NFTs collection!
             </p>
@@ -97,8 +97,8 @@ const Mint: NextPage = () => {
       </section>
 
       <section className="mb-16">
-        <div className="pb-6 bg-[url('/mobile-mission-bg.svg')] bg-no-repeat bg-center bg-cover relative text-center">
-          <div className="w-36 absolute -left-8 -scale-x-100">
+        <div className="pb-6 bg-[url('/mobile-mission-bg.svg')] bg-no-repeat bg-center bg-cover relative text-center md:bg-[url('/mission-bg.svg')] md:bg-contain">
+          <div className="w-36 absolute -left-8 -scale-x-100 md:hidden">
             <Image alt="Planet icon" src={planetSVG} layout="responsive" />
           </div>
           <div className="flex flex-col md:flex-row justify-center items-center">
@@ -108,17 +108,11 @@ const Mint: NextPage = () => {
               </div>
             </div>
             <div className="md:w-2/3 md:pl-12 md:pr-6">
-              <h2 className="text-white uppercase font-bold text-3xl mb-4 px-6 md:px-0">
+              <h2 className="text-white uppercase font-bold text-3xl md:text-4xl mb-4 px-6 md:px-0">
                 The Nexus Voyagers mission
               </h2>
               <div className="text-astromapGrayText text-base px-6 md:px-0">
                 <div className="pr-6">
-                  <p className="mb-5">
-                    To terraform Web3. An ecosystem cultivated by developers,
-                    artists, enthusiasts, and investors. A Solarpunk utopia
-                    powered by BeYu Labs and driven by radical optimism and
-                    sustainability.
-                  </p>
                   <p className="mb-5">
                     A collection of 10,119 crew members, primed for the genesis
                     mission launch. On this voyage, crew members will have
@@ -128,10 +122,6 @@ const Mint: NextPage = () => {
                     entrepreneurship the ecosystem will fill the underlying gaps
                     on contribution with incentivized exchange of utility. Each
                     of us will have a role to play.
-                  </p>
-                  <p className="uppercase font-medium mb-5">
-                    Bridging the gap between dream and reality, virtual and
-                    real, we build a regenerative vision of the future.
                   </p>
                   <p className="uppercase bold mb-5">
                     Are you mission ready?{" "}
@@ -158,14 +148,14 @@ const Mint: NextPage = () => {
 
       <section className="min-h-screen mb-40 px-4 pt-8 sm:pt-16 flex flex-col justify-center items-center">
         <div className="bg-[url('/astromap-line.svg')] bg-no-repeat bg-contain w-full bg-center">
-          <h2 className="text-white font-semibold text-3xl uppercase drop-shadow-xl mb-12 text-center">
+          <h2 className="text-white font-semibold text-3xl uppercase drop-shadow-xl mb-12 text-center md:text-4xl">
             Astromap
           </h2>
           <RoadmapTLDR />
           <div className="flex-row justify-center flex">
             <button
               disabled
-              className="w-full cursor-not-allowed rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen py-4 text-xl disabled:opacity-50"
+              className="w-full cursor-not-allowed rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen py-4 text-xl disabled:opacity-50 md:w-1/3"
             >
               Explore Astromap
             </button>
@@ -174,21 +164,24 @@ const Mint: NextPage = () => {
       </section>
 
       <section className="px-6 mb-28 mt-4 md:mt-10">
-        <div className="pt-14 pb-14 bg-nexusDarkBg bg-[url('/boarding-pass-ellipsis.svg')] bg-right-bottom bg-no-repeat relative border border-calloutBorderGreen rounded-calloutSection text-center">
+        <div className="pt-14 pb-14 bg-nexusDarkBg bg-[url('/boarding-pass-ellipsis.svg')] bg-right-bottom bg-no-repeat relative border border-calloutBorderGreen rounded-calloutSection text-center md:pb-8">
           <div className="w-36 absolute -top-4 right-0 -mt-6 -mr-12">
             <Image alt="Planet icon" src={planetSVG} layout="responsive" />
           </div>
-          <div className="flex flex-col md:flex-row justify-center items-center">
-            <div className="w-80 md:w-1/3 relative">
-              <h2 className="text-white uppercase font-bold text-3xl mb-5 px-6 md:px-0">
+          <div className="flex flex-col justify-center items-center">
+            <div className="w-80 md:hidden">
+              <h2 className="text-white uppercase font-bold text-3xl mb-5 px-6 md:text-4xl">
                 Boarding pass
               </h2>
             </div>
-            <div className="md:w-2/3 md:pl-12 md:pr-6">
-              <div className="md:absolute md:scale-110 md:-bottom-4 md:-left-4 lg:-bottom-64">
+            <div className="md:relative md:flex md:flex-row">
+              <div className="md:w-1/3 md:scale-125 lg:-bottom-64">
                 <Image src={nexusTicketsImage} alt="Boarding Pass" />
               </div>
-              <div className="text-astromapGrayText text-sm px-6 md:px-0">
+              <div className="text-astromapGrayText text-sm px-6 md:text-left md:w-2/3 md:ml-6 md:px-2">
+                <h2 className="text-white uppercase font-bold text-3xl mb-5 px-6 md:px-0">
+                  Boarding pass
+                </h2>
                 <p className="mb-5 uppercase font-medium">
                   The Boarding Passes are separated by their contribution to the
                   new world of web3. Each character type will have a unique

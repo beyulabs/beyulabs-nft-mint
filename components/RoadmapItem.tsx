@@ -14,7 +14,7 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
   const [isHover, setIsHover] = useState<boolean>(false);
 
   const roadmapItemCn = classNames(
-    "rounded-xl bg-[url('/astromap-item-bg.svg')] bg-cover bg-no-repeat bg-top-center bg-nexusDarkBg flex flex-row items-center mb-10 md:mb-20",
+    "rounded-xl bg-[url('/astromap-item-bg.svg')] bg-cover bg-no-repeat bg-top-center bg-nexusDarkBg flex flex-row items-center mb-10 md:mb-20 md:bg-none md:bg-transparent",
     {
       "md:flex-row-reverse md:mr-[50%]": itemIndex % 2 === 0,
       "md:ml-[50%]": itemIndex % 2 !== 0,
@@ -22,7 +22,7 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
   );
 
   const itemNumberWrapperCn = classNames(
-    "hidden flex flex-row items-center text-nexusGreen",
+    "hidden flex flex-row items-center text-nexusGreen md:inline-flex",
     {
       "md:mr-10": itemIndex % 2 !== 0,
       "md:flex-row-reverse md:ml-10": itemIndex % 2 === 0,
@@ -30,7 +30,7 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
   );
 
   const roadmapItemCardCn = classNames(
-    "p-2 w-96 text-white grow md:grow-0 rounded-xl",
+    "p-2 w-96 text-white grow md:grow-0 rounded-xl md:bg-[url('/astromap-item-bg.svg')] md:bg-cover md:bg-no-repeat md:bg-top-center md:bg-nexusDarkBg",
     {
       "text-white bg-nexusGreen ": isHover,
     }
@@ -48,7 +48,7 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
           <div className="-mt-2">{`0${itemIndex + 1}`}</div>
           <Image alt="Astromap" src={astroDot} width={48} height={48} />
         </div>
-        <div className="flex justify-center items-center rounded-full bg-calloutBorderGreen w-8 h-8 absolute -left-4 z-40 text-nexusGradientGreen">
+        <div className="flex justify-center items-center rounded-full bg-calloutBorderGreen w-8 h-8 absolute -left-4 z-40 text-nexusGradientGreen md:hidden">
           <span>{`0${itemIndex + 1}`}</span>
         </div>
         <div

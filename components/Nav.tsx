@@ -40,9 +40,17 @@ function Nav({ menuOpen, setMenuOpen }: NavProps) {
   });
 
   return (
-    <div className="flex items-center z-50">
-      <div className="text-white cursor-pointer md:hidden">
-        {menuOpen ? (
+    <div className="flex flex-row-reverse justify-center z-50">
+      <div className="text-white cursor-pointer md:ml-4 lg:hidden">
+        <Image
+          alt="Menu"
+          src={hamburgerSVG}
+          onClick={() => {
+            setMenuOpen(true);
+            document.body.style.overflow = "hidden";
+          }}
+        />
+        {/* {menuOpen ? (
           <FontAwesomeIcon
             width={24}
             height={24}
@@ -62,11 +70,13 @@ function Nav({ menuOpen, setMenuOpen }: NavProps) {
               document.body.style.overflow = "hidden";
             }}
           />
-        )}
+        )} */}
       </div>
-      <ul className="hidden sm:hidden md:ml-4 md:flex md:flex-row text-black">
-        {routeLinks}
-      </ul>
+      {!menuOpen && (
+        <ul className="hidden sm:hidden md:ml-4 md:flex md:flex-row text-black">
+          {routeLinks}
+        </ul>
+      )}
     </div>
   );
 }

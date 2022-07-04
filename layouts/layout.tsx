@@ -35,7 +35,7 @@ const Layout = (props: LayoutProps) => {
       </main>
 
       <footer className="w-full text-center bg-nexusGreen text-white">
-        <div className="flex flex-col items-center py-12">
+        <div className="flex flex-col items-center py-12 md:w-96 md:flex-row md:mx-auto">
           <div className="w-1/2 m-2">
             <Image
               src={nexusVoyagersLogo}

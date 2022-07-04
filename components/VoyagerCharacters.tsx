@@ -16,8 +16,8 @@ const VoyagerCharacters = () => {
   };
 
   return (
-    <div>
-      <h2 className="uppercase text-3xl text-white font-semibold drop-shadow-xl mb-8 text-center">
+    <div className="md:w-2/3 md:mx-auto">
+      <h2 className="uppercase text-3xl text-white font-semibold drop-shadow-xl mb-8 text-center md:text-4xl">
         The Voyagers
       </h2>
 
@@ -28,6 +28,7 @@ const VoyagerCharacters = () => {
         showArrows={true}
         showThumbs={false}
         dynamicHeight={false}
+        swipeable={true}
       >
         {createAvatarCards()}
       </Carousel>
