@@ -9,7 +9,6 @@ import EmailSignup from "../components/EmailSignup";
 import VoyagerCharacters from "../components/VoyagerCharacters";
 import RoadmapTLDR from "../components/RoadmapTLDR";
 import FAQList from "../components/FAQList";
-import CalloutSection from "../components/CalloutSection";
 
 import voyagersImage from "../public/voyagers-main-white.svg";
 import nexusMissionImage from "../public/nexus-mission.svg";
@@ -98,54 +97,58 @@ const Mint: NextPage = () => {
 
       <section className="px-6 lg:px-0 mb-8 lg:mt-12">
         <div className="pb-6 lg:bg-[url('/mission-bg.svg')] lg:bg-no-repeat lg:bg-center lg:bg-contain relative lg:p-20 border  border-calloutBorderGreen bg-nexusDarkBg rounded-calloutSection lg:border-0 lg:bg-transparent text-center">
-          <CalloutSection
-            title="The Nexus Voyagers mission"
-            image={
+          <div className="flex flex-col md:flex-row justify-center items-center">
+            <div className="w-80 md:w-1/3 relative">
               <div className="p-5 lg:p-0">
                 <Image src={nexusMissionImage} alt="Nexus Mission" />
               </div>
-            }
-            description={
-              <div className="pr-6">
-                <p className="mb-5">
-                  To terraform Web3. An ecosystem cultivated by developers,
-                  artists, enthusiasts, and investors. A Solarpunk utopia
-                  powered by BeYu Labs and driven by radical optimism and
-                  sustainability.
-                </p>
-                <p className="mb-5">
-                  A collection of 10,119 crew members, primed for the genesis
-                  mission launch. On this voyage, crew members will have access
-                  to epic shared experiences, meaningful collabs, one of a kind
-                  NFT drops, and a future built for the community over time.
-                  With the focus on empowering Web3 entrepreneurship the
-                  ecosystem will fill the underlying gaps on contribution with
-                  incentivized exchange of utility. Each of us will have a role
-                  to play.
-                </p>
-                <p className="uppercase font-medium mb-5">
-                  Bridging the gap between dream and reality, virtual and real,
-                  we build a regenerative vision of the future.
-                </p>
-                <p className="uppercase bold mb-5">
-                  Are you mission ready?{" "}
-                  <span
-                    className="text-nexusGreen cursor-pointer"
-                    onClick={() => setOpen(true)}
+            </div>
+            <div className="md:w-2/3 md:pl-12 md:pr-6">
+              <h2 className="text-white uppercase font-bold text-5xl mb-7 px-6 md:px-0">
+                The Nexus Voyagers mission
+              </h2>
+              <div className="text-astromapGrayText text-lg px-6 md:px-0">
+                <div className="pr-6">
+                  <p className="mb-5">
+                    To terraform Web3. An ecosystem cultivated by developers,
+                    artists, enthusiasts, and investors. A Solarpunk utopia
+                    powered by BeYu Labs and driven by radical optimism and
+                    sustainability.
+                  </p>
+                  <p className="mb-5">
+                    A collection of 10,119 crew members, primed for the genesis
+                    mission launch. On this voyage, crew members will have
+                    access to epic shared experiences, meaningful collabs, one
+                    of a kind NFT drops, and a future built for the community
+                    over time. With the focus on empowering Web3
+                    entrepreneurship the ecosystem will fill the underlying gaps
+                    on contribution with incentivized exchange of utility. Each
+                    of us will have a role to play.
+                  </p>
+                  <p className="uppercase font-medium mb-5">
+                    Bridging the gap between dream and reality, virtual and
+                    real, we build a regenerative vision of the future.
+                  </p>
+                  <p className="uppercase bold mb-5">
+                    Are you mission ready?{" "}
+                    <span
+                      className="text-nexusGreen cursor-pointer"
+                      onClick={() => setOpen(true)}
+                    >
+                      Join now!
+                    </span>
+                  </p>
+                  <button
+                    disabled
+                    className="mb-6 md:mb-0 cursor-not-allowed flex flex-row rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2 disabled:opacity-50 m-auto"
                   >
-                    Join now!
-                  </span>
-                </p>
-                <button
-                  disabled
-                  className="mb-6 md:mb-0 cursor-not-allowed flex flex-row rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2 disabled:opacity-50 m-auto"
-                >
-                  <Image alt="Coins" src={coinsSVG} />
-                  <span className="inline-block ml-2">Mint</span>
-                </button>
+                    <Image alt="Coins" src={coinsSVG} />
+                    <span className="inline-block ml-2">Mint</span>
+                  </button>
+                </div>
               </div>
-            }
-          />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -167,19 +170,21 @@ const Mint: NextPage = () => {
       </section>
 
       <section className="px-6 mb-28 mt-4 md:mt-10">
-        <div className="pt-14 pb-20 bg-nexusDarkBg md:bg-[url('/boarding-pass-ellipsis.svg')] md:bg-right-bottom md:bg-no-repeat relative border border-calloutBorderGreen rounded-calloutSection">
-          <div className="w-36 absolute top-0 right-0 -mt-6 -mr-12">
+        <div className="pt-14 pb-14 bg-nexusDarkBg bg-[url('/boarding-pass-ellipsis.svg')] bg-right-bottom bg-no-repeat relative border border-calloutBorderGreen rounded-calloutSection text-center">
+          <div className="w-36 absolute -top-4 right-0 -mt-6 -mr-12">
             <Image alt="Planet icon" src={planetSVG} layout="responsive" />
           </div>
-          <CalloutSection
-            title="Boarding pass"
-            image={
+          <div className="flex flex-col md:flex-row justify-center items-center">
+            <div className="w-80 md:w-1/3 relative">
+              <h2 className="text-white uppercase font-bold text-5xl mb-7 px-6 md:px-0">
+                Boarding pass
+              </h2>
+            </div>
+            <div className="md:w-2/3 md:pl-12 md:pr-6">
               <div className="md:absolute md:scale-110 md:-bottom-4 md:-left-4 lg:-bottom-64">
                 <Image src={nexusTicketsImage} alt="Boarding Pass" />
               </div>
-            }
-            description={
-              <>
+              <div className="text-astromapGrayText text-lg px-6 md:px-0">
                 <p className="mb-5 uppercase font-medium">
                   The Boarding Passes are separated by their contribution to the
                   new world of web3. Each character type will have a unique
@@ -199,9 +204,9 @@ const Mint: NextPage = () => {
                 <button className="rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2">
                   Get it
                 </button>
-              </>
-            }
-          />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
