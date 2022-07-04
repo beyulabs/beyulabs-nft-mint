@@ -5,9 +5,6 @@ import VoyagerCard from "./VoyagerCard";
 import { voyagers } from "../constants";
 import { Voyager } from "../types/common";
 
-import carouselNext from "../public/carousel-next.svg";
-import carouselPrevious from "../public/carousel-previous.svg";
-
 const VoyagerCharacters = () => {
   const createAvatarCards = () => {
     return voyagers.map((voyager: Voyager) => (
@@ -30,6 +27,7 @@ const VoyagerCharacters = () => {
         showStatus={false}
         showArrows={true}
         showThumbs={false}
+        dynamicHeight={false}
       >
         {createAvatarCards()}
       </Carousel>
