@@ -33,7 +33,7 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
     "text-white bg-nexusGreen": isHover,
   });
 
-  const descriptionCn = classNames({
+  const descriptionCn = classNames("text-xs", {
     "text-astromapGrayText": !isHover,
     "text-white": isHover,
   });
@@ -62,7 +62,7 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
             />
 
             <div key={roadmapItem.title} className="w-full ml-4">
-              <h3 className="text-white text-xl font-semibold highlight">
+              <h3 className="text-white text-base font-semibold highlight">
                 {roadmapItem.title}
               </h3>
               <p className={descriptionCn}>{roadmapItem.description}</p>

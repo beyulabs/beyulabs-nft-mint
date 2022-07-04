@@ -18,11 +18,13 @@ const Header = ({ menuOpen, setMenuOpen }: HeaderProps) => {
     <header className="px-4 py-4 flex flex-row items-center justify-between w-100 w-full text-xl border-b border-nexusHeaderDivider border-opacity-40 z-50 sticky">
       <div className="w-2/5">
         <Link href="/" passHref>
-          <Image
-            src={nexusVoyagersLogo}
-            alt="BeYu Labs logo"
-            className="cursor-pointer drop-shadow-md"
-          />
+          <div>
+            <Image
+              src={nexusVoyagersLogo}
+              alt="BeYu Labs logo"
+              className="cursor-pointer drop-shadow-md"
+            />
+          </div>
         </Link>
       </div>
       <div className="hidden z-50">
