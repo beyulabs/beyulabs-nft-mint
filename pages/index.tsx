@@ -3,7 +3,7 @@ import Image from "next/image";
 import type { NextPage } from "next";
 import { Dialog, Transition } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark, faMeteor } from "@fortawesome/free-solid-svg-icons";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 import EmailSignup from "../components/EmailSignup";
 import VoyagerCharacters from "../components/VoyagerCharacters";

@@ -1,6 +1,12 @@
+import Image from "next/image";
+import { Carousel } from "react-responsive-carousel";
+
 import VoyagerCard from "./VoyagerCard";
 import { voyagers } from "../constants";
 import { Voyager } from "../types/common";
+
+import carouselNext from "../public/carousel-next.svg";
+import carouselPrevious from "../public/carousel-previous.svg";
 
 const VoyagerCharacters = () => {
   const createAvatarCards = () => {
@@ -17,9 +23,16 @@ const VoyagerCharacters = () => {
       <h2 className="text-6xl text-white font-semibold drop-shadow-xl mb-12 text-center">
         The Voyagers
       </h2>
-      <div className="flex flex-row flex-wrap justify-center items-start">
+
+      <Carousel
+        infiniteLoop={true}
+        autoPlay={false}
+        showStatus={false}
+        showArrows={true}
+        showThumbs={false}
+      >
         {createAvatarCards()}
-      </div>
+      </Carousel>
     </div>
   );
 };
