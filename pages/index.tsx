@@ -81,8 +81,9 @@ const Mint: NextPage = () => {
         <div className="mt-10 sm:mt-20 md:mt-12 lg:mt-16 md:flex-row-reverse flex flex-col items-center z-30">
           <div className="md:w-3/5">
             <h2 className="text-5xl md:text-8xl mb-5 text-white font-medium drop-shadow-2xl">
-              <span>Become</span> a member of the{" "}
-              <span className="text-nexusGreen">Voyager</span> space mission
+              <span className="highlight">Become</span> a member of the{" "}
+              <span className="text-nexusGreen">Voyager</span> space{" "}
+              <span className="highlight">mission</span>
             </h2>
             <p className="text-md text-astromapGrayText font-raleway mb-5">
               Unforgettable adventures await you during the flight! Find friends

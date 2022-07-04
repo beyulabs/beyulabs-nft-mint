@@ -62,7 +62,7 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
             />
 
             <div key={roadmapItem.title} className="w-full ml-4">
-              <h3 className="text-white text-xl font-semibold">
+              <h3 className="text-white text-xl font-semibold highlight">
                 {roadmapItem.title}
               </h3>
               <p className={descriptionCn}>{roadmapItem.description}</p>

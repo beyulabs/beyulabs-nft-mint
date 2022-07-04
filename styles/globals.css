@@ -6,6 +6,24 @@
   box-sizing: border-box;
 }
 
+.highlight {
+  position: relative;
+  z-index: 1;
+}
+
+.highlight::before {
+  position: absolute;
+  display: block;
+  content: "";
+  background-color: #41a380;
+  width: 100%;
+  height: 8px;
+  bottom: 12%;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
 .control-next:before,
 .control-prev:before {
   border: none !important;
