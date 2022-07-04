@@ -2,7 +2,7 @@ import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
+import { faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { NavRoute } from "../types/common";
@@ -42,15 +42,7 @@ function Nav({ menuOpen, setMenuOpen }: NavProps) {
   return (
     <div className="flex flex-row-reverse justify-center z-50">
       <div className="text-white cursor-pointer md:ml-4 lg:hidden">
-        <Image
-          alt="Menu"
-          src={hamburgerSVG}
-          onClick={() => {
-            setMenuOpen(true);
-            document.body.style.overflow = "hidden";
-          }}
-        />
-        {/* {menuOpen ? (
+        {menuOpen ? (
           <FontAwesomeIcon
             width={24}
             height={24}
@@ -70,10 +62,10 @@ function Nav({ menuOpen, setMenuOpen }: NavProps) {
               document.body.style.overflow = "hidden";
             }}
           />
-        )} */}
+        )}
       </div>
       {!menuOpen && (
-        <ul className="hidden sm:hidden md:ml-4 md:flex md:flex-row text-black">
+        <ul className="hidden text-black lg:ml-4 lg:flex lg:flex-row">
           {routeLinks}
         </ul>
       )}

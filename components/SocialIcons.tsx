@@ -5,7 +5,7 @@ import { beyuSocialIcons } from "../constants";
 
 const SocialIcons = () => {
   return (
-    <ul className="flex mt-2.5">
+    <ul className="flex">
       {beyuSocialIcons
         .filter((icon) => icon.enabled)
         .map((icon) => {

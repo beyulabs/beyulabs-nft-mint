@@ -28,8 +28,12 @@ const Layout = (props: LayoutProps) => {
 
       <main className="bg-[url('/home-bg.svg')] bg-cover overflow-hidden">
         <div className="m-auto max-w-screen-xl">
-          <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-          {menuOpen && <MobileMenu setMenuOpen={setMenuOpen} />}
+          {!menuOpen && (
+            <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+          )}
+          {menuOpen && (
+            <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+          )}
           {props.children}
         </div>
       </main>

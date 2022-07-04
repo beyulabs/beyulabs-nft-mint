@@ -4,15 +4,17 @@ import classNames from "classnames";
 
 import { NavRoute } from "../types/common";
 import { routes, beyuSocialIcons } from "../constants";
+import Header from "./Header";
 
 import coinsSVG from "../public/coins.svg";
 import walletSVG from "../public/wallet.svg";
 
 interface MobileMenuProps {
   setMenuOpen: (open: boolean) => void;
+  menuOpen: boolean;
 }
 
-const MobileMenu = ({ setMenuOpen }: MobileMenuProps) => {
+const MobileMenu = ({ menuOpen, setMenuOpen }: MobileMenuProps) => {
   const createMenuItems = () => {
     return routes.map((route: NavRoute) => {
       const cn = classNames(
@@ -79,36 +81,39 @@ const MobileMenu = ({ setMenuOpen }: MobileMenuProps) => {
   };
 
   return (
-    <div className="fixed h-full w-full py-6 bg-nexusDarkBg top-0 left-0 z-40">
-      <div className="flex flex-col mt-24 h-full">
-        <div className="relative w-full flex flex-col justify-center items-center text-white mb-8 px-4">
-          <h2 className="w-full mb-4">Menu</h2>
-          <ul className="w-full">{createMenuItems()}</ul>
-        </div>
-        <hr className="opacity-40 bg-nexusHeaderDivider mb-8" />
-        <div className="relative w-full flex flex-col justify-center items-center text-white mb-8 px-4">
-          <h2 className="w-full mb-4">Social</h2>
-          <ul className="w-full">{createMobileSocials()}</ul>
-        </div>
-        <hr className="opacity-40 bg-nexusHeaderDivider mb-8" />
-        <div className="flex flex-col px-4">
-          <button
-            disabled
-            className="mb-4 flex flex-row justify-center mx-2 rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2 cursor-not-allowed disabled:opacity-50"
-          >
-            <Image alt="Coins" src={coinsSVG} />
-            <span className="inline-block ml-2">Mint</span>
-          </button>
-          <button
-            disabled
-            className="mb-4 flex flex-row justify-center border mx-2 rounded-lg text-white bg-transparent px-4 py-2 cursor-not-allowed disabled:opacity-50"
-          >
-            <Image alt="Coins" src={walletSVG} />
-            <span className="inline-block ml-2">Connect wallet</span>
-          </button>
+    <>
+      <div className="fixed h-full w-full pb-6 bg-nexusDarkBg top-0 left-0 z-40">
+        <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <div className="flex flex-col mt-4 h-full md:mt-8">
+          <div className="relative w-full flex flex-col justify-center items-center text-white mb-8 px-4">
+            <h2 className="w-full mb-4">Menu</h2>
+            <ul className="w-full">{createMenuItems()}</ul>
+          </div>
+          <hr className="opacity-40 bg-nexusHeaderDivider mb-8" />
+          <div className="relative w-full flex flex-col justify-center items-center text-white mb-8 px-4">
+            <h2 className="w-full mb-4">Social</h2>
+            <ul className="w-full">{createMobileSocials()}</ul>
+          </div>
+          <hr className="opacity-40 bg-nexusHeaderDivider mb-8" />
+          <div className="flex flex-col px-4">
+            <button
+              disabled
+              className="mb-4 flex flex-row justify-center mx-2 rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2 cursor-not-allowed disabled:opacity-50"
+            >
+              <Image alt="Coins" src={coinsSVG} />
+              <span className="inline-block ml-2">Mint</span>
+            </button>
+            <button
+              disabled
+              className="mb-4 flex flex-row justify-center border mx-2 rounded-lg text-white bg-transparent px-4 py-2 cursor-not-allowed disabled:opacity-50"
+            >
+              <Image alt="Coins" src={walletSVG} />
+              <span className="inline-block ml-2">Connect wallet</span>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
