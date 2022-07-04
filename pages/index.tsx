@@ -95,11 +95,14 @@ const Mint: NextPage = () => {
         </div>
       </section>
 
-      <section className="px-6 lg:px-0 mb-8 lg:mt-12">
-        <div className="pb-6 lg:bg-[url('/mission-bg.svg')] lg:bg-no-repeat lg:bg-center lg:bg-contain relative lg:p-20 border  border-calloutBorderGreen bg-nexusDarkBg rounded-calloutSection lg:border-0 lg:bg-transparent text-center">
+      <section className="mb-16 pt-8">
+        <div className="pb-6 bg-[url('/mobile-mission-bg.svg')] bg-no-repeat bg-center bg-cover relative text-center">
+          <div className="w-36 absolute -left-8 -scale-x-100">
+            <Image alt="Planet icon" src={planetSVG} layout="responsive" />
+          </div>
           <div className="flex flex-col md:flex-row justify-center items-center">
             <div className="w-80 md:w-1/3 relative">
-              <div className="p-5 lg:p-0">
+              <div className="-mt-5 lg:p-0">
                 <Image src={nexusMissionImage} alt="Nexus Mission" />
               </div>
             </div>
