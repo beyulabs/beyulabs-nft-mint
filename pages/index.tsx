@@ -10,7 +10,8 @@ import VoyagerCharacters from "../components/VoyagerCharacters";
 import RoadmapTLDR from "../components/RoadmapTLDR";
 import FAQList from "../components/FAQList";
 
-import voyagersImage from "../public/voyagers-main-white.svg";
+import voyagersWhiteImage from "../public/voyagers-main-white.svg";
+import voyagersImage from "../public/voyagers-main.svg";
 import nexusMissionImage from "../public/nexus-mission.svg";
 import nexusTicketsImage from "../public/nexus-tickets.svg";
 import coinsSVG from "../public/coins.svg";
@@ -75,11 +76,11 @@ const Mint: NextPage = () => {
         </Dialog>
       </Transition.Root>
 
-      <div className="absolute top-0 left-0 right-0 bottom-0 h-screen w-full opacity-20 bg-black z-30"></div>
+      <div className="absolute top-0 left-0 right-0 bottom-0 h-screen w-full opacity-20 bg-black z-30 lg:hidden"></div>
 
-      <section className="h-screen px-2 flex flex-col justify-center items-center mb-8 md:mb-0 text-center">
-        <div className="mt-10 flex flex-col items-center z-30">
-          <div className="px-2 md:px-6">
+      <section className="h-screen px-2 flex flex-col justify-center items-center mb-8 md:mb-0 text-center lg:text-left lg:p-0 lg:h-fit lg:py-24 lg:mb-32">
+        <div className="mt-10 flex flex-col items-center z-30 lg:flex-row lg:items-start lg:mt-0">
+          <div className="px-2 md:px-6 lg:w-1/2">
             <h2 className="text-4xl md:text-6xl mb-5 text-white font-medium drop-shadow-2xl">
               <span className="highlight">Become</span> a member of the{" "}
               <span className="text-nexusGreen">Voyager</span> space{" "}
@@ -90,8 +91,13 @@ const Mint: NextPage = () => {
               and develop together creating, buying and selling NFTs collection!
             </p>
           </div>
-          <div className="w-full">
-            <Image alt="Nexus Voyagers" src={voyagersImage} />
+          <div className="w-full lg:w-1/2 lg:relative">
+            <div className="lg:hidden">
+              <Image alt="Nexus Voyagers" src={voyagersWhiteImage} />
+            </div>
+            <div className="hidden lg:block lg:absolute lg:-top-12 lg:right-4 lg:scale-125 lg:p-4">
+              <Image alt="Nexus Voyagers" src={voyagersImage} />
+            </div>
           </div>
         </div>
       </section>
