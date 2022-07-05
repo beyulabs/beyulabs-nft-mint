@@ -96,18 +96,20 @@ const Mint: NextPage = () => {
         </div>
       </section>
 
-      <section className="mb-16 md:px-8">
-        <div className="pb-6 bg-[url('/mobile-mission-bg.svg')] bg-no-repeat bg-center bg-cover relative text-center md:bg-[url('/mission-bg.svg')] md:bg-contain">
+      <section className="mb-16 md:px-8 md:bg-[url('/mission-bg.svg')] md:bg-contain md:bg-no-repeat">
+        <div className="pb-6 bg-[url('/mobile-mission-bg.svg')] bg-no-repeat bg-center bg-cover relative text-center md:bg-none md:text-left">
           <div className="w-36 absolute -left-8 -scale-x-100 md:hidden">
             <Image alt="Planet icon" src={planetSVG} layout="responsive" />
           </div>
-          <div className="flex flex-col md:flex-row justify-center items-center">
-            <div className="w-80 md:w-1/3 relative">
-              <div className="-mt-5 lg:p-0">
-                <Image src={nexusMissionImage} alt="Nexus Mission" />
+          <div className="flex flex-col md:flex-row justify-center items-center md:items-baseline">
+            <div className="w-80 md:w-1/3">
+              <div className="md:w-full md:relative">
+                <div className="-mt-5 md:absolute md:-top-12 md:mt-0 md:scale-115">
+                  <Image src={nexusMissionImage} alt="Nexus Mission" />
+                </div>
               </div>
             </div>
-            <div className="md:w-2/3 md:pl-12 md:pr-6">
+            <div className="md:w-2/3 md:ml-2 md:pt-12 md:pr-2">
               <h2 className="text-white uppercase font-bold text-3xl md:text-4xl mb-4 px-6 md:px-0">
                 The Nexus Voyagers mission
               </h2>
