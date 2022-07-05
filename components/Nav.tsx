@@ -25,7 +25,7 @@ function Nav({ menuOpen, setMenuOpen }: NavProps) {
         "opacity-50 hover:cursor-not-allowed": !route.enabled,
         "hover:drop-shadow": route.enabled,
       },
-      "mr-6 text-white"
+      "mr-6 text-white lg:text-base"
     );
 
     return (
@@ -65,7 +65,7 @@ function Nav({ menuOpen, setMenuOpen }: NavProps) {
         )}
       </div>
       {!menuOpen && (
-        <ul className="hidden text-black lg:ml-4 lg:flex lg:flex-row">
+        <ul className="hidden text-black lg:flex lg:flex-row lg:items-center">
           {routeLinks}
         </ul>
       )}
