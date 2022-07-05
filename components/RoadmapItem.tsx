@@ -24,8 +24,8 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
   const itemNumberWrapperCn = classNames(
     "hidden flex flex-row items-center text-nexusGreen md:inline-flex",
     {
-      "md:mr-10": itemIndex % 2 !== 0,
-      "md:flex-row-reverse md:ml-10": itemIndex % 2 === 0,
+      "md:mr-4": itemIndex % 2 !== 0,
+      "md:flex-row-reverse md:ml-4": itemIndex % 2 === 0,
     }
   );
 

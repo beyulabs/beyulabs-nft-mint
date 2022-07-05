@@ -96,7 +96,7 @@ const Mint: NextPage = () => {
         </div>
       </section>
 
-      <section className="mb-16">
+      <section className="mb-16 md:px-8">
         <div className="pb-6 bg-[url('/mobile-mission-bg.svg')] bg-no-repeat bg-center bg-cover relative text-center md:bg-[url('/mission-bg.svg')] md:bg-contain">
           <div className="w-36 absolute -left-8 -scale-x-100 md:hidden">
             <Image alt="Planet icon" src={planetSVG} layout="responsive" />
@@ -146,7 +146,7 @@ const Mint: NextPage = () => {
         </div>
       </section>
 
-      <section className="min-h-screen mb-40 px-4 pt-8 sm:pt-16 flex flex-col justify-center items-center">
+      <section className="min-h-screen mb-40 px-4 pt-8 flex flex-col justify-center items-center md:px-12">
         <div className="bg-[url('/astromap-line.svg')] bg-no-repeat bg-contain w-full bg-center">
           <h2 className="text-white font-semibold text-3xl uppercase drop-shadow-xl mb-12 text-center md:text-4xl">
             Astromap
@@ -163,8 +163,8 @@ const Mint: NextPage = () => {
         </div>
       </section>
 
-      <section className="px-6 mb-28 mt-4 md:mt-10">
-        <div className="pt-14 pb-14 bg-nexusDarkBg bg-[url('/boarding-pass-ellipsis.svg')] bg-right-bottom bg-no-repeat relative border border-calloutBorderGreen rounded-calloutSection text-center md:pb-8">
+      <section className="px-6 mb-28 mt-4 md:px-8">
+        <div className="pt-14 pb-14 bg-nexusDarkBg bg-[url('/boarding-pass-ellipsis.svg')] bg-right-bottom bg-no-repeat relative border border-calloutBorderGreen rounded-calloutSection text-center md:py-8">
           <div className="w-36 absolute -top-4 right-0 -mt-6 -mr-12">
             <Image alt="Planet icon" src={planetSVG} layout="responsive" />
           </div>
@@ -175,10 +175,12 @@ const Mint: NextPage = () => {
               </h2>
             </div>
             <div className="md:relative md:flex md:flex-row">
-              <div className="md:w-1/3 md:scale-125 lg:-bottom-64">
-                <Image src={nexusTicketsImage} alt="Boarding Pass" />
+              <div className="md:w-1/3 md:relative">
+                <div className="w-full md:absolute md:scale-125 md:top-8 md:-left-2 lg:-bottom-64">
+                  <Image src={nexusTicketsImage} alt="Boarding Pass" />
+                </div>
               </div>
-              <div className="text-astromapGrayText text-sm px-6 md:text-left md:w-2/3 md:ml-6 md:px-2">
+              <div className="text-astromapGrayText text-sm px-6 md:text-left md:w-2/3 md:ml-8 md:px-2">
                 <h2 className="text-white uppercase font-bold text-3xl mb-5 px-6 md:px-0">
                   Boarding pass
                 </h2>
@@ -211,7 +213,7 @@ const Mint: NextPage = () => {
         <VoyagerCharacters />
       </section>
 
-      <section className="w-5/6 md:w-4/6 mx-auto mb-12 md:mb-32">
+      <section className="w-5/6 md:w-5/6 mx-auto mb-12 md:mb-24">
         <FAQList />
       </section>
     </>
