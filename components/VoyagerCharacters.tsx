@@ -16,7 +16,7 @@ const VoyagerCharacters = () => {
   };
 
   return (
-    <div className="md:w-2/3 md:mx-auto">
+    <div className="md:w-2/3 md:mx-auto lg:max-w-lg">
       <h2 className="uppercase text-3xl text-white font-semibold drop-shadow-xl mb-8 text-center md:text-4xl">
         The Voyagers
       </h2>
