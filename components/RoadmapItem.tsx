@@ -14,7 +14,7 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
   const [isHover, setIsHover] = useState<boolean>(false);
 
   const roadmapItemCn = classNames(
-    "flex flex-row items-center mb-10 md:mb-20",
+    "rounded-xl bg-[url('/astromap-item-bg.svg')] bg-cover bg-no-repeat bg-top-center bg-nexusDarkBg flex flex-row items-center mb-10 md:mb-20 md:bg-none md:bg-transparent",
     {
       "md:flex-row-reverse md:mr-[50%]": itemIndex % 2 === 0,
       "md:ml-[50%]": itemIndex % 2 !== 0,
@@ -22,21 +22,21 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
   );
 
   const itemNumberWrapperCn = classNames(
-    "flex flex-row items-center text-nexusGreen",
+    "hidden flex flex-row items-center text-nexusGreen md:inline-flex",
     {
-      "md:mr-10": itemIndex % 2 !== 0,
-      "md:flex-row-reverse md:ml-10": itemIndex % 2 === 0,
+      "md:mr-4": itemIndex % 2 !== 0,
+      "md:flex-row-reverse md:ml-4": itemIndex % 2 === 0,
     }
   );
 
   const roadmapItemCardCn = classNames(
-    "bg-nexusBlack p-4 rounded-xl w-96 text-white grow md:grow-0",
+    "p-2 w-96 text-white grow md:grow-0 rounded-xl md:bg-[url('/astromap-item-bg.svg')] md:bg-cover md:bg-no-repeat md:bg-top-center md:bg-nexusDarkBg",
     {
-      "text-white bg-nexusGreen": isHover,
+      "text-white bg-nexusGreen ": isHover,
     }
   );
 
-  const descriptionCn = classNames({
+  const descriptionCn = classNames("text-xs", {
     "text-astromapGrayText": !isHover,
     "text-white": isHover,
   });
@@ -47,6 +47,9 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
         <div className={itemNumberWrapperCn}>
           <div className="-mt-2">{`0${itemIndex + 1}`}</div>
           <Image alt="Astromap" src={astroDot} width={48} height={48} />
+        </div>
+        <div className="flex justify-center items-center rounded-full bg-calloutBorderGreen w-8 h-8 absolute -left-4 z-40 text-nexusGradientGreen md:hidden">
+          <span>{`0${itemIndex + 1}`}</span>
         </div>
         <div
           className={roadmapItemCardCn}
@@ -62,7 +65,7 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
             />
 
             <div key={roadmapItem.title} className="w-full ml-4">
-              <h3 className="text-white text-xl font-semibold">
+              <h3 className="text-white text-base font-semibold highlight">
                 {roadmapItem.title}
               </h3>
               <p className={descriptionCn}>{roadmapItem.description}</p>

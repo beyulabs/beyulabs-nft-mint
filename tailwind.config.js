@@ -8,6 +8,21 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        spaceman: "spaceHover 6s linear infinite",
+      },
+      keyframes: {
+        spaceHover: {
+          "0%, 100%": {
+            transform: "translateY(-15%)",
+            "animation-timing-function": "ease-in-out",
+          },
+          "50%": {
+            transform: "translateY(0)",
+            "animation-timing-function": "ease-in-out",
+          },
+        },
+      },
       colors: {
         astromapGrayText: "#BBBBBB",
         nexusGreen: "#41A380",

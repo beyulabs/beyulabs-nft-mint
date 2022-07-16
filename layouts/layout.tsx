@@ -26,31 +26,35 @@ const Layout = (props: LayoutProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-[url('/home-bg.svg')] bg-cover overflow-hidden">
+      <main>
         <div className="m-auto max-w-screen-xl">
-          <Header setMenuOpen={setMenuOpen} />
-          {menuOpen && <MobileMenu setMenuOpen={setMenuOpen} />}
+          {!menuOpen && (
+            <div className="absolute bg-black bg-opacity-30 z-50 w-full top-0 left-0">
+              <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+            </div>
+          )}
+          {menuOpen && (
+            <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+          )}
           {props.children}
         </div>
       </main>
 
       <footer className="w-full text-center bg-nexusGreen text-white">
-        <div className="flex flex-row justify-center mt-8">
-          <div className="flex flex-row max-w-96">
-            <div className="w-1/2 m-8">
-              <Image
-                src={nexusVoyagersLogo}
-                alt="Nexus Voyagers logo"
-                layout="responsive"
-              />
-            </div>
-            <div className="w-1/2 m-8">
-              <Image
-                src={beyuLabsLogo}
-                alt="BeYu Labs logo"
-                layout="responsive"
-              />
-            </div>
+        <div className="flex flex-col items-center py-12 md:w-96 md:flex-row md:mx-auto">
+          <div className="w-1/2 m-2">
+            <Image
+              src={nexusVoyagersLogo}
+              alt="Nexus Voyagers logo"
+              layout="responsive"
+            />
+          </div>
+          <div className="w-1/2 m-2">
+            <Image
+              src={beyuLabsLogo}
+              alt="BeYu Labs logo"
+              layout="responsive"
+            />
           </div>
         </div>
         <hr className="border-nexusFooterDivider opacity-30" />

@@ -3,14 +3,14 @@ import Image from "next/image";
 import type { NextPage } from "next";
 import { Dialog, Transition } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark, faMeteor } from "@fortawesome/free-solid-svg-icons";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 import EmailSignup from "../components/EmailSignup";
 import VoyagerCharacters from "../components/VoyagerCharacters";
 import RoadmapTLDR from "../components/RoadmapTLDR";
 import FAQList from "../components/FAQList";
-import CalloutSection from "../components/CalloutSection";
 
+import spacemanImage from "../public/spaceman.svg";
 import voyagersImage from "../public/voyagers-main.svg";
 import nexusMissionImage from "../public/nexus-mission.svg";
 import nexusTicketsImage from "../public/nexus-tickets.svg";
@@ -22,7 +22,7 @@ const Mint: NextPage = () => {
   const cancelButtonRef = useRef(null);
 
   return (
-    <>
+    <div className="bg-[url('/home-bg.svg')] bg-cover overflow-hidden">
       <Transition.Root show={open} as={Fragment}>
         <Dialog
           as="div"
@@ -76,96 +76,95 @@ const Mint: NextPage = () => {
         </Dialog>
       </Transition.Root>
 
-      <div className="absolute top-0 left-0 right-0 bottom-0 h-[100vh] w-full opacity-20 bg-black z-30"></div>
+      <section className="h-screen bg-[url('/landscape.png')] bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center relative">
+        <div className="absolute top-0 left-0 right-0 bottom-0 h-screen w-full bg-opacity-30 bg-black z-30"></div>
+        <h1 className="hero-cta text-white text-center text-6xl z-40 font-bold drop-shadow-xl px-4 md:text-8xl">
+          Nexus Voyagers
+        </h1>
+      </section>
 
-      <section className="px-6 md:px-4 flex flex-col justify-center items-center mb-52 md:mb-24 xl:mb-72">
-        <div className="mt-10 sm:mt-20 md:mt-12 lg:mt-16 md:flex-row-reverse flex flex-col items-center z-30">
-          <div className="w-72 md:w-2/5">
-            <Image alt="Nexus Voyagers" src={voyagersImage} />
-          </div>
-          <div className="md:w-3/5">
-            <h2 className="text-6xl md:text-8xl mb-10 text-white font-medium drop-shadow-2xl">
-              <span>Become</span> a member of the{" "}
-              <span className="text-nexusGreen">Voyager</span> space mission
+      <section className="min-h-screen px-2 flex flex-col justify-center items-center mb-8 md:mb-0 text-center lg:text-left lg:p-0 lg:h-fit lg:py-24 lg:mb-8">
+        <div className="mt-10 flex flex-col items-center z-30 lg:flex-row lg:items-start lg:mt-0">
+          <div className="px-2 md:px-6 lg:w-1/2">
+            <h2 className="text-4xl md:text-6xl mb-5 text-white font-medium drop-shadow-2xl">
+              <span className="highlight">Become</span> a member of the{" "}
+              <span className="text-nexusGreen">Voyager</span> space{" "}
+              <span className="highlight">mission</span>
             </h2>
-            <p className="text-nexusGrayText font-raleway text-xl mb-12">
-              Unforgettable adventures await you during the flight! Find friends
-              and develop together creating, buying and selling NFTs collection!
-            </p>
-            <button
-              className="flex flex-row items-center rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-6 py-4 text-2xl"
-              onClick={() => setOpen(true)}
-            >
-              <FontAwesomeIcon icon={faMeteor} width={24} />
-              <span className="inline-block ml-2">Join the mission</span>
-            </button>
+          </div>
+          <div className="w-full lg:w-1/2 lg:relative">
+            <div className="lg:block lg:absolute lg:-top-12 lg:right-4 lg:scale-125 lg:p-4">
+              <Image alt="Nexus Voyagers" src={voyagersImage} />
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="px-6 lg:px-0 mb-24 lg:mt-12">
-        <div className="py-12 lg:bg-[url('/mission-bg.svg')] lg:bg-no-repeat lg:bg-center lg:bg-contain relative lg:p-20 border  border-calloutBorderGreen bg-nexusDarkBg rounded-calloutSection lg:border-0 lg:bg-transparent">
-          <CalloutSection
-            title="The Nexus Voyagers mission"
-            image={
-              <div className="p-8 lg:p-0">
-                <Image src={nexusMissionImage} alt="Nexus Mission" />
+      <section className="mb-16 md:px-8 md:bg-[url('/mission-bg.svg')] md:bg-contain md:bg-no-repeat lg:py-56 lg:mb-16 lg:bg-contain lg:bg-center">
+        <div className="py-24 bg-[url('/mobile-mission-bg.svg')] bg-no-repeat bg-center bg-cover relative text-center md:p-0 md:bg-none md:text-left md:pt-4 md:pb-12 lg:pb-0">
+          <div className="w-36 absolute -left-8 -scale-x-100 md:hidden">
+            <Image alt="Planet icon" src={planetSVG} layout="responsive" />
+          </div>
+          <div className="w-36 absolute right-0 -bottom-16 animate-spaceman md:bottom-8 lg:-bottom-24">
+            <Image alt="Nexus Spaceman" src={spacemanImage} />
+          </div>
+          <div className="flex flex-col md:flex-row justify-center items-center md:items-baseline">
+            <div className="w-80 md:w-1/3">
+              <div className="md:w-full md:relative">
+                <div className="-mt-5 md:absolute md:-top-12 md:-left-6 md:mt-0 lg:scale-05 lg:-top-48">
+                  <Image src={nexusMissionImage} alt="Nexus Mission" />
+                </div>
               </div>
-            }
-            description={
-              <div className="pr-6">
-                <p className="mb-5">
-                  To terraform Web3. An ecosystem cultivated by developers,
-                  artists, enthusiasts, and investors. A Solarpunk utopia
-                  powered by BeYu Labs and driven by radical optimism and
-                  sustainability.
-                </p>
-                <p className="mb-5">
-                  A collection of 10,119 crew members, primed for the genesis
-                  mission launch. On this voyage, crew members will have access
-                  to epic shared experiences, meaningful collabs, one of a kind
-                  NFT drops, and a future built for the community over time.
-                  With the focus on empowering Web3 entrepreneurship the
-                  ecosystem will fill the underlying gaps on contribution with
-                  incentivized exchange of utility. Each of us will have a role
-                  to play.
-                </p>
-                <p className="uppercase font-medium mb-5">
-                  Bridging the gap between dream and reality, virtual and real,
-                  we build a regenerative vision of the future.
-                </p>
-                <p className="uppercase bold mb-5">
-                  Are you mission ready?{" "}
-                  <span
-                    className="text-nexusGreen cursor-pointer"
-                    onClick={() => setOpen(true)}
+            </div>
+            <div className="md:w-2/3 md:ml-6 md:pt-8 md:pr-2 lg:pt-2">
+              <h2 className="text-white uppercase font-bold text-3xl md:text-4xl mb-4 px-6 md:px-0">
+                The Nexus Voyagers mission
+              </h2>
+              <div className="text-astromapGrayText text-base px-6 md:px-0">
+                <div className="pr-6">
+                  <p className="mb-5">
+                    A collection of 10,119 crew members, primed for the genesis
+                    mission launch. On this voyage, crew members will have
+                    access to epic shared experiences, meaningful collabs, one
+                    of a kind NFT drops, and a future built for the community
+                    over time. With the focus on empowering Web3
+                    entrepreneurship the ecosystem will fill the underlying gaps
+                    on contribution with incentivized exchange of utility. Each
+                    of us will have a role to play.
+                  </p>
+                  <p className="uppercase bold mb-5">
+                    Are you mission ready?{" "}
+                    <span
+                      className="text-nexusGreen cursor-pointer"
+                      onClick={() => setOpen(true)}
+                    >
+                      Join now!
+                    </span>
+                  </p>
+                  <button
+                    disabled
+                    className="text-xl mb-6 md:mb-0 cursor-not-allowed flex flex-row rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2 disabled:opacity-50 m-auto"
                   >
-                    Join now!
-                  </span>
-                </p>
-                <button
-                  disabled
-                  className="mb-6 md:mb-0 cursor-not-allowed flex flex-row rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2 disabled:opacity-50"
-                >
-                  <Image alt="Coins" src={coinsSVG} />
-                  <span className="inline-block ml-2">Mint</span>
-                </button>
+                    <Image alt="Coins" src={coinsSVG} />
+                    <span className="inline-block ml-2">Mint</span>
+                  </button>
+                </div>
               </div>
-            }
-          />
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="min-h-screen mb-40 px-4 pt-8 sm:pt-16 flex flex-col justify-center items-center">
-        <div className="bg-[url('/astromap-line.svg')] bg-no-repeat bg-contain w-full bg-center">
-          <h2 className="text-white font-semibold text-6xl drop-shadow-xl mb-12 text-center">
+      <section className="min-h-screen mb-40 px-4 pt-8 flex flex-col justify-center items-center md:px-12">
+        <div className="bg-[url('/astromap-line.svg')] bg-no-repeat bg-contain w-full bg-center lg:w-3/4">
+          <h2 className="text-white font-semibold text-3xl uppercase drop-shadow-xl mb-12 text-center md:text-4xl">
             Astromap
           </h2>
           <RoadmapTLDR />
           <div className="flex-row justify-center flex">
             <button
               disabled
-              className="cursor-not-allowed rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-9 py-5 text-xl disabled:opacity-50"
+              className="w-full cursor-not-allowed rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen py-4 text-xl disabled:opacity-50 md:w-1/3"
             >
               Explore Astromap
             </button>
@@ -173,20 +172,27 @@ const Mint: NextPage = () => {
         </div>
       </section>
 
-      <section className="px-6 mb-28 mt-4 md:mt-10">
-        <div className="pt-14 pb-20 bg-nexusDarkBg md:bg-[url('/boarding-pass-ellipsis.svg')] md:bg-right-bottom md:bg-no-repeat relative border border-calloutBorderGreen rounded-calloutSection">
-          <div className="w-36 absolute top-0 right-0 -mt-6 -mr-12">
+      <section className="px-6 mb-28 mt-4 md:px-8 lg:mb-52 lg:px-16">
+        <div className="pt-14 pb-14 bg-nexusDarkBg bg-[url('/boarding-pass-ellipsis.svg')] bg-right-bottom bg-no-repeat relative border border-calloutBorderGreen rounded-calloutSection text-center md:py-8">
+          <div className="w-36 absolute -top-4 right-0 -mt-6 -mr-12">
             <Image alt="Planet icon" src={planetSVG} layout="responsive" />
           </div>
-          <CalloutSection
-            title="Boarding pass"
-            image={
-              <div className="md:absolute md:scale-110 md:-bottom-4 md:-left-4 lg:-bottom-64">
-                <Image src={nexusTicketsImage} alt="Boarding Pass" />
+          <div className="flex flex-col justify-center items-center">
+            <div className="w-80 md:hidden">
+              <h2 className="text-white uppercase font-bold text-3xl mb-5 px-6 md:text-4xl">
+                Boarding pass
+              </h2>
+            </div>
+            <div className="md:relative md:flex md:flex-row">
+              <div className="md:w-1/3 md:relative">
+                <div className="w-full md:absolute md:scale-125 md:top-8 md:-left-2 lg:-bottom-64">
+                  <Image src={nexusTicketsImage} alt="Boarding Pass" />
+                </div>
               </div>
-            }
-            description={
-              <>
+              <div className="text-astromapGrayText text-sm px-6 md:text-left md:w-2/3 md:ml-8 md:px-2">
+                <h2 className="text-white uppercase font-bold text-3xl mb-5 px-6 md:px-0">
+                  Boarding pass
+                </h2>
                 <p className="mb-5 uppercase font-medium">
                   The Boarding Passes are separated by their contribution to the
                   new world of web3. Each character type will have a unique
@@ -203,23 +209,23 @@ const Mint: NextPage = () => {
                   in the deteriorating space of Web2.
                 </p>
 
-                <button className="rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2">
+                <button className="text-xl rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2">
                   Get it
                 </button>
-              </>
-            }
-          />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="mb-20">
+      <section className="mb-20 lg:mb-36">
         <VoyagerCharacters />
       </section>
 
-      <section className="w-5/6 md:w-4/6 mx-auto mb-12 md:mb-32">
+      <section className="w-5/6 md:w-5/6 mx-auto mb-12 md:mb-24">
         <FAQList />
       </section>
-    </>
+    </div>
   );
 };
 
