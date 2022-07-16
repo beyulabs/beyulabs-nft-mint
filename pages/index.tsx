@@ -105,13 +105,13 @@ const Mint: NextPage = () => {
           <div className="w-36 absolute -left-8 -scale-x-100 md:hidden">
             <Image alt="Planet icon" src={planetSVG} layout="responsive" />
           </div>
-          <div className="w-36 absolute right-0 -bottom-16 animate-spaceman md:bottom-8">
+          <div className="w-36 absolute right-0 -bottom-16 animate-spaceman md:bottom-8 lg:-bottom-24">
             <Image alt="Nexus Spaceman" src={spacemanImage} />
           </div>
           <div className="flex flex-col md:flex-row justify-center items-center md:items-baseline">
             <div className="w-80 md:w-1/3">
               <div className="md:w-full md:relative">
-                <div className="-mt-5 md:absolute md:-top-12 md:-left-6 md:mt-0 lg:scale-05 lg:-top-28">
+                <div className="-mt-5 md:absolute md:-top-12 md:-left-6 md:mt-0 lg:scale-05 lg:-top-48">
                   <Image src={nexusMissionImage} alt="Nexus Mission" />
                 </div>
               </div>

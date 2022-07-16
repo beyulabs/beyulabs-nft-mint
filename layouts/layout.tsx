@@ -29,7 +29,7 @@ const Layout = (props: LayoutProps) => {
       <main>
         <div className="m-auto max-w-screen-xl">
           {!menuOpen && (
-            <div className="absolute bg-black bg-opacity-30 z-50 w-full">
+            <div className="absolute bg-black bg-opacity-30 z-50 w-full top-0 left-0">
               <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             </div>
           )}
