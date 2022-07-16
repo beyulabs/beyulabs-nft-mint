@@ -154,42 +154,42 @@ export const astromap: AstromapItem[] = [
 export const voyagers: Voyager[] = [
   {
     nexusName: "Captain",
-    irlName: "Founder",
+    irlName: ["Founder"],
     description:
       "Pulling together the pieces of the puzzle and ensuring the community is working in harmony to terraform the planet in the same direction - the founders. While each cog in the wheel is valuable in its own right, progress is not truly made unless all voyagers are working in harmony and aligned on the vision of this new world. The captain’s vision is brought to life by those inspired enough to see the light at the end of the tunnel.",
     image: captainAvatar,
   },
   {
     nexusName: "Mechanic",
-    irlName: "Dev",
+    irlName: ["Dev"],
     description:
       "The brains behind the ideas - the engineers/developers. Creating technical solutions to the complex challenges that come with terraforming a new world; they build quietly in the back-end and help connect the dots to bring innovation to life.",
     image: mechanicAvatar,
   },
   {
     nexusName: "Architect",
-    irlName: "Artist",
+    irlName: ["Artist"],
     description:
       "The creatives that take ideas and bring them to life in a beautiful way - the artists. Without grace in the design of a new world, it would become nothing more than a lifeless land of chrome and boxy structures. The architects breathe life into the planet and create an aesthetic that makes it worth populating.",
     image: architectAvatar,
   },
   {
     nexusName: "Journalist",
-    irlName: "Marketing",
+    irlName: ["Marketing"],
     description:
       "On a mission to spread ideas and share news of innovations and creation - the marketers. A new business - a beautiful piece of art - an innovative idea; do they really exist if the people of the planet don’t KNOW they exist? The journalists spread the word to ensure the population is aware of what’s happening on the planet.",
     image: journalistAvatar,
   },
   {
     nexusName: "Merchant",
-    irlName: "Investor/Trader",
+    irlName: ["Investor", "Trader"],
     description:
       "The driving force behind the economy of the new world - the investors. Those who decide what the direction of the market looks like, support new businesses and create financial abundance for the builders and community alike.",
     image: merchantAvatar,
   },
   {
     nexusName: "Explorer",
-    irlName: "Collector",
+    irlName: ["Collector"],
     description:
       "Like true mavens, stimulating the economy as the backbone to all initiatives of the new world - the collector. All innovations, projects, and progress of this terraformed society would be all for naught if not for these community members actively participating and engaging in the wild world of web3. These collectors of innovation buy, sell, trade and barter their way through the space, providing feedback to the builders so the planet is built with progress and abundance in mind.",
     image: explorerAvatar,

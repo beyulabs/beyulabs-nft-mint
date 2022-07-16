@@ -29,7 +29,9 @@ const Layout = (props: LayoutProps) => {
       <main className="bg-[url('/home-bg.svg')] bg-cover overflow-hidden">
         <div className="m-auto max-w-screen-xl">
           {!menuOpen && (
-            <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+            <div className="absolute bg-black bg-opacity-30 z-50 w-full">
+              <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+            </div>
           )}
           {menuOpen && (
             <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />

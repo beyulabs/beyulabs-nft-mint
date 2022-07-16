@@ -72,7 +72,7 @@ export interface AstromapItem {
 
 export interface Voyager {
   nexusName: string;
-  irlName: string;
+  irlName: string[];
   description: string;
   image: StaticImageData;
 }

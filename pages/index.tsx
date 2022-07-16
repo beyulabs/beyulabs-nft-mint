@@ -10,7 +10,7 @@ import VoyagerCharacters from "../components/VoyagerCharacters";
 import RoadmapTLDR from "../components/RoadmapTLDR";
 import FAQList from "../components/FAQList";
 
-import voyagersWhiteImage from "../public/voyagers-main-white.svg";
+import spacemanImage from "../public/spaceman.svg";
 import voyagersImage from "../public/voyagers-main.svg";
 import nexusMissionImage from "../public/nexus-mission.svg";
 import nexusTicketsImage from "../public/nexus-tickets.svg";
@@ -76,7 +76,12 @@ const Mint: NextPage = () => {
         </Dialog>
       </Transition.Root>
 
-      <div className="absolute top-0 left-0 right-0 bottom-0 h-screen w-full opacity-20 bg-black z-30 lg:hidden"></div>
+      <section className="h-screen bg-[url('/landscape.png')] bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center relative">
+        <div className="absolute top-0 left-0 right-0 bottom-0 h-screen w-full bg-opacity-20 bg-black z-30"></div>
+        <h1 className="text-white text-center text-6xl z-40 font-bold drop-shadow-xl px-4">
+          Nexus Voyagers
+        </h1>
+      </section>
 
       <section className="h-screen px-2 flex flex-col justify-center items-center mb-8 md:mb-0 text-center lg:text-left lg:p-0 lg:h-fit lg:py-24 lg:mb-8">
         <div className="mt-10 flex flex-col items-center z-30 lg:flex-row lg:items-start lg:mt-0">
@@ -86,16 +91,9 @@ const Mint: NextPage = () => {
               <span className="text-nexusGreen">Voyager</span> space{" "}
               <span className="highlight">mission</span>
             </h2>
-            <p className="text-sm text-astromapGrayText font-raleway mb-5 md:text-base">
-              Unforgettable adventures await you during the flight! Find friends
-              and develop together creating, buying and selling NFTs collection!
-            </p>
           </div>
           <div className="w-full lg:w-1/2 lg:relative">
-            <div className="lg:hidden">
-              <Image alt="Nexus Voyagers" src={voyagersWhiteImage} />
-            </div>
-            <div className="hidden lg:block lg:absolute lg:-top-12 lg:right-4 lg:scale-125 lg:p-4">
+            <div className="lg:block lg:absolute lg:-top-12 lg:right-4 lg:scale-125 lg:p-4">
               <Image alt="Nexus Voyagers" src={voyagersImage} />
             </div>
           </div>
@@ -106,6 +104,9 @@ const Mint: NextPage = () => {
         <div className="pb-6 bg-[url('/mobile-mission-bg.svg')] bg-no-repeat bg-center bg-cover relative text-center md:bg-none md:text-left lg:pb-0">
           <div className="w-36 absolute -left-8 -scale-x-100 md:hidden">
             <Image alt="Planet icon" src={planetSVG} layout="responsive" />
+          </div>
+          <div className="w-36 absolute right-0 -bottom-16 animate-spaceman">
+            <Image alt="Nexus Spaceman" src={spacemanImage} />
           </div>
           <div className="flex flex-col md:flex-row justify-center items-center md:items-baseline">
             <div className="w-80 md:w-1/3">

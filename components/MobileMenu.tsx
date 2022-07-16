@@ -82,7 +82,7 @@ const MobileMenu = ({ menuOpen, setMenuOpen }: MobileMenuProps) => {
 
   return (
     <>
-      <div className="fixed h-full w-full pb-6 bg-nexusDarkBg top-0 left-0 z-40">
+      <div className="fixed h-full w-full pb-6 bg-nexusDarkBg top-0 left-0 z-50">
         <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <div className="flex flex-col mt-4 h-full md:mt-8">
           <div className="relative w-full flex flex-col justify-center items-center text-white mb-8 px-4">
