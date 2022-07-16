@@ -26,7 +26,7 @@ const Layout = (props: LayoutProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-[url('/home-bg.svg')] bg-cover overflow-hidden">
+      <main>
         <div className="m-auto max-w-screen-xl">
           {!menuOpen && (
             <div className="absolute bg-black bg-opacity-30 z-50 w-full">

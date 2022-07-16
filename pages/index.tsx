@@ -22,7 +22,7 @@ const Mint: NextPage = () => {
   const cancelButtonRef = useRef(null);
 
   return (
-    <>
+    <div className="bg-[url('/home-bg.svg')] bg-cover overflow-hidden">
       <Transition.Root show={open} as={Fragment}>
         <Dialog
           as="div"
@@ -77,8 +77,8 @@ const Mint: NextPage = () => {
       </Transition.Root>
 
       <section className="h-screen bg-[url('/landscape.png')] bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center relative">
-        <div className="absolute top-0 left-0 right-0 bottom-0 h-screen w-full bg-opacity-20 bg-black z-30"></div>
-        <h1 className="text-white text-center text-6xl z-40 font-bold drop-shadow-xl px-4">
+        <div className="absolute top-0 left-0 right-0 bottom-0 h-screen w-full bg-opacity-30 bg-black z-30"></div>
+        <h1 className="hero-cta text-white text-center text-6xl z-40 font-bold drop-shadow-xl px-4 md:text-8xl">
           Nexus Voyagers
         </h1>
       </section>
@@ -100,12 +100,12 @@ const Mint: NextPage = () => {
         </div>
       </section>
 
-      <section className="min-h-screen mb-16 md:px-8 md:bg-[url('/mission-bg.svg')] md:bg-contain md:bg-no-repeat lg:py-56 lg:mb-16 lg:bg-contain lg:bg-center">
-        <div className="py-24 bg-[url('/mobile-mission-bg.svg')] bg-no-repeat bg-center bg-cover relative text-center md:bg-none md:text-left lg:pb-0">
+      <section className="mb-16 md:px-8 md:bg-[url('/mission-bg.svg')] md:bg-contain md:bg-no-repeat lg:py-56 lg:mb-16 lg:bg-contain lg:bg-center">
+        <div className="py-24 bg-[url('/mobile-mission-bg.svg')] bg-no-repeat bg-center bg-cover relative text-center md:p-0 md:bg-none md:text-left md:pt-4 md:pb-12 lg:pb-0">
           <div className="w-36 absolute -left-8 -scale-x-100 md:hidden">
             <Image alt="Planet icon" src={planetSVG} layout="responsive" />
           </div>
-          <div className="w-36 absolute right-0 -bottom-16 animate-spaceman">
+          <div className="w-36 absolute right-0 -bottom-16 animate-spaceman md:bottom-8">
             <Image alt="Nexus Spaceman" src={spacemanImage} />
           </div>
           <div className="flex flex-col md:flex-row justify-center items-center md:items-baseline">
@@ -172,7 +172,7 @@ const Mint: NextPage = () => {
         </div>
       </section>
 
-      <section className="min-h-screen px-6 mb-28 mt-4 md:px-8 lg:mb-52 lg:px-16">
+      <section className="px-6 mb-28 mt-4 md:px-8 lg:mb-52 lg:px-16">
         <div className="pt-14 pb-14 bg-nexusDarkBg bg-[url('/boarding-pass-ellipsis.svg')] bg-right-bottom bg-no-repeat relative border border-calloutBorderGreen rounded-calloutSection text-center md:py-8">
           <div className="w-36 absolute -top-4 right-0 -mt-6 -mr-12">
             <Image alt="Planet icon" src={planetSVG} layout="responsive" />
@@ -218,14 +218,14 @@ const Mint: NextPage = () => {
         </div>
       </section>
 
-      <section className="min-h-screen mb-20 lg:mb-36">
+      <section className="mb-20 lg:mb-36">
         <VoyagerCharacters />
       </section>
 
-      <section className="min-h-screen w-5/6 md:w-5/6 mx-auto mb-12 md:mb-24">
+      <section className="w-5/6 md:w-5/6 mx-auto mb-12 md:mb-24">
         <FAQList />
       </section>
-    </>
+    </div>
   );
 };
 
