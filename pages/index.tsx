@@ -83,7 +83,7 @@ const Mint: NextPage = () => {
         </h1>
       </section>
 
-      <section className="h-screen px-2 flex flex-col justify-center items-center mb-8 md:mb-0 text-center lg:text-left lg:p-0 lg:h-fit lg:py-24 lg:mb-8">
+      <section className="min-h-screen px-2 flex flex-col justify-center items-center mb-8 md:mb-0 text-center lg:text-left lg:p-0 lg:h-fit lg:py-24 lg:mb-8">
         <div className="mt-10 flex flex-col items-center z-30 lg:flex-row lg:items-start lg:mt-0">
           <div className="px-2 md:px-6 lg:w-1/2">
             <h2 className="text-4xl md:text-6xl mb-5 text-white font-medium drop-shadow-2xl">
@@ -100,8 +100,8 @@ const Mint: NextPage = () => {
         </div>
       </section>
 
-      <section className="mb-16 md:px-8 md:bg-[url('/mission-bg.svg')] md:bg-contain md:bg-no-repeat lg:py-56 lg:mb-16 lg:bg-contain lg:bg-center">
-        <div className="pb-6 bg-[url('/mobile-mission-bg.svg')] bg-no-repeat bg-center bg-cover relative text-center md:bg-none md:text-left lg:pb-0">
+      <section className="min-h-screen mb-16 md:px-8 md:bg-[url('/mission-bg.svg')] md:bg-contain md:bg-no-repeat lg:py-56 lg:mb-16 lg:bg-contain lg:bg-center">
+        <div className="py-24 bg-[url('/mobile-mission-bg.svg')] bg-no-repeat bg-center bg-cover relative text-center md:bg-none md:text-left lg:pb-0">
           <div className="w-36 absolute -left-8 -scale-x-100 md:hidden">
             <Image alt="Planet icon" src={planetSVG} layout="responsive" />
           </div>
@@ -172,7 +172,7 @@ const Mint: NextPage = () => {
         </div>
       </section>
 
-      <section className="px-6 mb-28 mt-4 md:px-8 lg:mb-52 lg:px-16">
+      <section className="min-h-screen px-6 mb-28 mt-4 md:px-8 lg:mb-52 lg:px-16">
         <div className="pt-14 pb-14 bg-nexusDarkBg bg-[url('/boarding-pass-ellipsis.svg')] bg-right-bottom bg-no-repeat relative border border-calloutBorderGreen rounded-calloutSection text-center md:py-8">
           <div className="w-36 absolute -top-4 right-0 -mt-6 -mr-12">
             <Image alt="Planet icon" src={planetSVG} layout="responsive" />
@@ -218,11 +218,11 @@ const Mint: NextPage = () => {
         </div>
       </section>
 
-      <section className="mb-20 lg:mb-36">
+      <section className="min-h-screen mb-20 lg:mb-36">
         <VoyagerCharacters />
       </section>
 
-      <section className="w-5/6 md:w-5/6 mx-auto mb-12 md:mb-24">
+      <section className="min-h-screen w-5/6 md:w-5/6 mx-auto mb-12 md:mb-24">
         <FAQList />
       </section>
     </>
