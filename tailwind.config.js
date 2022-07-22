@@ -32,7 +32,26 @@ module.exports = {
       fontFamily: {
         sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
         raleway: ["Raleway", "sans-serif"],
+        gothamPro: ["Gotham Pro", "sans-serif"],
       },
+      width: {
+        mint: '105px',
+        wallet: '165px',
+        missionSection: '1335px',
+        description: '756px',
+        heroTitle: '746px',
+        heroDescription: '520px',
+        titleMission: '536px',
+        boardingDescription: '668px',
+        astromapDescription: '253px',
+        faqField: '847px',
+        faqAnswer: '735px',
+      }
+    },
+    height: {
+      mint: "45px",
+      boardingDescription: '192px',
+      heroImage: '500px',
     },
   },
   plugins: [],

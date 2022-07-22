@@ -10,13 +10,13 @@ import openSeaLogo from "./public/opensea-logo.svg";
 import etherscanLogo from "./public/etherscan-logo.svg";
 import discordLogo from "./public/discord-logo.svg";
 import twitterLogo from "./public/twitter-logo.svg";
-
-import architectAvatar from "./public/architect.png";
-import captainAvatar from "./public/captain.png";
-import explorerAvatar from "./public/explorer.png";
-import mechanicAvatar from "./public/mechanic.png";
-import journalistAvatar from "./public/journalist.png";
-import merchantAvatar from "./public/architect.png";
+import captainAvatar from "./public/Cap.png";
+import FirstMechanic from './public/Rectangle.svg';
+import SecondMechanic from './public/SecondMechanic.png';
+import Arch from './public/Rectangle2.svg'
+// import explorerAvatar from "./public/explorer.png";
+// import journalistAvatar from "./public/journalist.png";
+// import merchantAvatar from "./public/architect.png";
 
 export const beyuLabsTwitterURL: string = "https://twitter.com/Beyu_labs";
 export const discordInviteURL: string = "https://discord.gg/Ye6pQqJes7";
@@ -36,16 +36,16 @@ export const routes: NavRoute[] = [
 
 export const beyuSocialIcons: SocialIcon[] = [
   {
-    name: "discord",
-    image: discordLogo,
-    enabled: true,
-    url: "https://discord.gg/3NXV2J3S7M",
-  },
-  {
     name: "twitter",
     image: twitterLogo,
     enabled: true,
     url: "https://twitter.com/beyu_labs",
+  },
+  {
+    name: "discord",
+    image: discordLogo,
+    enabled: true,
+    url: "https://discord.gg/3NXV2J3S7M",
   },
   {
     name: "opensea",
@@ -74,12 +74,7 @@ export const faqs: FAQ[] = [
   },
   {
     question: "What is the supply of this collection?",
-    answer: "10,119 NFTs.",
-  },
-  {
-    question: "Why this supply number?",
-    answer:
-      "1/01/19 is the date that the farthest object (2014 MU69) was discovered by a spacecraft in human history. We aim to extend beyond these limits on our journey through web3. Buckle up.",
+    answer: "1/01/19 is the date that the farthest object (2014 MU69) was discovered by a spacecraft in human history. We aim to extend beyond these limits on our journey through web3. Buckle up.",
   },
   {
     question: "When is the drop date?",
@@ -92,7 +87,7 @@ export const faqs: FAQ[] = [
       "TBA - be sure to tune into the #announcements channel for updates.",
   },
   {
-    question: "Wen reveal?",
+    question: "When reveal?",
     answer: "24 hours after sellout.",
   },
   {
@@ -138,20 +133,28 @@ export const astromap: AstromapItem[] = [
     imagePath: "/astromap-6.svg",
   },
   {
-    title: "Commercial Rights",
-    description:
-      "Holders are granted commercial rights to the Nexus Voyagers NFTs and can get creative with derivative projects, collaborations, and more.",
-    imagePath: "/astromap-1.svg",
-  },
-  {
     title: "Charity",
     description:
       "We’ll be donating x% of proceeds from mint to a charity that’s aligned with our overall vision: NY PACE (https://www.nypace.org/), supporting under-represented, under-resourced entrepreneurs to get their business endeavors off the ground.",
-    imagePath: "/astromap-2.svg",
+    imagePath: "/astromap-1.svg",
   },
 ];
 
 export const voyagers: Voyager[] = [
+  {
+    nexusName: "Mechanic",
+    irlName: "Dev",
+    description:
+      "The brains behind the ideas - the engineers/developers. Creating technical solutions to the complex challenges that come with terraforming a new world; they build quietly in the back-end and help connect the dots to bring innovation to life.",
+    image: FirstMechanic
+  },
+  {
+    nexusName: "Architect",
+    irlName: "Artist",
+    description:
+      "The creatives that take ideas and bring them to life in a beautiful way - the artists. Without grace in the design of a new world, it would become nothing more than a lifeless land of chrome and boxy structures. The architects breathe life into the planet and create an aesthetic that makes it worth populating.",
+    image: Arch,
+  },
   {
     nexusName: "Captain",
     irlName: "Founder",
@@ -164,34 +167,34 @@ export const voyagers: Voyager[] = [
     irlName: "Dev",
     description:
       "The brains behind the ideas - the engineers/developers. Creating technical solutions to the complex challenges that come with terraforming a new world; they build quietly in the back-end and help connect the dots to bring innovation to life.",
-    image: mechanicAvatar,
+    image: SecondMechanic,
   },
-  {
-    nexusName: "Architect",
-    irlName: "Artist",
-    description:
-      "The creatives that take ideas and bring them to life in a beautiful way - the artists. Without grace in the design of a new world, it would become nothing more than a lifeless land of chrome and boxy structures. The architects breathe life into the planet and create an aesthetic that makes it worth populating.",
-    image: architectAvatar,
-  },
-  {
-    nexusName: "Journalist",
-    irlName: "Marketing",
-    description:
-      "On a mission to spread ideas and share news of innovations and creation - the marketers. A new business - a beautiful piece of art - an innovative idea; do they really exist if the people of the planet don’t KNOW they exist? The journalists spread the word to ensure the population is aware of what’s happening on the planet.",
-    image: journalistAvatar,
-  },
-  {
-    nexusName: "Merchant",
-    irlName: "Investor/Trader",
-    description:
-      "The driving force behind the economy of the new world - the investors. Those who decide what the direction of the market looks like, support new businesses and create financial abundance for the builders and community alike.",
-    image: merchantAvatar,
-  },
-  {
-    nexusName: "Explorer",
-    irlName: "Collector",
-    description:
-      "Like true mavens, stimulating the economy as the backbone to all initiatives of the new world - the collector. All innovations, projects, and progress of this terraformed society would be all for naught if not for these community members actively participating and engaging in the wild world of web3. These collectors of innovation buy, sell, trade and barter their way through the space, providing feedback to the builders so the planet is built with progress and abundance in mind.",
-    image: explorerAvatar,
-  },
+  // {
+  //   nexusName: "Architect",
+  //   irlName: "Artist",
+  //   description:
+  //     "The creatives that take ideas and bring them to life in a beautiful way - the artists. Without grace in the design of a new world, it would become nothing more than a lifeless land of chrome and boxy structures. The architects breathe life into the planet and create an aesthetic that makes it worth populating.",
+  //   image: architectAvatar,
+  // },
+  // {
+  //   nexusName: "Journalist",
+  //   irlName: "Marketing",
+  //   description:
+  //     "On a mission to spread ideas and share news of innovations and creation - the marketers. A new business - a beautiful piece of art - an innovative idea; do they really exist if the people of the planet don’t KNOW they exist? The journalists spread the word to ensure the population is aware of what’s happening on the planet.",
+  //   image: journalistAvatar,
+  // },
+  // {
+  //   nexusName: "Merchant",
+  //   irlName: "Investor/Trader",
+  //   description:
+  //     "The driving force behind the economy of the new world - the investors. Those who decide what the direction of the market looks like, support new businesses and create financial abundance for the builders and community alike.",
+  //   image: merchantAvatar,
+  // },
+  // {
+  //   nexusName: "Explorer",
+  //   irlName: "Collector",
+  //   description:
+  //     "Like true mavens, stimulating the economy as the backbone to all initiatives of the new world - the collector. All innovations, projects, and progress of this terraformed society would be all for naught if not for these community members actively participating and engaging in the wild world of web3. These collectors of innovation buy, sell, trade and barter their way through the space, providing feedback to the builders so the planet is built with progress and abundance in mind.",
+  //   image: explorerAvatar,
+  // },
 ];

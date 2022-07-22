@@ -26,7 +26,7 @@ const VoyagerCard = ({ voyager }: VoyagerCardProps) => {
             layout="responsive"
           />
         </div>
-        <h3 className="text-2xl text-white bold mb-2">{voyager.nexusName}</h3>
+        <h3 className="text-2xl text-white font-bold mb-2">{voyager.nexusName}</h3>
         <span className="rounded-lg text-sm inline-block py-2 px-4 mb-3 bg-nexusGreen text-nexusDarkBg">
           {voyager.irlName}
         </span>

@@ -1,5 +1,4 @@
 import classNames from "classnames";
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -23,7 +22,7 @@ function Nav({ setMenuOpen }: NavProps) {
         "opacity-50 hover:cursor-not-allowed": !route.enabled,
         "hover:drop-shadow": route.enabled,
       },
-      "mr-6 text-white"
+      "ml-8 mr-8 text-white text-sm"
     );
 
     return (

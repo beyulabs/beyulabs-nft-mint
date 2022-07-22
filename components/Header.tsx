@@ -15,7 +15,7 @@ interface HeaderProps {
 const Header = ({ setMenuOpen }: HeaderProps) => {
   return (
     <header className="px-4 py-4 flex flex-row items-center justify-between w-100 w-full text-xl border-b border-nexusHeaderDivider border-opacity-40 z-50">
-      <div className="hidden md:block w-1/5">
+      <div className="hidden md:block w-1/6 mr-10">
         <Link href="/" passHref>
           <Image
             src={nexusVoyagersLogo}
@@ -25,24 +25,24 @@ const Header = ({ setMenuOpen }: HeaderProps) => {
         </Link>
       </div>
       <Nav setMenuOpen={setMenuOpen} />
-      <div className="z-50">
+      <div className="flex justify-end -mr-5">
+      <div className="z-50 mr-2 -ml-20">
         <SocialIcons />
       </div>
       <div className="hidden md:flex md:flex-row">
         <button
-          disabled
-          className="flex flex-row mx-2 rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2 cursor-not-allowed disabled:opacity-50"
+          className="flex flex-row justify-center items-center ml-11 mx-2 rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2 mr-8 w-mint h-mint cursor-not-allowed disabled:opacity-50"
         >
           <Image alt="Coins" src={coinsSVG} />
-          <span className="inline-block ml-2">Mint</span>
+          <span className="ml-2 text-sm">Mint</span>
         </button>
         <button
-          disabled
-          className="flex flex-row border mx-2 rounded-lg text-white bg-transparent px-4 py-2 cursor-not-allowed disabled:opacity-50"
+          className="flex flex-row justify-center items-center border mx-2 rounded-lg text-white text-sm bg-transparent px-4 py-2 cursor-not-allowed disabled:opacity-50"
         >
           <Image alt="Coins" src={walletSVG} />
-          <span className="inline-block ml-2">Connect</span>
+          <span className="inline-block ml-2">Connect wallet</span>
         </button>
+      </div>
       </div>
     </header>
   );

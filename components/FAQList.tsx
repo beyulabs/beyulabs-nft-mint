@@ -21,7 +21,7 @@ const FAQ = ({ question, answer }: FAQProps) => {
           >
             <Disclosure.Button className="w-full">
               <div className="flex flex-row justify-between w-full text-left">
-                <span className="pr-2">{question}</span>
+                <span className="pr-2 font-bold text-2xl">{question}</span>
                 <span className="text-nexusGreen">
                   {open ? (
                     <FontAwesomeIcon icon={faMinus} width={24} />
@@ -33,7 +33,7 @@ const FAQ = ({ question, answer }: FAQProps) => {
             </Disclosure.Button>
           </div>
 
-          <Disclosure.Panel className="text-gray-500">
+          <Disclosure.Panel className="text-gray-400 font-normal text-lg w-faqAnswer">
             {answer}
           </Disclosure.Panel>
         </div>
@@ -45,8 +45,8 @@ const FAQ = ({ question, answer }: FAQProps) => {
 const FAQList = () => {
   return (
     <>
-      <h2 className="text-center text-5xl mb-20 text-white font-semibold">
-        FAQs
+      <h2 className="text-center text-5xl mb-20 text-white font-bold">
+        FAQ
       </h2>
       {faqs.map((faq, index) => {
         return (

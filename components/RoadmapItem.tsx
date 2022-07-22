@@ -39,7 +39,9 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
   const descriptionCn = classNames({
     "text-astromapGrayText": !isHover,
     "text-white": isHover,
-  });
+  },
+    "font-normal text-base leading-6 w-astromapDescription"
+  );
 
   return (
     <div className="w-full cursor-pointer">
@@ -62,7 +64,7 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
             />
 
             <div key={roadmapItem.title} className="w-full ml-4">
-              <h3 className="text-white text-xl font-semibold">
+              <h3 className="text-white text-xl font-bold">
                 {roadmapItem.title}
               </h3>
               <p className={descriptionCn}>{roadmapItem.description}</p>
