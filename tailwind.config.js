@@ -46,13 +46,14 @@ module.exports = {
         boardingSection: '1305px',
         boardingDescription: '668px',
         astromapDescription: '253px',
+        voyagerCard: '270px',
         faqField: '847px',
         faqAnswer: '735px',
       }
     },
     height: {
       mint: "45px",
-      boardingSection: "668px",
+      boardingSection: "590px",
       boardingDescription: '192px',
       heroImage: '500px',
     },

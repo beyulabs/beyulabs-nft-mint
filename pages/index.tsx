@@ -92,8 +92,8 @@ const Mint: NextPage = () => {
           </div>
         </div>
       </section>
-      <section className="px-6 lg:px-0 mb-24 lg:mt-12 w-missionSection">
-        <div className="-mt-18 py-12 lg:bg-[url('/mission-bg.svg')] lg:bg-no-repeat lg:bg-center lg:bg-contain relative lg:p-20 border  border-calloutBorderGreen bg-nexusDarkBg rounded-calloutSection lg:border-0 lg:bg-transparent">
+      <section className="px-6 lg:px-0 mb-24 lg:mt-12">
+        <div className="-mt-40 py-12 w-missionSection lg:bg-[url('/mission-bg.svg')] lg:bg-no-repeat lg:bg-center lg:bg-contain relative lg:p-20 border  border-calloutBorderGreen bg-nexusDarkBg rounded-calloutSection lg:border-0 lg:bg-transparent">
           <CalloutSection
             title="The Nexus Voyagers mission"
             image={
@@ -161,7 +161,7 @@ const Mint: NextPage = () => {
       </section>
 
       <section className="px-6 mb-28 mt-4 md:mt-32">
-        <div className="w-boardingSection h-boardingSection pt-14 pb-20 bg-nexusDarkBg md:bg-[url('/boarding-pass-ellipsis.svg')] md:bg-right-bottom md:bg-no-repeat relative border border-calloutBorderGreen rounded-calloutSection">
+        <div className="w-boardingSection h-boardingSection pt-14 pb-14 bg-nexusDarkBg md:bg-[url('/boarding-pass-ellipsis.svg')] md:bg-right-bottom md:bg-no-repeat relative border border-calloutBorderGreen rounded-calloutSection">
           <div className="w-36 absolute top-0 right-0 -mt-6 -mr-12">
             <Image alt="Planet icon" src={planetSVG} layout="responsive" />
           </div>
@@ -180,7 +180,7 @@ const Mint: NextPage = () => {
                   challenge in order to ensure you align with that character,and
                   that you will be able to mint them during our presale.
                 </p>
-                <p className="mb-5 font-normal text-lg w-boardingDescription h-boardingDescription leading-8">
+                <p className="mb-5 font-normal text-left text-lg w-boardingDescription h-boardingDescription leading-8">
                   Keep your eyes on the #announcements and #boarding-pass
                   channels for these challenges, they will essentially guarantee
                   your seat on the rocket to the new world. These challenges
@@ -198,7 +198,6 @@ const Mint: NextPage = () => {
           />
         </div>
       </section>
-
       <section className="mb-20">
         <VoyagerCharacters />
       </section>

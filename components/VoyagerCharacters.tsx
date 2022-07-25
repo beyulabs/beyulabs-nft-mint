@@ -3,9 +3,10 @@ import { voyagers } from "../constants";
 import { Voyager } from "../types/common";
 import Carousel from 'react-multi-carousel';
 
+
 const VoyagerCharacters = () => {
   const createAvatarCards = voyagers.map((voyager: Voyager) => (
-    <div className="-mr-2">
+    <div className="mr-10">
       <VoyagerCard
         key={`${voyager.nexusName.toLowerCase()}`}
         voyager={voyager}
@@ -34,7 +35,18 @@ const responsive = {
         The Voyagers
       </h2>
       <div className="flex flex-row flex-nowrap justify-center items-start mb-64">
+      {/* <Carousel
+          responsive={responsive}
+          ssr
+          showDots={true}
+          slidesToSlide={1}
+          containerClass={`w-full`}
+          itemClass={`w-voyagerCard h-80 mx-4 relative cursor-pointer`}
+          deviceType={''}
+          centerMode={true}
+        > */}
         {createAvatarCards}
+        {/* </Carousel> */}
       </div>
     </div>
   );
