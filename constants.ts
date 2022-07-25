@@ -10,10 +10,11 @@ import openSeaLogo from "./public/opensea-logo.svg";
 import etherscanLogo from "./public/etherscan-logo.svg";
 import discordLogo from "./public/discord-logo.svg";
 import twitterLogo from "./public/twitter-logo.svg";
+import LightMode from "./public/light-mode-2.svg";
 import captainAvatar from "./public/Cap.png";
-import FirstMechanic from './public/Rectangle.svg';
+import FirstMechanic from './public/mechanic2.png';
 import SecondMechanic from './public/SecondMechanic.png';
-import Arch from './public/Rectangle2.svg'
+import Architector from './public/Rectangle2.svg'
 // import explorerAvatar from "./public/explorer.png";
 // import journalistAvatar from "./public/journalist.png";
 // import merchantAvatar from "./public/architect.png";
@@ -46,6 +47,12 @@ export const beyuSocialIcons: SocialIcon[] = [
     image: discordLogo,
     enabled: true,
     url: "https://discord.gg/3NXV2J3S7M",
+  },
+  {
+    name: "light",
+    image: LightMode,
+    enabled: true,
+    url: "",
   },
   {
     name: "opensea",
@@ -153,14 +160,14 @@ export const voyagers: Voyager[] = [
     irlName: "Artist",
     description:
       "The creatives that take ideas and bring them to life in a beautiful way - the artists. Without grace in the design of a new world, it would become nothing more than a lifeless land of chrome and boxy structures. The architects breathe life into the planet and create an aesthetic that makes it worth populating.",
-    image: Arch,
+    image: Architector
   },
   {
     nexusName: "Captain",
     irlName: "Founder",
     description:
       "Pulling together the pieces of the puzzle and ensuring the community is working in harmony to terraform the planet in the same direction - the founders. While each cog in the wheel is valuable in its own right, progress is not truly made unless all voyagers are working in harmony and aligned on the vision of this new world. The captain’s vision is brought to life by those inspired enough to see the light at the end of the tunnel.",
-    image: captainAvatar,
+    image: captainAvatar
   },
   {
     nexusName: "Mechanic",

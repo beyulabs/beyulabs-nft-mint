@@ -77,10 +77,10 @@ const Mint: NextPage = () => {
       <div className="absolute top-0 left-0 right-0 bottom-0 h-[100vh] w-full opacity-20 bg-black z-30"></div>
       <section className="px-6 md:px-4 flex flex-col justify-center items-center mb-52 md:mb-24 xl:mb-72">
         <div className="mt-10 sm:mt-20 md:mt-12 lg:mt-16 md:flex-row-reverse flex flex-col items-center z-30">
-          <div className="w-72 md:w-3/5 h-heroImage mr-12 -mt-20">
+          <div className="w-72 md:w-3/5 h-heroImage mr-12 mt-8">
             <Image alt="Nexus Voyagers" src={voyagersImage} />
           </div>
-          <div className="md:w-2/5 mr-36">
+          <div className="md:w-2/5 mr-36 mt-32">
             <h2 className="text-6xl md:text-7xl mb-10 text-white font-bold drop-shadow-2xl w-heroTitle">
               <span>Become</span> a member of the{" "}
               <span className="text-nexusGreen">Voyager</span> space mission
@@ -93,7 +93,7 @@ const Mint: NextPage = () => {
         </div>
       </section>
       <section className="px-6 lg:px-0 mb-24 lg:mt-12 w-missionSection">
-        <div className="py-12 lg:bg-[url('/mission-bg.svg')] lg:bg-no-repeat lg:bg-center lg:bg-contain relative lg:p-20 border  border-calloutBorderGreen bg-nexusDarkBg rounded-calloutSection lg:border-0 lg:bg-transparent">
+        <div className="-mt-18 py-12 lg:bg-[url('/mission-bg.svg')] lg:bg-no-repeat lg:bg-center lg:bg-contain relative lg:p-20 border  border-calloutBorderGreen bg-nexusDarkBg rounded-calloutSection lg:border-0 lg:bg-transparent">
           <CalloutSection
             title="The Nexus Voyagers mission"
             image={
@@ -161,7 +161,7 @@ const Mint: NextPage = () => {
       </section>
 
       <section className="px-6 mb-28 mt-4 md:mt-32">
-        <div className="pt-14 pb-20 bg-nexusDarkBg md:bg-[url('/boarding-pass-ellipsis.svg')] md:bg-right-bottom md:bg-no-repeat relative border border-calloutBorderGreen rounded-calloutSection">
+        <div className="w-boardingSection h-boardingSection pt-14 pb-20 bg-nexusDarkBg md:bg-[url('/boarding-pass-ellipsis.svg')] md:bg-right-bottom md:bg-no-repeat relative border border-calloutBorderGreen rounded-calloutSection">
           <div className="w-36 absolute top-0 right-0 -mt-6 -mr-12">
             <Image alt="Planet icon" src={planetSVG} layout="responsive" />
           </div>

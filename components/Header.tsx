@@ -1,13 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import Nav from "./Nav";
 import SocialIcons from "./SocialIcons";
-
 import coinsSVG from "../public/coins.svg";
 import walletSVG from "../public/wallet.svg";
-
 import nexusVoyagersLogo from "../public/nexus-voyagers-logotype-green-white.svg";
+
 interface HeaderProps {
   setMenuOpen: (open: boolean) => void;
 }
@@ -28,6 +26,9 @@ const Header = ({ setMenuOpen }: HeaderProps) => {
       <div className="flex justify-end -mr-5">
       <div className="z-50 mr-2 -ml-20">
         <SocialIcons />
+      </div>
+      <div className="-ml-4 mt-2 w-10 h-6 leading-3">
+        <span className="text-xs text-white">Light mode</span>
       </div>
       <div className="hidden md:flex md:flex-row">
         <button

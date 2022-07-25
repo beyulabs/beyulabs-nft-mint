@@ -40,8 +40,10 @@ module.exports = {
         missionSection: '1335px',
         description: '756px',
         heroTitle: '746px',
+        heroImage: '385px',
         heroDescription: '520px',
         titleMission: '536px',
+        boardingSection: '1305px',
         boardingDescription: '668px',
         astromapDescription: '253px',
         faqField: '847px',
@@ -50,6 +52,7 @@ module.exports = {
     },
     height: {
       mint: "45px",
+      boardingSection: "668px",
       boardingDescription: '192px',
       heroImage: '500px',
     },
