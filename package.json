@@ -25,6 +25,7 @@
     "react-hook-form": "^7.27.1",
     "react-multi-carousel": "^2.8.2",
     "react-query": "^3.34.16",
+    "react-responsive-carousel": "^3.2.23",
     "react-slick": "^0.29.0",
     "web3modal": "^1.9.5"
   },
