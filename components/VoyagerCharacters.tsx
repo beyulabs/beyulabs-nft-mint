@@ -6,12 +6,10 @@ import { Carousel } from "react-responsive-carousel";
 const VoyagerCharacters = () => {
   const createAvatarCards = () => {
     return voyagers.map((voyager: Voyager) => (
-      <div className="mr-10">
       <VoyagerCard
         key={`${voyager.nexusName.toLowerCase()}`}
         voyager={voyager}
       />
-      </div>
     ));
   };
 
