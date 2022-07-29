@@ -94,11 +94,11 @@ const Mint: NextPage = () => {
         </div>
       </section>
       <section className="px-6 lg:px-0 mb-20 lg:mt-12">
-        <div className="-mt-40 py-12 w-missionBlock lg:bg-[url('/mission-bg.svg')] lg:bg-no-repeat lg:bg-center lg:bg-contain relative lg:p-20 border  border-calloutBorderGreen bg-nexusDarkBg rounded-calloutSection lg:border-0 lg:bg-transparent">
+        <div className="-mt-40 py-12 md:w-missionSection lg:bg-[url('/mission-bg.svg')] lg:bg-no-repeat lg:bg-center lg:bg-contain relative lg:p-20 border  border-calloutBorderGreen bg-nexusDarkBg rounded-calloutSection lg:border-0 lg:bg-transparent">
           <CalloutSection
             title="The Nexus Voyagers mission"
             image={
-              <div className="p-8 lg:p-0 left-273px">
+              <div className="p-8 lg:p-0 w-nexusMissionImage h-nexusMissionImage ml-12">
                 <Image src={nexusMissionImage} alt="Nexus Mission" />
               </div>
             }
@@ -161,7 +161,7 @@ const Mint: NextPage = () => {
         </div>
       </section>
 
-      <section className="px-6 mb-28 mt-4 md:mt-32 w-boardingSection h-boardingSection">
+      <section className="px-6 mb-28 mt-4 md:mt-32">
         <div className="pt-14 pb-14 bg-nexusDarkBg md:bg-[url('/boarding-pass-ellipsis.svg')] md:w-boardingBlock h-boardingBlock bg-right-bottom md:bg-no-repeat relative border border-calloutBorderGreen rounded-calloutSection">
           <div className="w-36 absolute top-0 right-0 -mt-6 -mr-12">
             <Image alt="Planet icon" src={planetSVG} layout="responsive" />

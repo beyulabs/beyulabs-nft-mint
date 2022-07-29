@@ -41,33 +41,35 @@ module.exports = {
       width: {
         mint: '105px',
         wallet: '165px',
+        missionImage: '500px',
         missionBlock: '1628px',
-        missionSection: '1335px',
+        missionSection: '1348px',
         description: '756px',
         heroTitle: '746px',
         heroImage: '647px',
         heroDescription: '520px',
         titleMission: '536px',
         boardingSection: '1394px',
-        boardingBlock: '1349px',
+        boardingBlock: '1305px',
         boardingDescription: '668px',
         astromapDescription: '253px',
         voyagerCard: '300px',
         bgFaq: '2563px',
         faqField: '847px',
         faqAnswer: '735px',
-        nexusMissionImage: '524px'
+        nexusMissionImage: '450px'
       }
     },
     height: {
       mint: "45px",
+      missionImage: '638px',
       boardingSection: "736px",
-      boardingBlock: "710px",
+      boardingBlock: "590px",
       boardingDescription: '192px',
       heroImage: '616px',
       heroTitle: '264px',
       heroBlock: '688px',
-      nexusMissionImage: '679px'
+      nexusMissionImage: '574px'
     },
     lineHeight: {
       heroTitle: '87px',
