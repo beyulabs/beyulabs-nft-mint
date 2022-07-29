@@ -156,13 +156,6 @@ export const astromap: AstromapItem[] = [
 
 export const voyagers: Voyager[] = [
   {
-    nexusName: "Mechanic",
-    irlName: "Dev",
-    description:
-      "The brains behind the ideas - the engineers/developers. Creating technical solutions to the complex challenges that come with terraforming a new world; they build quietly in the back-end and help connect the dots to bring innovation to life.",
-    image: FirstMechanic
-  },
-  {
     nexusName: "Architect",
     irlName: "Artist",
     description:
@@ -181,7 +174,14 @@ export const voyagers: Voyager[] = [
     irlName: "Dev",
     description:
       "The brains behind the ideas - the engineers/developers. Creating technical solutions to the complex challenges that come with terraforming a new world; they build quietly in the back-end and help connect the dots to bring innovation to life.",
-    image: SecondMechanic,
+    image: SecondMechanic
+  },
+  {
+    nexusName: "Mechanic",
+    irlName: "Dev",
+    description:
+      "The brains behind the ideas - the engineers/developers. Creating technical solutions to the complex challenges that come with terraforming a new world; they build quietly in the back-end and help connect the dots to bring innovation to life.",
+    image: FirstMechanic
   },
   // {
   //   nexusName: "Architect",
