@@ -10,7 +10,7 @@ const FAQ = ({ question, answer }: FAQProps) => {
     <Disclosure>
       {({ open }) => (
         <div
-          className={`py-6 px-9 mb-5 rounded-xl bg-nexusBlack ${
+          className={`py-6 px-9 mb-5 rounded-xl bg-nexusBlack w-faqField ml-60 ${
             open ? "border border-nexusGreen" : ""
           }`}
         >
@@ -45,7 +45,7 @@ const FAQ = ({ question, answer }: FAQProps) => {
 const FAQList = () => {
   return (
     <>
-      <h2 className="text-center text-5xl mb-20 text-white font-bold">
+      <h2 className="text-center text-5xl mb-20 -ml-64 text-white font-bold">
         FAQ
       </h2>
       {faqs.map((faq, index) => {

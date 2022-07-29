@@ -12,24 +12,24 @@ const VoyagerCharacters = () => {
       />
     ));
   };
-
   return (
-    <div>
+    <div className="">
       <h2 className="text-6xl text-white font-bold drop-shadow-xl mb-24 text-center uppercase">
         The Voyagers
       </h2>
-      <div className="flex flex-row flex-wrap justify-center mb-64">
       <Carousel
+        infiniteLoop={true}
         autoPlay={false}
         showStatus={false}
         showArrows={true}
         showThumbs={false}
+        dynamicHeight={false}
+        swipeable={true}
         centerMode={true}
-        centerSlidePercentage={25} 
+        centerSlidePercentage={33}
       >
         {createAvatarCards()}
       </Carousel>
-      </div>
     </div>
   );
 };

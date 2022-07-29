@@ -3,7 +3,7 @@ import Image from "next/image";
 import type { NextPage } from "next";
 import { Dialog, Transition } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark, faMeteor } from "@fortawesome/free-solid-svg-icons";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 import EmailSignup from "../components/EmailSignup";
 import VoyagerCharacters from "../components/VoyagerCharacters";
@@ -75,15 +75,16 @@ const Mint: NextPage = () => {
       </Transition.Root>
 
       <div className="absolute top-0 left-0 right-0 bottom-0 h-[100vh] w-full opacity-20 bg-black z-30"></div>
+      <div className="rounded-faqSection">
       <section className="px-6 md:px-4 flex flex-col justify-center items-center mb-52 md:mb-24 xl:mb-72">
         <div className="mt-10 sm:mt-20 md:mt-12 lg:mt-16 md:flex-row-reverse flex flex-col items-center z-30">
-          <div className="w-72 md:w-3/5 h-heroImage mr-12 mt-8">
+          <div className="w-heroImage md:w-3/5 h-heroImage mr-12 mt-8">
             <Image alt="Nexus Voyagers" src={voyagersImage} />
           </div>
-          <div className="md:w-2/5 mr-36 mt-32">
-            <h2 className="text-6xl md:text-7xl mb-10 text-white font-bold drop-shadow-2xl w-heroTitle">
-              <span>Become</span> a member of the{" "}
-              <span className="text-nexusGreen">Voyager</span> space mission
+          <div className="md:w-2/5 mr-36 md:top-60">
+            <h2 className="text-6xl md:text-7xl mb-10 text-white font-bold drop-shadow-2xl md:w-heroTitle md:h-heroTitle md:leading-heroTitle">
+              <span className="underline decoration-nexusGreen decoration-4 underline-offset-2">Become</span> a member of the{" "}
+              <span className="text-nexusGreen">Voyager</span> space <span className="underline decoration-nexusGreen decoration-4 underline-offset-2"> mission</span>
             </h2>
             <p className="text-nexusGrayText text-xl mb-12 leading-9 w-heroDescription">
               Unforgettable adventures await you during the flight! Find friends
@@ -92,12 +93,12 @@ const Mint: NextPage = () => {
           </div>
         </div>
       </section>
-      <section className="px-6 lg:px-0 mb-24 lg:mt-12">
-        <div className="-mt-40 py-12 w-missionSection lg:bg-[url('/mission-bg.svg')] lg:bg-no-repeat lg:bg-center lg:bg-contain relative lg:p-20 border  border-calloutBorderGreen bg-nexusDarkBg rounded-calloutSection lg:border-0 lg:bg-transparent">
+      <section className="px-6 lg:px-0 mb-20 lg:mt-12">
+        <div className="-mt-40 py-12 w-missionBlock lg:bg-[url('/mission-bg.svg')] lg:bg-no-repeat lg:bg-center lg:bg-contain relative lg:p-20 border  border-calloutBorderGreen bg-nexusDarkBg rounded-calloutSection lg:border-0 lg:bg-transparent">
           <CalloutSection
             title="The Nexus Voyagers mission"
             image={
-              <div className="p-8 lg:p-0">
+              <div className="p-8 lg:p-0 left-273px">
                 <Image src={nexusMissionImage} alt="Nexus Mission" />
               </div>
             }
@@ -126,14 +127,14 @@ const Mint: NextPage = () => {
                 <p className="uppercase bold mb-5 font-bold">
                   Are you mission ready?{" "}
                   <span
-                    className="text-nexusGreen cursor-pointer"
+                    className="text-nexusGreen cursor-pointer ml-2"
                     onClick={() => setOpen(true)}
                   >
                     Join now!
                   </span>
                 </p>
                 <button
-                  className="mb-6 md:mb-0 cursor-not-allowed flex flex-row rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2 disabled:opacity-50"
+                  className="mb-6 md:mb-0 cursor-not-allowed flex flex-row justify-center items-center text-xl rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-8 py-3 disabled:opacity-50"
                 >
                   <Image alt="Coins" src={coinsSVG} />
                   <span className="inline-block ml-2">Mint</span>
@@ -146,7 +147,7 @@ const Mint: NextPage = () => {
 
       <section className="min-h-screen mb-40 px-4 pt-8 sm:pt-16 flex flex-col justify-center items-center">
         <div className="bg-[url('/astromap-line.svg')] bg-no-repeat bg-contain w-full bg-center">
-          <h2 className="text-white font-semibold text-6xl drop-shadow-xl mb-12 text-center">
+          <h2 className="text-white font-semibold text-6xl drop-shadow-xl mb-20 text-center uppercase">
             Astromap
           </h2>
           <RoadmapTLDR />
@@ -160,15 +161,15 @@ const Mint: NextPage = () => {
         </div>
       </section>
 
-      <section className="px-6 mb-28 mt-4 md:mt-32">
-        <div className="w-boardingSection h-boardingSection pt-14 pb-14 bg-nexusDarkBg md:bg-[url('/boarding-pass-ellipsis.svg')] md:bg-right-bottom md:bg-no-repeat relative border border-calloutBorderGreen rounded-calloutSection">
+      <section className="px-6 mb-28 mt-4 md:mt-32 w-boardingSection h-boardingSection">
+        <div className="pt-14 pb-14 bg-nexusDarkBg md:bg-[url('/boarding-pass-ellipsis.svg')] md:w-boardingBlock h-boardingBlock bg-right-bottom md:bg-no-repeat relative border border-calloutBorderGreen rounded-calloutSection">
           <div className="w-36 absolute top-0 right-0 -mt-6 -mr-12">
             <Image alt="Planet icon" src={planetSVG} layout="responsive" />
           </div>
           <CalloutSection
             title="Boarding pass"
             image={
-              <div className="md:absolute md:scale-110 md:-bottom-4 md:-left-4 lg:-bottom-64">
+              <div className="md:absolute md:scale-110 md:-bottom-4 md:-left-4 lg:-bottom-64 ">
                 <Image src={nexusTicketsImage} alt="Boarding Pass" />
               </div>
             }
@@ -190,7 +191,7 @@ const Mint: NextPage = () => {
                   in the deteriorating space of Web2.
                 </p>
 
-                <button className="rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2">
+                <button className="rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2 -mt-4">
                   Get it
                 </button>
               </>
@@ -201,7 +202,8 @@ const Mint: NextPage = () => {
       <section className="mb-20">
         <VoyagerCharacters />
       </section>
-      <section className="w-5/6 md: w-faqField mx-auto mb-12 md:mb-32">
+      </div>
+      <section className="w-5/6 md: ml-0 w-screen mx-auto mb-0 md: pt-8 pb-28 bg-faqBg">
         <FAQList />
       </section>
     </>

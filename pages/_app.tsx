@@ -6,16 +6,19 @@ import type { AppProps } from "next/app";
 import { QueryClient, QueryClientProvider } from "react-query";
 
 import Layout from "../layouts/layout";
+import { ThemeProvider } from "next-themes"
 
 const queryClient = new QueryClient();
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
+    <ThemeProvider attribute="class">
     <QueryClientProvider client={queryClient}>
       <Layout>
         <Component {...pageProps} />
       </Layout>
     </QueryClientProvider>
+    </ThemeProvider>
   );
 }
 

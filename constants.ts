@@ -8,9 +8,10 @@ import {
 
 import openSeaLogo from "./public/opensea-logo.svg";
 import etherscanLogo from "./public/etherscan-logo.svg";
-import discordLogo from "./public/discord-logo.svg";
+import discordLogo from "./public/discord-icon.svg";
 import twitterLogo from "./public/twitter-logo.svg";
-import LightMode from "./public/light-mode-2.svg";
+import LightModeIcon from "./public/light-mode-page.svg"
+import DarkMode from "./public/dark-mode.png";
 import captainAvatar from "./public/Cap.png";
 import FirstMechanic from './public/mechanic2.png';
 import SecondMechanic from './public/SecondMechanic.png';
@@ -50,8 +51,14 @@ export const beyuSocialIcons: SocialIcon[] = [
   },
   {
     name: "light",
-    image: LightMode,
-    enabled: true,
+    image: LightModeIcon,
+    enabled: false,
+    url: "",
+  },
+  {
+    name: "dark",
+    image: DarkMode,
+    enabled: false,
     url: "",
   },
   {

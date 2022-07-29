@@ -1,4 +1,3 @@
-import classNames from "classnames";
 import Image from "next/image";
 import { useState } from "react";
 import { Voyager } from "../types/common";
@@ -12,38 +11,50 @@ interface VoyagerCardProps {
 const VoyagerCard = ({ voyager }: VoyagerCardProps) => {
   const [isHover, setIsHover] = useState<boolean>(false);
 
+  const VoyagerDescription = () => {
+    return(
+      <div className="h-80">
+         <p
+        className="text-astromapGrayText rounded-lg text-left font-sm"
+      >
+        {voyager.description}
+      </p> 
+      </div>
+    )
+  }
+   
+  
   return (
-    <div className="w-voyagerCard h-80 mx-4 mr-14 relative cursor-pointer">
+    <div className="w-voyagerCard h-80 mx-4 relative cursor-pointer">
       <div
-        className="w-80 bg-nexusDarkBg rounded-xl mb-6 p-4 border border-nexusGreen relative sm:hover:scale-110 sm:hover:z-10 sm:hover:shadow-voyagerCard voyager-card-wrapper"
+        className="w-voyagerCard bg-nexusDarkBg rounded-xl mb-6 p-4 border border-cardBorder relative sm:hover:scale-110 sm:hover:z-10 sm:hover:shadow-voyagerCard voyager-card-wrapper"
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
-        <div className="bg-white mb-5 rounded-xl overflow-hidden">
+        <>
+        <div>
+        <div className="bg-nexusDarkBg mb-5 rounded-xl overflow-hidden pt-5">
+        {isHover ? <VoyagerDescription/> :
           <Image
             alt={voyager.nexusName}
             src={voyager.image}
             layout="responsive"
-          />
+          /> 
+}
         </div>
         <h3 className="text-2xl text-white font-bold mb-2">{voyager.nexusName}</h3>
         <span className="rounded-lg text-sm inline-block py-2 px-4 mb-3 bg-nexusGreen text-nexusDarkBg">
           {voyager.irlName}
         </span>
 
-        <p
-          className={`text-astromapGrayText rounded-lg hidden ${
-            isHover ? "sm:block" : ""
-          }`}
-        >
-          {voyager.description}
-        </p>
-
         {!isHover && (
           <div className="absolute right-0 bottom-0 p-4">
             <Image alt="Arrow icon" src={voyagerArrow} width={20} height={20} />
           </div>
         )}
+        </div>
+        </>
+
       </div>
     </div>
   );
