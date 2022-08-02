@@ -25,7 +25,7 @@ const VoyagerCard = ({ voyager }: VoyagerCardProps) => {
    
   
   return (
-    <div className="w-voyagerCard h-80 mx-4 relative cursor-pointer">
+    <div className="mx-16 pb-6 relative cursor-pointer">
       <div
         className="w-voyagerCard bg-nexusDarkBg rounded-xl mb-6 p-4 border border-cardBorder relative sm:hover:scale-110 sm:hover:z-10 sm:hover:shadow-voyagerCard voyager-card-wrapper"
         onMouseEnter={() => setIsHover(true)}

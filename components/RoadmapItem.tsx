@@ -30,7 +30,7 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
   );
 
   const roadmapItemCardCn = classNames(
-    "bg-nexusBlack p-4 rounded-xl w-96 text-white grow md:grow-0",
+    "bg-nexusBlack p-4 rounded-xl w-astromapItem h-astromapItem text-white grow md:grow-0",
     {
       "text-white bg-nexusGreen": isHover,
     }
@@ -55,16 +55,16 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
           onMouseEnter={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
         >
-          <div className="flex flex-row justify-center">
+          <div className="flex flex-row justify-center items-center">
             <Image
               alt="Astromap"
               src={roadmapItem.imagePath}
-              width={150}
-              height={150}
+              width={240}
+              height={240}
             />
 
             <div key={roadmapItem.title} className="w-full ml-4">
-              <h3 className="text-white text-xl font-bold underline decoration-emerald-700 decoration-4 underline-offset-2">
+              <h3 className="text-white text-2xl font-bold underline decoration-emerald-700 decoration-4 underline-offset-2">
                 {roadmapItem.title}
               </h3>
               <p className={descriptionCn}>{roadmapItem.description}</p>

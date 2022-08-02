@@ -57,9 +57,6 @@ const Header = ({ setMenuOpen }: HeaderProps) => {
       <div className="mt-2 mr-2">
       <Image alt="light-mode" src={LightMode} />
       </div>
-       {/* <div className="-ml-4 mt-2 w-10 h-6">
-        <span className="text-xs text-white">Light mode</span>
-      </div> */}
       <div className="hidden md:flex md:flex-row">
         <button
           className="flex flex-row justify-center items-center ml-11 mx-2 rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2 mr-8 w-mint h-mint cursor-not-allowed disabled:opacity-50"

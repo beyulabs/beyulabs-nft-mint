@@ -26,7 +26,7 @@ const Layout = (props: LayoutProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-[url('/home-bg.svg')] bg-cover overflow-hidden">
+      <main className="bg-[url('/home-bg.svg')] bg-cover overflow-hidden opacity-100">
         <div className="m-auto max-w-screen-xl">
           <Header setMenuOpen={setMenuOpen} />
           {menuOpen && <MobileMenu setMenuOpen={setMenuOpen} />}

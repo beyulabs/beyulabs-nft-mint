@@ -149,7 +149,7 @@ export const astromap: AstromapItem[] = [
   {
     title: "Charity",
     description:
-      "We’ll be donating x% of proceeds from mint to a charity that’s aligned with our overall vision: NY PACE (https://www.nypace.org/), supporting under-represented, under-resourced entrepreneurs to get their business endeavors off the ground.",
+      "We’ll be donating x% of proceeds from mint to a charity that’s aligned with our overall vision: NY PACE (https://www.nypace.org/).",
     imagePath: "/astromap-1.svg",
   },
 ];

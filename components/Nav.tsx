@@ -50,7 +50,7 @@ function Nav({ setMenuOpen }: NavProps) {
           }}
         />
       </div>
-      <ul className="hidden sm:hidden md:ml-4 md:flex md:flex-row text-black">
+      <ul className="hidden sm:hidden md:ml-4 md:flex md:flex-row text-white">
         {routeLinks}
       </ul>
     </div>

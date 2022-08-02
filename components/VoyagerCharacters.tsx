@@ -2,6 +2,7 @@ import VoyagerCard from "./VoyagerCard";
 import { voyagers } from "../constants";
 import { Voyager } from "../types/common";
 import { Carousel } from "react-responsive-carousel";
+import Slider from "react-slick";
 
 const VoyagerCharacters = () => {
   const createAvatarCards = () => {
@@ -12,11 +13,19 @@ const VoyagerCharacters = () => {
       />
     ));
   };
+  // const settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 4,
+  //   slidesToScroll: 2
+  // };
   return (
-    <div className="">
+    <div>
       <h2 className="text-6xl text-white font-bold drop-shadow-xl mb-24 text-center uppercase">
         The Voyagers
       </h2>
+      {/* <Slider {...settings}> */}
       <Carousel
         infiniteLoop={true}
         autoPlay={false}
@@ -29,6 +38,7 @@ const VoyagerCharacters = () => {
         centerSlidePercentage={33}
       >
         {createAvatarCards()}
+        {/* </Slider> */}
       </Carousel>
     </div>
   );
