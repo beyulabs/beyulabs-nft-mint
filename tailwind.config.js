@@ -59,6 +59,8 @@ module.exports = {
         faqAnswer: '735px',
         nexusMissionImage: '524px',
         astromapItem: '468px',
+        partnerItem: "630px",
+        partnerImage: "175px",
         ticketsImage: '532px',
         missionText: "630px",
       }
@@ -75,6 +77,7 @@ module.exports = {
       heroBlock: '688px',
       nexusMissionImage: '679px',
       astromapItem: '184px',
+      partnerItem:'356px',
       ticketsImage: '701px',
     },
     lineHeight: {

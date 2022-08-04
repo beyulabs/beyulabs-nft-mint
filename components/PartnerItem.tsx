@@ -7,11 +7,19 @@ interface PartnerItemProps {
     partnerItem: PartnersItem;
   }
 
-  const RoadmapItem = ({ partnerItem }: PartnerItemProps) => {
+  const Partner = ({ partnerItem }: PartnerItemProps) => {
     const [isHover, setIsHover] = useState<boolean>(false);
 
+    const Description = () => {
+      return (
+        <div>
+          <p>Some description about project</p>
+        </div>
+    )
+    }
+
     const roadmapItemCardCn = classNames(
-        "bg-nexusBlack p-4 rounded-xl w-astromapItem h-astromapItem text-white grow md:grow-0",
+        "bg-nexusBlack p-4 rounded-xl w-partnerItem h-partnerItem text-white grow md:grow-0",
         {
           "text-white bg-nexusGreen": isHover,
         }
@@ -28,7 +36,7 @@ interface PartnerItemProps {
         "text-nexusGreen": !isHover,
         "text-white": isHover,
       },
-        "font-normal text-base uppercase"
+        "font-normal text-base uppercase mt-6"
       );
 
 
@@ -40,19 +48,21 @@ interface PartnerItemProps {
               onMouseEnter={() => setIsHover(true)}
               onMouseLeave={() => setIsHover(false)}
             >
-              <div className="flex flex-row justify-center items-center">
+              <div className="flex flex-row justify-center items-center lg:bg-[url('/boarding-pass-ellipsis.svg')] lg:bg-right-bottom md:bg-no-repeat">
+                <div className="-ml-4 -mt-4">
                 <Image
                   alt="Astromap"
                   src={partnerItem.imagePath}
-                  width={240}
-                  height={240}
+                  width={233}
+                  height={473}
                 />
+                </div>
     
                 <div key={partnerItem.title} className="w-full ml-4">
-                  <h3 className="text-white text-2xl font-bold underline decoration-emerald-700 decoration-4 underline-offset-2">
+                  <h3 className="text-white text-2xl font-bold">
                     {partnerItem.title}
                   </h3>
-                  <p className={descriptionCn}>{partnerItem.description}</p>
+                  <p className={descriptionCn}><Description/></p>
                   <p className={CTAdescriptionCn}>{partnerItem.callToAction}</p>
                 </div>
               </div>
@@ -61,5 +71,7 @@ interface PartnerItemProps {
         </div>
       );
     };
+
+    export default Partner;
   
 

@@ -174,20 +174,20 @@ export const astromap: AstromapItem[] = [
   },
 ];
 
-export const partner: PartnersItem[] = [
+export const partners: PartnersItem[] = [
   {
-    title: "Events",
+    title: "Project 3",
     description:
       "It takes more than just grinding behind the scenes to grow an ecosystem.",
     callToAction: "Don't procrastinate",
-    imagePath: "/astromap-1.svg",
+    imagePath: "/Partner1.svg",
   },
   {
-    title: "Bounty Board",
+    title: "BDH (Legal)",
     description:
       "A bounty hub empowering freelancers, project teams, and agencies alike.",
     callToAction: "Don't procrastinate",
-    imagePath: "/astromap-2.svg",
+    imagePath: "/Partner2.svg",
   },
 ]
 

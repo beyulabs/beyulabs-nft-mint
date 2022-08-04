@@ -1,7 +1,8 @@
-import classNames from "classnames";
 import Image from "next/image";
 import { useState } from "react";
 import { TeamMember } from "../types/common";
+import Linkedin from "../public/linkedin.svg";
+import Instagram from "../public/instagram.svg";
 
 import voyagerArrow from "../public/voyager-card-arrow.svg";
 
@@ -15,7 +16,7 @@ const OurTeamMember = ({ voyager }: VoyagerCardProps) => {
   return (
     <div className="mx-4 relative cursor-pointer">
       <div
-        className="w-80 bg-nexusDarkBg rounded-xl mb-6 p-4 relative sm:hover:scale-110 sm:hover:bg-nexusGradientGreen"
+        className="w-80 rounded-xl mb-6 p-4 relative sm:hover:scale-110 sm:hover:bg-nexusGradientGreen"
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
@@ -34,13 +35,22 @@ const OurTeamMember = ({ voyager }: VoyagerCardProps) => {
           }`}>
           {voyager.irlName}
         </span>
-
-        <p
-          className={`text-astromapGrayText rounded-lg hidden ${
-            isHover ? "sm:block" : ""
-          }`}
-        >
-        </p>
+        <div className={`flex flex-row justify-center mt-4 ${isHover ? "invert" : ""}`}>
+        <Image alt="linkedin" src={Linkedin}/>
+        <Image alt="instagram" src={Instagram}/>
+        </div>
+        {isHover && (
+          <div className="text-center z-10">
+          <p className={`font-bold mt-3 ${isHover ? "text-cardBorder" : ""}`}>Skillset</p>
+          <ul className="mb-4 text-white">
+           <li>Entrepreneur</li>
+           <li>Networker</li>
+           <li>Project manager/Engineer</li>
+           <li>Scateboarder</li>
+           <li>loves overprices jpegs and metal shows</li>
+          </ul>
+          </div>
+        )}
       </div>
     </div>
   );
