@@ -24,7 +24,11 @@ module.exports = {
         bodyBg: "#16171B",
         cardBorder: "#2C4B40",
         walletIconBorder: "#41A380",
-        faqBg: "#232424"
+        faqBg: "#232424",
+        teamMember: "linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%)",
+      },
+      backgroundImage: {
+        teamMemberHover: "linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%)"
       },
       boxShadow: {
         voyagerCard: "0px 15px 20px rgba(95, 192, 157, 0.15)",

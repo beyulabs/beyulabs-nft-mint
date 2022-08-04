@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import OurTeamMember from "../components/OurTeamMember";
+import MeetTeamMember from "../components/MeetTeamMember";
 import Partner from "../components/PartnerItem"
 import { teamMembers } from "../constants";
 import { partners } from "../constants";
@@ -9,8 +9,8 @@ import { PartnersItem } from "../types/common";
 const Team: NextPage = () => {
   const createAvatarCards = () => {
     return teamMembers.map((voyager: TeamMember) => (
-      <OurTeamMember
-        key={`${voyager.nexusName.toLowerCase()}`}
+      <MeetTeamMember
+        key={voyager.id}
         voyager={voyager}
       />
     ));

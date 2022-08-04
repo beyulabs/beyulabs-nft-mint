@@ -12,8 +12,9 @@ interface PartnerItemProps {
 
     const Description = () => {
       return (
-        <div>
-          <p>Some description about project</p>
+        <div className="mt-4">
+          <p>Some description about project. Keep your eyes on the <span className="text-nexusGreen">#announcements</span> and <span className="text-nexusGreen">#boarding-pass</span> channels for these challenges,
+           they will essentialy guarantee your seet on the rocket to the new world. These challenges will be presented sporadically.  </p>
         </div>
     )
     }
@@ -49,7 +50,7 @@ interface PartnerItemProps {
               onMouseLeave={() => setIsHover(false)}
             >
               <div className="flex flex-row justify-center items-center lg:bg-[url('/boarding-pass-ellipsis.svg')] lg:bg-right-bottom md:bg-no-repeat">
-                <div className="-ml-4 -mt-4">
+                <div className="-ml-4">
                 <Image
                   alt="Astromap"
                   src={partnerItem.imagePath}

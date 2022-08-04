@@ -177,15 +177,11 @@ export const astromap: AstromapItem[] = [
 export const partners: PartnersItem[] = [
   {
     title: "Project 3",
-    description:
-      "It takes more than just grinding behind the scenes to grow an ecosystem.",
     callToAction: "Don't procrastinate",
     imagePath: "/Partner1.svg",
   },
   {
     title: "BDH (Legal)",
-    description:
-      "A bounty hub empowering freelancers, project teams, and agencies alike.",
     callToAction: "Don't procrastinate",
     imagePath: "/Partner2.svg",
   },
@@ -254,82 +250,98 @@ export const teamMembers: TeamMember[] = [
   {
     nexusName: "Ryan Harris",
     irlName: "Commander|Biz dev",
-    image: Ryan1
+    image: Ryan1,
+    id: '1'
   },
   {
     nexusName: "Ryan Harris",
     irlName: "Commander|Biz dev",
-    image: Ryan2
+    image: Ryan2,
+    id: '2'
   },
   {
     nexusName: "Ben Yurcisin",
     irlName: "Mechanic|Community",
-    image: Ben1
+    image: Ben1,
+    id: '3'
   },
   {
     nexusName: "QwertyCo",
     irlName: "Co-Commander|Project Manager",
-    image: Qwerty1
+    image: Qwerty1,
+     id: '4'
   },
   {
     nexusName: "QwertyCo",
     irlName: "Co-Commander|Project Manager",
-    image: Qwerty2
+    image: Qwerty2,
+     id: '5'
   },
   {
     nexusName: "Ryan Harris",
     irlName: "Commander|Biz dev",
-    image: Ryan3
+    image: Ryan3,
+     id: '6'
   },
   {
     nexusName: "Ben Yurcisin",
     irlName: "Mechanic|Community",
-    image: Ben2
+    image: Ben2,
+     id: '7'
   },
   {
     nexusName: "Ryan Harris",
     irlName: "Commander|Biz dev",
-    image: Ryan4
+    image: Ryan4,
+     id: '8'
   },
   {
     nexusName: "Este Lopez",
     irlName: "Commander|Biz dev",
-    image: Este1
+    image: Este1,
+     id: '9'
   },
   {
     nexusName: "Ryan Harris",
     irlName: "Commander|Biz dev",
-    image: Ryan5
+    image: Ryan5,
+     id: '10'
   },
   {
     nexusName: "QwertyCo",
     irlName: "Co-Commander|Project Manager",
-    image: Qwerty3
+    image: Qwerty3,
+     id: '11'
   },
   {
     nexusName: "Este Lopez",
     irlName: "Commander|Biz dev",
-    image: Este2
+    image: Este2,
+     id: '12'
   },
   {
     nexusName: "QwertyCo",
     irlName: "Co-Commander|Project Manager",
-    image: Qwerty4
+    image: Qwerty4,
+     id: '13'
   },
   {
     nexusName: "Ryan Harris",
     irlName: "Commander|Biz dev",
-    image: Ryan6
+    image: Ryan6,
+     id: '14'
   },
   {
     nexusName: "Ben Yurcisin",
     irlName: "Mechanic|Community",
-    image: Ben3
+    image: Ben3,
+     id: '15'
   },
   {
     nexusName: "Ryan Harris",
     irlName: "Commander|Biz dev",
-    image: Ryan7
+    image: Ryan7,
+    id: '16'
   },
 ]
 

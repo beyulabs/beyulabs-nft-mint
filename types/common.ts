@@ -72,7 +72,6 @@ export interface AstromapItem {
 
 export interface PartnersItem {
   title: string;
-  description: string;
   callToAction: string;
   imagePath: string;
 }
@@ -88,6 +87,7 @@ export interface TeamMember {
   nexusName: string;
   irlName: string;
   image: StaticImageData;
+  id: string;
 }
 
 export interface RoadmapItem {
