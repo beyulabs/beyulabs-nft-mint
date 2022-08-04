@@ -47,8 +47,8 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
     <div className="w-full cursor-pointer">
       <div className={roadmapItemCn}>
         <div className={itemNumberWrapperCn}>
-          <div className="-mt-2 font-bold">{`0${itemIndex + 1}`}</div>
-          <Image alt="Astromap" src={astroDot} width={40} height={40} />
+          <div className="-mt-2 font-bold text-2xl">{`0${itemIndex + 1}`}</div>
+          <Image alt="Astromap" src={astroDot} width={50} height={50} />
         </div>
         <div
           className={roadmapItemCardCn}

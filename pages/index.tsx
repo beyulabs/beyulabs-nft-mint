@@ -74,9 +74,9 @@ const Mint: NextPage = () => {
         </Dialog>
       </Transition.Root>
 
-      <div className="absolute top-0 left-0 right-0 bottom-0 h-[100vh] w-full opacity-20 bg-black z-30"></div>
+      <div className="absolute top-0 left-0 right-0 bottom-0 h-[100vh] w-full opacity-20 bg-black -z-30"></div>
       <div>
-      <section className="px-6 md:px-4 flex flex-col justify-center items-center mb-52 md:mb-24 xl:mb-72">
+      <section className="px-6 md:px-4 flex flex-col justify-center items-center mb-52 md:mb-24 xl:mb-72 lg:-ml-40">
         <div className="mt-10 sm:mt-20 md:mt-12 lg:mt-2 ml-24 md:flex-row-reverse flex flex-col items-center z-30">
           <div className="md:w-heroImage h-heroImage mr-16 mt-8 -ml-12">
             <Image alt="Nexus Voyagers" src={voyagersImage} />
@@ -93,8 +93,8 @@ const Mint: NextPage = () => {
           </div>
         </div>
       </section>
-      <section className="px-6 lg:px-0 mb-20 lg:mt-12">
-        <div className="-mt-40 py-12 md:w-missionSection lg:bg-[url('/mission-bg.svg')] lg:bg-no-repeat lg:bg-center lg:bg-contain relative lg:p-20 border  border-calloutBorderGreen bg-nexusDarkBg rounded-calloutSection lg:border-0 lg:bg-transparent lg:-ml-12">
+      <section className="px-6 lg:px-0 mb-20">
+        <div className="lg:mt-12 py-12 md:w-missionSection lg:bg-[url('/mission-bg.svg')] lg:bg-no-repeat lg:bg-center lg:bg-contain relative lg:p-20 border  border-calloutBorderGreen bg-nexusDarkBg rounded-calloutSection lg:border-0 lg:bg-transparent lg:-ml-24">
           <CalloutSection
             title="The Nexus Voyagers mission"
             image={
@@ -205,7 +205,7 @@ const Mint: NextPage = () => {
         <VoyagerCharacters />
       </section>
       </div>
-      <section className="w-5/6 md: left-0 right-0 w-bgFaq mx-auto mb-0 md: pt-8 pb-28 md:bg-[url('/bg_faq.svg')] lg:-ml-32 -mt-8">
+      <section className="w-5/6 md: left-0 right-0 w-bgFaq mx-auto mb-0 md: pt-8 pb-28 md:bg-[url('/bg_faq.svg')] lg:-ml-72 -mt-8">
         <FAQList />
       </section>
     </>

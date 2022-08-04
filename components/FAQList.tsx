@@ -10,7 +10,7 @@ const FAQ = ({ question, answer }: FAQProps) => {
     <Disclosure>
       {({ open }) => (
         <div
-          className={`py-6 px-9 mb-5 rounded-xl bg-nexusBlack w-faqField ml-80 ${
+          className={`py-6 px-9 mb-5 rounded-xl bg-nexusBlack w-faqField ml-96 -mr-32 ${
             open ? "border border-nexusGreen" : ""
           }`}
         >
@@ -56,7 +56,7 @@ const FaqItem = () => {
 const FAQList = () => {
   return (
     <>
-      <h2 className="text-center text-5xl mb-20 -ml-96 mr-96 text-white font-bold">
+      <h2 className="text-center text-5xl mb-20 text-white font-bold -ml-44 mr-80">
         FAQ
       </h2>
       {FaqItem()}

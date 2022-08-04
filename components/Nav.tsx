@@ -19,7 +19,7 @@ function Nav({ setMenuOpen }: NavProps) {
       {
         "font-bold drop-shadow-md": nextRouter.pathname === route.path,
         "font-normal": nextRouter.pathname !== route.path,
-        "opacity-50 hover:cursor-not-allowed": !route.enabled,
+        "opacity-100 hover:cursor-not-allowed": !route.enabled,
         "hover:drop-shadow": route.enabled,
       },
       "ml-8 mr-8 text-white text-sm"

@@ -4,6 +4,8 @@ import {
   NavRoute,
   SocialIcon,
   Voyager,
+  TeamMember,
+  PartnersItem
 } from "./types/common";
 
 import openSeaLogo from "./public/opensea-logo.svg";
@@ -15,7 +17,25 @@ import DarkMode from "./public/dark-mode.png";
 import captainAvatar from "./public/Cap.png";
 import FirstMechanic from './public/mechanic2.png';
 import SecondMechanic from './public/SecondMechanic.png';
-import Architector from './public/Rectangle2.svg'
+import Architector from './public/Rectangle2.svg';
+import Ryan1 from "./team-images/team1.png";
+import Ryan2 from "./team-images/team2.png";
+import Ben1 from "./team-images/team3.png";
+import Qwerty1 from "./team-images/team4.png";
+import Qwerty2 from "./team-images/team5.png";
+import Ryan3 from "./team-images/team6.png";
+import Ben2 from "./team-images/team7.png";
+import Ryan4 from "./team-images/team8.png";
+import Este1 from "./team-images/team9.png";
+import Ryan5 from "./team-images/team10.png";
+import Qwerty3 from "./team-images/team11.png";
+import Este2 from "./team-images/team12.png";
+import Qwerty4 from "./team-images/team13.png";
+import Ryan6 from "./team-images/team14.png";
+import Ben3 from "./team-images/team15.png";
+import Ryan7 from "./team-images/team16.png";
+
+
 // import explorerAvatar from "./public/explorer.png";
 // import journalistAvatar from "./public/journalist.png";
 // import merchantAvatar from "./public/architect.png";
@@ -32,7 +52,7 @@ export const routes: NavRoute[] = [
   {
     path: "/team",
     title: "Our team",
-    enabled: false,
+    enabled: true,
   },
 ];
 
@@ -154,6 +174,23 @@ export const astromap: AstromapItem[] = [
   },
 ];
 
+export const partner: PartnersItem[] = [
+  {
+    title: "Events",
+    description:
+      "It takes more than just grinding behind the scenes to grow an ecosystem.",
+    callToAction: "Don't procrastinate",
+    imagePath: "/astromap-1.svg",
+  },
+  {
+    title: "Bounty Board",
+    description:
+      "A bounty hub empowering freelancers, project teams, and agencies alike.",
+    callToAction: "Don't procrastinate",
+    imagePath: "/astromap-2.svg",
+  },
+]
+
 export const voyagers: Voyager[] = [
   {
     nexusName: "Architect",
@@ -212,3 +249,88 @@ export const voyagers: Voyager[] = [
   //   image: explorerAvatar,
   // },
 ];
+
+export const teamMembers: TeamMember[] = [
+  {
+    nexusName: "Ryan Harris",
+    irlName: "Commander|Biz dev",
+    image: Ryan1
+  },
+  {
+    nexusName: "Ryan Harris",
+    irlName: "Commander|Biz dev",
+    image: Ryan2
+  },
+  {
+    nexusName: "Ben Yurcisin",
+    irlName: "Mechanic|Community",
+    image: Ben1
+  },
+  {
+    nexusName: "QwertyCo",
+    irlName: "Co-Commander|Project Manager",
+    image: Qwerty1
+  },
+  {
+    nexusName: "QwertyCo",
+    irlName: "Co-Commander|Project Manager",
+    image: Qwerty2
+  },
+  {
+    nexusName: "Ryan Harris",
+    irlName: "Commander|Biz dev",
+    image: Ryan3
+  },
+  {
+    nexusName: "Ben Yurcisin",
+    irlName: "Mechanic|Community",
+    image: Ben2
+  },
+  {
+    nexusName: "Ryan Harris",
+    irlName: "Commander|Biz dev",
+    image: Ryan4
+  },
+  {
+    nexusName: "Este Lopez",
+    irlName: "Commander|Biz dev",
+    image: Este1
+  },
+  {
+    nexusName: "Ryan Harris",
+    irlName: "Commander|Biz dev",
+    image: Ryan5
+  },
+  {
+    nexusName: "QwertyCo",
+    irlName: "Co-Commander|Project Manager",
+    image: Qwerty3
+  },
+  {
+    nexusName: "Este Lopez",
+    irlName: "Commander|Biz dev",
+    image: Este2
+  },
+  {
+    nexusName: "QwertyCo",
+    irlName: "Co-Commander|Project Manager",
+    image: Qwerty4
+  },
+  {
+    nexusName: "Ryan Harris",
+    irlName: "Commander|Biz dev",
+    image: Ryan6
+  },
+  {
+    nexusName: "Ben Yurcisin",
+    irlName: "Mechanic|Community",
+    image: Ben3
+  },
+  {
+    nexusName: "Ryan Harris",
+    irlName: "Commander|Biz dev",
+    image: Ryan7
+  },
+]
+
+

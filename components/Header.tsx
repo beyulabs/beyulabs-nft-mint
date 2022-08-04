@@ -39,7 +39,7 @@ const Header = ({ setMenuOpen }: HeaderProps) => {
   }
   
   return (
-    <header className="px-4 py-4 flex flex-row items-center justify-between w-100 w-full h-20 text-xl border-b border-nexusHeaderDivider border-opacity-40 z-50">
+    <header className="px-4 py-8 flex flex-row items-center justify-between w-100 w-full h-20 text-xl border-b border-nexusHeaderDivider border-opacity-40 z-50">
       <div className="hidden md:block w-40 h-12 mr-10">
         <Link href="/" passHref>
           <Image

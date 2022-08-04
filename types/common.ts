@@ -70,10 +70,23 @@ export interface AstromapItem {
   imagePath: string;
 }
 
+export interface PartnersItem {
+  title: string;
+  description: string;
+  callToAction: string;
+  imagePath: string;
+}
+
 export interface Voyager {
   nexusName: string;
   irlName: string;
   description: string;
+  image: StaticImageData;
+}
+
+export interface TeamMember {
+  nexusName: string;
+  irlName: string;
   image: StaticImageData;
 }
 
