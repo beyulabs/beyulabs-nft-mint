@@ -7,6 +7,11 @@
     align-items: center;
     border-bottom: 1px solid #ACC2BD40;
 
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr auto;
+      padding: 20px 0;
+    }
+
     .ToggleTheme {
       cursor: pointer;
       transition: 0.2s all;
@@ -20,6 +25,91 @@
       display: flex;
       align-items: center;
       gap: 30px;
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.nav {
+  &_icon {
+    width: 22px;
+    padding: 0;
+    background: transparent;
+    height: 18px;
+    position: relative;
+    z-index: 33;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    border: 0;
+    top: 2px;
+
+    &:hover, &:focus {
+      background: transparent;
+
+      span {
+        position: absolute;
+      }
+    }
+
+    @media (min-width: 1331px) {
+      display: none;
+    }
+
+    &:active, &:focus, &:hover {
+      border: 0;
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: white;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: 0.25s ease-in-out;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        top: 6px;
+      }
+
+      &:nth-child(4) {
+        top: 12px;
+      }
+    }
+
+    &_active {
+      span {
+        &:nth-child(1) {
+          top: 6px;
+          width: 0;
+          left: 50%;
+        }
+
+        &:nth-child(2) {
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+
+        &:nth-child(4) {
+          top: 6px;
+          width: 0;
+          left: 50%;
+        }
+      }
     }
   }
 }

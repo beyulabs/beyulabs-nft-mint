@@ -5,6 +5,12 @@ h1 {
   line-height: 120%;
   color: var(--theme-heading-color);
   margin-bottom: 40px;
+
+  @media (max-width: 992px) {
+    font-size: 40px;
+    line-height: 110%;
+    margin-bottom: 15px;
+  }
 }
 
 h2 {
@@ -13,6 +19,11 @@ h2 {
   line-height: 110%;
   text-transform: uppercase;
   color: var(--theme-heading-color);
+
+  @media (max-width: 992px) {
+    font-size: 30px;
+    line-height: 110%;
+  }
 }
 
 h3 {
@@ -20,6 +31,11 @@ h3 {
   font-size: 24px;
   line-height: 29px;
   color: var(--theme-heading-color);
+
+  @media (max-width: 992px) {
+    font-size: 16px;
+    line-height: 100%;
+  }
 }
 
 h4 {

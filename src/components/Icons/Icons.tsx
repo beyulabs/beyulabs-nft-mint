@@ -68,3 +68,43 @@ export const Wallet = () => (
     />
   </svg>
 );
+
+export const BottomRightArrow = () => (
+  <svg
+    width="20"
+    height="19"
+    viewBox="0 0 20 19"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <line
+      x1="5.58186"
+      y1="5.16435"
+      x2="18.3058"
+      y2="17.8883"
+      stroke="#51BEA7"
+      strokeWidth="2"
+    />
+    <mask maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="19">
+      <rect
+        x="18.0002"
+        y="1"
+        width="17"
+        height="17"
+        transform="rotate(90 18.0002 1)"
+        stroke="black"
+        strokeWidth="2"
+      />
+    </mask>
+    <g mask="url(#mask0_0_911)">
+      <rect
+        x="20.0002"
+        y="4"
+        width="16"
+        height="16"
+        transform="rotate(90 20.0002 4)"
+        fill="currentColor"
+      />
+    </g>
+  </svg>
+);

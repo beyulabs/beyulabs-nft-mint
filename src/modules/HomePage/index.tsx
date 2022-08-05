@@ -1,15 +1,23 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef } from 'react';
 import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper';
 import AppContext from '@modules/Layout/context/AppContext';
 import HtmlMeta from '@components/HtmlMeta';
-
-import s from './HomePage.module.scss';
 import cn from 'classnames';
 import { Coins } from '@components/Icons/Icons';
+import Spoiler from '@components/Spoiler';
 import { Button } from '@components/Button/button';
+
+import 'swiper/css';
+import s from './HomePage.module.scss';
+import { faqs } from '@utils/constants';
 
 const HomePage = () => {
   const { isLightMode } = useContext(AppContext);
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
   return (
     <div>
       <HtmlMeta title="Home" />
@@ -48,7 +56,11 @@ const HomePage = () => {
           <div className={cn(s.mission__row, isLightMode && s.light)}>
             <div>
               <Image
-                src={'/nexus-mission.svg'}
+                src={
+                  isLightMode
+                    ? '/nexus-mission-light.svg'
+                    : '/nexus-mission.svg'
+                }
                 width={524}
                 height={679}
                 alt="Nexus Mission"
@@ -115,8 +127,8 @@ const HomePage = () => {
                 </p>
               </div>
             </div>
-            <div />
-            <div />
+            <div className={s.empty} />
+            <div className={s.empty} />
             <div className={cn(s.card, s.right)}>
               <div className={s.dot_num}>
                 <span className={s.dot} />
@@ -153,8 +165,8 @@ const HomePage = () => {
                 </p>
               </div>
             </div>
-            <div />
-            <div />
+            <div className={s.empty} />
+            <div className={s.empty} />
             <div className={cn(s.card, s.right)}>
               <div className={s.dot_num}>
                 <span className={s.dot} />
@@ -191,8 +203,8 @@ const HomePage = () => {
                 </p>
               </div>
             </div>
-            <div />
-            <div />
+            <div className={s.empty} />
+            <div className={s.empty} />
 
             <div className={cn(s.card, s.right)}>
               <div className={s.dot_num}>
@@ -274,6 +286,110 @@ const HomePage = () => {
                 disabled
               />
             </div>
+          </div>
+        </div>
+      </section>
+      <section className={s.voyagers}>
+        <div className="container">
+          <h2>The Voyagers</h2>
+          <Swiper
+            modules={[Navigation]}
+            effect="fade"
+            slidesPerView={2}
+            spaceBetween={30}
+            observer={true}
+            navigation={{
+              prevEl: prevRef?.current,
+              nextEl: nextRef?.current,
+            }}
+            breakpoints={{
+              580: {
+                slidesPerView: 2,
+              },
+              768: {
+                slidesPerView: 3,
+              },
+              992: {
+                slidesPerView: 4,
+              },
+            }}
+          >
+            <SwiperSlide>
+              <div className={s.card}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={'/mechanic2.png'} alt="Mechanic" />
+                <h3>Mechanic</h3>
+                <span className={s.tag}>Dev</span>
+                <div className={s.description}>
+                  <p>
+                    The creatives that take ideas and bring them to life in a
+                    beautiful way - the artists. Without grace in the design.
+                    The creatives that take ideas and bring them to life in a
+                    beautiful way - the artists. Without grace in the design.
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={s.card}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={'/mechanic2.png'} alt="Mechanic" />
+                <h3>Mechanic</h3>
+                <span className={s.tag}>Dev</span>
+                <div className={s.description}>
+                  <p>
+                    The creatives that take ideas and bring them to life in a
+                    beautiful way - the artists. Without grace in the design.
+                    The creatives that take ideas and bring them to life in a
+                    beautiful way - the artists. Without grace in the design.
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={s.card}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={'/Rectangle2.svg'} alt="Architect " />
+                <h3>Architect</h3>
+                <span className={s.tag}>Artist</span>
+                <div className={s.description}>
+                  <p>
+                    The creatives that take ideas and bring them to life in a
+                    beautiful way - the artists. Without grace in the design.
+                    The creatives that take ideas and bring them to life in a
+                    beautiful way - the artists. Without grace in the design.
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={s.card}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={'/Cap.png'} alt="Captain" />
+                <h3>Captain</h3>
+                <span className={s.tag}>Founder</span>
+                <div className={s.description}>
+                  <p>
+                    The creatives that take ideas and bring them to life in a
+                    beautiful way - the artists. Without grace in the design.
+                    The creatives that take ideas and bring them to life in a
+                    beautiful way - the artists. Without grace in the design.
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </section>
+      <section className={cn(s.faq, isLightMode && s.light)}>
+        <div className="container">
+          <h2>FAQ</h2>
+          <div className={s.faq__list}>
+            {faqs.map((faq, index) => (
+              <Spoiler key={`faq-${index}`} title={faq.question}>
+                {faq.answer}
+              </Spoiler>
+            ))}
           </div>
         </div>
       </section>

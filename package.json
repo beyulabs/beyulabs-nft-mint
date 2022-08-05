@@ -41,12 +41,14 @@
     "react-dom": "17.0.2",
     "react-elastic-carousel": "^0.11.5",
     "react-hook-form": "^7.27.1",
+    "react-id-swiper": "4.0.0",
     "react-multi-carousel": "^2.8.2",
     "react-query": "^3.34.16",
     "react-responsive-carousel": "^3.2.23",
     "react-slick": "^0.29.0",
     "sass": "^1.54.3",
     "slick-carousel": "^1.8.1",
+    "swiper": "8.0.7",
     "web3modal": "^1.9.5"
   },
   "devDependencies": {

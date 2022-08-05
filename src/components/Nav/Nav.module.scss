@@ -1,4 +1,9 @@
 .nav {
+
+  @media (max-width: 992px) {
+    display: none;
+  }
+
   &__links {
     display: flex;
     align-items: center;

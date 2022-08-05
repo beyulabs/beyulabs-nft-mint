@@ -36,6 +36,11 @@ $bdt_bp: 1330px;
   --theme-btn-transparent-bg: transparent;
   --theme-btn-transparent-border: #41A380;
   --theme-heading-color: #FFFFFF;
+  --team-card-bg: #232424;
+  --team-card-border: #2C4B40;
+  --spoiler-bg: #1A1A1A;
+  --astro-card-bg: #232424;
+  --astro-card-border: #2C4B40;
 }
 
 .light-mode {
@@ -50,4 +55,9 @@ $bdt_bp: 1330px;
   --theme-btn-transparent-bg: transparent;
   --theme-btn-transparent-border: #41A380;
   --theme-heading-color: #202020;
+  --team-card-bg: #FFFFFF;
+  --team-card-border: #FFFFFF;
+  --spoiler-bg: #FCF9F9;
+  --astro-card-bg: #FFFFFF;
+  --astro-card-border: #fff;
 }
