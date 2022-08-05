@@ -1,0 +1,11 @@
+.nav {
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+
+    a {
+      color: var(--theme-links-color);
+    }
+  }
+}

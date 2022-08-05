@@ -1,42 +1,42 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./layouts/**/*.{js,ts,jsx,tsx}",
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './Layout/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
       colors: {
-        astromapGrayText: "#BBBBBB",
-        nexusGreen: "#41A380",
-        nexusGradientGreen: "#63D4AC",
-        nexusBlack: "#202020",
-        nexusGray: "#4F4F4F",
-        nexusGrayText: "#989898",
-        nexusFooterDivider: "#FCF9F9",
-        nexusHeaderDivider: "#ACC2BD",
-        nexusDarkBg: "#232424",
-        discordBlue: "#7289da",
-        twitterBlue: "#1da1f2",
-        calloutBorderGreen: "#2C4B40",
-        bodyBg: "#16171B",
-        cardBorder: "#2C4B40",
-        walletIconBorder: "#41A380",
-        faqBg: "#232424"
+        astromapGrayText: '#BBBBBB',
+        nexusGreen: '#41A380',
+        nexusGradientGreen: '#63D4AC',
+        nexusBlack: '#202020',
+        nexusGray: '#4F4F4F',
+        nexusGrayText: '#989898',
+        nexusFooterDivider: '#FCF9F9',
+        nexusHeaderDivider: '#ACC2BD',
+        nexusDarkBg: '#232424',
+        discordBlue: '#7289da',
+        twitterBlue: '#1da1f2',
+        calloutBorderGreen: '#2C4B40',
+        bodyBg: '#16171B',
+        cardBorder: '#2C4B40',
+        walletIconBorder: '#41A380',
+        faqBg: '#232424',
       },
       boxShadow: {
-        voyagerCard: "0px 15px 20px rgba(95, 192, 157, 0.15)",
+        voyagerCard: '0px 15px 20px rgba(95, 192, 157, 0.15)',
       },
       borderRadius: {
-        calloutSection: "48px",
-        faqSection: '0 0 50% 50%/0 0 15% 15%'
+        calloutSection: '48px',
+        faqSection: '0 0 50% 50%/0 0 15% 15%',
       },
       fontFamily: {
-        sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
-        raleway: ["Raleway", "sans-serif"],
-        gothamPro: ["Gotham Pro", "sans-serif"],
+        sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
+        raleway: ['Raleway', 'sans-serif'],
+        gothamPro: ['Gotham Pro', 'sans-serif'],
       },
       width: {
         mint: '105px',
@@ -60,15 +60,15 @@ module.exports = {
         nexusMissionImage: '524px',
         astromapItem: '468px',
         ticketsImage: '532px',
-        missionText: "630px",
-      }
+        missionText: '630px',
+      },
     },
     height: {
-      mint: "45px",
+      mint: '45px',
       missionImage: '638px',
       missionSection: '720px',
-      boardingSection: "736px",
-      boardingBlock: "590px",
+      boardingSection: '736px',
+      boardingBlock: '590px',
       boardingDescription: '192px',
       heroImage: '647px',
       heroTitle: '264px',
@@ -80,7 +80,6 @@ module.exports = {
     lineHeight: {
       heroTitle: '87px',
     },
-
   },
   plugins: [],
   darkMode: 'class',

@@ -1,9 +1,11 @@
-/** @type {import('next').NextConfig} */
+const withPlugins = require('next-compose-plugins');
+
 const nextConfig = {
+  dir: 'src',
   reactStrictMode: true,
   images: {
-    domains: ["ikzttp.mypinata.cloud"],
+    domains: ['ikzttp.mypinata.cloud'],
   },
 };
 
-module.exports = nextConfig;
+module.exports = withPlugins([], nextConfig);

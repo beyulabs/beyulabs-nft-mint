@@ -1,0 +1,33 @@
+.spoiler {
+  transition: .5s all;
+
+  &__head {
+    transition: 0.3s all;
+    cursor: pointer;
+
+    .icon {
+      transition: 0.3s all;
+      display: flex;
+      align-items: center;
+
+      &__active {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__text {
+    opacity: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: opacity .5s ease-out, max-height .55s ease-out, padding .25s ease-in .25s;
+
+    &__active {
+      max-height: 100%;
+      opacity: 1;
+      padding: 24px 24px 18px 24px;
+      transition: padding .25s ease-in, max-height .5s ease-in, opacity .5s ease-in .3s;
+    }
+  }
+
+}
