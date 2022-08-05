@@ -31,6 +31,7 @@
 
     &:hover {
       background: var(--theme-btn-green-bg-hover);
+      background-size: 102%;
       color: var(--theme-btn-green-color);
       border-color: transparent;
       transition: all 0.3s ease-in-out;
@@ -58,8 +59,14 @@
   }
 
   &.large {
-    min-height: 40px;
-    min-width: 141px;
+    min-height: 63px;
+    font-size: 20px;
+    padding: 0 40px;
+    font-weight: 400;
+
+    span {
+      top: 1px;
+    }
   }
 
   &[disabled], &[disabled]:hover {
