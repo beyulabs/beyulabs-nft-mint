@@ -8,31 +8,57 @@ import {
   PartnersItem,
 } from '../types/common';
 
+// @ts-ignore
 import openSeaLogo from '../../public/opensea-logo.svg';
+// @ts-ignore
 import etherscanLogo from '../../public/etherscan-logo.svg';
+// @ts-ignore
 import discordLogo from '../../public/discord-icon.svg';
+// @ts-ignore
 import twitterLogo from '../../public/twitter-logo.svg';
+// @ts-ignore
 import LightModeIcon from '../../public/light-mode-page.svg';
+// @ts-ignore
 import DarkMode from '../../public/dark-mode.png';
+// @ts-ignore
 import captainAvatar from '../../public/Cap.png';
+// @ts-ignore
 import FirstMechanic from '../../public/mechanic2.png';
+// @ts-ignore
 import SecondMechanic from '../../public/SecondMechanic.png';
+// @ts-ignore
 import Architector from '../../public/Rectangle2.svg';
+// @ts-ignore
 import Ryan1 from '../team-images/team1.png';
+// @ts-ignore
 import Ryan2 from '../team-images/team2.png';
+// @ts-ignore
 import Ben1 from '../team-images/team3.png';
+// @ts-ignore
 import Qwerty1 from '../team-images/team4.png';
+// @ts-ignore
 import Qwerty2 from '../team-images/team5.png';
+// @ts-ignore
 import Ryan3 from '../team-images/team6.png';
+// @ts-ignore
 import Ben2 from '../team-images/team7.png';
+// @ts-ignore
 import Ryan4 from '../team-images/team8.png';
+// @ts-ignore
 import Este1 from '../team-images/team9.png';
+// @ts-ignore
 import Ryan5 from '../team-images/team10.png';
+// @ts-ignore
 import Qwerty3 from '../team-images/team11.png';
+// @ts-ignore
 import Este2 from '../team-images/team12.png';
+// @ts-ignore
 import Qwerty4 from '../team-images/team13.png';
+// @ts-ignore
 import Ryan6 from '../team-images/team14.png';
+// @ts-ignore
 import Ben3 from '../team-images/team15.png';
+// @ts-ignore
 import Ryan7 from '../team-images/team16.png';
 
 // import explorerAvatar from "./public/explorer.png";
@@ -98,17 +124,25 @@ export const faqs: FAQ[] = [
   {
     question: 'What is BeYu Labs?',
     answer:
-      'The driving force behind the Nexus Voyagers NFT drop. A digital hub of creators, developers and investors to collaborate on and build web3 projects. Our mission is to empower web3 entrepreneurship by bringing together project teams and investors, facilitating epic shared experiences, and dropping a one-of-a-kind NFT collection to tie the whole ecosystem together.',
+      'The driving force behind the Nexus Voyagers NFT drop. A digital hub of creators, developers and ' +
+      'investors to collaborate on and build web3 projects. Our mission is to empower web3 entrepreneurship ' +
+      'by bringing together project teams and investors, facilitating epic shared experiences, and ' +
+      'dropping a one-of-a-kind NFT collection to tie the whole ecosystem together.',
   },
   {
     question: 'What is Nexus Voyagers?',
     answer:
-      'The genesis NFT drop by BeYu Labs. A collection of 10,119 crew members, primed for the genesis mission launch. On this voyage, crew members will have access to epic shared experiences, meaningful  collabs, one of a kind NFT drops, and a future built for the community over time. With the focus on empowering Web3 entrepreneurship the ecosystem will fill the underlying gaps on contribution with incentivized exchange of utility. Each of us will have a role to play.',
+      'The genesis NFT drop by BeYu Labs. A collection of 10,119 crew members, primed for the genesis ' +
+      'mission launch. On this voyage, crew members will have access to epic shared experiences, meaningful  ' +
+      'collabs, one of a kind NFT drops, and a future built for the community over time. With the focus on ' +
+      'empowering Web3 entrepreneurship the ecosystem will fill the underlying gaps on contribution with ' +
+      'incentivized exchange of utility. Each of us will have a role to play.',
   },
   {
     question: 'What is the supply of this collection?',
     answer:
-      '1/01/19 is the date that the farthest object (2014 MU69) was discovered by a spacecraft in human history. We aim to extend beyond these limits on our journey through web3. Buckle up.',
+      '1/01/19 is the date that the farthest object (2014 MU69) was discovered by a spacecraft in human ' +
+      'history. We aim to extend beyond these limits on our journey through web3. Buckle up.',
   },
   {
     question: 'When is the drop date?',
@@ -127,7 +161,10 @@ export const faqs: FAQ[] = [
   {
     question: 'How to get presale access?',
     answer:
-      'See #boarding-pass channel for a briefing on how to access our presale launch. We will be sporadically posting challenges in this channel - be sure to stay active in the community so you don’t miss out! The BeYu team is always watching the Discord, and contributors to this mission will be rewarded.',
+      'See #boarding-pass channel for a briefing on how to access our presale launch. We will be ' +
+      'sporadically posting challenges in this channel - be sure to stay active in the community so you ' +
+      'don’t miss out! The BeYu team is always watching the Discord, and contributors to this mission ' +
+      'will be rewarded.',
   },
 ];
 
@@ -152,7 +189,8 @@ export const astromap: AstromapItem[] = [
   {
     title: 'Project Showcase',
     description:
-      "A spotlight on some of our Holder's Top Projects via Panels, Interviews, Podcast, Collabs, and Dedicated Discord channels.",
+      "A spotlight on some of our Holder's Top Projects via Panels, Interviews, " +
+      'Podcast, Collabs, and Dedicated Discord channels.',
     imagePath: '/astromap-4.svg',
   },
   {
@@ -169,7 +207,8 @@ export const astromap: AstromapItem[] = [
   {
     title: 'Charity',
     description:
-      'We’ll be donating x% of proceeds from mint to a charity that’s aligned with our overall vision: NY PACE (https://www.nypace.org/).',
+      'We’ll be donating x% of proceeds from mint to a charity that’s aligned with our overall vision: ' +
+      'NY PACE (https://www.nypace.org/).',
     imagePath: '/astromap-1.svg',
   },
 ];
@@ -197,7 +236,10 @@ export const voyagers: Voyager[] = [
     irlName: 'Artist',
     description:
       // eslint-disable-next-line max-len
-      'The creatives that take ideas and bring them to life in a beautiful way - the artists. Without grace in the design of a new world, it would become nothing more than a lifeless land of chrome and boxy structures. The architects breathe life into the planet and create an aesthetic that makes it worth populating.',
+      'The creatives that take ideas and bring them to life in a beautiful way - the artists. Without ' +
+      'grace in the design of a new world, it would become nothing more than a lifeless land of chrome ' +
+      'and boxy structures. The architects breathe life into the planet and create an aesthetic that ' +
+      'makes it worth populating.',
     image: Architector,
   },
   {
@@ -228,6 +270,7 @@ export const voyagers: Voyager[] = [
   //   nexusName: "Architect",
   //   irlName: "Artist",
   //   description:
+  // eslint-disable-next-line max-len
   //     "The creatives that take ideas and bring them to life in a beautiful way - the artists. Without grace in the design of a new world, it would become nothing more than a lifeless land of chrome and boxy structures. The architects breathe life into the planet and create an aesthetic that makes it worth populating.",
   //   image: architectAvatar,
   // },
@@ -235,6 +278,7 @@ export const voyagers: Voyager[] = [
   //   nexusName: "Journalist",
   //   irlName: "Marketing",
   //   description:
+  // eslint-disable-next-line max-len
   //     "On a mission to spread ideas and share news of innovations and creation - the marketers. A new business - a beautiful piece of art - an innovative idea; do they really exist if the people of the planet don’t KNOW they exist? The journalists spread the word to ensure the population is aware of what’s happening on the planet.",
   //   image: journalistAvatar,
   // },
@@ -242,6 +286,7 @@ export const voyagers: Voyager[] = [
   //   nexusName: "Merchant",
   //   irlName: "Investor/Trader",
   //   description:
+  // eslint-disable-next-line max-len
   //     "The driving force behind the economy of the new world - the investors. Those who decide what the direction of the market looks like, support new businesses and create financial abundance for the builders and community alike.",
   //   image: merchantAvatar,
   // },
@@ -249,6 +294,7 @@ export const voyagers: Voyager[] = [
   //   nexusName: "Explorer",
   //   irlName: "Collector",
   //   description:
+  // eslint-disable-next-line max-len
   //     "Like true mavens, stimulating the economy as the backbone to all initiatives of the new world - the collector. All innovations, projects, and progress of this terraformed society would be all for naught if not for these community members actively participating and engaging in the wild world of web3. These collectors of innovation buy, sell, trade and barter their way through the space, providing feedback to the builders so the planet is built with progress and abundance in mind.",
   //   image: explorerAvatar,
   // },

@@ -1,9 +1,7 @@
-import classNames from "classnames";
-import Image from "next/image";
-import { useState } from "react";
-import { TeamMember } from "../types/common";
-
-import voyagerArrow from "../../public/voyager-card-arrow.svg";
+import classNames from 'classnames';
+import Image from 'next/image';
+import { useState } from 'react';
+import { TeamMember } from '../types/common';
 
 interface VoyagerCardProps {
   voyager: TeamMember;
@@ -28,19 +26,24 @@ const OurTeamMember = ({ voyager }: VoyagerCardProps) => {
             layout="responsive"
           />
         </div>
-        <h3 className="text-center text-2xl text-white font-bold mb-2">{voyager.nexusName}</h3>
-        <span className={`flex justify-center rounded-lg text-sm inline-block py-2 px-4 mb-3 bg-nexusGreen text-white ${
-            isHover ? "sm:bg-white sm:text-nexusGradientGreen" : "bg-nexusGreen text-white"
-          }`}>
+        <h3 className="text-center text-2xl text-white font-bold mb-2">
+          {voyager.nexusName}
+        </h3>
+        <span
+          className={`flex justify-center rounded-lg text-sm inline-block py-2 px-4 mb-3 bg-nexusGreen text-white ${
+            isHover
+              ? 'sm:bg-white sm:text-nexusGradientGreen'
+              : 'bg-nexusGreen text-white'
+          }`}
+        >
           {voyager.irlName}
         </span>
 
         <p
           className={`text-astromapGrayText rounded-lg hidden ${
-            isHover ? "sm:block" : ""
+            isHover ? 'sm:block' : ''
           }`}
-        >
-        </p>
+        />
       </div>
     </div>
   );

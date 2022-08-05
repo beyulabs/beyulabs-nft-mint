@@ -1,7 +1,8 @@
-import { SelectedFilter } from "../types/common";
+import { SelectedFilter } from '../types/common';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 interface FilterTagProps {
   filter: SelectedFilter;
@@ -19,7 +20,7 @@ const FilterTag = ({ filter, remove }: FilterTagProps) => {
         className="ml-2"
         width={16}
         height={16}
-        icon={faXmark}
+        icon={faXmark as IconProp}
         onClick={() => remove(filter)}
       />
     </div>

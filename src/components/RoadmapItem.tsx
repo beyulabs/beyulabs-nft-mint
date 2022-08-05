@@ -1,9 +1,10 @@
-import { useState } from "react";
-import Image from "next/image";
-import classNames from "classnames";
-import { AstromapItem } from "../types/common";
+import { useState } from 'react';
+import Image from 'next/image';
+import classNames from 'classnames';
+import { AstromapItem } from '../types/common';
 
-import astroDot from "../../public/astromap-dot.svg";
+// @ts-ignore
+import astroDot from '../../public/astromap-dot.svg';
 
 interface RoadmapItemProps {
   itemIndex: number;
@@ -14,33 +15,34 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
   const [isHover, setIsHover] = useState<boolean>(false);
 
   const roadmapItemCn = classNames(
-    "flex flex-row items-center mb-10 md:mb-20",
+    'flex flex-row items-center mb-10 md:mb-20',
     {
-      "md:flex-row-reverse md:mr-[50%]": itemIndex % 2 === 0,
-      "md:ml-[50%]": itemIndex % 2 !== 0,
+      'md:flex-row-reverse md:mr-[50%]': itemIndex % 2 === 0,
+      'md:ml-[50%]': itemIndex % 2 !== 0,
     }
   );
 
   const itemNumberWrapperCn = classNames(
-    "flex flex-row items-center text-nexusGreen",
+    'flex flex-row items-center text-nexusGreen',
     {
-      "md:mr-10": itemIndex % 2 !== 0,
-      "md:flex-row-reverse md:ml-10": itemIndex % 2 === 0,
+      'md:mr-10': itemIndex % 2 !== 0,
+      'md:flex-row-reverse md:ml-10': itemIndex % 2 === 0,
     }
   );
 
   const roadmapItemCardCn = classNames(
-    "bg-nexusBlack p-4 rounded-xl w-astromapItem h-astromapItem text-white grow md:grow-0",
+    'bg-nexusBlack p-4 rounded-xl w-astromapItem h-astromapItem text-white grow md:grow-0',
     {
-      "text-white bg-nexusGreen": isHover,
+      'text-white bg-nexusGreen': isHover,
     }
   );
 
-  const descriptionCn = classNames({
-    "text-astromapGrayText": !isHover,
-    "text-white": isHover,
-  },
-    "font-normal text-base leading-6 w-astromapDescription"
+  const descriptionCn = classNames(
+    {
+      'text-astromapGrayText': !isHover,
+      'text-white': isHover,
+    },
+    'font-normal text-base leading-6 w-astromapDescription'
   );
 
   return (

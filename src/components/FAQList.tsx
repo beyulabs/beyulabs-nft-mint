@@ -1,12 +1,12 @@
 // import { ReactNode, useState } from "react";
 // import cn from "classnames";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
-import { Disclosure } from "@headlessui/react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
+import { Disclosure } from '@headlessui/react';
 
-import { faqs } from "../utils/constants";
-import { FAQProps } from "../types/common";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { faqs } from '../utils/constants';
+import { FAQProps } from '../types/common';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 // import s from "./Spoiler.module.scss";
 // import { SpoilerPlus, SpoilerMinus } from "./Icons";
@@ -68,12 +68,12 @@ const FAQ = ({ question, answer }: FAQProps) => {
       {({ open }) => (
         <div
           className={`py-6 px-9 mb-5 rounded-xl bg-nexusBlack w-faqField ml-96 -mr-32 ${
-            open ? "border border-nexusGreen" : "border border-nexusBlack"
+            open ? 'border border-nexusGreen' : 'border border-nexusBlack'
           }`}
         >
           <div
             className={`flex flex-row text-white text-xl md:text-2xl font-bold justify-between ${
-              open ? "mb-6" : ""
+              open ? 'mb-6' : ''
             }`}
           >
             <Disclosure.Button className="w-full">

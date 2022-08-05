@@ -236,6 +236,47 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      <section className={s.boarding}>
+        <div className="container">
+          <div className={cn(s.boarding__row, isLightMode && s.light)}>
+            <div>
+              <Image
+                src={'/tickets.svg'}
+                width={532}
+                height={701}
+                alt="Boarding Pass"
+              />
+            </div>
+            <div>
+              <h2>Boarding Pass</h2>
+              <h5>
+                The Boarding Passes are separated by their contribution to the
+                new world of web3. Each character type will have a unique
+                challenge in order to ensure you align with that character,and
+                that you will be able to mint them during our presale.
+              </h5>
+              <p>
+                Keep your eyes on the #announcements and #boarding-pass channels
+                for these challenges, they will essentially guarantee your seat
+                on the rocket to the new world. These challenges will be
+                presented sporadically and closed off in short sprints of time,
+                so stay active in the Discord to make sure you lock down your
+                respective boarding pass and don’t get left behind in the
+                deteriorating space of Web2.
+              </p>
+
+              <Button
+                size="large"
+                text="Get it"
+                color="green"
+                icon={<Coins />}
+                disabled
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

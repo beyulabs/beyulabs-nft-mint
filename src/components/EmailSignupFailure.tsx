@@ -1,7 +1,8 @@
-import { faDiscord, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDiscord, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { beyuLabsTwitterURL, discordInviteURL } from "../utils/constants";
+import { beyuLabsTwitterURL, discordInviteURL } from '../utils/constants';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 const EmailSignupSuccess = () => {
   return (
@@ -12,13 +13,13 @@ const EmailSignupSuccess = () => {
         </h2>
         <p className="mb-2">
           There was an issue setting up your subscription. Please contact
-          support at{" "}
+          support at{' '}
           <a
             href="mailto:team@beyulabs.io?subject=Help with newsletter subscription"
             className="text-teal-500 font-semibold"
           >
             team@beyulabs.io
-          </a>{" "}
+          </a>{' '}
           for help.
         </p>
       </div>
@@ -34,7 +35,7 @@ const EmailSignupSuccess = () => {
                 className="text-teal-500 drop-shadow-lg hover:scale-110 hover:rotate-12"
                 width={32}
                 height={32}
-                icon={faTwitter}
+                icon={faTwitter as IconProp}
               />
             </a>
           </li>
@@ -48,7 +49,7 @@ const EmailSignupSuccess = () => {
                 className="text-teal-500 drop-shadow-lg hover:scale-110 hover:rotate-12"
                 width={32}
                 height={32}
-                icon={faDiscord}
+                icon={faDiscord as IconProp}
               />
             </a>
           </li>

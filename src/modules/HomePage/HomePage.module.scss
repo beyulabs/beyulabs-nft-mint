@@ -225,3 +225,48 @@
     }
   }
 }
+
+.boarding {
+  padding-bottom: 120px;
+  &__row {
+    background: #232424;
+    //background-size: contain;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    grid-gap: 60px;
+    padding-right:5%;
+    border-radius: 60px;
+
+    &.light {
+      background: url('../../../public/bg_mission_light.svg') no-repeat;
+      background-size: contain;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    h5 {
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    h4 {
+      text-transform: uppercase;
+      margin-bottom: 20px;
+
+      a {
+        background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+    }
+  }
+}

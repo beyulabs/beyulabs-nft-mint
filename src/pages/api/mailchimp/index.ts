@@ -1,11 +1,11 @@
-const mailchimp = require("@mailchimp/mailchimp_marketing");
+const mailchimp = require('@mailchimp/mailchimp_marketing');
 
 mailchimp.setConfig({
   apiKey: process.env.MAILCHIMP_API_KEY,
   server: process.env.MAILCHIMP_SERVER_PREFIX,
 });
 
-import type { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 type Data = {
   name: string;
@@ -19,12 +19,12 @@ export default async function handler(
   let userAlreadyExists: boolean = false;
 
   switch (req.method) {
-    case "GET":
+    case 'GET':
       response = await mailchimp.lists.getListMembersInfo(
         `${process.env.MAILCHIMP_LIST_ID}`
       );
       break;
-    case "POST":
+    case 'POST':
       try {
         response = await mailchimp.lists.addListMember(
           process.env.MAILCHIMP_LIST_ID,
@@ -40,7 +40,10 @@ export default async function handler(
         );
       } catch (err: any) {
         // Handle response when user is already on the list
-        if (err.response.statusCode === 400 && err.response.body.title === "Member Exists") {
+        if (
+          err.response.statusCode === 400 &&
+          err.response.body.title === 'Member Exists'
+        ) {
           userAlreadyExists = true;
           res.status(200).json(response);
         }

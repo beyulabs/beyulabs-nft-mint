@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export interface EmailSignupCharacterTypes {
   id: number;
@@ -28,9 +28,9 @@ export interface NavRoute {
 }
 
 export enum SocialPlatform {
-  twitter = "twitter",
-  github = "github",
-  linkedin = "linkedin",
+  twitter = 'twitter',
+  github = 'github',
+  linkedin = 'linkedin',
 }
 
 export interface SocialInfo {
@@ -40,6 +40,7 @@ export interface SocialInfo {
 
 export interface SocialIcon {
   name: string;
+  // @ts-ignore
   image: StaticImageData;
   enabled: boolean;
   url: string;
@@ -81,12 +82,14 @@ export interface Voyager {
   nexusName: string;
   irlName: string;
   description: string;
+  // @ts-ignore
   image: StaticImageData;
 }
 
 export interface TeamMember {
   nexusName: string;
   irlName: string;
+  // @ts-ignore
   image: StaticImageData;
 }
 

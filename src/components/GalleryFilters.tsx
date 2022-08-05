@@ -1,8 +1,9 @@
-import { FilterCategory, FilterOption, SelectedFilter } from "../types/common";
-import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
+import { FilterCategory, FilterOption, SelectedFilter } from '../types/common';
+import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 interface GalleryFiltersProps {
   filters: FilterCategory[];
@@ -22,14 +23,22 @@ const GalleryFilters = ({
       return (
         <Disclosure key={`filter-${filter.name}`}>
           {({ open }) => (
-            <div className={`${open ? "mb-6" : "mb-2"}`}>
+            <div className={`${open ? 'mb-6' : 'mb-2'}`}>
               <Disclosure.Button className="flex flex-row items-center justify-between w-full mb-2">
                 <h3>{filter.name}</h3>
                 <span className="font-medx-rowium text-gray-900">
                   {open ? (
-                    <FontAwesomeIcon width={12} height={12} icon={faMinus} />
+                    <FontAwesomeIcon
+                      width={12}
+                      height={12}
+                      icon={faMinus as IconProp}
+                    />
                   ) : (
-                    <FontAwesomeIcon width={12} height={12} icon={faPlus} />
+                    <FontAwesomeIcon
+                      width={12}
+                      height={12}
+                      icon={faPlus as IconProp}
+                    />
                   )}
                 </span>
               </Disclosure.Button>
@@ -46,18 +55,18 @@ const GalleryFilters = ({
                           defaultChecked={option.checked}
                           className="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
                           onClick={(e) => {
-                            const categoryAndOption: string[] =
-                              e.currentTarget.name.split("-");
+                            const categoryAndOption: string[] = e.currentTarget.name.split(
+                              '-'
+                            );
 
-                            const existingFilterIndex: number =
-                              selectedFilters.findIndex(
-                                (filter: SelectedFilter) => {
-                                  return (
-                                    filter.category === categoryAndOption[0] &&
-                                    filter.option === categoryAndOption[1]
-                                  );
-                                }
-                              );
+                            const existingFilterIndex: number = selectedFilters.findIndex(
+                              (filter: SelectedFilter) => {
+                                return (
+                                  filter.category === categoryAndOption[0] &&
+                                  filter.option === categoryAndOption[1]
+                                );
+                              }
+                            );
 
                             let newSelectedFilters: SelectedFilter[] = [];
                             if (existingFilterIndex === -1) {
@@ -107,7 +116,7 @@ const GalleryFilters = ({
     <div className="bg-stone-50 px-2">
       <div className="flex items-center justify-between mb-4 border-b border-gray-200 pt-2 pb-1">
         <h2 className="text-xl uppercase">Filters</h2>
-        <FontAwesomeIcon width={12} height={12} icon={faBars} />
+        <FontAwesomeIcon width={12} height={12} icon={faBars as IconProp} />
       </div>
       <form className="flex flex-col min-h-screen">{filterComponents()}</form>
     </div>

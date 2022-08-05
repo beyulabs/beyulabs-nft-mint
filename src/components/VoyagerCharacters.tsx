@@ -1,7 +1,7 @@
-import VoyagerCard from "./VoyagerCard";
-import { voyagers } from "../utils/constants";
-import { Voyager } from "../types/common";
-import { Carousel } from "react-responsive-carousel";
+import VoyagerCard from './VoyagerCard';
+import { voyagers } from '../utils/constants';
+import { Voyager } from '../types/common';
+import { Carousel } from 'react-responsive-carousel';
 
 const VoyagerCharacters = () => {
   const createAvatarCards = () => {

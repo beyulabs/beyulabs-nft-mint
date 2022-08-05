@@ -1,7 +1,8 @@
-import { faDiscord, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDiscord, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { beyuLabsTwitterURL, discordInviteURL } from "../utils/constants";
+import { beyuLabsTwitterURL, discordInviteURL } from '../utils/constants';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 const EmailSignupExists = () => {
   return (
@@ -12,7 +13,7 @@ const EmailSignupExists = () => {
         </h2>
         <p>
           Make sure to check your inbox for the email we sent to verify your
-          identity. In the meantime, follow{" "}
+          identity. In the meantime, follow{' '}
           <a
             href={beyuLabsTwitterURL}
             target="_blank"
@@ -20,8 +21,8 @@ const EmailSignupExists = () => {
             className="text-teal-500 font-semibold"
           >
             BeYu Labs
-          </a>{" "}
-          on Twitter and join our{" "}
+          </a>{' '}
+          on Twitter and join our{' '}
           <a
             href={discordInviteURL}
             target="_blank"
@@ -45,7 +46,7 @@ const EmailSignupExists = () => {
                 className="text-teal-500 drop-shadow-lg hover:scale-110 hover:rotate-12"
                 width={32}
                 height={32}
-                icon={faTwitter}
+                icon={faTwitter as IconProp}
               />
             </a>
           </li>
@@ -59,7 +60,7 @@ const EmailSignupExists = () => {
                 className="text-teal-500 drop-shadow-lg hover:scale-110 hover:rotate-12"
                 width={32}
                 height={32}
-                icon={faDiscord}
+                icon={faDiscord as IconProp}
               />
             </a>
           </li>

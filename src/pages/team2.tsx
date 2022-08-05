@@ -1,21 +1,26 @@
-import type { NextPage } from "next";
-import Image from "next/image";
+import type { NextPage } from 'next';
+import Image from 'next/image';
 
-import ryanProfile from "../../public/ryan-profile.png";
-import benProfile from "../../public/ben-profile.png";
-import milesProfile from "../../public/miles-profile.png";
-import beeProfile from "../../public/bee-profile.jpg";
-import beyuLabsLogotype from "../../public/beyu-labs-logotype.png";
+// @ts-ignore
+import ryanProfile from '../../public/ryan-profile.png';
+// @ts-ignore
+import benProfile from '../../public/ben-profile.png';
+// @ts-ignore
+import milesProfile from '../../public/miles-profile.png';
+// @ts-ignore
+import beeProfile from '../../public/bee-profile.jpg';
+// @ts-ignore
+import beyuLabsLogotype from '../../public/beyu-labs-logotype.png';
 
-import { SocialPlatform, TeamMemberInfo } from "../types/common";
+import { SocialPlatform, TeamMemberInfo } from '../types/common';
 
-import TeamMember from "../components/TeamMember";
+import TeamMember from '../components/TeamMember';
 
 export const projectTeam: TeamMemberInfo[] = [
   {
-    name: "Ben",
-    job: "commander",
-    skills: ["founder", "biz dev"],
+    name: 'Ben',
+    job: 'commander',
+    skills: ['founder', 'biz dev'],
     image: (
       <Image
         className="rounded-full min-w-xs"
@@ -29,20 +34,21 @@ export const projectTeam: TeamMemberInfo[] = [
     socialMedia: [
       {
         platform: SocialPlatform.twitter,
-        username: "beyuworldwide",
+        username: 'beyuworldwide',
       },
       {
         platform: SocialPlatform.linkedin,
-        username: "benyurcisin",
+        username: 'benyurcisin',
       },
     ],
     description:
-      "Ben is a serial entrepreneur with a background in engineering and a passion for creating community through fun, value-packed events. As founder of BeYu Labs - a web3 startup focused on empowering web3 entrepreneurship through connections and events - Ben aims to explore the unique opportunities and potential presented by the rise of NFT culture and the future of the internet as we know it. Ben spends his free time playing guitar, skateboarding, traveling and researching overpriced JPEGs.",
+      // eslint-disable-next-line max-len
+      'Ben is a serial entrepreneur with a background in engineering and a passion for creating community through fun, value-packed events. As founder of BeYu Labs - a web3 startup focused on empowering web3 entrepreneurship through connections and events - Ben aims to explore the unique opportunities and potential presented by the rise of NFT culture and the future of the internet as we know it. Ben spends his free time playing guitar, skateboarding, traveling and researching overpriced JPEGs.',
   },
   {
-    name: "Miles",
-    job: "co-commander",
-    skills: ["product", "marketing"],
+    name: 'Miles',
+    job: 'co-commander',
+    skills: ['product', 'marketing'],
     image: (
       <Image
         className="rounded-full min-w-xs"
@@ -56,20 +62,21 @@ export const projectTeam: TeamMemberInfo[] = [
     socialMedia: [
       {
         platform: SocialPlatform.twitter,
-        username: "MusingsOf_Miles",
+        username: 'MusingsOf_Miles',
       },
       {
         platform: SocialPlatform.linkedin,
-        username: "milescolon",
+        username: 'milescolon',
       },
     ],
     description:
-      "Product Manager & Brand Evangelist. Miles is a serial Startup contributor with over 5 years in driving high performing teams. Already a miner, gamer, and FunkoFan; it was digital horse racing that hooked him into NFTs *cough* Zed Run.",
+      // eslint-disable-next-line max-len
+      'Product Manager & Brand Evangelist. Miles is a serial Startup contributor with over 5 years in driving high performing teams. Already a miner, gamer, and FunkoFan; it was digital horse racing that hooked him into NFTs *cough* Zed Run.',
   },
   {
-    name: "Ryan",
-    job: "engineering",
-    skills: ["tech", "typescript", "solidity"],
+    name: 'Ryan',
+    job: 'engineering',
+    skills: ['tech', 'typescript', 'solidity'],
     image: (
       <Image
         className="rounded-full min-w-xs"
@@ -83,24 +90,25 @@ export const projectTeam: TeamMemberInfo[] = [
     socialMedia: [
       {
         platform: SocialPlatform.twitter,
-        username: "ryan_c_harris",
+        username: 'ryan_c_harris',
       },
       {
         platform: SocialPlatform.github,
-        username: "ryancharris",
+        username: 'ryancharris',
       },
       {
         platform: SocialPlatform.linkedin,
-        username: "ryancharris",
+        username: 'ryancharris',
       },
     ],
     description:
-      "Ryan is currently a Senior Engineer at dbt Labs and has worked with some of Philadelphia’s most successful startups. As a filmmaker turned engineer, he is passionate about helping others transition into tech and creates educational content on Egghead. When he’s not coding, Ryan enjoys making music and playing with his dog, Banjo.",
+      // eslint-disable-next-line max-len
+      'Ryan is currently a Senior Engineer at dbt Labs and has worked with some of Philadelphia’s most successful startups. As a filmmaker turned engineer, he is passionate about helping others transition into tech and creates educational content on Egghead. When he’s not coding, Ryan enjoys making music and playing with his dog, Banjo.',
   },
   {
-    name: "Bee",
-    job: "architecture",
-    skills: ["concepts", "art"],
+    name: 'Bee',
+    job: 'architecture',
+    skills: ['concepts', 'art'],
     image: (
       <Image
         className="rounded-full min-w-xs"
@@ -114,7 +122,7 @@ export const projectTeam: TeamMemberInfo[] = [
     socialMedia: [
       {
         platform: SocialPlatform.twitter,
-        username: "thenftbee",
+        username: 'thenftbee',
       },
     ],
     description: (
@@ -122,7 +130,7 @@ export const projectTeam: TeamMemberInfo[] = [
         NFTBee is digital artist specialized in graphic design and illustration.
         She is a graduate of SCAD and got into NFTs in late 2020. Bee is a full
         stack artist, owning the art process end to end. Beyond her 1/1 works
-        she is the artist behind several NFT projects including{" "}
+        she is the artist behind several NFT projects including{' '}
         <a
           className="text-violet-400"
           href="https://twitter.com/dogepunks"
@@ -130,15 +138,15 @@ export const projectTeam: TeamMemberInfo[] = [
         >
           @Dogepunks
         </a>
-        ,{" "}
+        ,{' '}
         <a
           className="text-violet-400"
           href="https://twitter.com/space_bums"
           rel="nofollow noreferrer"
         >
           @space_bums
-        </a>{" "}
-        and{" "}
+        </a>{' '}
+        and{' '}
         <a
           className="text-violet-400"
           href="https://twitter.com/ecobotsnft"

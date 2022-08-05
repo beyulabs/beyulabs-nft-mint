@@ -1,69 +1,69 @@
-import { useState } from "react";
-import type { NextPage } from "next";
-import Image from "next/image";
+import { useState } from 'react';
+import type { NextPage } from 'next';
+import Image from 'next/image';
 
-import GalleryFilters from "../components/GalleryFilters";
-import FilterTag from "../components/FilterTag";
-import { mockData } from "./api/mockData";
-import { FilterCategory, SelectedFilter } from "../types/common";
+import GalleryFilters from '../components/GalleryFilters';
+import FilterTag from '../components/FilterTag';
+import { mockData } from './api/mockData';
+import { FilterCategory, SelectedFilter } from '../types/common';
 
 const initialFilters = [
   {
-    name: "Type",
+    name: 'Type',
     options: [
       {
-        display: "Human",
+        display: 'Human',
         checked: false,
       },
       {
-        display: "Red",
+        display: 'Red',
         checked: false,
       },
     ],
   },
   {
-    name: "Mouth",
+    name: 'Mouth',
     options: [
       {
-        display: "Smirk",
+        display: 'Smirk',
         checked: false,
       },
       {
-        display: "Relaxed",
+        display: 'Relaxed',
         checked: false,
       },
       {
-        display: "Smile",
+        display: 'Smile',
         checked: false,
       },
       {
-        display: "Scroll",
+        display: 'Scroll',
         checked: false,
       },
       {
-        display: "Frown",
+        display: 'Frown',
         checked: false,
       },
     ],
   },
   {
-    name: "Hair",
+    name: 'Hair',
     options: [
       {
-        display: "Gray Samurai",
+        display: 'Gray Samurai',
         checked: false,
       },
       {
-        display: "Brown Samurai",
+        display: 'Brown Samurai',
         checked: false,
       },
       {
-        display: "Indigo Disheveled",
+        display: 'Indigo Disheveled',
         checked: false,
       },
 
       {
-        display: "Blonde Pixie",
+        display: 'Blonde Pixie',
         checked: false,
       },
     ],
@@ -73,7 +73,7 @@ const initialFilters = [
 const Gallery: NextPage = () => {
   const [filters, setFilters] = useState<FilterCategory[]>(initialFilters);
   const [selectedFilters, setSelectedFilters] = useState<SelectedFilter[]>([]);
-  console.log("selectedFilters", selectedFilters);
+  console.log('selectedFilters', selectedFilters);
 
   const createAzukiPreviews = () => {
     return mockData.map((azuki, index) => {

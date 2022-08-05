@@ -1,16 +1,20 @@
-import Link from "next/link";
-import Image from "next/image";
-import classNames from "classnames";
-import { faX } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from 'next/link';
+import Image from 'next/image';
+import classNames from 'classnames';
+import { faX } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
-import { NavRoute } from "../types/common";
-import { routes } from "../utils/constants";
-import SocialIcons from "./SocalIcons/SocialIcons";
+import { NavRoute } from '../types/common';
+import { routes } from '../utils/constants';
+import SocialIcons from './SocalIcons/SocialIcons';
 
-import coinsSVG from "../../public/coins.svg";
-import walletSVG from "../../public/wallet.svg";
-import nexusVoyagersLogo from "../../public/nexus-voyagers-logotype-green-white.svg";
+// @ts-ignore
+import coinsSVG from '../../public/coins.svg';
+// @ts-ignore
+import walletSVG from '../../public/wallet.svg';
+// @ts-ignore
+import nexusVoyagersLogo from '../../public/nexus-voyagers-logotype-green-white.svg';
 
 interface MobileMenuProps {
   setMenuOpen: (open: boolean) => void;
@@ -21,10 +25,10 @@ const MobileMenu = ({ setMenuOpen }: MobileMenuProps) => {
     return routes.map((route: NavRoute) => {
       const cn = classNames(
         {
-          "opacity-50 hover:cursor-not-allowed": !route.enabled,
-          "hover:text-purple-400": route.enabled,
+          'opacity-50 hover:cursor-not-allowed': !route.enabled,
+          'hover:text-purple-400': route.enabled,
         },
-        "text-xl"
+        'text-xl'
       );
 
       return (
@@ -32,7 +36,7 @@ const MobileMenu = ({ setMenuOpen }: MobileMenuProps) => {
           key={route.path}
           className={cn}
           onClick={() => {
-            document.body.style.overflow = "auto";
+            document.body.style.overflow = 'auto';
             setMenuOpen(false);
           }}
         >
@@ -53,9 +57,9 @@ const MobileMenu = ({ setMenuOpen }: MobileMenuProps) => {
           className="mr-2"
           width={36}
           height={36}
-          icon={faX}
+          icon={faX as IconProp}
           onClick={() => {
-            document.body.style.overflow = "auto";
+            document.body.style.overflow = 'auto';
             setMenuOpen(false);
           }}
         />
@@ -74,6 +78,7 @@ const MobileMenu = ({ setMenuOpen }: MobileMenuProps) => {
         <div className="flex flex-col px-24 mb-10">
           <button
             disabled
+            /* eslint-disable-next-line max-len */
             className="mb-4 flex flex-row justify-center mx-2 rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-4 py-2 cursor-not-allowed disabled:opacity-50"
           >
             <Image alt="Coins" src={coinsSVG} />
@@ -81,6 +86,7 @@ const MobileMenu = ({ setMenuOpen }: MobileMenuProps) => {
           </button>
           <button
             disabled
+            /* eslint-disable-next-line max-len */
             className="mb-4 flex flex-row justify-center border mx-2 rounded-lg text-white bg-transparent px-4 py-2 cursor-not-allowed disabled:opacity-50"
           >
             <Image alt="Coins" src={walletSVG} />

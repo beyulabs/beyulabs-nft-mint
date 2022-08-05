@@ -1,7 +1,7 @@
-import type { NextPage } from "next";
-import OurTeamMember from "../components/OurTeamMember";
-import { teamMembers } from "../utils/constants";
-import { TeamMember } from "../types/common";
+import type { NextPage } from 'next';
+import OurTeamMember from '../components/OurTeamMember';
+import { teamMembers } from '../utils/constants';
+import { TeamMember } from '../types/common';
 
 const Team: NextPage = () => {
   const createAvatarCards = () => {

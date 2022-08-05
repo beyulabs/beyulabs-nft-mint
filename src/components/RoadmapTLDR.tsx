@@ -1,6 +1,6 @@
-import { AstromapItem } from "../types/common";
-import { astromap } from "../utils/constants";
-import RoadmapItem from "./RoadmapItem";
+import { AstromapItem } from '../types/common';
+import { astromap } from '../utils/constants';
+import RoadmapItem from './RoadmapItem';
 
 const RoadmapTLDR = () => {
   const createRoadmap = () => {
