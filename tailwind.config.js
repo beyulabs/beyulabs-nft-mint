@@ -8,6 +8,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        sm: '380px',
+        md: '768px',
+        lg: '1024px',
+      },
       colors: {
         astromapGrayText: "#BBBBBB",
         nexusGreen: "#41A380",
@@ -64,6 +69,7 @@ module.exports = {
         nexusMissionImage: '524px',
         astromapItem: '468px',
         partnerItem: "630px",
+        partnerItemPhone: "335px",
         partnerImage: "175px",
         ticketsImage: '532px',
         missionText: "630px",
@@ -82,6 +88,7 @@ module.exports = {
       nexusMissionImage: '679px',
       astromapItem: '184px',
       partnerItem:'356px',
+      partnerItemPhone: "521px",
       ticketsImage: '701px',
     },
     lineHeight: {

@@ -20,7 +20,7 @@ interface PartnerItemProps {
     }
 
     const roadmapItemCardCn = classNames(
-        "bg-nexusBlack p-4 rounded-xl w-partnerItem h-partnerItem text-white grow md:grow-0",
+        "bg-nexusBlack p-4 rounded-xl sm:w-partnerItemPhone lg:w-partnerItem h-partnerItem text-white grow md:grow-0 sm:flex flex-column",
         {
           "text-white bg-nexusGreen": isHover,
         }
@@ -43,13 +43,13 @@ interface PartnerItemProps {
 
       return (
         <div className="w-full cursor-pointer">
-          <div className="grid grid-cols-2">
+          <div className="sm:h-partnerItemPhone">
             <div
               className={roadmapItemCardCn}
               onMouseEnter={() => setIsHover(true)}
               onMouseLeave={() => setIsHover(false)}
             >
-              <div className="flex flex-row justify-center items-center lg:bg-[url('/boarding-pass-ellipsis.svg')] lg:bg-right-bottom md:bg-no-repeat">
+              <div className="lg:flex flex-row justify-center items-center lg:bg-[url('/boarding-pass-ellipsis.svg')] bg-right-bottom md:bg-no-repeat">
                 <div className="-ml-4">
                 <Image
                   alt="Astromap"

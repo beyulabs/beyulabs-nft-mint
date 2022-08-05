@@ -15,13 +15,13 @@ const MeetTeamMember = ({ voyager }: VoyagerCardProps) => {
   const [isHover, setIsHover] = useState<boolean>(false);
 
   return (
-    <div className="mx-4 relative cursor-pointer">
+    <div className="mx-4 relative cursor-pointer rounded-xl">
       <div
-        className="w-80 rounded-xl mb-6 p-4 relative sm:hover:scale-110 sm:hover:bg-nexusGradientGreen"
+        className="w-80 rounded-xl mb-6 p-4 relative sm:hover:scale-110 sm:hover:bg-nexusGradientGreen lg:bg-none transition ease-in-out"
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
-        <div className="bg-white mb-5 rounded-xl overflow-hidden">
+        <div className="mb-5 rounded-xl overflow-hidden">
           <Image
             alt={voyager.nexusName}
             src={voyager.image}
@@ -31,10 +31,12 @@ const MeetTeamMember = ({ voyager }: VoyagerCardProps) => {
           />
         </div>
         <h3 className="text-center text-2xl text-white font-bold mb-2">{voyager.nexusName}</h3>
-        <span className={`flex justify-center rounded-lg text-sm inline-block py-2 px-4 mb-3 bg-nexusGreen text-white ${isHover ? "sm:bg-white sm:text-nexusGradientGreen" : "bg-nexusGreen text-white"
+        <div className="justify-center items-center">
+        <span className={`w-fit m-auto flex rounded-lg text-sm justify-center inline-block py-2.5 px-4 bg-nexusGreen text-white ${isHover ? "sm:bg-white sm:text-nexusGradientGreen" : "bg-nexusGreen text-white"
           }`}>
           {voyager.irlName}
         </span>
+        </div>
         {voyager.id === '13' ? null : (
           <div className={`flex flex-row justify-center mt-4 ${isHover ? "invert" : ""}`}>
             {voyager.id === '11' ? null : (
@@ -69,13 +71,19 @@ const MeetTeamMember = ({ voyager }: VoyagerCardProps) => {
         {isHover && (
           <div className="text-center z-10">
             <p className={`font-bold mt-3 ${isHover ? "text-cardBorder" : ""}`}>Skillset:</p>
-            <ul className="mb-4 text-white">
+            <ul className="mb-4 text-white text-sm">
               <li>Entrepreneur</li>
               <li>Networker</li>
               <li>Project manager/Engineer</li>
               <li>Scateboarder</li>
               <li>loves overprices jpegs and metal shows</li>
             </ul>
+          </div>
+        )}
+        {!isHover && (
+          <div className="lg:hidden sm: flex flex-column justify-center items-center p-4">
+            <p className="text-white">Read more</p>
+            <Image alt="Arrow icon" src={voyagerArrow} width={20} height={20} />
           </div>
         )}
       </div>

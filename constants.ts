@@ -34,6 +34,8 @@ import Qwerty4 from "./team-images/team13.png";
 import Ryan6 from "./team-images/team14.png";
 import Ben3 from "./team-images/team15.png";
 import Ryan7 from "./team-images/team16.png";
+import mobTeam3 from "./public/mobTeam3.svg";
+import mobTeam6 from "./public/mobTeam6.svg";
 
 
 // import explorerAvatar from "./public/explorer.png";
@@ -184,6 +186,19 @@ export const partners: PartnersItem[] = [
     title: "BDH (Legal)",
     callToAction: "Don't procrastinate",
     imagePath: "/Partner2.svg",
+  },
+]
+
+export const partnersMob: PartnersItem[] = [
+  {
+    title: "Project 3",
+    callToAction: "Don't procrastinate",
+    imagePath: "/partner1mob.svg",
+  },
+  {
+    title: "BDH (Legal)",
+    callToAction: "Don't procrastinate",
+    imagePath: "/partner2mob.svg",
   },
 ]
 
@@ -345,4 +360,42 @@ export const teamMembers: TeamMember[] = [
   },
 ]
 
+export const mobTeamMembers: TeamMember[] = [
+  {
+    nexusName: "Ryan Harris",
+    irlName: "Commander|Biz dev",
+    image: Ryan1,
+    id: '1'
+  },
+  {
+    nexusName: "QwertyCo",
+    irlName: "Co-Commander|Project Manager",
+    image: Ryan2,
+    id: '2'
+  },
+  {
+    nexusName: "Este Lopez",
+    irlName: "Commander|Biz dev",
+    image: mobTeam3,
+     id: '3'
+  },
+  {
+    nexusName: "Ryan Harris",
+    irlName: "Commander|Biz dev",
+    image: Ben3,
+     id: '4'
+  },
+  {
+    nexusName: "Ryan Harris",
+    irlName: "Commander|Biz dev",
+    image: Qwerty3,
+     id: '5'
+  },
+  {
+    nexusName: "Ryan Harris",
+    irlName: "Commander|Biz dev",
+    image: mobTeam6,
+     id: '6'
+  },
+]
 
