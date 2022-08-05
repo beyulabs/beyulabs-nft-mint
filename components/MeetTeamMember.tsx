@@ -3,9 +3,9 @@ import { useState } from "react";
 import { TeamMember } from "../types/common";
 import Linkedin from "../public/linkedin.svg";
 import Instagram from "../public/instagram.svg";
-import Twitter from "../public/twitter.svg";
+import Twitter from "../public/twitterMobile.svg";
 
-import voyagerArrow from "../public/voyager-card-arrow.svg";
+import voyagerArrow from "../public/Arrow.svg";
 
 interface VoyagerCardProps {
   voyager: TeamMember;
@@ -15,9 +15,9 @@ const MeetTeamMember = ({ voyager }: VoyagerCardProps) => {
   const [isHover, setIsHover] = useState<boolean>(false);
 
   return (
-    <div className="mx-4 relative cursor-pointer rounded-xl">
+    <div className="mx-4 relative cursor-pointer rounded-xl sm:w-9/12">
       <div
-        className="w-80 rounded-xl mb-6 p-4 relative sm:hover:scale-110 sm:hover:bg-nexusGradientGreen lg:bg-none transition duration-300 delay-150 hover:delay-300 ease-in-out"
+        className="sm:bg-nexusBlack w-80 rounded-xl mb-6 p-4 relative sm:hover:scale-110 sm:hover:bg-nexusGradientGreen lg:bg-transparent transition duration-300 delay-150 hover:delay-300 ease-in-out"
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
@@ -47,6 +47,11 @@ const MeetTeamMember = ({ voyager }: VoyagerCardProps) => {
               </div>
             )
             }
+            <div className="lg:hidden sm:mr-5">
+              <a href="https://www.twitter.com">
+                <Image alt="twitter" src={Twitter} />
+              </a>
+            </div>
             {isHover && voyager.id === '2' ? (
               <div className="flex flex-row">
                 <div className="mr-5">
@@ -82,7 +87,7 @@ const MeetTeamMember = ({ voyager }: VoyagerCardProps) => {
         )}
         {!isHover && (
           <div className="lg:hidden sm: flex flex-column justify-center items-center p-4">
-            <p className="text-white">Read more</p>
+            <p className="text-white text-sm mr-3">Read more</p>
             <Image alt="Arrow icon" src={voyagerArrow} width={20} height={20} />
           </div>
         )}

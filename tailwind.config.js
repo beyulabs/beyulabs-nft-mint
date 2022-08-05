@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        sm: '380px',
+        sm: '375px',
         md: '768px',
         lg: '1024px',
       },
@@ -73,6 +73,8 @@ module.exports = {
         partnerImage: "175px",
         ticketsImage: '532px',
         missionText: "630px",
+        partnerTextMob: "303px",
+        partnerText: "395px",
       }
     },
     height: {

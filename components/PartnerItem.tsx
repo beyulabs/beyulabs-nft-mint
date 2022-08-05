@@ -12,7 +12,7 @@ interface PartnerItemProps {
 
     const Description = () => {
       return (
-        <div className="mt-4">
+        <div className="mt-4 lg:text-lg sm:text-sm sm:text-center lg:text-left leading-5 sm:w-partnerTextMob lg:w-partnerText">
           <p>Some description about project. Keep your eyes on the <span className="text-nexusGreen">#announcements</span> and <span className="text-nexusGreen">#boarding-pass</span> channels for these challenges,
            they will essentialy guarantee your seet on the rocket to the new world. These challenges will be presented sporadically.  </p>
         </div>
@@ -30,27 +30,27 @@ interface PartnerItemProps {
         "text-astromapGrayText": !isHover,
         "text-white": isHover,
       },
-        "font-normal text-base leading-6"
+        "font-normal text-base leading-6 order-1"
       );
 
       const CTAdescriptionCn = classNames({
         "text-nexusGreen": !isHover,
         "text-white": isHover,
       },
-        "font-normal text-base uppercase mt-6"
+        "font-normal text-base lg:uppercase sm:lowercase mt-6 order-1 lg:text-left sm:text-center"
       );
 
 
       return (
         <div className="w-full cursor-pointer">
-          <div className="sm:h-partnerItemPhone">
+          <div className="sm:w-partnerItemPhone h-partnerItemPhone">
             <div
               className={roadmapItemCardCn}
               onMouseEnter={() => setIsHover(true)}
               onMouseLeave={() => setIsHover(false)}
             >
-              <div className="lg:flex flex-row justify-center items-center lg:bg-[url('/boarding-pass-ellipsis.svg')] bg-right-bottom md:bg-no-repeat">
-                <div className="-ml-4">
+              <div className="lg:flex flex-row justify-center items-center sm:flex items-start lg:bg-[url('/boarding-pass-ellipsis.svg')] bg-right-bottom md:bg-no-repeat">
+                <div className="-ml-4 lg:block sm:hidden">
                 <Image
                   alt="Astromap"
                   src={partnerItem.imagePath}
@@ -60,7 +60,7 @@ interface PartnerItemProps {
                 </div>
     
                 <div key={partnerItem.title} className="w-full ml-4">
-                  <h3 className="text-white text-2xl font-bold">
+                  <h3 className="text-white text-2xl font-bold sm:order-none">
                     {partnerItem.title}
                   </h3>
                   <p className={descriptionCn}><Description/></p>
