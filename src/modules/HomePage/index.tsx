@@ -109,137 +109,139 @@ const HomePage = () => {
             <div className={s.title}>
               <h2>Astromap</h2>
             </div>
-            <div className={cn(s.card, s.left)}>
-              <div className={s.dot_num}>
-                <span className={s.dot} />
+            <div className={s.cards__list}>
+              <div className={cn(s.card, s.left)}>
+                <div className={s.dot_num}>
+                  <span className={s.dot} />
+                </div>
+                <Image
+                  src={'/astromap_1.png'}
+                  width={150}
+                  height={150}
+                  alt="NFT"
+                />
+                <div>
+                  <h3>NFT</h3>
+                  <p>
+                    To terraform Web3. An ecosystem cultivated by developers,
+                    artists, enthusiasts, and investors.{' '}
+                  </p>
+                </div>
               </div>
-              <Image
-                src={'/astromap_1.png'}
-                width={150}
-                height={150}
-                alt="NFT"
-              />
-              <div>
-                <h3>NFT</h3>
-                <p>
-                  To terraform Web3. An ecosystem cultivated by developers,
-                  artists, enthusiasts, and investors.{' '}
-                </p>
+              <div className={s.empty} />
+              <div className={s.empty} />
+              <div className={cn(s.card, s.right)}>
+                <div className={s.dot_num}>
+                  <span className={s.dot} />
+                </div>
+                <Image
+                  src={'/astromap_2.png'}
+                  width={150}
+                  height={150}
+                  alt="Community Chest"
+                />
+                <div>
+                  <h3>Community Chest</h3>
+                  <p>
+                    To terraform Web3. An ecosystem cultivated by developers,
+                    artists, enthusiasts, and investors.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className={s.empty} />
-            <div className={s.empty} />
-            <div className={cn(s.card, s.right)}>
-              <div className={s.dot_num}>
-                <span className={s.dot} />
+              <div className={cn(s.card, s.left)}>
+                <div className={s.dot_num}>
+                  <span className={s.dot} />
+                </div>
+                <Image
+                  src={'/astromap_3.png'}
+                  width={150}
+                  height={150}
+                  alt="Community Chest"
+                />
+                <div>
+                  <h3>Mission Board</h3>
+                  <p>
+                    To terraform Web3. An ecosystem cultivated by developers,
+                    artists, enthusiasts, and investors.
+                  </p>
+                </div>
               </div>
-              <Image
-                src={'/astromap_2.png'}
-                width={150}
-                height={150}
-                alt="Community Chest"
-              />
-              <div>
-                <h3>Community Chest</h3>
-                <p>
-                  To terraform Web3. An ecosystem cultivated by developers,
-                  artists, enthusiasts, and investors.
-                </p>
+              <div className={s.empty} />
+              <div className={s.empty} />
+              <div className={cn(s.card, s.right)}>
+                <div className={s.dot_num}>
+                  <span className={s.dot} />
+                </div>
+                <Image
+                  src={'/astromap_4.png'}
+                  width={150}
+                  height={150}
+                  alt="Launchpad"
+                />
+                <div>
+                  <h3>Launchpad</h3>
+                  <p>
+                    To terraform Web3. An ecosystem cultivated by developers,
+                    artists, enthusiasts, and investors.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className={cn(s.card, s.left)}>
-              <div className={s.dot_num}>
-                <span className={s.dot} />
+              <div className={cn(s.card, s.left)}>
+                <div className={s.dot_num}>
+                  <span className={s.dot} />
+                </div>
+                <Image
+                  src={'/astromap_5.png'}
+                  width={150}
+                  height={150}
+                  alt="Project Showcase"
+                />
+                <div>
+                  <h3>Project Showcase</h3>
+                  <p>
+                    To terraform Web3. An ecosystem cultivated by developers,
+                    artists, enthusiasts, and investors.
+                  </p>
+                </div>
               </div>
-              <Image
-                src={'/astromap_3.png'}
-                width={150}
-                height={150}
-                alt="Community Chest"
-              />
-              <div>
-                <h3>Mission Board</h3>
-                <p>
-                  To terraform Web3. An ecosystem cultivated by developers,
-                  artists, enthusiasts, and investors.
-                </p>
-              </div>
-            </div>
-            <div className={s.empty} />
-            <div className={s.empty} />
-            <div className={cn(s.card, s.right)}>
-              <div className={s.dot_num}>
-                <span className={s.dot} />
-              </div>
-              <Image
-                src={'/astromap_4.png'}
-                width={150}
-                height={150}
-                alt="Launchpad"
-              />
-              <div>
-                <h3>Launchpad</h3>
-                <p>
-                  To terraform Web3. An ecosystem cultivated by developers,
-                  artists, enthusiasts, and investors.
-                </p>
-              </div>
-            </div>
-            <div className={cn(s.card, s.left)}>
-              <div className={s.dot_num}>
-                <span className={s.dot} />
-              </div>
-              <Image
-                src={'/astromap_5.png'}
-                width={150}
-                height={150}
-                alt="Project Showcase"
-              />
-              <div>
-                <h3>Project Showcase</h3>
-                <p>
-                  To terraform Web3. An ecosystem cultivated by developers,
-                  artists, enthusiasts, and investors.
-                </p>
-              </div>
-            </div>
-            <div className={s.empty} />
-            <div className={s.empty} />
+              <div className={s.empty} />
+              <div className={s.empty} />
 
-            <div className={cn(s.card, s.right)}>
-              <div className={s.dot_num}>
-                <span className={s.dot} />
+              <div className={cn(s.card, s.right)}>
+                <div className={s.dot_num}>
+                  <span className={s.dot} />
+                </div>
+                <Image
+                  src={'/astromap_6.png'}
+                  width={150}
+                  height={150}
+                  alt="The Experience"
+                />
+                <div>
+                  <h3>The Experience</h3>
+                  <p>
+                    To terraform Web3. An ecosystem cultivated by developers,
+                    artists, enthusiasts, and investors.
+                  </p>
+                </div>
               </div>
-              <Image
-                src={'/astromap_6.png'}
-                width={150}
-                height={150}
-                alt="The Experience"
-              />
-              <div>
-                <h3>The Experience</h3>
-                <p>
-                  To terraform Web3. An ecosystem cultivated by developers,
-                  artists, enthusiasts, and investors.
-                </p>
-              </div>
-            </div>
-            <div className={cn(s.card, s.left)}>
-              <div className={s.dot_num}>
-                <span className={s.dot} />
-              </div>
-              <Image
-                src={'/astromap_7.png'}
-                width={150}
-                height={150}
-                alt="Charity"
-              />
-              <div>
-                <h3>Charity</h3>
-                <p>
-                  To terraform Web3. An ecosystem cultivated by developers,
-                  artists, enthusiasts, and investors.
-                </p>
+              <div className={cn(s.card, s.left)}>
+                <div className={s.dot_num}>
+                  <span className={s.dot} />
+                </div>
+                <Image
+                  src={'/astromap_7.png'}
+                  width={150}
+                  height={150}
+                  alt="Charity"
+                />
+                <div>
+                  <h3>Charity</h3>
+                  <p>
+                    To terraform Web3. An ecosystem cultivated by developers,
+                    artists, enthusiasts, and investors.
+                  </p>
+                </div>
               </div>
             </div>
             <div className={s.button}>

@@ -2,8 +2,8 @@
   &__row {
     padding: 32px 0;
     display: grid;
-    grid-template-columns: auto 1fr auto auto auto;
-    grid-gap: 90px;
+    grid-template-columns: 1fr auto auto auto auto;
+    grid-gap: 50px;
     align-items: center;
     border-bottom: 1px solid #ACC2BD40;
 
