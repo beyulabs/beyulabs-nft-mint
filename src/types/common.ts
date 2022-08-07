@@ -90,7 +90,11 @@ export interface TeamMember {
   nexusName: string;
   irlName: string;
   // @ts-ignore
-  image: StaticImageData;
+  image: string;
+  linkedin?: string;
+  twitter?: string;
+  instagram?: string;
+  skillset?: string[];
 }
 
 export interface RoadmapItem {
