@@ -77,13 +77,15 @@ const TeamPage = () => {
   ));
 
   return (
-    <div className="container">
-      <HtmlMeta title="Team" />
-      <div className={s.team}>
-        <div className={s.team__list}>{CreateAvatarCards}</div>
+    <>
+      <div className="container">
+        <HtmlMeta title="Team" />
+        <div className={s.team}>
+          <div className={s.team__list}>{CreateAvatarCards}</div>
+        </div>
       </div>
       <div className={cn(s.bg, isHover && s.active)} />
-    </div>
+    </>
   );
 };
 
