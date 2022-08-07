@@ -41,18 +41,6 @@ function Nav({ setMenuOpen }: NavProps) {
 
   return (
     <div className={s.nav}>
-      {/*<div className="text-white cursor-pointer md:hidden">*/}
-      {/*  <FontAwesomeIcon*/}
-      {/*    className="mr-2"*/}
-      {/*    width={24}*/}
-      {/*    height={24}*/}
-      {/*    icon={faBars as IconProp}*/}
-      {/*    onClick={() => {*/}
-      {/*      setMenuOpen(true);*/}
-      {/*      document.body.style.overflow = 'hidden';*/}
-      {/*    }}*/}
-      {/*  />*/}
-      {/*</div>*/}
       <ul className={s.nav__links}>{routeLinks}</ul>
     </div>
   );

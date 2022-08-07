@@ -1,18 +1,102 @@
+.bg_wrapper {
+  position: relative;
+  padding-top: 109px;
+
+  @media (max-width: 992px) {
+    padding-top: 0;
+  }
+
+  &:before {
+    content: '';
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url('../../../public/wrapper_bg_left.png') 0 0 no-repeat;
+    background-size: cover;
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+
+  &:after {
+    content: '';
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url('../../../public/wrapper_bg_right.png') 0 110% no-repeat;
+    background-size: cover;
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+
+  &.light {
+    &:before {
+      background: url('../../../public/wrapper_bg_left_light.png') top left no-repeat;
+      background-size: cover;
+    }
+
+    &:after {
+      background: url('../../../public/wrapper_bg_right_light.png') top right no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
 .head {
   padding: 72px 0;
+  overflow: hidden;
+
+  @media (max-width: 992px) {
+    padding-bottom: 0;
+  }
 
   &__row {
     display: grid;
     grid-template-columns: 58% 1fr;
     align-items: center;
+    position: relative;
+    padding-bottom: 203px;
 
     @media (max-width: 992px) {
       grid-template-columns: 1fr;
       justify-content: center;
       text-align: center;
+      padding-bottom: 0;
+    }
+
+    .image {
+      position: absolute;
+      right: -67px;
+      top: 0;
+
+      @media (max-width: 992px) {
+        position: relative;
+        right: auto;
+      }
+
+      img {
+        max-width: 708px;
+
+        @media (max-width: 1400px) {
+          max-width: 620px;
+        }
+
+        @media (max-width: 992px) {
+          max-width: 90%;
+        }
+      }
     }
 
     h1 {
+      padding-top: 59px;
+
       .green {
         background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
         -webkit-background-clip: text;
@@ -48,6 +132,7 @@
 
       @media (max-width: 992px) {
         font-size: 14px;
+        margin: 0 auto;
         line-height: 150%;
       }
     }
@@ -55,8 +140,16 @@
 }
 
 .mission {
+  background: url('../../../public/bg_mission_dark.svg') center no-repeat;
+  background-size: 1629px 877px;
+  min-height: 880px;
+
+  &.light {
+    background: url('../../../public/bg_mission_light.svg') no-repeat;
+    background-size: 1629px 877px;
+  }
+
   &__row {
-    background: url('../../../public/bg_mission.svg') no-repeat;
     background-size: contain;
     display: grid;
     grid-template-columns: auto 1fr;
@@ -64,16 +157,13 @@
     grid-gap: 60px;
     padding-right: 10%;
     padding-bottom: 10%;
+    padding-top: 80px;
 
     @media (max-width: 992px) {
       grid-template-columns: 1fr;
       grid-gap: 30px;
       padding-right: 0;
-    }
-
-    &.light {
-      background: url('../../../public/bg_mission_light.svg') no-repeat;
-      background-size: contain;
+      text-align: center;
     }
 
     h2 {
@@ -82,6 +172,11 @@
 
     p {
       margin-bottom: 20px;
+      font-size: 18px;
+
+      @media (max-width: 992px) {
+        font-size: 14px;
+      }
     }
 
     h5 {
@@ -101,10 +196,28 @@
         text-fill-color: transparent;
       }
     }
+
+    .button {
+      position: relative;
+      display: inline-flex;
+
+      &:before {
+        content: '';
+        background: url('../../../public/mission_arrow.svg') no-repeat;
+        height: 94px;
+        width: 210px;
+        position: absolute;
+        right: -21px;
+        transform: translateX(100%);
+        top: -50px;
+        background-size: contain;
+      }
+    }
   }
 }
 
 .astromap {
+  padding-top: 90px;
   padding-bottom: 75px;
 
   @media (max-width: 992px) {
@@ -172,32 +285,39 @@
         grid-column: 1/2;
       }
 
-      &:nth-child(2) {
+      &.card_1 {
         background: var(--astro-card-bg) url('../../../public/astromap_bg_1.png') center no-repeat;
+        background-size: cover;
       }
 
-      &:nth-child(5) {
+      &.card_2 {
         background: var(--astro-card-bg) url('../../../public/astromap_bg_2.png') center no-repeat;
+        background-size: cover;
       }
 
-      &:nth-child(6) {
+      &.card_3 {
         background: var(--astro-card-bg) url('../../../public/astromap_bg_3.png') center no-repeat;
+        background-size: cover;
       }
 
-      &:nth-child(9) {
+      &.card_4 {
         background: var(--astro-card-bg) url('../../../public/astromap_bg_4.png') center no-repeat;
+        background-size: cover;
       }
 
-      &:nth-child(10) {
+      &.card_5 {
         background: var(--astro-card-bg) url('../../../public/astromap_bg_5.png') center no-repeat;
+        background-size: cover;
       }
 
-      &:nth-child(13) {
+      &.card_6 {
         background: var(--astro-card-bg) url('../../../public/astromap_bg_6.png') center no-repeat;
+        background-size: cover;
       }
 
-      &:nth-child(14) {
+      &.card_7 {
         background: var(--astro-card-bg) url('../../../public/astromap_bg_7.png') center no-repeat;
+        background-size: cover;
       }
 
       h3 {
@@ -215,7 +335,7 @@
           background: #41A380;
           width: 100%;
           height: 6px;
-          top: 72%;
+          top: 74%;
           z-index: -1;
         }
       }
@@ -302,6 +422,21 @@
         }
       }
     }
+
+    &.light {
+      background: url('../../../public/dashed_line_light.svg') center no-repeat;
+
+      .card {
+        box-shadow: 0px 29px 58px rgba(45, 115, 90, 0.15);
+
+        .dot_num {
+          .dot {
+            background: #FFFFFF;
+            box-shadow: 0px 7px 18px rgba(45, 115, 90, 0.25);
+          }
+        }
+      }
+    }
   }
 }
 
@@ -313,14 +448,51 @@
   }
 
   &__row {
-    background: #232424;
     //background-size: contain;
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
     grid-gap: 60px;
     padding-right:5%;
-    border-radius: 60px;
+    position: relative;
+
+    > div {
+      position: relative;
+      z-index: 2;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 5%;
+      width: 95%;
+      height: 87%;
+      background: #232424;
+      top: 6%;
+      border-radius: 60px;
+      border: 1px solid #2C4B40;
+
+      @media (max-width: 992px) {
+        width: 100%;
+        left: 0;
+        height: 100%;
+        top: 0;
+        border-radius: 30px;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 2;
+      width: 157px;
+      height: 116px;
+      background: url('../../../public/boarding_planet.svg') center no-repeat;
+      background-size: contain;
+      transform: translate(30%, -30%);
+    }
 
     @media (max-width: 992px) {
       grid-template-columns: 1fr;
@@ -330,8 +502,10 @@
     }
 
     &.light {
-      background: url('../../../public/bg_mission_light.svg') no-repeat;
-      background-size: contain;
+      &:before {
+        border: none;
+        background: linear-gradient(145.58deg, #E2F9F2 15.84%, rgba(226, 249, 242, 0) 124.93%);
+      }
     }
 
     h2 {
@@ -366,6 +540,26 @@
   h2 {
     text-align: center;
     margin-bottom: 40px;
+  }
+
+  .slider {
+    position: relative;
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      cursor: pointer;
+
+      &.left {
+        left: -26px;
+      }
+
+      &.right {
+        right: -26px;
+      }
+    }
   }
 
   .card {

@@ -1,0 +1,66 @@
+.team {
+  padding-top: 190px;
+
+  @media (max-width: 992px) {
+    padding-top: 0;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 70px;
+  }
+}
+
+.card {
+  --bdrs: 15px;
+  --transition-dur: 250ms;
+  position: relative;
+  z-index: 0;
+  transition: z-index var(--transition-dur) step-end;
+  user-select: none;
+
+
+
+  &__body {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: var(--bdrs);
+  }
+
+  &__box {
+    position: absolute;
+    inset: 0;
+    background-color: #fff;
+    border-radius: var(--bdrs);
+    transition: filter var(--transition-dur);
+    filter: drop-shadow(0 0 1px #02a7);
+    z-index: -1;
+    width: 100%;
+  }
+
+  &__footer {
+    position: absolute;
+    top: calc(100% - var(--bdrs));
+    left: 0;
+    padding: 15px;
+    background-color: inherit;
+    width: 100%;
+    border-radius: 0 0 var(--bdrs) var(--bdrs);
+    transform: translateY(-100%);
+    transition: transform var(--transition-dur);
+  }
+
+  &:hover {
+    z-index: 1;
+    transition-timing-function: step-start;
+
+    .card__box {
+      filter: drop-shadow(0 0 8px #02a7);
+    }
+
+    .card__footer {
+      transform: translateY(0);
+    }
+  }
+}

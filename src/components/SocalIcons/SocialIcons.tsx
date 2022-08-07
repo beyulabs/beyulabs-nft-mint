@@ -35,6 +35,7 @@ const SocialIcons = () => {
                   className="hover:shadow"
                   quality={100}
                 />
+                <span>{icon.name}</span>
               </a>
             </li>
           );

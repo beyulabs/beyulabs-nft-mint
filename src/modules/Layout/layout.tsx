@@ -35,12 +35,10 @@ const Layout = (props: LayoutProps) => {
 
   return (
     <AppContext.Provider value={context}>
-      <main className="bg-[url('/home-bg.svg')] bg-cover overflow-hidden opacity-100">
-        <div className="m-auto max-w-screen-xl">
-          <Header setMenuOpen={setMenuOpen} />
-          {menuOpen && <MobileMenu setMenuOpen={setMenuOpen} />}
-          {props.children}
-        </div>
+      <main>
+        <Header setMenuOpen={setMenuOpen} />
+        {menuOpen && <MobileMenu setMenuOpen={setMenuOpen} />}
+        {props.children}
       </main>
       <Footer />
     </AppContext.Provider>
