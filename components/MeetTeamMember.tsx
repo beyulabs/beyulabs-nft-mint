@@ -15,9 +15,9 @@ const MeetTeamMember = ({ voyager }: VoyagerCardProps) => {
   const [isHover, setIsHover] = useState<boolean>(false);
 
   return (
-    <div className="mx-4 relative cursor-pointer rounded-xl sm:w-9/12">
+    <div className="lg:-ml-4 relative cursor-pointer rounded-xl">
       <div
-        className="sm:bg-nexusBlack w-80 rounded-xl mb-6 p-4 relative sm:hover:scale-110 sm:hover:bg-nexusGradientGreen lg:bg-transparent transition duration-300 delay-150 hover:delay-300 ease-in-out"
+        className="sm:m-auto sm:bg-nexusBlack w-80 rounded-xl mb-6 p-4 relative sm:hover:scale-110 sm:hover:bg-nexusGradientGreen hover:scale-125 hover:z-999 lg:bg-transparent transition duration-300 delay-150 hover:delay-150 ease-in-out"
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
