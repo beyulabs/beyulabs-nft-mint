@@ -1,9 +1,9 @@
-import React, { FC, useContext, useRef } from 'react';
+import React, { FC, useMemo } from 'react';
+import { useTheme } from 'next-themes';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper';
 import cn from 'classnames';
 import Image from 'next/image';
-import AppContext from '@modules/Layout/context/AppContext';
 import HtmlMeta from '@components/HtmlMeta';
 import { Coins } from '@components/Icons/Icons';
 import Spoiler from '@components/Spoiler';
@@ -14,9 +14,10 @@ import 'swiper/css';
 import s from './HomePage.module.scss';
 
 const HomePage: FC = () => {
-  const { isLightMode } = useContext(AppContext);
+  const { theme, resolvedTheme } = useTheme();
 
-  console.log(isLightMode, 'isLightMode');
+  console.log(resolvedTheme, 'resolvedTheme');
+  console.log(resolvedTheme, 'resolvedTheme');
 
   const pagination = {
     clickable: true,
@@ -54,7 +55,13 @@ const HomePage: FC = () => {
   return (
     <div>
       <HtmlMeta title="Home" />
-      <div className={cn(s.bg_wrapper, isLightMode && s.light)}>
+      <div
+        className={cn(
+          s.bg_wrapper,
+          theme === 'light' && s.light,
+          theme === 'dark' && s.dark
+        )}
+      >
         <section className={s.head}>
           <div className="container">
             <div className={s.head__row}>
@@ -71,30 +78,36 @@ const HomePage: FC = () => {
                 </p>
               </div>
               <div className={s.image}>
-                {isLightMode && (
+                {theme === 'light' && (
                   <img src={'/head_img_light_c.png'} alt="Nexus Mission" />
                 )}
-                {!isLightMode && (
+                {theme === 'dark' && (
                   <img src={'/head_img_dark_c.png'} alt="Nexus Mission" />
                 )}
               </div>
             </div>
           </div>
         </section>
-        <section className={cn(s.mission, isLightMode && s.light)}>
+        <section className={cn(s.mission, theme === 'light' && s.light)}>
           <div className="container">
             <div className={s.mission__row}>
               <div>
-                <Image
-                  src={
-                    isLightMode
-                      ? '/nexus-mission-light.svg'
-                      : '/nexus-mission.svg'
-                  }
-                  width={524}
-                  height={679}
-                  alt="Nexus Mission"
-                />
+                {theme === 'light' && (
+                  <Image
+                    src={'/nexus-mission-light.svg'}
+                    width={524}
+                    height={679}
+                    alt="Nexus Mission"
+                  />
+                )}
+                {theme === 'dark' && (
+                  <Image
+                    src={'/nexus-mission.svg'}
+                    width={524}
+                    height={679}
+                    alt="Nexus Mission"
+                  />
+                )}
               </div>
               <div>
                 <h2>
@@ -139,7 +152,7 @@ const HomePage: FC = () => {
         </section>
         <section className={s.astromap}>
           <div className="container">
-            <div className={cn(s.cards, isLightMode && s.light)}>
+            <div className={cn(s.cards, theme === 'light' && s.light)}>
               <div className={s.title}>
                 <h2>Astromap</h2>
               </div>
@@ -287,7 +300,7 @@ const HomePage: FC = () => {
 
         <section className={s.boarding}>
           <div className="container">
-            <div className={cn(s.boarding__row, isLightMode && s.light)}>
+            <div className={cn(s.boarding__row, theme === 'light' && s.light)}>
               <div>
                 <Image
                   src="/tickets.svg"
@@ -492,7 +505,7 @@ const HomePage: FC = () => {
           </div>
         </section>
       </div>
-      <section className={cn(s.faq, isLightMode && s.light)}>
+      <section className={cn(s.faq, theme === 'light' && s.light)}>
         <div className="container">
           <h2>FAQ</h2>
           <div className={s.faq__list}>

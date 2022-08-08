@@ -7,47 +7,71 @@
     padding-top: 0;
   }
 
-  &:before {
-    content: '';
-    height: 100%;
-    width: 50%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: url('../../../public/wrapper_bg_left.png') 0 0 no-repeat;
-    background-size: cover;
-    pointer-events: none;
+  &.dark {
+    &:before {
+      content: '';
+      height: 100%;
+      width: 50%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: url('../../../public/wrapper_bg_left.png') 0 0 no-repeat;
+      background-size: cover;
+      pointer-events: none;
 
-    @media (max-width: 992px) {
-      display: none;
+      @media (max-width: 992px) {
+        display: none;
+      }
     }
-  }
 
-  &:after {
-    content: '';
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    background: url('../../../public/wrapper_bg_right.png') 0 110% no-repeat;
-    background-size: cover;
-    pointer-events: none;
+    &:after {
+      content: '';
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: url('../../../public/wrapper_bg_right.png') 0 110% no-repeat;
+      background-size: cover;
+      pointer-events: none;
 
-    @media (max-width: 992px) {
-      display: none;
+      @media (max-width: 992px) {
+        display: none;
+      }
     }
   }
 
   &.light {
     &:before {
+      content: '';
+      height: 100%;
+      width: 50%;
+      position: absolute;
+      left: 0;
+      top: 0;
       background: url('../../../public/wrapper_bg_left_light.png') top left no-repeat;
       background-size: cover;
+      pointer-events: none;
+
+      @media (max-width: 992px) {
+        display: none;
+      }
     }
 
     &:after {
+      content: '';
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
       background: url('../../../public/wrapper_bg_right_light.png') top right no-repeat;
       background-size: cover;
+      pointer-events: none;
+
+      @media (max-width: 992px) {
+        display: none;
+      }
     }
   }
 }

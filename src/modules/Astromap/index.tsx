@@ -4,12 +4,14 @@ import cn from 'classnames';
 import AppContext from '@modules/Layout/context/AppContext';
 import { ArrowLink } from '@components/Icons/Icons';
 import AstroCard from '@modules/Astromap/components/Card';
+import HtmlMeta from '@components/HtmlMeta';
 import s from './Astromap.module.scss';
 
 const AstromapPage = () => {
   const { isLightMode } = useContext(AppContext);
   return (
     <div className={cn(s.astromap, isLightMode && s.light)}>
+      <HtmlMeta title="Astromap" />
       <div className="container">
         <div className={s.cards}>
           <div className={cn(s.card, s.card_1)}>

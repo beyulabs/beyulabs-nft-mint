@@ -91,6 +91,27 @@
     @media (max-width: 992px) {
       max-height: inherit;
       grid-template-columns: 1fr;
+      overflow-y: auto;
+      padding-bottom: 40px;
+
+      &::-webkit-scrollbar-track
+      {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: #41A38020;
+      }
+
+      &::-webkit-scrollbar
+      {
+        width: 6px;
+        background-color: #F5F5F530;
+        border-radius: 4px;
+      }
+
+      &::-webkit-scrollbar-thumb
+      {
+        background-color: #41A380;
+        border: 0;
+      }
 
       .image {
         img {
@@ -110,6 +131,10 @@
         max-height: inherit;
         overflow-y: auto;
         padding-right: 40px;
+
+        @media (max-width: 992px) {
+          overflow: hidden;
+        }
 
         p {
           margin-bottom: 8px;

@@ -1,7 +1,5 @@
-import React, { useContext, useState } from 'react';
-import Image from 'next/image';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import AppContext from '@modules/Layout/context/AppContext';
 import SocialIcons from '@components/SocalIcons/SocialIcons';
 
 import { Button } from '@components/Button/button';
@@ -11,25 +9,26 @@ import useMediaQuery from '@modules/Layout/hooks/useMediaQuery';
 
 import { routes } from '@utils/constants';
 import { useRouter } from 'next/router';
+import { useTheme } from 'next-themes';
 import { NavRoute } from '../../../../types/common';
 
 import s from './Header.module.scss';
 
 const Header = () => {
-  const { handleSwitchLightMode, isLightMode } = useContext(AppContext);
+  const { theme, setTheme } = useTheme();
   const isTablet = useMediaQuery(992);
   const nextRouter = useRouter();
   const [activeNav, setActiveNav] = useState<boolean>(false);
 
   const SwitchLightMode = () => {
-    isLightMode ? handleSwitchLightMode(false) : handleSwitchLightMode(true);
+    setTheme(theme === 'light' ? 'dark' : 'light');
   };
 
   const ToggleThemeMode = () => (
     <>
       {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
       <a onClick={SwitchLightMode} className={s.ToggleTheme}>
-        {isLightMode ? (
+        {theme === 'light' ? (
           <img src={'/dark-mode-page.svg'} alt="Theme" width="26" height="26" />
         ) : (
           <img
@@ -40,7 +39,7 @@ const Header = () => {
           />
         )}
         <span>
-          {isLightMode ? <span>Dark </span> : <span>Light </span>}
+          {theme === 'light' ? <span>Dark </span> : <span>Light </span>}
           <span>mode</span>
         </span>
       </a>
@@ -100,23 +99,28 @@ const Header = () => {
       <div className="container">
         <div className={s.header__row}>
           <div className="logo">
-            {isLightMode ? (
-              <Link href="/" passHref>
-                <img
-                  src={'/nexus-voyagers-logotype-green-dark.svg'}
-                  alt="BeYu Labs logo"
-                  width="160"
-                  height="47"
-                />
+            {theme === 'light' && (
+              <Link href="/">
+                <a>
+                  <img
+                    src={'/nexus-voyagers-logotype-green-dark.svg'}
+                    alt="BeYu Labs logo"
+                    width="160"
+                    height="47"
+                  />
+                </a>
               </Link>
-            ) : (
-              <Link href="/" passHref>
-                <img
-                  src={'/nexus-voyagers-logotype-green-white.svg'}
-                  alt="BeYu Labs logo"
-                  width="160"
-                  height="47"
-                />
+            )}
+            {theme === 'dark' && (
+              <Link href="/">
+                <a>
+                  <img
+                    src={'/nexus-voyagers-logotype-green-white.svg'}
+                    alt="BeYu Labs logo"
+                    width="160"
+                    height="47"
+                  />
+                </a>
               </Link>
             )}
           </div>
