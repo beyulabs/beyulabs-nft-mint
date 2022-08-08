@@ -15,33 +15,11 @@
     grid-template-rows: 1fr 1fr 25px 1fr 1fr;
     grid-gap: 20px;
     counter-reset: itemnum;
+    height: 800px;
 
     > .card {
-      background: var(--astro-card-bg);
-      box-shadow: -10px -10px 23px rgba(105, 136, 129, 0.25), 10px 10px 25px rgba(58, 160, 124, 0.11);
-      border-radius: 20px;
-      padding: 30px 25px;
-      position: relative;
-      overflow: hidden;
-
-      &:before {
-        position: absolute;
-        counter-increment: itemnum;
-        content: counters(itemnum, "", decimal-leading-zero);
-        font-size: 176px;
-        font-weight: 700;
-        line-height: 126px;
-        text-align: right;
-        background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-        bottom: 0;
-        left: 0;
-        transform: translateX(-20%);
-        opacity: 0.8;
-      }
+      padding: 0;
+      display: grid;
 
       &.card_1 {
         grid-area: 1 / 1 / span 3 / span 1;
@@ -73,33 +51,6 @@
 
       &.card_8 {
         grid-area: 1 / 5 / span 4 / span 1;
-        background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
-        color: #fff;
-        text-align: center;
-
-        &:before {
-          background: none;
-          color: #4F4F4F;
-          opacity: 0.1;
-          text-fill-color: #4F4F4F;
-          -webkit-text-fill-color: #4F4F4F;
-        }
-      }
-
-      &.card_5, &.card_6, &.card_7 {
-        text-align: right;
-        padding: 20px 25px;
-
-        &:before {
-          position: relative;
-          font-weight: 700;
-          font-size: 85px;
-          line-height: 80px;
-        }
-
-        h3 {
-          padding-top: 10px;
-        }
       }
     }
   }

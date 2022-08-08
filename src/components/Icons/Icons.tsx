@@ -190,6 +190,7 @@ export const DownArrow = () => (
     />
   </svg>
 );
+
 export const ArrowLink = () => (
   <svg
     width="20"
@@ -234,5 +235,31 @@ export const ArrowLink = () => (
         fill="currentColor"
       />
     </g>
+  </svg>
+);
+
+export const Close = () => (
+  <svg
+    width="19"
+    height="18"
+    viewBox="0 0 19 18"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      x="17.625"
+      width="1.10678"
+      height="24.3491"
+      rx="0.553389"
+      transform="rotate(45 17.625 0)"
+      fill="currentColor"
+    />
+    <rect
+      width="1.10678"
+      height="24.3491"
+      rx="0.553389"
+      transform="matrix(-0.707107 0.707107 0.707107 0.707107 0.782227 0)"
+      fill="currentColor"
+    />
   </svg>
 );

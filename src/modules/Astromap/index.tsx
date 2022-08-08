@@ -18,7 +18,44 @@ const AstromapPage = () => {
               description="A bounty hub empowering freelancers, project teams, and agencies
               alike."
             >
-              Text for modal
+              <strong>Holders have priority</strong>
+              <p>
+                A bounty hub empowering freelancers, project teams, and agencies
+                alike. With the Web3 space growing into countless
+                sub-communities of creators and thinkers, we are able to create
+                a flexible and secure system of opportunities and relationships.
+                Holders have priority access to a marketplace of talent, powered
+                by partnerships and individual professionals who are invested in
+                the space (and its growth).
+              </p>
+              <p>
+                Into countless sub-communities of creators and thinkers, we are
+                able to create a flexible and secure system of opportunities and
+                relationships. Holders have priority access to a marketplace of
+                talent, powered by partnerships and individual professionals who
+                are invested in the space (and its growth).
+              </p>
+              <br />
+              <br />
+              <strong>Who are invested</strong>
+              <p>
+                A bounty hub empowering freelancers, project teams, and agencies
+                alike. With the Web3 space growing into countless
+                sub-communities of creators and thinkers, we are able to create
+                a flexible and secure system of opportunities and relationships.
+                Holders have priority access to a marketplace of talent, powered
+                by partnerships and individual professionals who are invested in
+                the space (and its growth).
+              </p>
+              <p>
+                A bounty hub empowering freelancers, project teams, and agencies
+                alike. With the Web3 space growing into countless
+                sub-communities of creators and thinkers, we are able to create
+                a flexible and secure system of opportunities and relationships.
+                Holders have priority access to a marketplace of talent, powered
+                by partnerships and individual professionals who are invested in
+                the space (and its growth).
+              </p>
             </AstroCard>
           </div>
           <div className={cn(s.card, s.card_2)}>
@@ -54,6 +91,7 @@ const AstromapPage = () => {
               title="Project Showcase"
               description="A bounty hub empowering freelancers, project teams, and agencies
               alike. With the Web3 space growing into."
+              isRight
             >
               Text for modal
             </AstroCard>
@@ -63,6 +101,7 @@ const AstromapPage = () => {
               title="Charity"
               description="A bounty hub empowering freelancers, project teams, and agencies
               alike. With the Web3"
+              isRight
             >
               Text for modal
             </AstroCard>
@@ -72,6 +111,7 @@ const AstromapPage = () => {
               title="Community Chest"
               description="A bounty hub empowering freelancers, project teams, and agencies
               alike. With"
+              isRight
             >
               Text for modal
             </AstroCard>
@@ -81,6 +121,7 @@ const AstromapPage = () => {
               title="Future"
               description="A bounty hub empowering freelancers, project teams, and agencies
               alike. With"
+              isGreen
             >
               Text for modal
             </AstroCard>
