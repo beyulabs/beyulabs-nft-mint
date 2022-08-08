@@ -2,6 +2,7 @@ import React, { ReactNode, useState } from 'react';
 import cn from 'classnames';
 
 import { Close } from '@components/Icons/Icons';
+import useMediaQuery from '@modules/Layout/hooks/useMediaQuery';
 import s from './AstroCard.module.scss';
 
 interface TeamUserProps {
@@ -20,6 +21,7 @@ const AstroCard = ({
   isRight,
 }: TeamUserProps) => {
   const [showModal, setShowModal] = useState<boolean>(false);
+  const isTablet = useMediaQuery(992);
 
   const showToggle = () => {
     setShowModal((prev) => !prev);
@@ -38,7 +40,11 @@ const AstroCard = ({
       <div className={cn(s.modal, showModal && s.active)}>
         <div className={s.modal__row}>
           <div className={s.image}>
-            <img src={'/modal_image.png'} alt="" />
+            {!isTablet ? (
+              <img src={'/modal_image.png'} alt="" />
+            ) : (
+              <img src={'/modal_img_mobile.png'} alt="" />
+            )}
           </div>
           <div className={s.text}>
             <h2>{title}</h2>

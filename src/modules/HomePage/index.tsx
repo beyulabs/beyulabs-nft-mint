@@ -16,6 +16,8 @@ import s from './HomePage.module.scss';
 const HomePage: FC = () => {
   const { isLightMode } = useContext(AppContext);
 
+  console.log(isLightMode, 'isLightMode');
+
   const pagination = {
     clickable: true,
     renderBullet(index: number, className: string) {
