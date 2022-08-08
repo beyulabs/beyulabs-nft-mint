@@ -1,8 +1,8 @@
 import React, { FC, useContext, useRef } from 'react';
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper';
 import cn from 'classnames';
 import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper';
 import AppContext from '@modules/Layout/context/AppContext';
 import HtmlMeta from '@components/HtmlMeta';
 import { Coins } from '@components/Icons/Icons';
@@ -18,10 +18,12 @@ const HomePage: FC = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
+  const swiper = useSwiper();
+
   const pagination = {
     clickable: true,
-    renderBullet: function (index: number, className: string) {
-      return '<span class="' + className + '"></span>';
+    renderBullet(index: number, className: string) {
+      return `<span class="${className}"></span>`;
     },
   };
 
@@ -45,15 +47,12 @@ const HomePage: FC = () => {
                 </p>
               </div>
               <div className={s.image}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={
-                    isLightMode
-                      ? '/head_img_light_c.png'
-                      : '/head_img_dark_c.png'
-                  }
-                  alt="Nexus Mission"
-                />
+                {isLightMode && (
+                  <img src={'/head_img_light_c.png'} alt="Nexus Mission" />
+                )}
+                {!isLightMode && (
+                  <img src={'/head_img_dark_c.png'} alt="Nexus Mission" />
+                )}
               </div>
             </div>
           </div>
@@ -126,7 +125,7 @@ const HomePage: FC = () => {
                     <span className={s.dot} />
                   </div>
                   <Image
-                    src={'/astromap_1.png'}
+                    src="/astromap_1.png"
                     width={150}
                     height={150}
                     alt="NFT"
@@ -146,7 +145,7 @@ const HomePage: FC = () => {
                     <span className={s.dot} />
                   </div>
                   <Image
-                    src={'/astromap_2.png'}
+                    src="/astromap_2.png"
                     width={150}
                     height={150}
                     alt="Community Chest"
@@ -164,7 +163,7 @@ const HomePage: FC = () => {
                     <span className={s.dot} />
                   </div>
                   <Image
-                    src={'/astromap_3.png'}
+                    src="/astromap_3.png"
                     width={150}
                     height={150}
                     alt="Community Chest"
@@ -184,7 +183,7 @@ const HomePage: FC = () => {
                     <span className={s.dot} />
                   </div>
                   <Image
-                    src={'/astromap_4.png'}
+                    src="/astromap_4.png"
                     width={150}
                     height={150}
                     alt="Launchpad"
@@ -202,7 +201,7 @@ const HomePage: FC = () => {
                     <span className={s.dot} />
                   </div>
                   <Image
-                    src={'/astromap_5.png'}
+                    src="/astromap_5.png"
                     width={150}
                     height={150}
                     alt="Project Showcase"
@@ -223,7 +222,7 @@ const HomePage: FC = () => {
                     <span className={s.dot} />
                   </div>
                   <Image
-                    src={'/astromap_6.png'}
+                    src="/astromap_6.png"
                     width={150}
                     height={150}
                     alt="The Experience"
@@ -241,7 +240,7 @@ const HomePage: FC = () => {
                     <span className={s.dot} />
                   </div>
                   <Image
-                    src={'/astromap_7.png'}
+                    src="/astromap_7.png"
                     width={150}
                     height={150}
                     alt="Charity"
@@ -267,7 +266,7 @@ const HomePage: FC = () => {
             <div className={cn(s.boarding__row, isLightMode && s.light)}>
               <div>
                 <Image
-                  src={'/tickets.svg'}
+                  src="/tickets.svg"
                   width={532}
                   height={701}
                   alt="Boarding Pass"
@@ -307,17 +306,19 @@ const HomePage: FC = () => {
             <h2>The Voyagers</h2>
             <div className={s.slider}>
               <Swiper
-                modules={[Navigation, Pagination]}
+                modules={[Pagination, Navigation]}
                 effect="fade"
                 slidesPerView={1}
                 spaceBetween={30}
                 // observer={true}
+                observer
+                observeParents
                 pagination={pagination}
                 loop
-                navigation={{
-                  prevEl: prevRef?.current,
-                  nextEl: nextRef?.current,
-                }}
+                // navigation={{
+                //   prevEl: prevRef?.current,
+                //   nextEl: nextRef?.current,
+                // }}
                 breakpoints={{
                   768: {
                     slidesPerView: 3,
@@ -332,8 +333,7 @@ const HomePage: FC = () => {
               >
                 <SwiperSlide>
                   <div className={s.card}>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={'/mechanic2.png'} alt="Mechanic" />
+                    <img src="/mechanic2.png" alt="Mechanic" />
                     <h3>Mechanic</h3>
                     <span className={s.tag}>Dev</span>
                     <div className={s.description}>
@@ -349,8 +349,7 @@ const HomePage: FC = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className={s.card}>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={'/mechanic2.png'} alt="Mechanic" />
+                    <img src="/mechanic2.png" alt="Mechanic" />
                     <h3>Mechanic</h3>
                     <span className={s.tag}>Dev</span>
                     <div className={s.description}>
@@ -366,8 +365,7 @@ const HomePage: FC = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className={s.card}>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={'/Rectangle2.svg'} alt="Architect " />
+                    <img src="/Rectangle2.svg" alt="Architect " />
                     <h3>Architect</h3>
                     <span className={s.tag}>Artist</span>
                     <div className={s.description}>
@@ -383,8 +381,7 @@ const HomePage: FC = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className={s.card}>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={'/mechanic2.png'} alt="Mechanic" />
+                    <img src="/mechanic2.png" alt="Mechanic" />
                     <h3>Mechanic</h3>
                     <span className={s.tag}>Dev</span>
                     <div className={s.description}>
@@ -400,8 +397,7 @@ const HomePage: FC = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className={s.card}>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={'/Cap.png'} alt="Captain" />
+                    <img src="/Cap.png" alt="Captain" />
                     <h3>Captain</h3>
                     <span className={s.tag}>Founder</span>
                     <div className={s.description}>
@@ -417,8 +413,7 @@ const HomePage: FC = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className={s.card}>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={'/Rectangle2.svg'} alt="Architect " />
+                    <img src="/Rectangle2.svg" alt="Architect " />
                     <h3>Architect</h3>
                     <span className={s.tag}>Artist</span>
                     <div className={s.description}>
@@ -433,7 +428,11 @@ const HomePage: FC = () => {
                   </div>
                 </SwiperSlide>
               </Swiper>
-              <button className={cn(s.arrow, s.left)} ref={prevRef}>
+              <button
+                type="button"
+                className={cn(s.arrow, s.left, 'left_nav')}
+                ref={prevRef}
+              >
                 <svg
                   width="11"
                   height="28"
@@ -450,7 +449,12 @@ const HomePage: FC = () => {
                   />
                 </svg>
               </button>
-              <button className={cn(s.arrow, s.right)} ref={nextRef}>
+              <button
+                type="button"
+                className={cn(s.arrow, s.right)}
+                // ref={nextRef}
+                onClick={() => swiper.slideNext()}
+              >
                 <svg
                   width="11"
                   height="28"

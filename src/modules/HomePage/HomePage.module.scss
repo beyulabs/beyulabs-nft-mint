@@ -1,6 +1,7 @@
 .bg_wrapper {
   position: relative;
   padding-top: 109px;
+  overflow: hidden;
 
   @media (max-width: 992px) {
     padding-top: 0;
@@ -15,6 +16,7 @@
     top: 0;
     background: url('../../../public/wrapper_bg_left.png') 0 0 no-repeat;
     background-size: cover;
+    pointer-events: none;
 
     @media (max-width: 992px) {
       display: none;
@@ -30,6 +32,7 @@
     top: 0;
     background: url('../../../public/wrapper_bg_right.png') 0 110% no-repeat;
     background-size: cover;
+    pointer-events: none;
 
     @media (max-width: 992px) {
       display: none;
@@ -544,6 +547,7 @@
 
   .slider {
     position: relative;
+    padding: 0 37px;
 
     .arrow {
       position: absolute;
@@ -551,13 +555,15 @@
       transform: translateY(-50%);
       z-index: 2;
       cursor: pointer;
+      background: transparent;
+      border: 0;
 
       &.left {
-        left: -26px;
+        left: 0;
       }
 
       &.right {
-        right: -26px;
+        right: 0;
       }
     }
   }

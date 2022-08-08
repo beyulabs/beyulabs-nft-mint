@@ -14,6 +14,7 @@ const TeamPage = () => {
   const CreateAvatarCards = teamMembers.map((voyager: TeamMember, index) => (
     <div
       className={s.card}
+      /* eslint-disable-next-line react/no-array-index-key */
       key={`${voyager.nexusName.toLowerCase()}-${index}`}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
@@ -82,6 +83,39 @@ const TeamPage = () => {
         <HtmlMeta title="Team" />
         <div className={s.team}>
           <div className={s.team__list}>{CreateAvatarCards}</div>
+        </div>
+        <div className={s.partners}>
+          <h2>Partners:</h2>
+          <div className={s.cards}>
+            <div className={s.card}>
+              <img src="/team_partner_1.png" alt="" />
+              <div className={s.text}>
+                <h3>Project 3</h3>
+                <p>
+                  Some description about project. Keep your eyes on the
+                  <span>#announcements</span> and #boarding-pass channels for
+                  these challenges, they will essentially guarantee your seat on
+                  the rocket to the new world. These challenges will be
+                  presented sporadically
+                </p>
+                <div className={s.dont}>don&apos;t procrastinate</div>
+              </div>
+            </div>
+            <div className={s.card}>
+              <img src="/team_partner_2.png" alt="" />
+              <div className={s.text}>
+                <h3>BDH (Legal)</h3>
+                <p>
+                  Some description about project. Keep your eyes on the
+                  <span>#announcements</span> and #boarding-pass channels for
+                  these challenges, they will essentially guarantee your seat on
+                  the rocket to the new world. These challenges will be
+                  presented sporadically
+                </p>
+                <div className={s.dont}>don&apos;t procrastinate</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div className={cn(s.bg, isHover && s.active)} />

@@ -70,7 +70,7 @@ export const discordInviteURL: string = 'https://discord.gg/Ye6pQqJes7';
 
 export const routes: NavRoute[] = [
   {
-    path: '/astro-map',
+    path: '/astromap',
     title: 'Astromap',
     enabled: true,
   },

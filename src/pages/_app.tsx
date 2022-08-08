@@ -1,9 +1,6 @@
 import '../styles/globals.css';
-// import '../styles/vars.scss';
 import '../styles/index.scss';
-// import 'react-responsive-carousel/lib/styles/carousel.min.css';
-// import 'slick-carousel/slick/slick.css';
-// import 'slick-carousel/slick/slick-theme.css';
+// import 'swiper/swiper.scss';
 
 import type { AppProps } from 'next/app';
 

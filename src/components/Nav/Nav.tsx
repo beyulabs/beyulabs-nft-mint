@@ -1,12 +1,8 @@
-import classNames from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { NavRoute } from '../../types/common';
 import { routes } from '@utils/constants';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 import s from './Nav.module.scss';
 
@@ -18,18 +14,11 @@ function Nav({ setMenuOpen }: NavProps) {
   const nextRouter = useRouter();
 
   const routeLinks = routes.map((route: NavRoute, index) => {
-    const cn = classNames(
-      {
-        'font-bold drop-shadow-md': nextRouter.pathname === route.path,
-        'font-normal': nextRouter.pathname !== route.path,
-        'opacity-100 hover:cursor-not-allowed': !route.enabled,
-        'hover:drop-shadow': route.enabled,
-      },
-      'ml-8 mr-8 text-white text-sm'
-    );
-
     return (
-      <li key={`route-${index}`} className={cn}>
+      <li
+        key={`route-${index}`}
+        className={nextRouter.pathname === route.path ? s.active : ''}
+      >
         {route.enabled ? (
           <Link href={route.path}>{route.title}</Link>
         ) : (

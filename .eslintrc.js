@@ -1,10 +1,23 @@
 module.exports = {
-  extends: ['next', 'prettier'],
-  plugins: ['@typescript-eslint', 'eslint-plugin-prettier'],
+  extends: ['airbnb-typescript', 'prettier'],
+  plugins: ['react', '@typescript-eslint', 'eslint-plugin-prettier', 'import'],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    sourceType: 'module',
+    project: './tsconfig.json',
+    createDefaultProgram: true,
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  env: {
+    browser: true,
+    es6: true,
+    jest: true,
+  },
   globals: {
     __DEV__: true,
     __PROD__: true,
-    localStorage: true,
   },
   rules: {
     'max-len': [2, { code: 140, ignorePattern: '^import .*' }],
@@ -25,6 +38,7 @@ module.exports = {
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
     'jsx-a11y/anchor-is-valid': 0,
+    'react/jsx-curly-brace-presence': 'off',
     //
     // for styles['abc']
     '@typescript-eslint/dot-notation': 0,
