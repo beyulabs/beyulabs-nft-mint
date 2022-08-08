@@ -12,15 +12,13 @@ interface VoyagerCardProps {
 const VoyagerCard = ({ voyager }: VoyagerCardProps) => {
   const [isHover, setIsHover] = useState<boolean>(false);
 
-  const VoyagerDescription = () => {
-    return (
-      <div className="h-80">
-        <p className="text-astromapGrayText rounded-lg text-left font-sm">
-          {voyager.description}
-        </p>
-      </div>
-    );
-  };
+  const VoyagerDescription = () => (
+    <div className="h-80">
+      <p className="text-astromapGrayText rounded-lg text-left font-sm">
+        {voyager.description}
+      </p>
+    </div>
+  );
 
   return (
     <div className="mx-16 pb-6 relative cursor-pointer">

@@ -38,7 +38,7 @@ const HtmlMeta = ({
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:image" content={image} />
-    {/*<meta name="telegram:channel" content="@q.xyz" />*/}
+    {/* <meta name="telegram:channel" content="@q.xyz" /> */}
   </Head>
 );
 

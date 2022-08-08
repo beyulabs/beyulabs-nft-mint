@@ -14,14 +14,14 @@ import {
 import { faEthereum } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import classNames from 'classnames';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { EmailSignupCharacterTypes } from '../types/common';
 import CharacterSelect from './CharacterSelect';
-import classNames from 'classnames';
 
 import EmailSignupSuccess from './EmailSignupSuccess';
 import EmailSignupFailure from './EmailSignupFailure';
 import EmailSignupExists from './EmailSignupExists';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 const beyuLabs = '/beyu-labs-logotype-bw.png';
 
@@ -135,8 +135,8 @@ const EmailSignup = () => {
   );
 
   const { mutate: submitEmailForm } = useMutation(
-    (data: EmailSignupSubmitPayload) => {
-      return axios
+    (data: EmailSignupSubmitPayload) =>
+      axios
         .post('/api/mailchimp', data)
         .then((res) => {
           if (res.status === 201) {
@@ -150,8 +150,7 @@ const EmailSignup = () => {
         })
         .finally(() => {
           setShowAlert(true);
-        });
-    }
+        })
   );
 
   const {
@@ -169,7 +168,7 @@ const EmailSignup = () => {
         : selectedCharacter.name;
 
     const payload: EmailSignupSubmitPayload = {
-      email: email,
+      email,
       first_name: firstName,
       last_name: lastName,
       persona: personaToSubmit,
@@ -180,6 +179,7 @@ const EmailSignup = () => {
     submitEmailForm(payload);
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-shadow
   const onError = (errors: any, e: any) => {
     console.log('errors', errors);
     console.log('e', e);
@@ -247,10 +247,12 @@ const EmailSignup = () => {
                   <div className="rounded-md -space-y-px mb-4">
                     <div className="flex flex-row mb-4">
                       <div className="w-1/2 mr-2">
+                        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
                         <label htmlFor="email-address" className="sr-only">
                           First name
                         </label>
                         <input
+                          /* eslint-disable-next-line react/jsx-props-no-spreading */
                           {...register('firstName')}
                           id="first-name"
                           name="firstName"
@@ -263,10 +265,12 @@ const EmailSignup = () => {
                         />
                       </div>
                       <div className="w-1/2 ml-2">
+                        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
                         <label htmlFor="email-address" className="sr-only">
                           Last name
                         </label>
                         <input
+                          /* eslint-disable-next-line react/jsx-props-no-spreading */
                           {...register('lastName')}
                           id="last-name"
                           name="lastName"
@@ -280,10 +284,12 @@ const EmailSignup = () => {
                       </div>
                     </div>
                     <div className="shadow-sm">
+                      {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
                       <label htmlFor="email-address" className="sr-only">
                         Email address
                       </label>
                       <input
+                        /* eslint-disable-next-line react/jsx-props-no-spreading */
                         {...register('email', {
                           required: true,
                         })}

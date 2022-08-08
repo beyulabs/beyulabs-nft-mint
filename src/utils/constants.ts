@@ -304,7 +304,7 @@ export const teamMembers: TeamMember[] = [
   {
     nexusName: 'Ryan Harris',
     irlName: 'Commander|Biz dev',
-    image: Ryan1,
+    image: 'team1.png',
     linkedin: 'https://linedin.com/',
     instagram: 'https://instagram.com/',
     skillset: [
@@ -318,7 +318,7 @@ export const teamMembers: TeamMember[] = [
   {
     nexusName: 'Ryan Harris',
     irlName: 'Commander|Biz dev',
-    image: Ryan2,
+    image: 'team2.png',
     linkedin: 'https://linedin.com/',
     twitter: 'https://twitter.com/',
     instagram: 'https://instagram.com/',
@@ -333,7 +333,7 @@ export const teamMembers: TeamMember[] = [
   {
     nexusName: 'Ben Yurcisin',
     irlName: 'Mechanic|Community',
-    image: Ben1,
+    image: 'team3.png',
     linkedin: 'https://linedin.com/',
     instagram: 'https://instagram.com/',
     skillset: [
@@ -347,7 +347,7 @@ export const teamMembers: TeamMember[] = [
   {
     nexusName: 'QwertyCo',
     irlName: 'Co-Commander|Project Manager',
-    image: Qwerty1,
+    image: 'team4.png',
     instagram: 'https://instagram.com/',
     skillset: [
       'Entrepreneur',
@@ -360,7 +360,7 @@ export const teamMembers: TeamMember[] = [
   {
     nexusName: 'QwertyCo',
     irlName: 'Co-Commander|Project Manager',
-    image: Qwerty2,
+    image: 'team5.png',
     linkedin: 'https://linedin.com/',
     skillset: [
       'Entrepreneur',
@@ -373,7 +373,7 @@ export const teamMembers: TeamMember[] = [
   {
     nexusName: 'Ryan Harris',
     irlName: 'Commander|Biz dev',
-    image: Ryan3,
+    image: 'team6.png',
     linkedin: 'https://linedin.com/',
     instagram: 'https://instagram.com/',
     skillset: [
@@ -387,7 +387,7 @@ export const teamMembers: TeamMember[] = [
   {
     nexusName: 'Ben Yurcisin',
     irlName: 'Mechanic|Community',
-    image: Ben2,
+    image: 'team7.png',
     linkedin: 'https://linedin.com/',
     instagram: 'https://instagram.com/',
     skillset: [
@@ -401,7 +401,7 @@ export const teamMembers: TeamMember[] = [
   {
     nexusName: 'Ryan Harris',
     irlName: 'Commander|Biz dev',
-    image: Ryan4,
+    image: 'team8.png',
     linkedin: 'https://linedin.com/',
     instagram: 'https://instagram.com/',
     skillset: [
@@ -415,7 +415,7 @@ export const teamMembers: TeamMember[] = [
   {
     nexusName: 'Este Lopez',
     irlName: 'Commander|Biz dev',
-    image: Este1,
+    image: 'team9.png',
     linkedin: 'https://linedin.com/',
     instagram: 'https://instagram.com/',
     skillset: [
@@ -429,7 +429,7 @@ export const teamMembers: TeamMember[] = [
   {
     nexusName: 'Ryan Harris',
     irlName: 'Commander|Biz dev',
-    image: Ryan5,
+    image: 'team10.png',
     linkedin: 'https://linedin.com/',
     instagram: 'https://instagram.com/',
     skillset: [
@@ -443,7 +443,7 @@ export const teamMembers: TeamMember[] = [
   {
     nexusName: 'QwertyCo',
     irlName: 'Co-Commander|Project Manager',
-    image: Qwerty3,
+    image: 'team11.png',
     linkedin: 'https://linedin.com/',
     instagram: 'https://instagram.com/',
     skillset: [
@@ -457,7 +457,7 @@ export const teamMembers: TeamMember[] = [
   {
     nexusName: 'Este Lopez',
     irlName: 'Commander|Biz dev',
-    image: Este2,
+    image: 'team12.png',
     linkedin: 'https://linedin.com/',
     instagram: 'https://instagram.com/',
     skillset: [
@@ -471,7 +471,7 @@ export const teamMembers: TeamMember[] = [
   {
     nexusName: 'QwertyCo',
     irlName: 'Co-Commander|Project Manager',
-    image: Qwerty4,
+    image: 'team13.png',
     linkedin: 'https://linedin.com/',
     instagram: 'https://instagram.com/',
     skillset: [
@@ -485,7 +485,7 @@ export const teamMembers: TeamMember[] = [
   {
     nexusName: 'Ryan Harris',
     irlName: 'Commander|Biz dev',
-    image: Ryan6,
+    image: 'team14.png',
     linkedin: 'https://linedin.com/',
     instagram: 'https://instagram.com/',
     skillset: [
@@ -499,7 +499,7 @@ export const teamMembers: TeamMember[] = [
   {
     nexusName: 'Ben Yurcisin',
     irlName: 'Mechanic|Community',
-    image: Ben3,
+    image: 'team15.png',
     linkedin: 'https://linedin.com/',
     instagram: 'https://instagram.com/',
     skillset: [
@@ -513,7 +513,7 @@ export const teamMembers: TeamMember[] = [
   {
     nexusName: 'Ryan Harris',
     irlName: 'Commander|Biz dev',
-    image: Ryan7,
+    image: 'team16.png',
     linkedin: 'https://linedin.com/',
     instagram: 'https://instagram.com/',
     skillset: [

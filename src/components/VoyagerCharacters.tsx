@@ -1,17 +1,16 @@
+import { Carousel } from 'react-responsive-carousel';
 import VoyagerCard from './VoyagerCard';
 import { voyagers } from '../utils/constants';
 import { Voyager } from '../types/common';
-import { Carousel } from 'react-responsive-carousel';
 
 const VoyagerCharacters = () => {
-  const createAvatarCards = () => {
-    return voyagers.map((voyager: Voyager) => (
+  const createAvatarCards = () =>
+    voyagers.map((voyager: Voyager) => (
       <VoyagerCard
         key={`${voyager.nexusName.toLowerCase()}`}
         voyager={voyager}
       />
     ));
-  };
 
   return (
     <div>
@@ -19,14 +18,14 @@ const VoyagerCharacters = () => {
         The Voyagers
       </h2>
       <Carousel
-        infiniteLoop={true}
+        infiniteLoop
         autoPlay={false}
         showStatus={false}
-        showArrows={true}
+        showArrows
         showThumbs={false}
         dynamicHeight={false}
-        swipeable={true}
-        centerMode={true}
+        swipeable
+        centerMode
         centerSlidePercentage={33}
       >
         {createAvatarCards()}

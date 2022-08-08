@@ -5,8 +5,8 @@ import {
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 
-import { SocialInfo, SocialPlatform, TeamMemberInfo } from '../types/common';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { SocialInfo, SocialPlatform, TeamMemberInfo } from '../types/common';
 
 interface TeamMemberProps {
   teamMember: TeamMemberInfo;

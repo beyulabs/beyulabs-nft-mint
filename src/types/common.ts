@@ -83,7 +83,7 @@ export interface Voyager {
   irlName: string;
   description: string;
   // @ts-ignore
-  image: StaticImageData;
+  image: string;
 }
 
 export interface TeamMember {

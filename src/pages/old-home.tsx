@@ -145,6 +145,7 @@ const Mint: NextPage = () => {
                   </p>
                   <p className="uppercase bold mb-5 font-bold">
                     Are you mission ready?{' '}
+                    {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
                     <span
                       className="text-nexusGreen cursor-pointer ml-2"
                       onClick={() => setOpen(true)}
@@ -152,6 +153,7 @@ const Mint: NextPage = () => {
                       Join now!
                     </span>
                   </p>
+                  {/* eslint-disable-next-line react/button-has-type */}
                   <button
                     className="mb-6 md:mb-0 cursor-not-allowed flex flex-row justify-center items-center
                   text-xl rounded-lg text-white bg-gradient-to-r from-nexusGreen to-nexusGradientGreen px-8
@@ -173,6 +175,7 @@ const Mint: NextPage = () => {
             </h2>
             <RoadmapTLDR />
             <div className="flex-row justify-center flex">
+              {/* eslint-disable-next-line react/button-has-type */}
               <button
                 className="cursor-not-allowed rounded-lg text-white bg-gradient-to-r from-nexusGreen
               to-nexusGradientGreen px-9 py-5 text-xl disabled:opacity-50"
@@ -223,6 +226,7 @@ const Mint: NextPage = () => {
                       don’t get left behind in the deteriorating space of Web2.
                     </p>
 
+                    {/* eslint-disable-next-line react/button-has-type */}
                     <button
                       className="w-32 h-16 rounded-lg text-white bg-gradient-to-r from-nexusGreen
                     to-nexusGradientGreen px-4 py-2 -mt-4"

@@ -75,31 +75,26 @@ const Gallery: NextPage = () => {
   const [selectedFilters, setSelectedFilters] = useState<SelectedFilter[]>([]);
   console.log('selectedFilters', selectedFilters);
 
-  const createAzukiPreviews = () => {
-    return mockData.map((azuki, index) => {
-      return (
-        <div className="w-1/3" key={`azuki-${index}`}>
-          <Image
-            src={azuki.image}
-            width="100%"
-            height="100%"
-            alt={azuki.name}
-            layout="responsive"
-            quality={20}
-          />
-        </div>
-      );
-    });
-  };
+  const createAzukiPreviews = () =>
+    mockData.map((azuki, index) => (
+      // eslint-disable-next-line react/no-array-index-key
+      <div className="w-1/3" key={`azuki-${index}`}>
+        <Image
+          src={azuki.image}
+          width="100%"
+          height="100%"
+          alt={azuki.name}
+          layout="responsive"
+          quality={20}
+        />
+      </div>
+    ));
 
   const removeFilterTag = (filterToRemove: SelectedFilter) => {
     const existingFilterIndex: number = selectedFilters.findIndex(
-      (selectedFilter: SelectedFilter) => {
-        return (
-          selectedFilter.category === filterToRemove.category &&
-          selectedFilter.option === filterToRemove.option
-        );
-      }
+      (selectedFilter: SelectedFilter) =>
+        selectedFilter.category === filterToRemove.category &&
+        selectedFilter.option === filterToRemove.option
     );
 
     const newSelectedFilters = [
@@ -127,17 +122,14 @@ const Gallery: NextPage = () => {
     // }
   };
 
-  const createFilterTags = () => {
-    return selectedFilters.map((filter: SelectedFilter) => {
-      return (
-        <FilterTag
-          key={`select-filter-${filter.category}-${filter.option}`}
-          filter={filter}
-          remove={removeFilterTag}
-        />
-      );
-    });
-  };
+  const createFilterTags = () =>
+    selectedFilters.map((filter: SelectedFilter) => (
+      <FilterTag
+        key={`select-filter-${filter.category}-${filter.option}`}
+        filter={filter}
+        remove={removeFilterTag}
+      />
+    ));
 
   return (
     <section className="flex flex-row min-h-screen">

@@ -1,16 +1,15 @@
 import React, { useCallback, useEffect, useState } from 'react';
+import { LOCAL_STORAGE } from '@utils/index';
 import AppContext from './context/AppContext';
 
 import Header from './containers/Header';
 import Footer from './containers/Footer';
-import MobileMenu from '@components/MobileMenu';
-import { LOCAL_STORAGE } from '@utils/index';
 
-interface LayoutProps {
-  children: React.ReactNode;
-}
+// interface LayoutProps {
+//   children: React.ReactNode;
+// }
 
-const Layout = (props: LayoutProps) => {
+const Layout = ({ children }: { children: JSX.Element }) => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   const [isLightMode, setIsLightMode] = useState(
@@ -18,6 +17,8 @@ const Layout = (props: LayoutProps) => {
       ? JSON.parse(localStorage.getItem(LOCAL_STORAGE.LIGHT_MODE) as string)
       : false
   );
+
+  console.log(menuOpen);
 
   const handleSwitchLightMode = useCallback((value: boolean) => {
     setIsLightMode(value);
@@ -37,8 +38,7 @@ const Layout = (props: LayoutProps) => {
     <AppContext.Provider value={context}>
       <main>
         <Header setMenuOpen={setMenuOpen} />
-        {menuOpen && <MobileMenu setMenuOpen={setMenuOpen} />}
-        {props.children}
+        {children}
       </main>
       <Footer />
     </AppContext.Provider>

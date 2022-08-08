@@ -161,16 +161,16 @@ export const projectTeam: TeamMemberInfo[] = [
 ];
 
 const Team: NextPage = () => {
-  const profiles = projectTeam.map((member, index) => {
-    return (
-      <div
-        key={`member-wrapper-${index}`}
-        className="bg-stone-50 rounded-xl shadow p-4 mb-10 last:mb-0"
-      >
-        <TeamMember key={`member-${index}`} teamMember={member} />
-      </div>
-    );
-  });
+  const profiles = projectTeam.map((member, index) => (
+    <div
+      /* eslint-disable-next-line react/no-array-index-key */
+      key={`member-wrapper-${index}`}
+      className="bg-stone-50 rounded-xl shadow p-4 mb-10 last:mb-0"
+    >
+      {/* eslint-disable-next-line react/no-array-index-key */}
+      <TeamMember key={`member-${index}`} teamMember={member} />
+    </div>
+  ));
 
   return (
     <section className="mt-4 min-h-screen">

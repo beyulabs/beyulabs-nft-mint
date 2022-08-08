@@ -28,24 +28,23 @@ const Header = ({ setMenuOpen }: HeaderProps) => {
     isLightMode ? handleSwitchLightMode(false) : handleSwitchLightMode(true);
   };
 
-  const ToggleThemeMode = () => {
-    return (
-      <>
-        <a onClick={SwitchLightMode} className={s.ToggleTheme}>
-          <Image
-            src={isLightMode ? '/dark-mode-page.svg' : '/light-mode-page.svg'}
-            alt="Theme"
-            width="26"
-            height="26"
-          />
-          <span>
-            {isLightMode ? <span>Dark </span> : <span>Light </span>}
-            <span>mode</span>
-          </span>
-        </a>
-      </>
-    );
-  };
+  const ToggleThemeMode = () => (
+    <>
+      {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
+      <a onClick={SwitchLightMode} className={s.ToggleTheme}>
+        <Image
+          src={isLightMode ? '/dark-mode-page.svg' : '/light-mode-page.svg'}
+          alt="Theme"
+          width="26"
+          height="26"
+        />
+        <span>
+          {isLightMode ? <span>Dark </span> : <span>Light </span>}
+          <span>mode</span>
+        </span>
+      </a>
+    </>
+  );
 
   const menu = (
     <div className={isTablet ? 'container' : ''}>
@@ -84,7 +83,6 @@ const Header = ({ setMenuOpen }: HeaderProps) => {
         <div className={s.header__row}>
           <div className="logo">
             <Link href="/" passHref>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={isLightMode ? AppLogoLight : AppLogoDark}
                 alt="BeYu Labs logo"
@@ -95,6 +93,7 @@ const Header = ({ setMenuOpen }: HeaderProps) => {
             </Link>
           </div>
           {isTablet ? (
+            // eslint-disable-next-line jsx-a11y/no-redundant-roles,react/button-has-type
             <button
               className={cn(s.nav_icon, activeNav && s.nav_icon_active)}
               onClick={navIconToggle}

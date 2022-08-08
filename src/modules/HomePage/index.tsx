@@ -480,6 +480,7 @@ const HomePage: FC = () => {
           <h2>FAQ</h2>
           <div className={s.faq__list}>
             {faqs.map((faq, index) => (
+              // eslint-disable-next-line react/no-array-index-key
               <Spoiler key={`faq-${index}`} title={faq.question}>
                 {faq.answer}
               </Spoiler>

@@ -3,17 +3,15 @@ import { astromap } from '../utils/constants';
 import RoadmapItem from './RoadmapItem';
 
 const RoadmapTLDR = () => {
-  const createRoadmap = () => {
-    return astromap.map((item: AstromapItem, index: number) => {
-      return (
-        <RoadmapItem
-          key={`roadmap-item-${index}`}
-          itemIndex={index}
-          roadmapItem={item}
-        />
-      );
-    });
-  };
+  const createRoadmap = () =>
+    astromap.map((item: AstromapItem, index: number) => (
+      <RoadmapItem
+        /* eslint-disable-next-line react/no-array-index-key */
+        key={`roadmap-item-${index}`}
+        itemIndex={index}
+        roadmapItem={item}
+      />
+    ));
 
   return <>{createRoadmap()}</>;
 };

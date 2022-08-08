@@ -21,12 +21,11 @@ const TeamPage = () => {
     >
       <div className={s.card__body}>
         <div className={s.image}>
-          <Image
+          <img
             alt={voyager.nexusName}
-            src={voyager.image}
+            src={`/team-images/${voyager.image}`}
             width={255}
             height={255}
-            layout="responsive"
           />
         </div>
         <div className={s.cont}>

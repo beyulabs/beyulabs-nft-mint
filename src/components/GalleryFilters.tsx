@@ -1,9 +1,9 @@
-import { FilterCategory, FilterOption, SelectedFilter } from '../types/common';
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { FilterCategory, FilterOption, SelectedFilter } from '../types/common';
 
 interface GalleryFiltersProps {
   filters: FilterCategory[];
@@ -16,8 +16,8 @@ const GalleryFilters = ({
   selectedFilters,
   setSelectedFilters,
 }: GalleryFiltersProps) => {
-  const filterComponents = () => {
-    return filters.map((filter: FilterCategory) => {
+  const filterComponents = () =>
+    filters.map((filter: FilterCategory) => {
       const { options } = filter;
 
       return (
@@ -44,65 +44,53 @@ const GalleryFilters = ({
               </Disclosure.Button>
               <Disclosure.Panel>
                 <div className="space-y-4">
-                  {options.map((option: FilterOption, index: number) => {
-                    return (
-                      <div key={option.display} className="flex items-center">
-                        <input
-                          id={`filter-${filter.name}-${index}`}
-                          name={`${filter.name}-${option.display}`}
-                          defaultValue={option.display}
-                          type="checkbox"
-                          defaultChecked={option.checked}
-                          className="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
-                          onClick={(e) => {
-                            const categoryAndOption: string[] = e.currentTarget.name.split(
-                              '-'
-                            );
+                  {options.map((option: FilterOption, index: number) => (
+                    <div key={option.display} className="flex items-center">
+                      <input
+                        id={`filter-${filter.name}-${index}`}
+                        name={`${filter.name}-${option.display}`}
+                        defaultValue={option.display}
+                        type="checkbox"
+                        defaultChecked={option.checked}
+                        className="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
+                        onClick={(e) => {
+                          const categoryAndOption: string[] = e.currentTarget.name.split(
+                            '-'
+                          );
 
-                            const existingFilterIndex: number = selectedFilters.findIndex(
-                              (filter: SelectedFilter) => {
-                                return (
-                                  filter.category === categoryAndOption[0] &&
-                                  filter.option === categoryAndOption[1]
-                                );
-                              }
-                            );
+                          const existingFilterIndex: number = selectedFilters.findIndex(
+                            // eslint-disable-next-line @typescript-eslint/no-shadow
+                            (filter: SelectedFilter) =>
+                              filter.category === categoryAndOption[0] &&
+                              filter.option === categoryAndOption[1]
+                          );
 
-                            let newSelectedFilters: SelectedFilter[] = [];
-                            if (existingFilterIndex === -1) {
-                              const newEntry: SelectedFilter = {
-                                category: categoryAndOption[0],
-                                option: categoryAndOption[1],
-                              };
+                          let newSelectedFilters: SelectedFilter[] = [];
+                          if (existingFilterIndex === -1) {
+                            const newEntry: SelectedFilter = {
+                              category: categoryAndOption[0],
+                              option: categoryAndOption[1],
+                            };
 
-                              newSelectedFilters = [
-                                ...selectedFilters,
-                                newEntry,
-                              ];
-                            } else {
-                              newSelectedFilters = [
-                                ...selectedFilters.slice(
-                                  0,
-                                  existingFilterIndex
-                                ),
-                                ...selectedFilters.slice(
-                                  existingFilterIndex + 1
-                                ),
-                              ];
-                            }
+                            newSelectedFilters = [...selectedFilters, newEntry];
+                          } else {
+                            newSelectedFilters = [
+                              ...selectedFilters.slice(0, existingFilterIndex),
+                              ...selectedFilters.slice(existingFilterIndex + 1),
+                            ];
+                          }
 
-                            setSelectedFilters(newSelectedFilters);
-                          }}
-                        />
-                        <label
-                          htmlFor={`filter-${filter.name}-${index}`}
-                          className="ml-3 text-sm text-gray-600"
-                        >
-                          {option.display}
-                        </label>
-                      </div>
-                    );
-                  })}
+                          setSelectedFilters(newSelectedFilters);
+                        }}
+                      />
+                      <label
+                        htmlFor={`filter-${filter.name}-${index}`}
+                        className="ml-3 text-sm text-gray-600"
+                      >
+                        {option.display}
+                      </label>
+                    </div>
+                  ))}
                 </div>
               </Disclosure.Panel>
             </div>
@@ -110,7 +98,6 @@ const GalleryFilters = ({
         </Disclosure>
       );
     });
-  };
 
   return (
     <div className="bg-stone-50 px-2">
