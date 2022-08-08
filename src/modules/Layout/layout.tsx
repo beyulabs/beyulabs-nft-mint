@@ -13,7 +13,7 @@ const Layout = ({ children }: { children: JSX.Element }) => {
 
   return (
     <>
-      <main>
+      <main className="main">
         <Header />
         {children}
       </main>

@@ -6,6 +6,24 @@
   padding: 0;
 }
 
+html, body {
+  height: 100%;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+main.main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex: 0 0 auto;
+}
+
 body {
   background: var(--theme-body-color) url('../../public/body_bg.png') repeat;
   font-family: 'Montserrat', sans-serif;
@@ -53,4 +71,8 @@ img {
   @media (min-width: $bdt_bp) {
     max-width: $bdt_bp;
   }
+}
+
+#nprogress .bar {
+  background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%) !important;
 }
