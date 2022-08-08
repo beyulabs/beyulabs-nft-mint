@@ -1,16 +1,26 @@
-import React, { useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import cn from 'classnames';
 
-import AppContext from '@modules/Layout/context/AppContext';
-import { ArrowLink } from '@components/Icons/Icons';
 import AstroCard from '@modules/Astromap/components/Card';
 import HtmlMeta from '@components/HtmlMeta';
+import { useTheme } from 'next-themes';
 import s from './Astromap.module.scss';
 
 const AstromapPage = () => {
-  const { isLightMode } = useContext(AppContext);
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  // useEffect only runs on the client, so now we can safely show the UI
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   return (
-    <div className={cn(s.astromap, isLightMode && s.light)}>
+    <div className={cn(s.astromap, theme === 'light' && s.light)}>
       <HtmlMeta title="Astromap" />
       <div className="container">
         <div className={s.cards}>

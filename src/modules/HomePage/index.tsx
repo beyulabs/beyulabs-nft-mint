@@ -1,4 +1,4 @@
-import React, { FC, useMemo } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper';
@@ -14,10 +14,8 @@ import 'swiper/css';
 import s from './HomePage.module.scss';
 
 const HomePage: FC = () => {
-  const { theme, resolvedTheme } = useTheme();
-
-  console.log(resolvedTheme, 'resolvedTheme');
-  console.log(resolvedTheme, 'resolvedTheme');
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   const pagination = {
     clickable: true,
@@ -51,6 +49,15 @@ const HomePage: FC = () => {
       </button>
     );
   };
+
+  // useEffect only runs on the client, so now we can safely show the UI
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <div>
