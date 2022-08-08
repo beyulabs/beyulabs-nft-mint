@@ -64,6 +64,11 @@
     padding: 0 40px;
     font-weight: 400;
 
+    @media (max-width: 992px) {
+      min-height: 50px;
+      padding: 0 35px;
+    }
+
     span {
       top: 1px;
     }

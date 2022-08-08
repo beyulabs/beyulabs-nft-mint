@@ -11,6 +11,10 @@
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #202020;
   z-index: 3;
 
+  @media (max-width: 992px) {
+    display: none;
+  }
+
   &.active {
     opacity: 0.5;
   }
@@ -20,9 +24,9 @@
   padding-top: 190px;
   padding-bottom: 120px;
 
-  //@media (max-width: 992px) {
-  //  padding-top: 0;
-  //}
+  @media (max-width: 992px) {
+    padding-top: 120px;
+  }
 
   &__list {
     display: grid;
@@ -31,162 +35,17 @@
 
     @media (max-width: 1200px) {
       grid-template-columns: repeat(3, 1fr);
+      grid-gap: 50px;
     }
 
     @media (max-width: 992px) {
+      grid-gap: 30px;
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
+      grid-gap: 20px;
       grid-template-columns: 1fr;
-    }
-  }
-
-
-  .card {
-    --bdrs: 20px;
-    --transition-dur: 250ms;
-    position: relative;
-    z-index: 0;
-    //transition: z-index var(--transition-dur) step-end;
-    user-select: none;
-    border-radius: var(--bdrs);
-    border: 1px solid transparent;
-
-    &__body {
-      //background-color: #fff;
-      border-radius: var(--bdrs);
-      text-align: center;
-
-      .cont {
-        padding: 15px;
-      }
-
-      .image {
-        position: relative;
-        margin-bottom: 10px;
-
-        img {
-          border-radius: 21px;
-          transition: none;
-        }
-      }
-
-      h3 {
-        color: var(--theme-heading-color);
-        margin-bottom: 10px;
-
-        @media (min-width: 992px) {
-          font-size: 28px;
-          line-height: 34px;
-        }
-      }
-
-      .position {
-        font-weight: 400;
-        font-size: 13px;
-        line-height: 17px;
-        color: var(--theme-heading-color);
-        padding: 10px 10px;
-        background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
-        border-radius: 5px;
-        margin: 0 auto;
-        display: inline-flex;
-      }
-
-      .socials {
-        display: inline-flex;
-        gap: 17px;
-        margin: 15px auto 0;
-      }
-    }
-
-    .skills {
-      text-align: center;
-      display: flex;
-      gap: 7px;
-      flex-direction: column;
-
-      li {
-        font-size: 13px;
-        line-height: 130%;
-      }
-    }
-
-    &__box {
-      position: absolute;
-      inset: 0;
-      border-radius: var(--bdrs);
-      transition: filter var(--transition-dur);
-      z-index: -1;
-      width: 100%;
-    }
-
-    &__footer {
-      position: absolute;
-      top: calc(100% - var(--bdrs));
-      left: -1px;
-      padding: 15px;
-      background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
-      width: calc(100% - -2px);
-      border-radius: 0 0 var(--bdrs) var(--bdrs);
-      transform: translateY(-100%);
-      opacity: 0;
-      transition: transform var(--transition-dur);
-      border: 1px solid #FFFFFF;
-      border-top: 0;
-
-      h5 {
-        font-size: 16px;
-        line-height: 20px;
-        margin-bottom: 7px;
-        text-align: center;
-        font-weight: 700;
-      }
-    }
-
-    &:hover {
-      z-index: 4;
-      transition-timing-function: step-start;
-      background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
-      border: 1px solid #FFFFFF;
-      border-bottom: 0;
-
-      .cont {
-        .position {
-          background: #fff;
-
-          span {
-            background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
-          }
-        }
-
-        h3 {
-          color: #fff;
-        }
-
-        .socials {
-          a {
-            color: #fff;
-          }
-        }
-      }
-
-      .card__footer {
-        opacity: 1;
-        transform: translateY(0);
-        color: #fff;
-
-        .skills {
-          li {
-            color: #fff;
-          }
-        }
-      }
     }
   }
 }
@@ -204,6 +63,10 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
 
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+    }
+
     .card {
       display: grid;
       grid-template-columns: 175px 1fr;
@@ -214,6 +77,10 @@
       backdrop-filter: blur(16px);
       border-radius: 20px;
       overflow: hidden;
+
+      @media (max-width: 992px) {
+        grid-template-columns: 1fr;
+      }
 
       &:nth-child(2) {
         background: var(--astro-card-bg) url('../../../public/partner_bg_card_2.png') no-repeat;

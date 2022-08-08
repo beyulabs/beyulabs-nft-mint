@@ -1,0 +1,20 @@
+.modal {
+  display: none;
+}
+
+.card {
+  h3 {
+    margin-bottom: 10px;
+    position: relative;
+
+    span {
+      display: block;
+    }
+  }
+
+  p {
+    position: relative;
+    font-size: 13px;
+    line-height: 150%;
+  }
+}

@@ -15,16 +15,38 @@ import s from './HomePage.module.scss';
 
 const HomePage: FC = () => {
   const { isLightMode } = useContext(AppContext);
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
-
-  const swiper = useSwiper();
 
   const pagination = {
     clickable: true,
     renderBullet(index: number, className: string) {
       return `<span class="${className}"></span>`;
     },
+  };
+
+  const SwiperButtonPrev = ({ children }: any) => {
+    const swiper = useSwiper();
+    return (
+      <button
+        type="button"
+        className={cn(s.arrow, s.left)}
+        onClick={() => swiper.slidePrev()}
+      >
+        {children}
+      </button>
+    );
+  };
+
+  const SwiperButtonNext = ({ children }: any) => {
+    const swiper = useSwiper();
+    return (
+      <button
+        type="button"
+        className={cn(s.arrow, s.right)}
+        onClick={() => swiper.slideNext()}
+      >
+        {children}
+      </button>
+    );
   };
 
   return (
@@ -290,13 +312,15 @@ const HomePage: FC = () => {
                   in the deteriorating space of Web2.
                 </p>
 
-                <Button
-                  size="large"
-                  text="Get it"
-                  color="green"
-                  icon={<Coins />}
-                  disabled
-                />
+                <div className={s.button}>
+                  <Button
+                    size="large"
+                    text="Get it"
+                    color="green"
+                    icon={<Coins />}
+                    disabled
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -333,7 +357,7 @@ const HomePage: FC = () => {
               >
                 <SwiperSlide>
                   <div className={s.card}>
-                    <img src="/mechanic2.png" alt="Mechanic" />
+                    <img src={'/mechanic2.png'} alt="Mechanic" />
                     <h3>Mechanic</h3>
                     <span className={s.tag}>Dev</span>
                     <div className={s.description}>
@@ -349,7 +373,7 @@ const HomePage: FC = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className={s.card}>
-                    <img src="/mechanic2.png" alt="Mechanic" />
+                    <img src={'/mechanic2.png'} alt="Mechanic" />
                     <h3>Mechanic</h3>
                     <span className={s.tag}>Dev</span>
                     <div className={s.description}>
@@ -365,7 +389,7 @@ const HomePage: FC = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className={s.card}>
-                    <img src="/Rectangle2.svg" alt="Architect " />
+                    <img src={'/Rectangle2.svg'} alt="Architect " />
                     <h3>Architect</h3>
                     <span className={s.tag}>Artist</span>
                     <div className={s.description}>
@@ -381,7 +405,7 @@ const HomePage: FC = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className={s.card}>
-                    <img src="/mechanic2.png" alt="Mechanic" />
+                    <img src={'/mechanic2.png'} alt="Mechanic" />
                     <h3>Mechanic</h3>
                     <span className={s.tag}>Dev</span>
                     <div className={s.description}>
@@ -397,7 +421,7 @@ const HomePage: FC = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className={s.card}>
-                    <img src="/Cap.png" alt="Captain" />
+                    <img src={'/Cap.png'} alt="Captain" />
                     <h3>Captain</h3>
                     <span className={s.tag}>Founder</span>
                     <div className={s.description}>
@@ -413,7 +437,7 @@ const HomePage: FC = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className={s.card}>
-                    <img src="/Rectangle2.svg" alt="Architect " />
+                    <img src={'/Rectangle2.svg'} alt="Architect " />
                     <h3>Architect</h3>
                     <span className={s.tag}>Artist</span>
                     <div className={s.description}>
@@ -427,50 +451,41 @@ const HomePage: FC = () => {
                     </div>
                   </div>
                 </SwiperSlide>
+                <SwiperButtonPrev>
+                  <svg
+                    width="11"
+                    height="28"
+                    viewBox="0 0 11 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      /* eslint-disable-next-line max-len */
+                      d="M9.69256 0.124353C9.18943 -0.141586 8.53547 0.0330498 8.23191 0.514414L0.1532 13.3249C0.0452833 13.4961 -0.00382233 13.6829 0.000309944 13.8646C-0.00328827 14.0455 0.0458603 14.2314 0.153244 14.4016L8.23204 27.2123C8.53558 27.6936 9.18948 27.8682 9.69257 27.6023C10.1957 27.3364 10.3574 26.7306 10.0539 26.2493L2.24294 13.8634L10.0539 1.47747C10.3575 0.996101 10.1957 0.390292 9.69256 0.124353Z"
+                      fill="#51BEA7"
+                    />
+                  </svg>
+                </SwiperButtonPrev>
+                <SwiperButtonNext>
+                  <svg
+                    width="11"
+                    height="28"
+                    viewBox="0 0 11 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      /* eslint-disable-next-line max-len */
+                      d="M0.909984 0.124353C1.41311 -0.141586 2.06707 0.0330498 2.37063 0.514414L10.4493 13.3249C10.5573 13.4961 10.6064 13.6829 10.6022 13.8646C10.6058 14.0455 10.5567 14.2314 10.4493 14.4016L2.3705 27.2123C2.06696 27.6936 1.41306 27.8682 0.909968 27.6023C0.40688 27.3364 0.245114 26.7306 0.548653 26.2493L8.3596 13.8634L0.548639 1.47747C0.245075 0.996101 0.406855 0.390292 0.909984 0.124353Z"
+                      fill="#51BEA7"
+                    />
+                  </svg>
+                </SwiperButtonNext>
               </Swiper>
-              <button
-                type="button"
-                className={cn(s.arrow, s.left, 'left_nav')}
-                ref={prevRef}
-              >
-                <svg
-                  width="11"
-                  height="28"
-                  viewBox="0 0 11 28"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    /* eslint-disable-next-line max-len */
-                    d="M9.69256 0.124353C9.18943 -0.141586 8.53547 0.0330498 8.23191 0.514414L0.1532 13.3249C0.0452833 13.4961 -0.00382233 13.6829 0.000309944 13.8646C-0.00328827 14.0455 0.0458603 14.2314 0.153244 14.4016L8.23204 27.2123C8.53558 27.6936 9.18948 27.8682 9.69257 27.6023C10.1957 27.3364 10.3574 26.7306 10.0539 26.2493L2.24294 13.8634L10.0539 1.47747C10.3575 0.996101 10.1957 0.390292 9.69256 0.124353Z"
-                    fill="#51BEA7"
-                  />
-                </svg>
-              </button>
-              <button
-                type="button"
-                className={cn(s.arrow, s.right)}
-                // ref={nextRef}
-                onClick={() => swiper.slideNext()}
-              >
-                <svg
-                  width="11"
-                  height="28"
-                  viewBox="0 0 11 28"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    /* eslint-disable-next-line max-len */
-                    d="M0.909984 0.124353C1.41311 -0.141586 2.06707 0.0330498 2.37063 0.514414L10.4493 13.3249C10.5573 13.4961 10.6064 13.6829 10.6022 13.8646C10.6058 14.0455 10.5567 14.2314 10.4493 14.4016L2.3705 27.2123C2.06696 27.6936 1.41306 27.8682 0.909968 27.6023C0.40688 27.3364 0.245114 26.7306 0.548653 26.2493L8.3596 13.8634L0.548639 1.47747C0.245075 0.996101 0.406855 0.390292 0.909984 0.124353Z"
-                    fill="#51BEA7"
-                  />
-                </svg>
-              </button>
             </div>
           </div>
         </section>

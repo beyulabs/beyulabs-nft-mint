@@ -172,3 +172,67 @@ export const Instagram = () => (
     />
   </svg>
 );
+
+export const DownArrow = () => (
+  <svg
+    width="22"
+    height="9"
+    viewBox="0 0 22 9"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      /* eslint-disable-next-line max-len */
+      d="M21.4058 1.26376C21.6072 1.64483 21.475 2.14013 21.1104 2.37005L11.4077 8.48884C11.2774 8.571 11.1351 8.60816 10.9968 8.60459C10.8605 8.60688 10.7205 8.56962 10.5922 8.48871L0.889481 2.36985C0.524927 2.13995 0.392668 1.64469 0.594074 1.26365C0.795479 0.882616 1.25428 0.760095 1.61884 0.989994L11 6.90603L20.381 0.990076C20.7456 0.760158 21.2044 0.88269 21.4058 1.26376Z"
+      fill="currentColor"
+    />
+  </svg>
+);
+export const ArrowLink = () => (
+  <svg
+    width="20"
+    height="19"
+    viewBox="0 0 20 19"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <line
+      x1="5.58211"
+      y1="5.16448"
+      x2="18.306"
+      y2="17.8884"
+      stroke="currentColor"
+      strokeWidth="2"
+    />
+    <mask
+      id="mask0_39_7877"
+      maskUnits="userSpaceOnUse"
+      x="0"
+      y="0"
+      width="19"
+      height="19"
+    >
+      <rect
+        x="18"
+        y="1"
+        width="17"
+        height="17"
+        transform="rotate(90 18 1)"
+        stroke="currentColor"
+        strokeWidth="2"
+      />
+    </mask>
+    <g mask="url(#mask0_39_7877)">
+      <rect
+        x="20"
+        y="4"
+        width="16"
+        height="16"
+        transform="rotate(90 20 4)"
+        fill="currentColor"
+      />
+    </g>
+  </svg>
+);

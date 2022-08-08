@@ -1,53 +1,105 @@
 .astromap {
   padding-top: 190px;
   padding-bottom: 120px;
+  background: url('../../../public/astromap_bg_desktop.png') top center no-repeat;
+  background-size: cover;
+
+  &.light {
+    background: url('../../../public/astromap_bg_desktop_light.png') top center no-repeat;
+    background-size: cover;
+  }
 
   .cards {
     display: grid;
     grid-template-columns: 1fr 1fr 25px 1fr 0.5fr;
     grid-template-rows: 1fr 1fr 25px 1fr 1fr;
     grid-gap: 20px;
+    counter-reset: itemnum;
 
     > .card {
       background: var(--astro-card-bg);
       box-shadow: -10px -10px 23px rgba(105, 136, 129, 0.25), 10px 10px 25px rgba(58, 160, 124, 0.11);
       border-radius: 20px;
       padding: 30px 25px;
+      position: relative;
+      overflow: hidden;
 
-      h3 {
-        margin-bottom: 10px;
+      &:before {
+        position: absolute;
+        counter-increment: itemnum;
+        content: counters(itemnum, "", decimal-leading-zero);
+        font-size: 176px;
+        font-weight: 700;
+        line-height: 126px;
+        text-align: right;
+        background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        bottom: 0;
+        left: 0;
+        transform: translateX(-20%);
+        opacity: 0.8;
       }
 
-      &:nth-child(1) {
+      &.card_1 {
         grid-area: 1 / 1 / span 3 / span 1;
       }
 
-      &:nth-child(2) {
+      &.card_2 {
         grid-area: 4 / 1 / span 2 / span 1;
       }
 
-      &:nth-child(3) {
+      &.card_3 {
         grid-area: 1 / 2 / span 2 / span 2;
       }
 
-      &:nth-child(4) {
+      &.card_4 {
         grid-area: 3 / 2 / span 3 / span 1;
       }
 
-      &:nth-child(5) {
+      &.card_5 {
         grid-area: 1 / 4 / span 2 / span 1;
       }
 
-      &:nth-child(6) {
+      &.card_6 {
         grid-area: 3 / 3 / span 2 / span 2;
       }
 
-      &:nth-child(7) {
+      &.card_7 {
         grid-area: 5 / 3 / span 1 / span 3;
       }
 
-      &:nth-child(8) {
+      &.card_8 {
         grid-area: 1 / 5 / span 4 / span 1;
+        background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
+        color: #fff;
+        text-align: center;
+
+        &:before {
+          background: none;
+          color: #4F4F4F;
+          opacity: 0.1;
+          text-fill-color: #4F4F4F;
+          -webkit-text-fill-color: #4F4F4F;
+        }
+      }
+
+      &.card_5, &.card_6, &.card_7 {
+        text-align: right;
+        padding: 20px 25px;
+
+        &:before {
+          position: relative;
+          font-weight: 700;
+          font-size: 85px;
+          line-height: 80px;
+        }
+
+        h3 {
+          padding-top: 10px;
+        }
       }
     }
   }

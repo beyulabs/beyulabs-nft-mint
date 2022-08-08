@@ -5,20 +5,12 @@ import AppContext from './context/AppContext';
 import Header from './containers/Header';
 import Footer from './containers/Footer';
 
-// interface LayoutProps {
-//   children: React.ReactNode;
-// }
-
 const Layout = ({ children }: { children: JSX.Element }) => {
-  const [menuOpen, setMenuOpen] = useState<boolean>(false);
-
   const [isLightMode, setIsLightMode] = useState(
     typeof window !== 'undefined'
       ? JSON.parse(localStorage.getItem(LOCAL_STORAGE.LIGHT_MODE) as string)
       : false
   );
-
-  console.log(menuOpen);
 
   const handleSwitchLightMode = useCallback((value: boolean) => {
     setIsLightMode(value);
@@ -37,7 +29,7 @@ const Layout = ({ children }: { children: JSX.Element }) => {
   return (
     <AppContext.Provider value={context}>
       <main>
-        <Header setMenuOpen={setMenuOpen} />
+        <Header />
         {children}
       </main>
       <Footer />
