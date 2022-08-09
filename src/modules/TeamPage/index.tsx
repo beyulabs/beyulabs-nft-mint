@@ -63,7 +63,7 @@ const TeamPage = () => {
                     on the rocket to the new world. These challenges will be
                     presented sporadically
                   </p>
-                  <span>Don&apos;t procrastinate</span>
+                  <span>Don't procrastinate</span>
                 </div>
               </div>
               <div className={s.card}>
@@ -81,7 +81,7 @@ const TeamPage = () => {
                     on the rocket to the new world. These challenges will be
                     presented sporadically
                   </p>
-                  <span>Don&apos;t procrastinate</span>
+                  <span>Don't procrastinate</span>
                 </div>
               </div>
             </div>
