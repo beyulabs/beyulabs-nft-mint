@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply dark:bg-white dark:text-gray-100 
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 976px) {
+  .voyager-card-wrapper:hover {
+    position: absolute;
+  }
+
+  .voyager-card-wrapper:hover > p {
+    display: block;
+  }
+  .control-next:before,
+  .control-prev:before {
+  border: none !important;
+}
+
+.control-next:before {
+  content: url("/carousel-next.svg") !important;
+}
+
+.control-prev:before {
+  content: url("/carousel-previous.svg") !important;
+}
+
+.control-dots > .dot {
+  background-color: #51bea7 !important;
+  opacity: 50% !important;
+}
+
+.control-dots > .dot.selected {
+  opacity: 100% !important;
+}
+}

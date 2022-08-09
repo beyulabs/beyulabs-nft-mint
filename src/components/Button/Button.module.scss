@@ -1,0 +1,83 @@
+.btn {
+  padding: 0 24px;
+  outline: none;
+  border: 1px solid;
+  cursor: pointer;
+  background-color: var(--default-text-color);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 45px;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 13px;
+  font-family: 'Gotham Pro', sans-serif;
+  gap: 10px;
+
+  span {
+    position: relative;
+    //top: 2px;
+  }
+
+  &.green {
+    background: var(--theme-btn-green-bg);
+    background-size: 102%;
+    color: var(--theme-btn-green-color);
+    border-color: transparent;
+    box-shadow: 0 7px 18px rgba(45, 115, 90, 0.25);
+
+    &:hover {
+      background: var(--theme-btn-green-bg-hover);
+      background-size: 102%;
+      color: var(--theme-btn-green-color);
+      border-color: transparent;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 7px 18px rgba(45, 115, 90, 0.25);
+    }
+  }
+
+  &.transparent {
+    background-color: transparent;
+    color: var(--theme-btn-transparent-color);
+    border-color: var(--theme-btn-transparent-border);
+    font-weight: 500;
+
+    &:hover {
+      background-color: var(--btn-hover-bg);
+      color: var(--default-text-color);
+      border-color: var(--btn-hover-bg);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &.small {
+    min-height: 32px;
+    min-width: 77px;
+  }
+
+  &.large {
+    min-height: 63px;
+    font-size: 20px;
+    padding: 0 40px;
+    font-weight: 400;
+
+    @media (max-width: 992px) {
+      min-height: 50px;
+      padding: 0 35px;
+    }
+
+    span {
+      top: 1px;
+    }
+  }
+
+  &[disabled], &[disabled]:hover {
+    //background-color: var(--btn-disabled-bg);
+    //color: rgba(255, 255, 255, 0.3);
+    //opacity: 0.8;
+    cursor: not-allowed;
+  }
+}
