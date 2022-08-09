@@ -12,7 +12,7 @@ const TeamPage = () => {
   const [isHover, setIsHover] = useState<boolean>(false);
   const isTablet = useMediaQuery(992);
   const { theme } = useTheme();
-  const [mounted, setMounted] = useState<boolean>(false);
+  const [mounted, setMounted] = useState(false);
 
   // useEffect only runs on the client, so now we can safely show the UI
   useEffect(() => {
@@ -29,7 +29,7 @@ const TeamPage = () => {
         <div className="container">
           <HtmlMeta title="Team" />
           <div className={s.team__list}>
-            {teamMembers.map((voyager: TeamMember, index: number) => (
+            {teamMembers.map((voyager: TeamMember, index) => (
               <div
                 /* eslint-disable-next-line react/no-array-index-key */
                 key={`${voyager.nexusName.toLowerCase()}-${index}`}
