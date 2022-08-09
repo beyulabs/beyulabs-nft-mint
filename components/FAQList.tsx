@@ -10,7 +10,7 @@ const FAQ = ({ question, answer }: FAQProps) => {
     <Disclosure>
       {({ open }) => (
         <div
-          className={`py-6 px-9 mb-5 rounded-xl bg-nexusBlack ${
+          className={`py-6 px-9 mb-5 rounded-xl bg-nexusBlack w-faqField ml-96 -mr-32 ${
             open ? "border border-nexusGreen" : ""
           }`}
         >
@@ -21,7 +21,7 @@ const FAQ = ({ question, answer }: FAQProps) => {
           >
             <Disclosure.Button className="w-full">
               <div className="flex flex-row justify-between w-full text-left">
-                <span className="pr-2">{question}</span>
+                <span className="pr-2 font-bold text-2xl">{question}</span>
                 <span className="text-nexusGreen">
                   {open ? (
                     <FontAwesomeIcon icon={faMinus} width={24} />
@@ -33,7 +33,7 @@ const FAQ = ({ question, answer }: FAQProps) => {
             </Disclosure.Button>
           </div>
 
-          <Disclosure.Panel className="text-gray-500">
+          <Disclosure.Panel className="text-gray-400 font-normal text-lg w-faqAnswer">
             {answer}
           </Disclosure.Panel>
         </div>
@@ -42,21 +42,24 @@ const FAQ = ({ question, answer }: FAQProps) => {
   );
 };
 
+const FaqItem = () => {
+  return faqs.map((faq, index) => (
+      
+        <FAQ
+          key={`faq-${index}`}
+          answer={faq.answer}
+          question={faq.question}
+        />
+        ));
+      };
+
 const FAQList = () => {
   return (
     <>
-      <h2 className="text-center text-5xl mb-20 text-white font-semibold">
-        FAQs
+      <h2 className="text-center text-5xl mb-20 text-white font-bold -ml-44 mr-80">
+        FAQ
       </h2>
-      {faqs.map((faq, index) => {
-        return (
-          <FAQ
-            key={`faq-${index}`}
-            answer={faq.answer}
-            question={faq.question}
-          />
-        );
-      })}
+      {FaqItem()}
     </>
   );
 };

@@ -12,7 +12,7 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
-const Layout = (props: LayoutProps) => {
+const TeamLayout = (props: LayoutProps) => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   return (
@@ -26,7 +26,7 @@ const Layout = (props: LayoutProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-[url('/home-bg.svg')] bg-cover overflow-hidden opacity-100">
+      <main className="bg-[url('/bg_team.svg')] bg-cover overflow-hidden opacity-100">
         <div className="m-auto max-w-screen-xl">
           <Header setMenuOpen={setMenuOpen} />
           {menuOpen && <MobileMenu setMenuOpen={setMenuOpen} />}
@@ -58,4 +58,4 @@ const Layout = (props: LayoutProps) => {
   );
 };
 
-export default Layout;
+export default TeamLayout;

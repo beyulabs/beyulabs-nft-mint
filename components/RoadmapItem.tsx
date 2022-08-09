@@ -30,7 +30,7 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
   );
 
   const roadmapItemCardCn = classNames(
-    "bg-nexusBlack p-4 rounded-xl w-96 text-white grow md:grow-0",
+    "bg-nexusBlack p-4 rounded-xl w-astromapItem h-astromapItem text-white grow md:grow-0",
     {
       "text-white bg-nexusGreen": isHover,
     }
@@ -39,30 +39,32 @@ const RoadmapItem = ({ itemIndex, roadmapItem }: RoadmapItemProps) => {
   const descriptionCn = classNames({
     "text-astromapGrayText": !isHover,
     "text-white": isHover,
-  });
+  },
+    "font-normal text-base leading-6 w-astromapDescription"
+  );
 
   return (
     <div className="w-full cursor-pointer">
       <div className={roadmapItemCn}>
         <div className={itemNumberWrapperCn}>
-          <div className="-mt-2">{`0${itemIndex + 1}`}</div>
-          <Image alt="Astromap" src={astroDot} width={48} height={48} />
+          <div className="-mt-2 font-bold text-2xl">{`0${itemIndex + 1}`}</div>
+          <Image alt="Astromap" src={astroDot} width={50} height={50} />
         </div>
         <div
           className={roadmapItemCardCn}
           onMouseEnter={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
         >
-          <div className="flex flex-row justify-center">
+          <div className="flex flex-row justify-center items-center">
             <Image
               alt="Astromap"
               src={roadmapItem.imagePath}
-              width={164}
-              height={164}
+              width={240}
+              height={240}
             />
 
             <div key={roadmapItem.title} className="w-full ml-4">
-              <h3 className="text-white text-xl font-semibold">
+              <h3 className="text-white text-2xl font-bold underline decoration-emerald-700 decoration-4 underline-offset-2">
                 {roadmapItem.title}
               </h3>
               <p className={descriptionCn}>{roadmapItem.description}</p>

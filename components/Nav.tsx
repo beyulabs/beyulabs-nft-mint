@@ -1,5 +1,4 @@
 import classNames from "classnames";
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -20,10 +19,10 @@ function Nav({ setMenuOpen }: NavProps) {
       {
         "font-bold drop-shadow-md": nextRouter.pathname === route.path,
         "font-normal": nextRouter.pathname !== route.path,
-        "opacity-50 hover:cursor-not-allowed": !route.enabled,
+        "opacity-100 hover:cursor-not-allowed": !route.enabled,
         "hover:drop-shadow": route.enabled,
       },
-      "mr-6 text-white"
+      "ml-8 mr-8 text-white text-sm"
     );
 
     return (
@@ -51,7 +50,7 @@ function Nav({ setMenuOpen }: NavProps) {
           }}
         />
       </div>
-      <ul className="hidden sm:hidden md:ml-4 md:flex md:flex-row text-black">
+      <ul className="hidden sm:hidden md:ml-4 md:flex md:flex-row text-white">
         {routeLinks}
       </ul>
     </div>
