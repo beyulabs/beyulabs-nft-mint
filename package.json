@@ -64,6 +64,7 @@
     "@types/node": "16.7.13",
     "@types/react": "17.0.39",
     "@types/react-slick": "^0.23.10",
+    "@types/swiper": "^6.0.0",
     "autoprefixer": "^10.4.2",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",

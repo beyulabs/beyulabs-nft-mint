@@ -305,7 +305,7 @@ export const teamMembers: TeamMember[] = [
     nexusName: 'Ryan Harris',
     irlName: 'Commander|Biz dev',
     image: 'team1.png',
-    linkedin: 'https://linedin.com/',
+    linkedin: 'https://linkedin.com/',
     instagram: 'https://instagram.com/',
     skillset: [
       'Entrepreneur',
@@ -319,7 +319,7 @@ export const teamMembers: TeamMember[] = [
     nexusName: 'Ryan Harris',
     irlName: 'Commander|Biz dev',
     image: 'team2.png',
-    linkedin: 'https://linedin.com/',
+    linkedin: 'https://linkedin.com/',
     twitter: 'https://twitter.com/',
     instagram: 'https://instagram.com/',
     skillset: [
@@ -334,7 +334,7 @@ export const teamMembers: TeamMember[] = [
     nexusName: 'Ben Yurcisin',
     irlName: 'Mechanic|Community',
     image: 'team3.png',
-    linkedin: 'https://linedin.com/',
+    linkedin: 'https://linkedin.com/',
     instagram: 'https://instagram.com/',
     skillset: [
       'Entrepreneur',
