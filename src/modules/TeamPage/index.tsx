@@ -6,7 +6,6 @@ import TeamUser from '@modules/TeamPage/components/TeamUser/intex';
 import useMediaQuery from '@modules/Layout/hooks/useMediaQuery';
 import { useTheme } from 'next-themes';
 import { TeamMember } from '../../types/common';
-
 import s from './TeamPage.module.scss';
 
 const TeamPage = () => {
