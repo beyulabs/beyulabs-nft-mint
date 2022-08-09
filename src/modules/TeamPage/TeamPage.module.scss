@@ -175,8 +175,8 @@
       color: var(--theme-green-color);
       background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
       -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-      text-fill-color: transparent;
+      // -webkit-background-clip: text;
+      // text-fill-color: transparent;
       font-size: 14px;
       line-height: 150%;
       &:hover {
