@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import cn from 'classnames';
-
+import Image from 'next/image';
 import AstroCard from '@modules/Astromap/components/Card';
 import HtmlMeta from '@components/HtmlMeta';
 import { useTheme } from 'next-themes';
 import s from './Astromap.module.scss';
+import voyagerArrow from '../../../public/voyager-card-arrow.svg'
+import { DownArrow } from '@components/Icons/Icons';
 
 const AstromapPage = () => {
   const { theme } = useTheme();
@@ -19,6 +21,7 @@ const AstromapPage = () => {
     return null;
   }
 
+
   return (
     <div className={cn(s.astromap, theme === 'light' && s.light)}>
       <HtmlMeta title="Astromap" />
@@ -29,6 +32,7 @@ const AstromapPage = () => {
               title="Community Festival"
               description="A bounty hub empowering freelancers, project teams, and agencies
               alike."
+              arrow={DownArrow}
             >
               <strong>Holders have priority</strong>
               <p>

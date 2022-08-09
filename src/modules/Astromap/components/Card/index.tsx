@@ -1,7 +1,7 @@
 import React, { ReactNode, useState } from 'react';
 import cn from 'classnames';
 
-import { Close } from '@components/Icons/Icons';
+import { Close, DownArrow } from '@components/Icons/Icons';
 import useMediaQuery from '@modules/Layout/hooks/useMediaQuery';
 import s from './AstroCard.module.scss';
 
@@ -11,6 +11,7 @@ interface TeamUserProps {
   children?: ReactNode;
   isRight?: boolean;
   isGreen?: boolean;
+  arrow?: ReactNode
 }
 
 const AstroCard = ({
@@ -19,6 +20,7 @@ const AstroCard = ({
   children,
   isGreen,
   isRight,
+  arrow
 }: TeamUserProps) => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const isTablet = useMediaQuery(992);
