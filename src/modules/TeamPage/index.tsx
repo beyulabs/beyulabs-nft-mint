@@ -48,6 +48,9 @@ const TeamPage = () => {
                             </div>
                         ))}
                     </div>
+                    <button type='button' className={s.button}>
+                        See all members
+                    </button>
                     <div className={s.partners}>
                         <h2>Partners:</h2>
                         <div className={s.cards}>
@@ -65,7 +68,7 @@ const TeamPage = () => {
                                         new world. These challenges will be
                                         presented sporadically
                                     </p>
-                                    <span>don&apos;t procrastinate</span>
+                                    <span>Don&apos;t procrastinate</span>
                                 </div>
                             </div>
                             <div className={s.card}>
@@ -89,7 +92,7 @@ const TeamPage = () => {
                                         new world. These challenges will be
                                         presented sporadically
                                     </p>
-                                    <span>don&apos;t procrastinate</span>
+                                    <span>Don&apos;t procrastinate</span>
                                 </div>
                             </div>
                         </div>

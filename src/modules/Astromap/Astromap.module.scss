@@ -35,6 +35,7 @@
       &.card_1 {
         @media (min-width: 992px) {
           grid-area: 1 / 1 / span 3 / span 1;
+          background: url('../../../public/ellipse-bg.svg') no-repeat right;
         }
       }
 

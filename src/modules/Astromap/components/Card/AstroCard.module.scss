@@ -83,7 +83,6 @@
     }
 
     &:hover {
-      transition:0.5s;
       svg {
         opacity: 1;
       }
@@ -131,7 +130,7 @@
     }
 
     &:hover {
-      transition:0.5s;
+      transition: 2s ease-out;
       svg {
         opacity: 1;
       }
@@ -249,12 +248,13 @@
 .card {
   padding: 30px 25px;
   cursor: pointer;
-  background: var(--astro-card-bg);
+  background-color: var(--astro-card-bg);
   box-shadow: -10px -10px 23px rgba(105, 136, 129, 0.25), 10px 10px 25px rgba(58, 160, 124, 0.11);
   border-radius: 20px;
   position: relative;
   overflow: hidden;
-  transition: 0.2s all;
+  transition: all 0.5s ease;
+  // background: url('../../../../../public/Crater.svg') no-repeat right;
 
   @media (max-width: 992px) {
     display: grid;
@@ -326,7 +326,7 @@
       }
 
       &:before {
-        opacity: 0;
+        opacity: 0.8;
       }
     }
   }
@@ -367,6 +367,7 @@
   h3 {
     margin-bottom: 10px;
     position: relative;
+    font-size: 28px;
 
     span {
       display: block;
@@ -375,7 +376,7 @@
 
   p {
     position: relative;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 150%;
   }
 }

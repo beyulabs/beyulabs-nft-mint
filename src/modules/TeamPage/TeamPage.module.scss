@@ -23,9 +23,11 @@
 .team {
   padding-top: 190px;
   position: relative;
+  background: url('../../../public/Background.svg');
 
   @media (max-width: 992px) {
     padding-top: 120px;
+    background: url('../../../public/mob-bg.svg');
   }
 
   //&.dark {
@@ -170,6 +172,7 @@
       }
       
     }
+
     .dont {
       text-transform: uppercase;
       color: var(--theme-green-color);
@@ -183,5 +186,27 @@
         color:white;
         }
     }
+  }
+}
+
+.button {
+  @media (min-width: 992px) {
+  display:none;
+  }
+  @media (max-width: 992px) {
+    align-items: center;
+    padding: 17px 84px;
+    margin-top: 25px;
+    gap: 10px;
+    font-size: 20px;
+    line-height: 19px;
+    width: 334px;
+    height: 53px;
+    border: 1px solid #41A380;
+    border-radius: 10px;
+    background: none;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
   }
 }
