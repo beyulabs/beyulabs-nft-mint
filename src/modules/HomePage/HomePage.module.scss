@@ -650,7 +650,7 @@
     }
 
     h3 {
-      margin-bottom: 13px;
+      margin-bottom: 7px;
 
       @media (max-width: 992px) {
         font-size: 24px;
@@ -676,7 +676,10 @@
       font-size: 13px;
       width: 100%;
       transition: 0.2s all;
-      padding-top: 15px;
+      @media (min-width: 992px) {
+        font-size: 13px;
+        line-height: 180%;
+      }
     }
 
     &:hover {
@@ -686,6 +689,9 @@
       p {
         //height: auto;
         opacity: 1;
+        @media (min-width: 992px) {
+          display: block;
+        }
       }
     }
   }
@@ -707,6 +713,17 @@
 
     @media (max-width: 992px) {
       margin-bottom: 40px;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 180%;
+    @media (max-width: 992px) {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
     }
   }
 

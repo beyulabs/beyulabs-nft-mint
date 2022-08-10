@@ -427,7 +427,9 @@ const HomePage: FC = () => {
                                             alt='Mechanic'
                                         />
                                         <h3>Mechanic</h3>
-                                        <span className={s.tag}>Dev</span>
+                                        <button type='button' className={s.tag}>
+                                            Dev
+                                        </button>
                                         <div className={s.description}>
                                             <p>
                                                 The creatives that take ideas
@@ -449,7 +451,9 @@ const HomePage: FC = () => {
                                             alt='Mechanic'
                                         />
                                         <h3>Mechanic</h3>
-                                        <span className={s.tag}>Dev</span>
+                                        <button type='button' className={s.tag}>
+                                            Dev
+                                        </button>
                                         <div className={s.description}>
                                             <p>
                                                 The creatives that take ideas
@@ -471,7 +475,9 @@ const HomePage: FC = () => {
                                             alt='Architect '
                                         />
                                         <h3>Architect</h3>
-                                        <span className={s.tag}>Artist</span>
+                                        <button type='button' className={s.tag}>
+                                            Artist
+                                        </button>
                                         <div className={s.description}>
                                             <p>
                                                 The creatives that take ideas
@@ -493,7 +499,9 @@ const HomePage: FC = () => {
                                             alt='Mechanic'
                                         />
                                         <h3>Mechanic</h3>
-                                        <span className={s.tag}>Dev</span>
+                                        <button type='button' className={s.tag}>
+                                            Dev
+                                        </button>
                                         <div className={s.description}>
                                             <p>
                                                 The creatives that take ideas
@@ -512,7 +520,9 @@ const HomePage: FC = () => {
                                     <div className={s.card}>
                                         <img src={"/Cap.png"} alt='Captain' />
                                         <h3>Captain</h3>
-                                        <span className={s.tag}>Founder</span>
+                                        <button type='button' className={s.tag}>
+                                            Founder
+                                        </button>
                                         <div className={s.description}>
                                             <p>
                                                 The creatives that take ideas
@@ -534,7 +544,9 @@ const HomePage: FC = () => {
                                             alt='Architect '
                                         />
                                         <h3>Architect</h3>
-                                        <span className={s.tag}>Artist</span>
+                                        <button type='button' className={s.tag}>
+                                            Artist
+                                        </button>
                                         <div className={s.description}>
                                             <p>
                                                 The creatives that take ideas
@@ -595,7 +607,7 @@ const HomePage: FC = () => {
                         {faqs.map((faq, index) => (
                             // eslint-disable-next-line react/no-array-index-key
                             <Spoiler key={`faq-${index}`} title={faq.question}>
-                                {faq.answer}
+                                <p>{faq.answer}</p>
                             </Spoiler>
                         ))}
                     </div>
