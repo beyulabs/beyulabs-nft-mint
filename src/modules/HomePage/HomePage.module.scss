@@ -671,6 +671,10 @@
       width: 100%;
       transition: 0.2s all;
       padding-top: 15px;
+      @media (min-width: 992px) {
+        font-size: 13px;
+        line-height: 180%;
+      }
     }
 
     &:hover {
