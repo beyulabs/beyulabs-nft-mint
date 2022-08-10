@@ -252,7 +252,7 @@
   }
 
   .cards {
-    max-width: 1038px;
+    max-width: 1080px;
     margin: 0 auto;
     counter-reset: itemnum;
     background: url('../../../public/dashed_line.svg') center no-repeat;
@@ -380,12 +380,6 @@
       p {
         @media (max-width: 768px) {
           font-size: 12px;
-          line-height: 150%;
-        }
-      }
-      p {
-        @media (min-width: 768px) {
-          font-size: 16px;
           line-height: 150%;
         }
       }

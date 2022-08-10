@@ -32,7 +32,6 @@
   border-radius: 20px;
   pointer-events: none;
   overflow: hidden;
-  transition:0.5s;
 
   @media (max-width: 992px) {
     position: fixed;
@@ -41,11 +40,10 @@
     border-radius: 10px;
   }
 
-
   .close {
     position: absolute;
-    right: 32px;
-    top: 35px;
+    right: 52px;
+    top: 45px;
     background: none;
     border: 0;
     cursor: pointer;
@@ -71,72 +69,19 @@
       position: absolute;
       width: 128px;
       height: 128px;
-      // background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
+      background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
       border-radius: 50%;
       top: -80px;
       right: -85px;
-
-      
-      @media (max-width: 992px) {
-        background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
-      }
     }
 
     &:hover {
-      transition:0.5s;
       svg {
         opacity: 1;
       }
     }
   }
 
-  .arrow {
-    position: absolute;
-    right: 32px;
-    bottom: 35px;
-    background: none;
-    border: 0;
-    cursor: pointer;
-    color: var(--theme-heading-color);
-
-    @media (max-width: 992px) {
-      top: 20px;
-      right: 20px;
-      color: #fff;
-    }
-
-    svg {
-      opacity: 0.5;
-      position: relative;
-
-      @media (max-width: 992px) {
-        opacity: 0.8;
-      }
-    }
-
-    &:before {
-      content: '';
-      position: absolute;
-      width: 128px;
-      height: 128px;
-      // background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
-      border-radius: 50%;
-      bottom: -80px;
-      right: -85px;
-
-      
-      @media (max-width: 992px) {
-        background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
-      }
-    }
-
-    &:hover {
-      transition:0.5s;
-      svg {
-        opacity: 1;
-      }
-    }
-  }
   &__row {
     display: grid;
     grid-template-columns: auto 1fr;

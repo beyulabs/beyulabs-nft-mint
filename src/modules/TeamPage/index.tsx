@@ -6,6 +6,7 @@ import TeamUser from '@modules/TeamPage/components/TeamUser/intex';
 import useMediaQuery from '@modules/Layout/hooks/useMediaQuery';
 import { useTheme } from 'next-themes';
 import { TeamMember } from '../../types/common';
+
 import s from './TeamPage.module.scss';
 
 const TeamPage = () => {
@@ -57,12 +58,12 @@ const TeamPage = () => {
                   <h3>Project 3</h3>
                   <p>
                     Some description about project. Keep your eyes on the
-                    <span>#announcements</span> and <span>#boarding-pass</span> channels for
+                    <span>#announcements</span> and #boarding-pass channels for
                     these challenges, they will essentially guarantee your seat
                     on the rocket to the new world. These challenges will be
                     presented sporadically
                   </p>
-                  <span>Don't procrastinate</span>
+                  <div className={s.dont}>don&apos;t procrastinate</div>
                 </div>
               </div>
               <div className={s.card}>
@@ -75,12 +76,12 @@ const TeamPage = () => {
                   <h3>BDH (Legal)</h3>
                   <p>
                     Some description about project. Keep your eyes on the
-                    <span>#announcements</span> and <span>#boarding-pass</span> channels for
+                    <span>#announcements</span> and #boarding-pass channels for
                     these challenges, they will essentially guarantee your seat
                     on the rocket to the new world. These challenges will be
                     presented sporadically
                   </p>
-                  <span>Don't procrastinate</span>
+                  <div className={s.dont}>don&apos;t procrastinate</div>
                 </div>
               </div>
             </div>
