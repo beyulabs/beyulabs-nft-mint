@@ -644,11 +644,13 @@
     }
 
     h3 {
-      margin-bottom: 13px;
+      margin-bottom: 7px;
 
       @media (max-width: 992px) {
         font-size: 24px;
         line-height: 29px;
+        margin-bottom: 13px;
+
       }
     }
 
@@ -660,6 +662,7 @@
       line-height: 13px;
       color: #FFFFFF;
       padding: 8px 15px;
+      margin-bottom: 10px;
     }
 
     .description {
@@ -670,10 +673,10 @@
       font-size: 13px;
       width: 100%;
       transition: 0.2s all;
-      padding-top: 15px;
       @media (min-width: 992px) {
         font-size: 13px;
         line-height: 180%;
+        display: none;
       }
     }
 
@@ -684,6 +687,9 @@
       p {
         //height: auto;
         opacity: 1;
+        @media (min-width: 992px) {
+          display: block;
+        }
       }
     }
   }

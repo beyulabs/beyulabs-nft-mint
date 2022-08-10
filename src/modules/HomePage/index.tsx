@@ -381,7 +381,7 @@ const HomePage: FC = () => {
                   <div className={s.card}>
                     <img src={'/mechanic2.png'} alt="Mechanic" />
                     <h3>Mechanic</h3>
-                    <span className={s.tag}>Dev</span>
+                    <button className={s.tag}>Dev</button>
                     <div className={s.description}>
                       <p>
                         The creatives that take ideas and bring them to life in
@@ -397,7 +397,7 @@ const HomePage: FC = () => {
                   <div className={s.card}>
                     <img src={'/mechanic2.png'} alt="Mechanic" />
                     <h3>Mechanic</h3>
-                    <span className={s.tag}>Dev</span>
+                    <button className={s.tag}>Dev</button>
                     <div className={s.description}>
                       <p>
                         The creatives that take ideas and bring them to life in
@@ -413,7 +413,7 @@ const HomePage: FC = () => {
                   <div className={s.card}>
                     <img src={'/Rectangle2.svg'} alt="Architect " />
                     <h3>Architect</h3>
-                    <span className={s.tag}>Artist</span>
+                    <button className={s.tag}>Artist</button>
                     <div className={s.description}>
                       <p>
                         The creatives that take ideas and bring them to life in
@@ -429,7 +429,7 @@ const HomePage: FC = () => {
                   <div className={s.card}>
                     <img src={'/mechanic2.png'} alt="Mechanic" />
                     <h3>Mechanic</h3>
-                    <span className={s.tag}>Dev</span>
+                    <button className={s.tag}>Dev</button>
                     <div className={s.description}>
                       <p>
                         The creatives that take ideas and bring them to life in
@@ -445,7 +445,7 @@ const HomePage: FC = () => {
                   <div className={s.card}>
                     <img src={'/Cap.png'} alt="Captain" />
                     <h3>Captain</h3>
-                    <span className={s.tag}>Founder</span>
+                    <button className={s.tag}>Founder</button>
                     <div className={s.description}>
                       <p>
                         The creatives that take ideas and bring them to life in
@@ -461,7 +461,7 @@ const HomePage: FC = () => {
                   <div className={s.card}>
                     <img src={'/Rectangle2.svg'} alt="Architect " />
                     <h3>Architect</h3>
-                    <span className={s.tag}>Artist</span>
+                    <button className={s.tag}>Artist</button>
                     <div className={s.description}>
                       <p>
                         The creatives that take ideas and bring them to life in
