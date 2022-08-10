@@ -237,6 +237,11 @@
         transform: translateX(100%);
         top: -50px;
         background-size: contain;
+        @media (max-width: 992px) {
+          background: url('../../../public/arrow-mission-mob.svg') no-repeat;
+          right: -7px;
+          top: -38px;
+        }
       }
     }
   }
