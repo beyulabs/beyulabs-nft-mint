@@ -213,8 +213,6 @@
 
     h4 {
       text-transform: uppercase;
-      margin-bottom: 20px;
-
       a {
         background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
         -webkit-background-clip: text;
@@ -227,6 +225,7 @@
     .button {
       position: relative;
       display: inline-flex;
+      margin-top: 20px;
 
       &:before {
         content: '';
