@@ -252,7 +252,7 @@
   }
 
   .cards {
-    max-width: 1080px;
+    max-width: 1038px;
     margin: 0 auto;
     counter-reset: itemnum;
     background: url('../../../public/dashed_line.svg') center no-repeat;
@@ -296,7 +296,7 @@
       justify-content: center;
 
       @media (max-width: 992px) {
-       margin-top: 20px;
+        margin-top: 20px;
       }
     }
 
@@ -380,6 +380,13 @@
       p {
         @media (max-width: 768px) {
           font-size: 12px;
+          line-height: 150%;
+        }
+      }
+
+      p {
+        @media (min-width: 768px) {
+          font-size: 16px;
           line-height: 150%;
         }
       }
@@ -498,10 +505,10 @@
     grid-template-columns: auto 1fr;
     align-items: center;
     grid-gap: 60px;
-    padding-right:5%;
+    padding-right: 5%;
     position: relative;
 
-    > div {
+    >div {
       position: relative;
       z-index: 2;
     }
@@ -510,8 +517,8 @@
       content: '';
       position: absolute;
       left: 5%;
-      width: 95%;
-      height: 87%;
+      width: 1303px;
+      height: 666px;
       background: #232424;
       top: 6%;
       border-radius: 60px;
@@ -532,11 +539,15 @@
       right: 0;
       top: 0;
       z-index: 2;
-      width: 157px;
-      height: 116px;
+      width: 236px;
+      height: 174px;
       background: url('../../../public/boarding_planet.svg') center no-repeat;
       background-size: contain;
       transform: translate(30%, -30%);
+      @media (min-width: 992px) {
+        top: 32px;
+        right: -80px;
+      }
     }
 
     @media (max-width: 992px) {
@@ -560,11 +571,23 @@
 
     p {
       margin-bottom: 20px;
+
+      @media (min-width: 992px) {
+        font-size: 18px;
+        line-height: 180%;
+        font-weight: 400;
+      }
     }
 
     h5 {
       margin-bottom: 20px;
       text-transform: uppercase;
+
+      @media (min-width: 992px) {
+        font-size: 18px;
+        line-height: 150%;
+        font-weight: 500;
+      }
     }
 
     h4 {
@@ -584,6 +607,46 @@
       @media (max-width: 992px) {
         display: flex;
         justify-content: center;
+      }
+    }
+
+    .circle_bording_pass_big {
+      @media (min-width: 922px) {
+        height: 72.39px;
+        width: 72.39px;
+        background-color: #4F4F4F;
+        border-radius: 50%;
+        display: inline-block;
+        opacity: 0.3;
+        position: absolute;
+        right: 95.55px;
+        bottom: 21.65px;
+      }
+    }
+    .circle_bording_pass_md {
+      @media (min-width: 922px) {
+        height: 29px;
+        width: 29px;
+        background-color: #4F4F4F;
+        border-radius: 50%;
+        display: inline-block;
+        opacity: 0.3;
+        position: absolute;
+        right: 39.95px;
+        bottom: 74.63px;
+      }
+    }
+    .circle_bording_pass_sm {
+      @media (min-width: 922px) {
+        height: 16px;
+        width: 16px;
+        background-color: #4F4F4F;
+        border-radius: 50%;
+        display: inline-block;
+        opacity: 0.3;
+        position: absolute;
+        right: 73.55px;
+        bottom: 154.23px;
       }
     }
   }
@@ -723,7 +786,7 @@
     }
   }
 
-  > div {
+  >div {
     position: relative;
   }
 

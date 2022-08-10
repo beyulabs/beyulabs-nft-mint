@@ -344,6 +344,9 @@ const HomePage: FC = () => {
                   />
                 </div>
               </div>
+              <span className={s.circle_bording_pass_big}></span>
+              <span className={s.circle_bording_pass_md}></span>
+              <span className={s.circle_bording_pass_sm}></span>
             </div>
           </div>
         </section>
