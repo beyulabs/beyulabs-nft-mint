@@ -140,9 +140,7 @@ export const faqs: FAQ[] = [
     },
     {
         question: "What is the supply of this collection?",
-        answer:
-            "1/01/19 is the date that the farthest object (2014 MU69) was discovered by a spacecraft in human " +
-            "history. We aim to extend beyond these limits on our journey through web3. Buckle up.",
+        answer: "10,119 NFTs",
     },
     {
         question: "When is the drop date?",

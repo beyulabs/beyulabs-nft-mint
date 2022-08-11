@@ -75,17 +75,11 @@ const HomePage: FC = () => {
                             <div>
                                 <h1>
                                     <span className={s.line}>Become</span> a
-                                    member of the{" "}
+                                    crew member of the{" "}
                                     <span className={s.green}>Voyager</span>{" "}
                                     space{" "}
                                     <span className={s.line}>mission</span>
                                 </h1>
-                                <p>
-                                    Unforgettable adventures await you during
-                                    the flight! Find friends and develop
-                                    together creating, buying and selling NFTs
-                                    collection!
-                                </p>
                             </div>
                             <div className={s.image}>
                                 {theme === "light" && (
@@ -361,7 +355,7 @@ const HomePage: FC = () => {
                                     contribution to the new world of web3. Each
                                     character type will have a unique challenge
                                     in order to ensure you align with that
-                                    character,and that you will be able to mint
+                                    character, and that you will be able to mint
                                     them during our presale.
                                 </h5>
                                 <p>
@@ -432,38 +426,15 @@ const HomePage: FC = () => {
                                         </button>
                                         <div className={s.description}>
                                             <p>
-                                                The creatives that take ideas
-                                                and bring them to life in a
-                                                beautiful way - the artists.
-                                                Without grace in the design. The
-                                                creatives that take ideas and
-                                                bring them to life in a
-                                                beautiful way - the artists.
-                                                Without grace in the design.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className={s.card}>
-                                        <img
-                                            src={"/mechanic2.png"}
-                                            alt='Mechanic'
-                                        />
-                                        <h3>Mechanic</h3>
-                                        <button type='button' className={s.tag}>
-                                            Dev
-                                        </button>
-                                        <div className={s.description}>
-                                            <p>
-                                                The creatives that take ideas
-                                                and bring them to life in a
-                                                beautiful way - the artists.
-                                                Without grace in the design. The
-                                                creatives that take ideas and
-                                                bring them to life in a
-                                                beautiful way - the artists.
-                                                Without grace in the design.
+                                                The brains behind the ideas -
+                                                the engineers/developers.
+                                                Creating technical solutions to
+                                                the complex challenges that come
+                                                with terraforming a new world;
+                                                they build quietly in the
+                                                back-end and help connect the
+                                                dots to bring innovation to
+                                                life.
                                             </p>
                                         </div>
                                     </div>
@@ -483,35 +454,14 @@ const HomePage: FC = () => {
                                                 The creatives that take ideas
                                                 and bring them to life in a
                                                 beautiful way - the artists.
-                                                Without grace in the design. The
-                                                creatives that take ideas and
-                                                bring them to life in a
-                                                beautiful way - the artists.
-                                                Without grace in the design.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className={s.card}>
-                                        <img
-                                            src={"/mechanic2.png"}
-                                            alt='Mechanic'
-                                        />
-                                        <h3>Mechanic</h3>
-                                        <button type='button' className={s.tag}>
-                                            Dev
-                                        </button>
-                                        <div className={s.description}>
-                                            <p>
-                                                The creatives that take ideas
-                                                and bring them to life in a
-                                                beautiful way - the artists.
-                                                Without grace in the design. The
-                                                creatives that take ideas and
-                                                bring them to life in a
-                                                beautiful way - the artists.
-                                                Without grace in the design.
+                                                Without grace in the design of a
+                                                of a new world, it would become
+                                                nothing more than a lifeless
+                                                land of chrome structures.
+                                                structures. The architects
+                                                breathe life into the planet and
+                                                create an aesthetic that makes
+                                                it worth populating.
                                             </p>
                                         </div>
                                     </div>
@@ -528,11 +478,61 @@ const HomePage: FC = () => {
                                                 The creatives that take ideas
                                                 and bring them to life in a
                                                 beautiful way - the artists.
-                                                Without grace in the design. The
-                                                creatives that take ideas and
-                                                bring them to life in a
-                                                beautiful way - the artists.
-                                                Without grace in the design.
+                                                Without grace in the design of a
+                                                of a new world, it would become
+                                                nothing more than a lifeless
+                                                land of chrome structures.
+                                                structures. The architects
+                                                breathe life into the planet and
+                                                create an aesthetic that makes
+                                                it worth populating.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className={s.card}>
+                                        <img
+                                            src={"/mechanic2.png"}
+                                            alt='Mechanic'
+                                        />
+                                        <h3>Mechanic</h3>
+                                        <button type='button' className={s.tag}>
+                                            Dev
+                                        </button>
+                                        <div className={s.description}>
+                                            <p>
+                                                The brains behind the ideas -
+                                                the engineers/developers.
+                                                Creating technical solutions to
+                                                the complex challenges that come
+                                                with terraforming a new world;
+                                                they build quietly in the
+                                                back-end and help connect the
+                                                dots to bring innovation to
+                                                life.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className={s.card}>
+                                        <img src={"/Cap.png"} alt='Captain' />
+                                        <h3>Captain</h3>
+                                        <button type='button' className={s.tag}>
+                                            Founder
+                                        </button>
+                                        <div className={s.description}>
+                                            <p>
+                                                Pulling together the pieces of
+                                                the puzzle and ensuring the
+                                                community is working in harmony
+                                                to terraform the planet in the
+                                                same direction - the founders.
+                                                The captain’s vision is brought
+                                                to life by those to see the
+                                                light at the end of at the end
+                                                of the tunnel.
                                             </p>
                                         </div>
                                     </div>
@@ -552,11 +552,14 @@ const HomePage: FC = () => {
                                                 The creatives that take ideas
                                                 and bring them to life in a
                                                 beautiful way - the artists.
-                                                Without grace in the design. The
-                                                creatives that take ideas and
-                                                bring them to life in a
-                                                beautiful way - the artists.
-                                                Without grace in the design.
+                                                Without grace in the design of a
+                                                of a new world, it would become
+                                                nothing more than a lifeless
+                                                land of chrome structures.
+                                                structures. The architects
+                                                breathe life into the planet and
+                                                create an aesthetic that makes
+                                                it worth populating.
                                             </p>
                                         </div>
                                     </div>
