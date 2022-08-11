@@ -7,6 +7,7 @@ import {
 } from "@components/Icons/Icons"
 
 import cn from "classnames"
+import { useTheme } from "next-themes"
 import s from "./TeamUser.module.scss"
 
 interface TeamUserProps {
@@ -29,13 +30,20 @@ const TeamUser = ({
     skillset,
 }: TeamUserProps) => {
     const [showSkills, setShowSkills] = useState<boolean>(false)
+    const { theme } = useTheme()
 
     const showToggle = () => {
         setShowSkills((prev) => !prev)
     }
 
     return (
-        <div className={cn(s.card, showSkills && s.active)}>
+        <div
+            className={cn(
+                s.card,
+                showSkills && s.active,
+                theme === "light" && s.light
+            )}
+        >
             <div className={s.card__body}>
                 <div className={s.image}>
                     <img

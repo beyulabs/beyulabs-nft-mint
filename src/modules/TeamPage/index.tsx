@@ -25,7 +25,7 @@ const TeamPage = () => {
 
     return (
         <>
-            <div className={cn(s.team, theme === "dark" && s.dark)}>
+            <div className={cn(s.team, theme === "light" && s.light)}>
                 <div className='container'>
                     <HtmlMeta title='Team' />
                     <div className={s.team__list}>
@@ -54,7 +54,12 @@ const TeamPage = () => {
                     <div className={s.partners}>
                         <h2>Partners:</h2>
                         <div className={s.cards}>
-                            <div className={s.card}>
+                            <div
+                                className={cn(
+                                    s.card,
+                                    theme === "light" && s.light
+                                )}
+                            >
                                 <img src={"/team_partner_1.png"} alt='' />
                                 <div className={s.text}>
                                     <h3>Project 3</h3>
@@ -71,7 +76,12 @@ const TeamPage = () => {
                                     <span>Don&apos;t procrastinate</span>
                                 </div>
                             </div>
-                            <div className={s.card}>
+                            <div
+                                className={cn(
+                                    s.card,
+                                    theme === "light" && s.light
+                                )}
+                            >
                                 {isTablet ? (
                                     <img src={"/team_partner_2.png"} alt='' />
                                 ) : (

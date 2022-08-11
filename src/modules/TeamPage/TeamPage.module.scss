@@ -30,6 +30,11 @@
     background: url('../../../public/mob-bg.svg');
   }
 
+  &.light {
+    background: url('../../../public/bg-team-light.svg') top center no-repeat;
+      background-size: cover;
+    }
+
   //&.dark {
   //  &:before {
   //    content: '';
@@ -117,6 +122,10 @@
 
       @media (max-width: 992px) {
         grid-template-columns: 1fr;
+      }
+
+      &.light {
+        box-shadow: -10px -10px 23px rgba(105, 136, 129, 0.25), 10px 10px 25px rgba(58, 160, 124, 0.11);
       }
 
       &:nth-child(2) {
