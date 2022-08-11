@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { ReactNode, useState } from "react"
 import cn from "classnames"
 
@@ -32,13 +34,16 @@ const AstroCard = ({
         <>
             {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
             <div
-                onClick={showToggle}
                 className={cn(s.card, isGreen && s.green, isRight && s.right)}
+                onClick={showToggle}
             >
                 <h3>{title}</h3>
                 <p>{description}</p>
             </div>
-            <div className={cn(s.bg, showModal && s.active)} />
+            <div
+                className={cn(s.bg, showModal && s.active)}
+                onClick={showToggle}
+            />
             <div className={cn(s.modal, showModal && s.active)}>
                 <div className={s.modal__row}>
                     <div className={s.image}>

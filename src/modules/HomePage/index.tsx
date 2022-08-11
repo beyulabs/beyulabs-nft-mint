@@ -157,8 +157,8 @@ const HomePage: FC = () => {
                                     virtual and real, we build a regenerative
                                     vision of the future.
                                 </h5>
+                                <h4>Are you mission ready?</h4>
                                 <h4>
-                                    Are you mission ready?{" "}
                                     <a href='#'>Join now!</a>
                                 </h4>
                                 <div className={s.button}>
