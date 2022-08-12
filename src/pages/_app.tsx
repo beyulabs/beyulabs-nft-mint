@@ -1,5 +1,8 @@
 import "../styles/globals.css"
 import "../styles/index.scss"
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
 
 import { QueryClient, QueryClientProvider } from "react-query"
 import { Hydrate } from "react-query/hydration"

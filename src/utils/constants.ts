@@ -79,6 +79,11 @@ export const routes: NavRoute[] = [
         title: "Our team",
         enabled: true,
     },
+    {
+        path: "/whitepaper",
+        title: "Whitepaper",
+        enabled: true,
+    },
 ]
 
 export const beyuSocialIcons: SocialIcon[] = [
@@ -109,7 +114,7 @@ export const beyuSocialIcons: SocialIcon[] = [
     {
         name: "opensea",
         image: openSeaLogo,
-        enabled: false,
+        enabled: true,
         url: "",
     },
     {
@@ -157,12 +162,31 @@ export const faqs: FAQ[] = [
         answer: "24 hours after sellout.",
     },
     {
-        question: "How to get presale access?",
+        question: "How to purchase?",
+        answer: "Mint will be on our official website.",
+    },
+    {
+        question: "Are you offering financial advice?",
+        answer: "No. Do your own research.",
+    },
+    {
+        question: "What is the Nifty Nomads podcast?",
         answer:
-            "See #boarding-pass channel for a briefing on how to access our presale launch. We will be " +
-            "sporadically posting challenges in this channel - be sure to stay active in the community so you " +
-            "don’t miss out! The BeYu team is always watching the Discord, and contributors to this mission " +
-            "will be rewarded.",
+            "Join Hosts (& BeYu Labs Founders) Ben and Miles as they fly through " +
+            "the metaverse on their journey to empower Web3 entrepreneurship" +
+            "with their startup, BeYu Labs. Check out these weekly discussions on " +
+            "NFT Trends & Creations “Behind the Curtain” and learn how to build a " +
+            "Web3 future. Visit linktr.ee/niftynomads to subscribe and listen now!",
+    },
+    {
+        question: "Who is the Artist?",
+        answer:
+            "Our amazing art was all created by the one and only NFT Bee." +
+            "NFT Bee is digital artist specialized in graphic design and illustration. She is a " +
+            "graduate of SCAD and found herself in NFTs in late 2020. Bee is a full " +
+            "stack artist, owning the art process end to end. Beyond her 1/1 works " +
+            "she is the artist behind several NFT projects including @Dogepunks," +
+            "@Spacebums and @EcoBotsNFT.",
     },
 ]
 

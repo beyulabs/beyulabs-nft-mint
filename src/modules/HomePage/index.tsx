@@ -11,6 +11,8 @@ import { Button } from "@components/Button/button"
 import { faqs } from "@utils/constants"
 
 import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
 import s from "./HomePage.module.scss"
 
 const HomePage: FC = () => {
@@ -84,13 +86,13 @@ const HomePage: FC = () => {
                             <div className={s.image}>
                                 {theme === "light" && (
                                     <img
-                                        src={"/head_img_light_c.png"}
+                                        src={"/new-voyagers-img.png"}
                                         alt='Nexus Mission'
                                     />
                                 )}
                                 {theme === "dark" && (
                                     <img
-                                        src={"/head_img_dark_c.png"}
+                                        src={"/new-voyagers-img.png"}
                                         alt='Nexus Mission'
                                     />
                                 )}
@@ -158,7 +160,7 @@ const HomePage: FC = () => {
                                 <div className={s.button}>
                                     <Button
                                         size='large'
-                                        text='Mint'
+                                        text='Launch'
                                         color='green'
                                         icon={<Coins />}
                                         disabled
@@ -354,9 +356,11 @@ const HomePage: FC = () => {
                                     The Boarding Passes are separated by their
                                     contribution to the new world of web3. Each
                                     character type will have a unique challenge
-                                    in order to ensure you align with that
-                                    character, and that you will be able to mint
-                                    them during our presale.
+                                    in order to cultivate a diverse list of
+                                    creators . This list will give you access to
+                                    the Boarding Pass NFT and its exclusive
+                                    perks. Stay alert and don’t get left behind
+                                    in the deteriorating space of Web2.
                                 </h5>
                                 <p className={s.boardingDescr}>
                                     Keep your eyes on the #announcements and
@@ -374,7 +378,7 @@ const HomePage: FC = () => {
                                 <div className={s.button}>
                                     <Button
                                         size='large'
-                                        text='Get it'
+                                        text='Free Mint'
                                         color='green'
                                         icon={<Coins />}
                                         disabled
@@ -417,107 +421,9 @@ const HomePage: FC = () => {
                                 <SwiperSlide>
                                     <div className={s.card}>
                                         <img
-                                            src={"/mechanic2.png"}
-                                            alt='Mechanic'
+                                            src={"/Captain.png"}
+                                            alt='Captain'
                                         />
-                                        <h3>Mechanic</h3>
-                                        <button type='button' className={s.tag}>
-                                            Dev
-                                        </button>
-                                        <div className={s.description}>
-                                            <p>
-                                                The brains behind the ideas -
-                                                the engineers/developers.
-                                                Creating technical solutions to
-                                                the complex challenges that come
-                                                with terraforming a new world;
-                                                they build quietly in the
-                                                back-end and help connect the
-                                                dots to bring innovation to
-                                                life.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className={s.card}>
-                                        <img
-                                            src={"/Rectangle2.svg"}
-                                            alt='Architect '
-                                        />
-                                        <h3>Architect</h3>
-                                        <button type='button' className={s.tag}>
-                                            Artist
-                                        </button>
-                                        <div className={s.description}>
-                                            <p>
-                                                The creatives that take ideas
-                                                and bring them to life in a
-                                                beautiful way - the artists.
-                                                Without grace in the design of a
-                                                of a new world, it would become
-                                                nothing more than a lifeless
-                                                land of chrome structures.
-                                                structures. The architects
-                                                breathe life into the planet and
-                                                create an aesthetic that makes
-                                                it worth populating.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className={s.card}>
-                                        <img src={"/Cap.png"} alt='Captain' />
-                                        <h3>Captain</h3>
-                                        <button type='button' className={s.tag}>
-                                            Founder
-                                        </button>
-                                        <div className={s.description}>
-                                            <p>
-                                                The creatives that take ideas
-                                                and bring them to life in a
-                                                beautiful way - the artists.
-                                                Without grace in the design of a
-                                                of a new world, it would become
-                                                nothing more than a lifeless
-                                                land of chrome structures.
-                                                structures. The architects
-                                                breathe life into the planet and
-                                                create an aesthetic that makes
-                                                it worth populating.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className={s.card}>
-                                        <img
-                                            src={"/mechanic2.png"}
-                                            alt='Mechanic'
-                                        />
-                                        <h3>Mechanic</h3>
-                                        <button type='button' className={s.tag}>
-                                            Dev
-                                        </button>
-                                        <div className={s.description}>
-                                            <p>
-                                                The brains behind the ideas -
-                                                the engineers/developers.
-                                                Creating technical solutions to
-                                                the complex challenges that come
-                                                with terraforming a new world;
-                                                they build quietly in the
-                                                back-end and help connect the
-                                                dots to bring innovation to
-                                                life.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className={s.card}>
-                                        <img src={"/Cap.png"} alt='Captain' />
                                         <h3>Captain</h3>
                                         <button type='button' className={s.tag}>
                                             Founder
@@ -540,8 +446,33 @@ const HomePage: FC = () => {
                                 <SwiperSlide>
                                     <div className={s.card}>
                                         <img
-                                            src={"/Rectangle2.svg"}
-                                            alt='Architect '
+                                            src={"/Mechanic.png"}
+                                            alt='Mechanic'
+                                        />
+                                        <h3>Mechanic</h3>
+                                        <button type='button' className={s.tag}>
+                                            Dev
+                                        </button>
+                                        <div className={s.description}>
+                                            <p>
+                                                The brains behind the ideas -
+                                                the engineers/developers.
+                                                Creating technical solutions to
+                                                the complex challenges that come
+                                                with terraforming a new world;
+                                                they build quietly in the
+                                                back-end and help connect the
+                                                dots to bring innovation to
+                                                life.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className={s.card}>
+                                        <img
+                                            src={"/Architect.png"}
+                                            alt='Architect'
                                         />
                                         <h3>Architect</h3>
                                         <button type='button' className={s.tag}>
@@ -560,6 +491,84 @@ const HomePage: FC = () => {
                                                 breathe life into the planet and
                                                 create an aesthetic that makes
                                                 it worth populating.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className={s.card}>
+                                        <img
+                                            src={"/Journalist.png"}
+                                            alt='Journalist'
+                                        />
+                                        <h3>Journalist</h3>
+                                        <button type='button' className={s.tag}>
+                                            Influencer
+                                        </button>
+                                        <div className={s.description}>
+                                            <p>
+                                                On a mission to spread ideas and
+                                                share news of innovations and
+                                                creation - the marketers. A new
+                                                business - a beautiful piece of
+                                                art - an innovative idea; do
+                                                they really exist if the people
+                                                of the planet don’t KNOW they
+                                                exist? The journalists spread
+                                                the word to ensure the
+                                                population is aware of what’s
+                                                happening on the planet.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className={s.card}>
+                                        <img
+                                            src={"/Merchant.png"}
+                                            alt='Merchant'
+                                        />
+                                        <h3>Merchant</h3>
+                                        <button type='button' className={s.tag}>
+                                            Investor
+                                        </button>
+                                        <div className={s.description}>
+                                            <p>
+                                                The driving force behind the
+                                                economy of the new world - the
+                                                investors. Those who decide what
+                                                the direction of the market
+                                                looks like, support businesses
+                                                and create financial abundance
+                                                for the builders and community
+                                                alike.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className={s.card}>
+                                        <img
+                                            src={"/Explorer.png"}
+                                            alt='Explorer'
+                                        />
+                                        <h3>Explorer</h3>
+                                        <button type='button' className={s.tag}>
+                                            Collector
+                                        </button>
+                                        <div className={s.description}>
+                                            <p>
+                                                Like true mavens, stimulating
+                                                the economy as the backbone to
+                                                all initiatives of the new world
+                                                - the collector. All
+                                                innovations, projects, and
+                                                progress of this terraformed
+                                                society would be all for naught
+                                                if not for these community
+                                                members actively participating
+                                                and engaging in the wild world
+                                                of web3.
                                             </p>
                                         </div>
                                     </div>
