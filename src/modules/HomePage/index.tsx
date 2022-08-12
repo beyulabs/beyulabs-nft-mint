@@ -72,7 +72,7 @@ const HomePage: FC = () => {
                 <section className={s.head}>
                     <div className='container'>
                         <div className={s.head__row}>
-                            <div>
+                            <div className={s.mainTitle}>
                                 <h1>
                                     <span className={s.line}>Become</span> a
                                     crew member of the{" "}
@@ -103,7 +103,7 @@ const HomePage: FC = () => {
                 >
                     <div className='container'>
                         <div className={s.mission__row}>
-                            <div>
+                            <div className={s.nexusImage}>
                                 {theme === "light" && (
                                     <Image
                                         src={"/nexus-mission-light.svg"}
@@ -115,14 +115,14 @@ const HomePage: FC = () => {
                                 {theme === "dark" && (
                                     <Image
                                         src={"/nexus-mission.svg"}
-                                        width={524}
-                                        height={679}
+                                        width={500}
+                                        height={648}
                                         alt='Nexus Mission'
                                     />
                                 )}
                             </div>
                             <div>
-                                <h2>
+                                <h2 className={s.nexusTitle}>
                                     The Nexus <br />
                                     Voyagers mission
                                 </h2>
@@ -146,13 +146,13 @@ const HomePage: FC = () => {
                                     utility. Each of us will have a role to
                                     play.
                                 </p>
-                                <h5>
+                                <h5 className={s.nexush5}>
                                     Bridging the gap between dream and reality,
                                     virtual and real, we build a regenerative
                                     vision of the future.
                                 </h5>
-                                <h4>Are you mission ready?</h4>
                                 <h4>
+                                    Are you mission ready?{" "}
                                     <a href='#'>Join now!</a>
                                 </h4>
                                 <div className={s.button}>
@@ -350,7 +350,7 @@ const HomePage: FC = () => {
                             </div>
                             <div>
                                 <h2>Boarding Pass</h2>
-                                <h5>
+                                <h5 className={s.nexush5}>
                                     The Boarding Passes are separated by their
                                     contribution to the new world of web3. Each
                                     character type will have a unique challenge
@@ -358,7 +358,7 @@ const HomePage: FC = () => {
                                     character, and that you will be able to mint
                                     them during our presale.
                                 </h5>
-                                <p>
+                                <p className={s.boardingDescr}>
                                     Keep your eyes on the #announcements and
                                     #boarding-pass channels for these
                                     challenges, they will essentially guarantee

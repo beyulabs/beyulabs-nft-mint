@@ -47,10 +47,10 @@ const TeamPage = () => {
                                 />
                             </div>
                         ))}
+                        <button type='button' className={s.button}>
+                            See all members
+                        </button>
                     </div>
-                    <button type='button' className={s.button}>
-                        See all members
-                    </button>
                     <div className={s.partners}>
                         <h2>Partners:</h2>
                         <div className={s.cards}>

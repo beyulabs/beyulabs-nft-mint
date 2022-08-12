@@ -122,6 +122,7 @@
 
       @media (max-width: 992px) {
         grid-template-columns: 1fr;
+        z-index: 100;
       }
 
       &.light {
@@ -205,8 +206,7 @@
   @media (max-width: 992px) {
     align-items: center;
     padding: 17px 84px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
     margin-top: 25px;
     gap: 10px;
     font-size: 20px;

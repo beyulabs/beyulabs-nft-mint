@@ -101,7 +101,7 @@ const Header = () => {
                         disabled
                     />
                     <Button
-                        text='Conect wallet'
+                        text='Connect wallet'
                         color='transparent'
                         icon={<Wallet />}
                         disabled

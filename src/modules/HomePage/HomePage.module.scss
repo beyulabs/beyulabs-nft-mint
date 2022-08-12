@@ -164,16 +164,33 @@
       }
     }
   }
+
+  .mainTitle {
+    @media (min-width: 992px) {
+      margin-left: 70px;
+    }
+  }
 }
 
 .mission {
   background: url('../../../public/bg_mission_dark.svg') center no-repeat;
-  background-size: 1629px 877px;
+  background-size: 1520px 877px;
   min-height: 880px;
+
+  @media (max-width: 992px) {
+  background-size: 1700px 877px;
+  }
+
+  .nexusImage {
+    @media (min-width: 992px) {
+    margin-left: 30px;
+    }
+  }
+
 
   &.light {
     background: url('../../../public/bg_mission_light.svg') no-repeat;
-    background-size: 1629px 877px;
+    background-size: 1500px 877px;
   }
 
   &__row {
@@ -204,11 +221,6 @@
       @media (max-width: 992px) {
         font-size: 14px;
       }
-    }
-
-    h5 {
-      margin-bottom: 20px;
-      text-transform: uppercase;
     }
 
     h4 {
@@ -245,6 +257,33 @@
       }
     }
   }
+}
+
+
+.nexush5 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+
+  @media (max-width: 992px) {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+}
+}
+
+.boardingDescr {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 180%;
+}
+
+.nexusTitle {
+  @media (max-width: 992px) {
+  // margin-top: 0;
+}
 }
 
 .astromap {
