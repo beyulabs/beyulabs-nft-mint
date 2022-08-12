@@ -421,7 +421,7 @@ const HomePage: FC = () => {
                                 <SwiperSlide>
                                     <div className={s.card}>
                                         <img
-                                            src={"/Captain.png"}
+                                            src={"/captain.png"}
                                             alt='Captain'
                                         />
                                         <h3>Captain</h3>
@@ -446,7 +446,7 @@ const HomePage: FC = () => {
                                 <SwiperSlide>
                                     <div className={s.card}>
                                         <img
-                                            src={"/Mechanic.png"}
+                                            src={"/mechanic.png"}
                                             alt='Mechanic'
                                         />
                                         <h3>Mechanic</h3>
@@ -471,7 +471,7 @@ const HomePage: FC = () => {
                                 <SwiperSlide>
                                     <div className={s.card}>
                                         <img
-                                            src={"/Architect.png"}
+                                            src={"/architect.png"}
                                             alt='Architect'
                                         />
                                         <h3>Architect</h3>
@@ -498,7 +498,7 @@ const HomePage: FC = () => {
                                 <SwiperSlide>
                                     <div className={s.card}>
                                         <img
-                                            src={"/Journalist.png"}
+                                            src={"/journalist.png"}
                                             alt='Journalist'
                                         />
                                         <h3>Journalist</h3>
@@ -525,7 +525,7 @@ const HomePage: FC = () => {
                                 <SwiperSlide>
                                     <div className={s.card}>
                                         <img
-                                            src={"/Merchant.png"}
+                                            src={"/merchant.png"}
                                             alt='Merchant'
                                         />
                                         <h3>Merchant</h3>
@@ -549,7 +549,7 @@ const HomePage: FC = () => {
                                 <SwiperSlide>
                                     <div className={s.card}>
                                         <img
-                                            src={"/Explorer.png"}
+                                            src={"/explorer.png"}
                                             alt='Explorer'
                                         />
                                         <h3>Explorer</h3>
