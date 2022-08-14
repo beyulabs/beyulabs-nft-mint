@@ -419,7 +419,12 @@ const HomePage: FC = () => {
                                 }}
                             >
                                 <SwiperSlide>
-                                    <div className={s.card}>
+                                    <div
+                                        className={cn(
+                                            s.card,
+                                            theme === "light" && s.light
+                                        )}
+                                    >
                                         <img
                                             src={"/captain.png"}
                                             alt='Captain'
@@ -444,7 +449,12 @@ const HomePage: FC = () => {
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className={s.card}>
+                                    <div
+                                        className={cn(
+                                            s.card,
+                                            theme === "light" && s.light
+                                        )}
+                                    >
                                         <img
                                             src={"/mechanic.png"}
                                             alt='Mechanic'
@@ -469,7 +479,12 @@ const HomePage: FC = () => {
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className={s.card}>
+                                    <div
+                                        className={cn(
+                                            s.card,
+                                            theme === "light" && s.light
+                                        )}
+                                    >
                                         <img
                                             src={"/architect.png"}
                                             alt='Architect'
@@ -496,7 +511,12 @@ const HomePage: FC = () => {
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className={s.card}>
+                                    <div
+                                        className={cn(
+                                            s.card,
+                                            theme === "light" && s.light
+                                        )}
+                                    >
                                         <img
                                             src={"/journalist.png"}
                                             alt='Journalist'
@@ -523,7 +543,12 @@ const HomePage: FC = () => {
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className={s.card}>
+                                    <div
+                                        className={cn(
+                                            s.card,
+                                            theme === "light" && s.light
+                                        )}
+                                    >
                                         <img
                                             src={"/merchant.png"}
                                             alt='Merchant'
@@ -547,7 +572,12 @@ const HomePage: FC = () => {
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className={s.card}>
+                                    <div
+                                        className={cn(
+                                            s.card,
+                                            theme === "light" && s.light
+                                        )}
+                                    >
                                         <img
                                             src={"/explorer.png"}
                                             alt='Explorer'

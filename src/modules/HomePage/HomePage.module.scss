@@ -278,6 +278,12 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 180%;
+
+  @media (max-width: 992px) {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+  }
 }
 
 .nexusTitle {
@@ -553,6 +559,7 @@
     > div {
       position: relative;
       z-index: 2;
+      
     }
 
     &:before {
@@ -565,6 +572,7 @@
       top: 6%;
       border-radius: 60px;
       border: 1px solid #2C4B40;
+      background: var(--astro-card-bg) url('../../../public/boarding-pass-ellipsis.svg') right bottom no-repeat;
 
       @media (max-width: 992px) {
         width: 100%;
@@ -633,6 +641,7 @@
       @media (max-width: 992px) {
         display: flex;
         justify-content: center;
+        margin-bottom: 40px;
       }
     }
   }
@@ -710,6 +719,10 @@
       text-align: center;
     }
 
+    &.light {
+      box-shadow: -10px -10px 23px rgba(105, 136, 129, 0.25), 10px 10px 25px rgba(58, 160, 124, 0.11);
+    }
+
     img {
       margin-bottom: 20px;
       width: 100%;
@@ -743,9 +756,10 @@
     }
 
     p {
-      font-size: 13px;
+      font-size: 14px;
       width: 100%;
       transition: 0.2s all;
+      line-height: 150%;
       @media (min-width: 992px) {
         font-size: 13px;
         line-height: 180%;
