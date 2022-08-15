@@ -1,4 +1,5 @@
 import React, { FC, useEffect, useState } from "react"
+import Link from "next/link"
 import { useTheme } from "next-themes"
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react"
 import { Navigation, Pagination } from "swiper"
@@ -71,6 +72,9 @@ const HomePage: FC = () => {
                     theme === "dark" && s.dark
                 )}
             >
+                <section className={s.hero}>
+                    <img src={"landscape.png"} alt='hero' />
+                </section>
                 <section className={s.head}>
                     <div className='container'>
                         <div className={s.head__row}>
@@ -179,7 +183,7 @@ const HomePage: FC = () => {
                             )}
                         >
                             <div className={s.title}>
-                                <h2>Astromap</h2>
+                                <h2>Benefits</h2>
                             </div>
                             <div className={s.cards__list}>
                                 <div className={cn(s.card, s.left, s.card_1)}>
@@ -194,11 +198,7 @@ const HomePage: FC = () => {
                                     />
                                     <div>
                                         <h3>NFT</h3>
-                                        <p>
-                                            To terraform Web3. An ecosystem
-                                            cultivated by developers, artists,
-                                            enthusiasts, and investors.{" "}
-                                        </p>
+                                        <p>Commercial Use </p>
                                     </div>
                                 </div>
                                 <div className={s.empty} />
@@ -216,9 +216,8 @@ const HomePage: FC = () => {
                                     <div>
                                         <h3>Community Chest</h3>
                                         <p>
-                                            To terraform Web3. An ecosystem
-                                            cultivated by developers, artists,
-                                            enthusiasts, and investors.
+                                            Opportunity to be showcased at irl
+                                            and virtual events
                                         </p>
                                     </div>
                                 </div>
@@ -234,11 +233,7 @@ const HomePage: FC = () => {
                                     />
                                     <div>
                                         <h3>Mission Board</h3>
-                                        <p>
-                                            To terraform Web3. An ecosystem
-                                            cultivated by developers, artists,
-                                            enthusiasts, and investors.
-                                        </p>
+                                        <p>Lifetime Access to all Events</p>
                                     </div>
                                 </div>
                                 <div className={s.empty} />
@@ -256,9 +251,8 @@ const HomePage: FC = () => {
                                     <div>
                                         <h3>Launchpad</h3>
                                         <p>
-                                            To terraform Web3. An ecosystem
-                                            cultivated by developers, artists,
-                                            enthusiasts, and investors.
+                                            Exclusive Voyager Perks by Character
+                                            Types
                                         </p>
                                     </div>
                                 </div>
@@ -275,9 +269,8 @@ const HomePage: FC = () => {
                                     <div>
                                         <h3>Project Showcase</h3>
                                         <p>
-                                            To terraform Web3. An ecosystem
-                                            cultivated by developers, artists,
-                                            enthusiasts, and investors.
+                                            Community Lottery i.e. all expense
+                                            trip to SXSW
                                         </p>
                                     </div>
                                 </div>
@@ -297,9 +290,8 @@ const HomePage: FC = () => {
                                     <div>
                                         <h3>The Experience</h3>
                                         <p>
-                                            To terraform Web3. An ecosystem
-                                            cultivated by developers, artists,
-                                            enthusiasts, and investors.
+                                            Networking access to Web3 Hub of
+                                            builders
                                         </p>
                                     </div>
                                 </div>
@@ -315,20 +307,18 @@ const HomePage: FC = () => {
                                     />
                                     <div>
                                         <h3>Charity</h3>
-                                        <p>
-                                            To terraform Web3. An ecosystem
-                                            cultivated by developers, artists,
-                                            enthusiasts, and investors.
-                                        </p>
+                                        <p>Digital work profile - PFP</p>
                                     </div>
                                 </div>
                             </div>
                             <div className={s.button}>
-                                <Button
-                                    size='large'
-                                    text='Explore Astromap'
-                                    color='green'
-                                />
+                                <Link href='/astromap'>
+                                    <Button
+                                        size='large'
+                                        text='Explore Astromap'
+                                        color='green'
+                                    />
+                                </Link>
                             </div>
                         </div>
                     </div>

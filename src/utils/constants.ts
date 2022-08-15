@@ -9,7 +9,7 @@ import {
 } from "../types/common"
 
 // @ts-ignore
-import openSeaLogo from "../../public/opensea-logo.svg"
+import openSeaLogo from "../../public/opensea.svg"
 // @ts-ignore
 import etherscanLogo from "../../public/etherscan-logo.svg"
 // @ts-ignore
@@ -98,18 +98,6 @@ export const beyuSocialIcons: SocialIcon[] = [
         image: discordLogo,
         enabled: true,
         url: "https://discord.gg/3NXV2J3S7M",
-    },
-    {
-        name: "light",
-        image: LightModeIcon,
-        enabled: false,
-        url: "",
-    },
-    {
-        name: "dark",
-        image: DarkMode,
-        enabled: false,
-        url: "",
     },
     {
         name: "opensea",

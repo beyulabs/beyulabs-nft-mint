@@ -76,6 +76,20 @@
   }
 }
 
+.hero {
+  // background: url('../../../public/landscape.png') center no-repeat;
+  position: relative;
+  background-size: cover;
+  height: auto;
+
+  @media (max-width: 992px) {
+    margin-top: 80px;
+  }
+  &.light {
+    margin-bottom: 30px;
+  }
+}
+
 .head {
   padding: 72px 0;
   overflow: hidden;
@@ -102,6 +116,7 @@
       position: absolute;
       right: -67px;
       top: 0;
+      z-index: 100;
 
       @media (max-width: 992px) {
         position: relative;

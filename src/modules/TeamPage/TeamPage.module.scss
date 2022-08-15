@@ -145,6 +145,10 @@
         span {
           color: white;
         }
+        a {
+          color: white;
+        }
+
       }
 
       img {
@@ -175,16 +179,7 @@
           line-height: 150%;
           font-size: 18px;
         }
-
       }
-      span {
-        color: var(--theme-green-color);
-        &:hover {
-          color:white;
-          }
-          
-      }
-      
     }
 
     .dont {
@@ -201,6 +196,14 @@
         }
     }
   }
+}
+
+.link {
+  color: var(--theme-green-color);
+  &:hover {
+    color:white;
+    }
+    
 }
 
 .button {

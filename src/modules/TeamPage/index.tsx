@@ -60,20 +60,14 @@ const TeamPage = () => {
                                     theme === "light" && s.light
                                 )}
                             >
-                                <img src={"/team_partner_1.png"} alt='' />
+                                <img src={"/WeDream.png"} alt='' />
                                 <div className={s.text}>
-                                    <h3>Project 3</h3>
+                                    <h3>WeDream</h3>
                                     <p>
-                                        Some description about project. Keep
-                                        your eyes on the
-                                        <span>#announcements</span> and{" "}
-                                        <span>#boarding-pass</span> channels for
-                                        these challenges, they will essentially
-                                        guarantee your seat on the rocket to the
-                                        new world. These challenges will be
-                                        presented sporadically
+                                        <a href='https://www.wedream.world/'>
+                                            Link to the project website
+                                        </a>
                                     </p>
-                                    <span>Don&apos;t procrastinate</span>
                                 </div>
                             </div>
                             <div
@@ -91,18 +85,12 @@ const TeamPage = () => {
                                     />
                                 )}
                                 <div className={s.text}>
-                                    <h3>BDH (Legal)</h3>
+                                    <h3>ThinkNFT</h3>
                                     <p>
-                                        Some description about project. Keep
-                                        your eyes on the
-                                        <span>#announcements</span> and{" "}
-                                        <span>#boarding-pass</span> channels for
-                                        these challenges, they will essentially
-                                        guarantee your seat on the rocket to the
-                                        new world. These challenges will be
-                                        presented sporadically
+                                        <a href='https://thinknft.art/'>
+                                            Link to the project website
+                                        </a>
                                     </p>
-                                    <span>Don&apos;t procrastinate</span>
                                 </div>
                             </div>
                         </div>
