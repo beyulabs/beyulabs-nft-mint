@@ -465,6 +465,17 @@
       scale: 0.8;
     }
     }
+
+    .join_mob {
+      @media (min-width: 992px) {
+        display: none;
+      }
+    }
+    .join_descktop {
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
   }
 }
 

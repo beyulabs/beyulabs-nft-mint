@@ -148,22 +148,22 @@ const HomePage: FC = () => {
                   />
                 </div>
                 <div className={s.mission_astronaut}>
-                 
+
                   {theme === 'light' && (
                     <Image
-                    src={'/astronaut_light.svg'}
-                    width={269}
-                    height={223}
-                    alt="Nexus Mission"
-                  />
+                      src={'/astronaut_light.svg'}
+                      width={269}
+                      height={223}
+                      alt="Nexus Mission"
+                    />
                   )}
                   {theme === 'dark' && (
-                     <Image
-                     src={'/astronaut_durk_desk.svg'}
-                     width={269}
-                     height={223}
-                     alt="Nexus Mission"
-                   />
+                    <Image
+                      src={'/astronaut_durk_desk.svg'}
+                      width={269}
+                      height={223}
+                      alt="Nexus Mission"
+                    />
                   )}
 
                 </div>
@@ -211,10 +211,18 @@ const HomePage: FC = () => {
                   Bridging the gap between dream and reality, virtual and real,
                   we build a regenerative vision of the future.
                 </h5>
-                <h4>
-                  Are you mission ready?
-                </h4>
-                <h4><a href="#">Join now!</a></h4>
+                <div className={s.join_mob}>
+                  <h4>
+                    Are you mission ready?
+                  </h4>
+                  <h4><a href="#">Join now!</a></h4>
+                </div>
+                <div className={s.join_descktop}>
+                  <h4>
+                    Are you mission ready? {' '}
+                    <a href="#">Join now!</a>
+                  </h4>
+                </div>
                 <div className={s.button}>
                   <Button
                     size="large"
