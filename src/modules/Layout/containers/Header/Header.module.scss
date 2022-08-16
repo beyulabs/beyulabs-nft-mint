@@ -20,7 +20,7 @@
       font-size: 16px;
       line-height: 100%;
       color: var(--theme-heading-color);
-      margin-bottom: 19px;
+      margin-bottom: 15px;
 
       @media (min-width: 992px) {
         display: none;
@@ -54,7 +54,7 @@
 
     @media (max-width: 992px) {
       flex-direction: column;
-      gap: 15px;
+      gap: 5px;
       align-items: flex-start;
     }
 
@@ -145,6 +145,7 @@
 
   @media (max-width: 992px) {
     flex-direction: column;
+    margin-top: 0;
     width: 100%;
     gap: 12px;
 

@@ -73,7 +73,7 @@ const HomePage: FC = () => {
                 )}
             >
                 <section className={s.hero}>
-                    <img src={"landscape.png"} alt='hero' />
+                    {/* <img src={"landscape.png"} alt='hero' /> */}
                 </section>
                 <section className={s.head}>
                     <div className='container'>
