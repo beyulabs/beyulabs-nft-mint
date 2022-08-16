@@ -1,3 +1,3 @@
-import AstromapPage from '@modules/Astromap';
+import AstromapPage from "@modules/Astromap"
 
-export default AstromapPage;
+export default AstromapPage
