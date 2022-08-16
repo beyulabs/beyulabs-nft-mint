@@ -188,11 +188,12 @@
 }
 
 .mission {
-  background: url('../../../public/bg_mission_dark.svg') center no-repeat;
+  background: url('../../../public/mission-bg-2.svg') center no-repeat;
   background-size: 1520px 877px;
   min-height: 880px;
 
   @media (max-width: 992px) {
+  // background: url('../../../public/mobile-mission-bg-2.svg') center no-repeat;
   background-size: 1700px 877px;
   }
 
@@ -206,6 +207,34 @@
   &.light {
     background: url('../../../public/bg_mission_light.svg') no-repeat;
     background-size: 1500px 877px;
+  }
+
+  .spaceman {
+    position: absolute;
+    right: 0;
+    bottom: -30;
+    animation: bounce 6s linear infinite;
+
+    img {
+      width: 200px;
+      height: 176px;
+
+      @media (max-width: 992px) {
+        width: 144px;
+        height: 130px;
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(-25%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+      }
+      50% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      }
+    }
   }
 
   &__row {

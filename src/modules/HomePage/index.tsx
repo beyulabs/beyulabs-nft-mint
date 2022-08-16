@@ -173,6 +173,9 @@ const HomePage: FC = () => {
                                         disabled
                                     />
                                 </div>
+                                <div className={s.spaceman}>
+                                    <img src={"/spaceman.svg"} alt='spaceman' />
+                                </div>
                             </div>
                         </div>
                     </div>
