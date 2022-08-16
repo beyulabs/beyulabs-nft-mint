@@ -7,6 +7,11 @@
     flex-direction: column;
     align-items: start;
     gap: 0;
+    // width: 100%;
+    // height: 100%;
+    // // left: 0;
+    // z-index: 50;
+    // position: absolute;
   }
 
   .block {
@@ -36,6 +41,11 @@
   }
 }
 
+.pageslist {
+  flex-direction: column;
+  margin-top: 15px;
+}
+
 .nav {
   &__links {
     display: flex;
@@ -45,6 +55,7 @@
     @media (max-width: 992px) {
       flex-direction: column;
       gap: 15px;
+      align-items: flex-start;
     }
 
     a {

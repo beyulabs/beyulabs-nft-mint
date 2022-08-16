@@ -87,7 +87,12 @@ const HomePage: FC = () => {
                                     <span className={s.line}>mission</span>
                                 </h1>
                             </div>
-                            <div className={s.image}>
+                            <div
+                                className={cn(
+                                    s.image,
+                                    theme === "light" && s.light
+                                )}
+                            >
                                 {theme === "light" && (
                                     <img
                                         src={"/new-voyagers-img.png"}
