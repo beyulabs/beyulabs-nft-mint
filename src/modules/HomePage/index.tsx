@@ -62,6 +62,434 @@ const HomePage: FC = () => {
         return null
     }
 
+<<<<<<< HEAD
+  return (
+    <div>
+      <HtmlMeta title="Home" />
+      <div
+        className={cn(
+          s.bg_wrapper,
+          theme === 'light' && s.light,
+          theme === 'dark' && s.dark
+        )}
+      >
+        <section className={s.head}>
+          <div className="container">
+            <div className={s.head__row}>
+              <div>
+                <h1>
+                  <span className={s.line}>Become</span> a member of the{' '}
+                  <span className={s.green}>Voyager</span> space{' '}
+                  <span className={s.line}>mission</span>
+                </h1>
+                <p>
+                  Unforgettable adventures await you during the flight! Find
+                  friends and develop together creating, buying and selling NFTs
+                  collection!
+                </p>
+              </div>
+              <div className={s.image}>
+                {theme === 'light' && (
+                  <img src={'/head_img_light_c.png'} alt="Nexus Mission" />
+                )}
+                {theme === 'dark' && (
+                  <img src={'/head_img_dark_c.png'} alt="Nexus Mission" />
+                )}
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className={s.background_planets_mission}>
+          {/* <div className={s.container_planets_mission}>
+            <div className={s.mars_lg_img}>
+              <Image
+                src={'/mars-lg.svg'}
+                width={853}
+                height={856}
+                alt="Nexus Mission"
+              />
+            </div>
+            <div className={s.mars_md_img}>
+              <Image
+                src={'/mars-md.svg'}
+                width={150}
+                height={150}
+                alt="Nexus Mission"
+              />
+            </div>
+            <div className={s.circle_mission_lg}></div>
+            <div className={s.circle_mission_sm_first}></div>
+            <div className={s.circle_mission_second}></div>
+            <div className={s.circle_mission_third}></div>
+          </div> */}
+        </section>
+        <section className={cn(s.mission, theme === 'light' && s.light)}>
+          <div className={s.conrainer_mission}>
+            <div className={s.mission__row}>
+              <div className={s.mission_imgages}>
+                <div className={s.mission_saturn}>
+                  <Image
+                    src={'/saturn-mob-left.svg'}
+                    width={127}
+                    height={96}
+                    alt="Nexus Mission"
+                  />
+                </div>
+                <div className={s.mission_mars_bg_mob}>
+                  <Image
+                    src={'/mars-lg.svg'}
+                    width={312}
+                    height={318}
+                    alt="Nexus Mission"
+                  />
+                </div>
+                <div className={s.mission_mars_bg_mob_sm}>
+                  <Image
+                    src={'/mars-mission-bg-sm.svg'}
+                    width={79}
+                    height={80}
+                    alt="Planet"
+                  />
+                </div>
+                <div className={s.mission_astronaut}>
+
+                  {theme === 'light' && (
+                    <Image
+                      src={'/astronaut_light.svg'}
+                      width={269}
+                      height={223}
+                      alt="Nexus Mission"
+                    />
+                  )}
+                  {theme === 'dark' && (
+                    <Image
+                      src={'/astronaut_durk_desk.svg'}
+                      width={269}
+                      height={223}
+                      alt="Nexus Mission"
+                    />
+                  )}
+
+                </div>
+                <div className={s.nexus_img}>
+                  {theme === 'light' && (
+                    <Image
+                      src={'/nexus-mission-light.svg'}
+                      width={552}
+                      height={728}
+                      alt="Nexus Mission"
+                    />
+                  )}
+                  {theme === 'dark' && (
+                    <Image
+                      src={'/nexus-mission.svg'}
+                      width={552}
+                      height={728}
+                      alt="Nexus Mission"
+                    />
+                  )}
+                </div>
+              </div>
+              <div>
+                <h2>
+                  The Nexus <br />
+                  Voyagers mission
+                </h2>
+                <p>
+                  To terraform Web3. An ecosystem cultivated by developers,
+                  artists, enthusiasts, and investors. A Solarpunk utopia
+                  powered by BeYu Labs and driven by radical optimism and
+                  sustainability.{' '}
+                </p>
+                <p>
+                  A collection of 10,119 crew members, primed for the genesis
+                  mission launch. On this voyage, crew members will have access
+                  to epic shared experiences, meaningful collabs, one of a kind
+                  NFT drops, and a future built for the community over time.
+                  With the focus on empowering Web3 entrepreneurship the
+                  ecosystem will fill the underlying gaps on contribution with
+                  incentivized exchange of utility. Each of us will have a role
+                  to play.
+                </p>
+                <h5>
+                  Bridging the gap between dream and reality, virtual and real,
+                  we build a regenerative vision of the future.
+                </h5>
+                <div className={s.join_mob}>
+                  <h4>
+                    Are you mission ready?
+                  </h4>
+                  <h4><a href="#">Join now!</a></h4>
+                </div>
+                <div className={s.join_descktop}>
+                  <h4>
+                    Are you mission ready? {' '}
+                    <a href="#">Join now!</a>
+                  </h4>
+                </div>
+                <div className={s.button}>
+                  <Button
+                    size="large"
+                    text="Mint"
+                    color="green"
+                    icon={<Coins />}
+                    disabled
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className={s.astromap}>
+          <div className="container">
+            <div className={cn(s.cards, theme === 'light' && s.light)}>
+              <div className={s.title}>
+                <h2>Astromap</h2>
+              </div>
+              <div className={s.cards__list}>
+                <div className={cn(s.card, s.left, s.card_1)}>
+                  <div className={s.dot_num}>
+                    <span className={s.dot} />
+                  </div>
+                  <Image
+                    src="/astromap_1.png"
+                    width={150}
+                    height={150}
+                    alt="NFT"
+                  />
+                  <div>
+                    <h3>NFT</h3>
+                    <p>
+                      To terraform Web3. An ecosystem cultivated by developers,
+                      artists, enthusiasts, and investors.{' '}
+                    </p>
+                  </div>
+                </div>
+                <div className={s.empty} />
+                <div className={s.empty} />
+                <div className={cn(s.card, s.right, s.card_2)}>
+                  <div className={s.dot_num}>
+                    <span className={s.dot} />
+                  </div>
+                  <Image
+                    src="/astromap_2.png"
+                    width={150}
+                    height={150}
+                    alt="Community Chest"
+                  />
+                  <div>
+                    <h3>Community Chest</h3>
+                    <p>
+                      To terraform Web3. An ecosystem cultivated by developers,
+                      artists, enthusiasts, and investors.
+                    </p>
+                  </div>
+                </div>
+                <div className={cn(s.card, s.left, s.card_3)}>
+                  <div className={s.dot_num}>
+                    <span className={s.dot} />
+                  </div>
+                  <Image
+                    src="/astromap_3.png"
+                    width={150}
+                    height={150}
+                    alt="Community Chest"
+                  />
+                  <div>
+                    <h3>Mission Board</h3>
+                    <p>
+                      To terraform Web3. An ecosystem cultivated by developers,
+                      artists, enthusiasts, and investors.
+                    </p>
+                  </div>
+                </div>
+                <div className={s.empty} />
+                <div className={s.empty} />
+                <div className={cn(s.card, s.right, s.card_4)}>
+                  <div className={s.dot_num}>
+                    <span className={s.dot} />
+                  </div>
+                  <Image
+                    src="/astromap_4.png"
+                    width={150}
+                    height={150}
+                    alt="Launchpad"
+                  />
+                  <div>
+                    <h3>Launchpad</h3>
+                    <p>
+                      To terraform Web3. An ecosystem cultivated by developers,
+                      artists, enthusiasts, and investors.
+                    </p>
+                  </div>
+                </div>
+                <div className={cn(s.card, s.left, s.card_5)}>
+                  <div className={s.dot_num}>
+                    <span className={s.dot} />
+                  </div>
+                  <Image
+                    src="/astromap_5.png"
+                    width={150}
+                    height={150}
+                    alt="Project Showcase"
+                  />
+                  <div>
+                    <h3>Project Showcase</h3>
+                    <p>
+                      To terraform Web3. An ecosystem cultivated by developers,
+                      artists, enthusiasts, and investors.
+                    </p>
+                  </div>
+                </div>
+                <div className={s.empty} />
+                <div className={s.empty} />
+
+                <div className={cn(s.card, s.right, s.card_6)}>
+                  <div className={s.dot_num}>
+                    <span className={s.dot} />
+                  </div>
+                  <Image
+                    src="/astromap_6.png"
+                    width={150}
+                    height={150}
+                    alt="The Experience"
+                  />
+                  <div>
+                    <h3>The Experience</h3>
+                    <p>
+                      To terraform Web3. An ecosystem cultivated by developers,
+                      artists, enthusiasts, and investors.
+                    </p>
+                  </div>
+                </div>
+                <div className={cn(s.card, s.left, s.card_7)}>
+                  <div className={s.dot_num}>
+                    <span className={s.dot} />
+                  </div>
+                  <Image
+                    src="/astromap_7.png"
+                    width={150}
+                    height={150}
+                    alt="Charity"
+                  />
+                  <div>
+                    <h3>Charity</h3>
+                    <p>
+                      To terraform Web3. An ecosystem cultivated by developers,
+                      artists, enthusiasts, and investors.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className={s.button}>
+                <Button size="large" text="Explore Astromap" color="green" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className={s.boarding}>
+          <div className="container">
+            <div className={cn(s.boarding__row, theme === 'light' && s.light)}>
+              <div>
+                <Image
+                  src="/tickets.svg"
+                  width={532}
+                  height={701}
+                  alt="Boarding Pass"
+                />
+              </div>
+              <div>
+                <h2>Boarding Pass</h2>
+                <h5>
+                  The Boarding Passes are separated by their contribution to the
+                  new world of web3. Each character type will have a unique
+                  challenge in order to ensure you align with that character,and
+                  that you will be able to mint them during our presale.
+                </h5>
+                <p>
+                  Keep your eyes on the #announcements and #boarding-pass
+                  channels for these challenges, they will essentially guarantee
+                  your seat on the rocket to the new world. These challenges
+                  will be presented sporadically and closed off in short sprints
+                  of time, so stay active in the Discord to make sure you lock
+                  down your respective boarding pass and don’t get left behind
+                  in the deteriorating space of Web2.
+                </p>
+
+                <div className={s.button}>
+                  <Button
+                    size="large"
+                    text="Get it"
+                    color="green"
+                    icon={<Coins />}
+                    disabled
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className={s.voyagers}>
+          <div className="container">
+            <h2>The Voyagers</h2>
+            <div className={s.slider}>
+              <Swiper
+                modules={[Pagination, Navigation]}
+                effect="fade"
+                slidesPerView={1}
+                spaceBetween={30}
+                // observer={true}
+                observer
+                observeParents
+                pagination={pagination}
+                loop
+                // navigation={{
+                //   prevEl: prevRef?.current,
+                //   nextEl: nextRef?.current,
+                // }}
+                breakpoints={{
+                  768: {
+                    slidesPerView: 3,
+                  },
+                  992: {
+                    slidesPerView: 3,
+                  },
+                  1200: {
+                    slidesPerView: 4,
+                  },
+                }}
+              >
+                <SwiperSlide>
+                  <div className={s.card}>
+                    <img src={'/mechanic2.png'} alt="Mechanic" />
+                    <h3>Mechanic</h3>
+                    <button className={s.tag}>Dev</button>
+                    <div className={s.description}>
+                      <p>
+                        The creatives that take ideas and bring them to life in
+                        a beautiful way - the artists. Without grace in the
+                        design. The creatives that take ideas and bring them to
+                        life in a beautiful way - the artists. Without grace in
+                        the design.
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className={s.card}>
+                    <img src={'/mechanic2.png'} alt="Mechanic" />
+                    <h3>Mechanic</h3>
+                    <button className={s.tag}>Dev</button>
+                    <div className={s.description}>
+                      <p>
+                        The creatives that take ideas and bring them to life in
+                        a beautiful way - the artists. Without grace in the
+                        design. The creatives that take ideas and bring them to
+                        life in a beautiful way - the artists. Without grace in
+                        the design.
+                      </p>
+=======
     return (
         <div>
             <HtmlMeta title='Home' />
@@ -105,6 +533,7 @@ const HomePage: FC = () => {
                                 )}
                             </div>
                         </div>
+>>>>>>> fix/design_layout
                     </div>
                 </section>
                 <section
