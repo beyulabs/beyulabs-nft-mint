@@ -95,26 +95,96 @@ const HomePage: FC = () => {
             </div>
           </div>
         </section>
+        <section className={s.background_planets_mission}>
+          {/* <div className={s.container_planets_mission}>
+            <div className={s.mars_lg_img}>
+              <Image
+                src={'/mars-lg.svg'}
+                width={853}
+                height={856}
+                alt="Nexus Mission"
+              />
+            </div>
+            <div className={s.mars_md_img}>
+              <Image
+                src={'/mars-md.svg'}
+                width={150}
+                height={150}
+                alt="Nexus Mission"
+              />
+            </div>
+            <div className={s.circle_mission_lg}></div>
+            <div className={s.circle_mission_sm_first}></div>
+            <div className={s.circle_mission_second}></div>
+            <div className={s.circle_mission_third}></div>
+          </div> */}
+        </section>
         <section className={cn(s.mission, theme === 'light' && s.light)}>
-          <div className="container">
+          <div className={s.conrainer_mission}>
             <div className={s.mission__row}>
-              <div>
-                {theme === 'light' && (
+              <div className={s.mission_imgages}>
+                <div className={s.mission_saturn}>
                   <Image
-                    src={'/nexus-mission-light.svg'}
-                    width={524}
-                    height={679}
+                    src={'/saturn-mob-left.svg'}
+                    width={127}
+                    height={96}
                     alt="Nexus Mission"
                   />
-                )}
-                {theme === 'dark' && (
+                </div>
+                <div className={s.mission_mars_bg_mob}>
                   <Image
-                    src={'/nexus-mission.svg'}
-                    width={524}
-                    height={679}
+                    src={'/mars-lg.svg'}
+                    width={312}
+                    height={318}
                     alt="Nexus Mission"
                   />
-                )}
+                </div>
+                <div className={s.mission_mars_bg_mob_sm}>
+                  <Image
+                    src={'/mars-mission-bg-sm.svg'}
+                    width={79}
+                    height={80}
+                    alt="Planet"
+                  />
+                </div>
+                <div className={s.mission_astronaut}>
+                 
+                  {theme === 'light' && (
+                    <Image
+                    src={'/astronaut_light.svg'}
+                    width={269}
+                    height={223}
+                    alt="Nexus Mission"
+                  />
+                  )}
+                  {theme === 'dark' && (
+                     <Image
+                     src={'/astronaut_durk_desk.svg'}
+                     width={269}
+                     height={223}
+                     alt="Nexus Mission"
+                   />
+                  )}
+
+                </div>
+                <div className={s.nexus_img}>
+                  {theme === 'light' && (
+                    <Image
+                      src={'/nexus-mission-light.svg'}
+                      width={552}
+                      height={728}
+                      alt="Nexus Mission"
+                    />
+                  )}
+                  {theme === 'dark' && (
+                    <Image
+                      src={'/nexus-mission.svg'}
+                      width={552}
+                      height={728}
+                      alt="Nexus Mission"
+                    />
+                  )}
+                </div>
               </div>
               <div>
                 <h2>
@@ -142,7 +212,7 @@ const HomePage: FC = () => {
                   we build a regenerative vision of the future.
                 </h5>
                 <h4>
-                  Are you mission ready? 
+                  Are you mission ready?
                 </h4>
                 <h4><a href="#">Join now!</a></h4>
                 <div className={s.button}>
