@@ -1,33 +1,33 @@
-import { useCallback, useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from 'react';
 
 interface Matches {
-    matches: boolean
+  matches: boolean;
 }
 
 const useMediaQuery = (width: number): boolean => {
-    const [targetReached, setTargetReached] = useState(false)
+  const [targetReached, setTargetReached] = useState(false);
 
-    const updateTarget = useCallback((event: Matches) => {
-        if (event.matches) {
-            setTargetReached(true)
-        } else {
-            setTargetReached(false)
-        }
-    }, [])
+  const updateTarget = useCallback((event: Matches) => {
+    if (event.matches) {
+      setTargetReached(true);
+    } else {
+      setTargetReached(false);
+    }
+  }, []);
 
-    useEffect(() => {
-        const media = window.matchMedia(`(max-width: ${width}px)`)
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${width}px)`);
 
-        media.addEventListener("change", updateTarget)
+    media.addEventListener('change', updateTarget);
 
-        if (media.matches) {
-            setTargetReached(true)
-        }
+    if (media.matches) {
+      setTargetReached(true);
+    }
 
-        return () => media.removeEventListener("change", updateTarget)
-    }, [updateTarget, width])
+    return () => media.removeEventListener('change', updateTarget);
+  }, [updateTarget, width]);
 
-    return targetReached
-}
+  return targetReached;
+};
 
-export default useMediaQuery
+export default useMediaQuery;

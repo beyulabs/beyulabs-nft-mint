@@ -32,7 +32,6 @@
   border-radius: 20px;
   pointer-events: none;
   overflow: hidden;
-  transition:0.5s;
 
   @media (max-width: 992px) {
     position: fixed;
@@ -41,11 +40,10 @@
     border-radius: 10px;
   }
 
-
   .close {
     position: absolute;
-    right: 32px;
-    top: 35px;
+    right: 52px;
+    top: 45px;
     background: none;
     border: 0;
     cursor: pointer;
@@ -71,15 +69,10 @@
       position: absolute;
       width: 128px;
       height: 128px;
-      // background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
+      background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
       border-radius: 50%;
       top: -80px;
       right: -85px;
-
-      
-      @media (max-width: 992px) {
-        background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
-      }
     }
 
     &:hover {
@@ -89,53 +82,6 @@
     }
   }
 
-  .arrow {
-    position: absolute;
-    right: 32px;
-    bottom: 35px;
-    background: none;
-    border: 0;
-    cursor: pointer;
-    color: var(--theme-heading-color);
-
-    @media (max-width: 992px) {
-      top: 20px;
-      right: 20px;
-      color: #fff;
-    }
-
-    svg {
-      opacity: 0.5;
-      position: relative;
-
-      @media (max-width: 992px) {
-        opacity: 0.8;
-      }
-    }
-
-    &:before {
-      content: '';
-      position: absolute;
-      width: 128px;
-      height: 128px;
-      // background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
-      border-radius: 50%;
-      bottom: -80px;
-      right: -85px;
-
-      
-      @media (max-width: 992px) {
-        background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
-      }
-    }
-
-    &:hover {
-      transition: 2s ease-out;
-      svg {
-        opacity: 1;
-      }
-    }
-  }
   &__row {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -248,13 +194,12 @@
 .card {
   padding: 30px 25px;
   cursor: pointer;
-  background-color: var(--astro-card-bg);
+  background: var(--astro-card-bg);
   box-shadow: -10px -10px 23px rgba(105, 136, 129, 0.25), 10px 10px 25px rgba(58, 160, 124, 0.11);
   border-radius: 20px;
   position: relative;
   overflow: hidden;
-  transition: all 0.5s ease;
-  // background: url('../../../../../public/Crater.svg') no-repeat right;
+  transition: 0.2s all;
 
   @media (max-width: 992px) {
     display: grid;
@@ -326,7 +271,7 @@
       }
 
       &:before {
-        opacity: 0.8;
+        opacity: 0;
       }
     }
   }
@@ -367,7 +312,6 @@
   h3 {
     margin-bottom: 10px;
     position: relative;
-    font-size: 28px;
 
     span {
       display: block;
@@ -376,7 +320,7 @@
 
   p {
     position: relative;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 150%;
   }
 }

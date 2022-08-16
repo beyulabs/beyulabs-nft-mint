@@ -32,11 +32,6 @@
       padding: 0;
       display: grid;
 
-      ul {
-        list-style: inside;
-        margin-top: 15px;
-      }
-
       &.card_1 {
         @media (min-width: 992px) {
           grid-area: 1 / 1 / span 3 / span 1;
