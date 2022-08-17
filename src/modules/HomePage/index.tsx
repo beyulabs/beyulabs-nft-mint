@@ -96,7 +96,7 @@ const HomePage: FC = () => {
           </div>
         </section>
         <section className={s.background_planets_mission}>
-          {/* <div className={s.container_planets_mission}>
+          <div className={s.container_planets_mission}>
             <div className={s.mars_lg_img}>
               <Image
                 src={'/mars-lg.svg'}
@@ -117,7 +117,7 @@ const HomePage: FC = () => {
             <div className={s.circle_mission_sm_first}></div>
             <div className={s.circle_mission_second}></div>
             <div className={s.circle_mission_third}></div>
-          </div> */}
+          </div>
         </section>
         <section className={cn(s.mission, theme === 'light' && s.light)}>
           <div className={s.conrainer_mission}>
