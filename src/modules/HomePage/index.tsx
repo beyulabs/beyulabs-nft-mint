@@ -228,18 +228,20 @@ const HomePage: FC = () => {
                                     virtual and real, we build a regenerative
                                     vision of the future.
                                 </h5>
-                                <h4>
-                                    Are you mission ready?{" "}
-                                    <a href='#'>Join now!</a>
-                                </h4>
-                                <div className={s.button}>
-                                    <Button
-                                        size='large'
-                                        text='Launch'
-                                        color='green'
-                                        icon={<Coins />}
-                                        disabled
-                                    />
+                                <div className={s.missionCTA}>
+                                    <h4>
+                                        Are you mission ready?{" "}
+                                        <a href='#'>Join now!</a>
+                                    </h4>
+                                    <div className={s.button}>
+                                        <Button
+                                            size='large'
+                                            text='Launch'
+                                            color='green'
+                                            icon={<Coins />}
+                                            disabled
+                                        />
+                                    </div>
                                 </div>
                                 <div className={s.spaceman}>
                                     <img src={"/spaceman.svg"} alt='spaceman' />
