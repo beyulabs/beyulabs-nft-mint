@@ -256,7 +256,7 @@
 }
 
 .mission {
-  background: url('../../../public/mission-bg-2.svg') center no-repeat;
+  background: url('../../../public/bg_mission.svg') center no-repeat;
   background-size: 1629px 877px;
   min-height: 880px;
   background-size: contain;
@@ -282,8 +282,8 @@
   width: 100%;
 
   @media (mix-width: 468px) {
-    padding-right: 0px;
-    padding-left: 0px;
+        padding-right: 0px;
+        padding-left: 0px;
         }
 
   @media (min-width: 992px) {
@@ -295,16 +295,9 @@
   @media (min-width: 1535px) {
     max-width: 1500px;
     padding-right: 75px;
-    padding-left: 15px;
+        padding-left: 15px;
   }
 }
-
-  .nexusImage {
-    @media (min-width: 992px) {
-    margin-left: 30px;
-    }
-  }
-
 
   &.light {
     background: url('../../../public/bg-mission-light.svg') center no-repeat;
@@ -327,33 +320,33 @@
     }
   }
 
-  .spaceman {
-    position: absolute;
-    right: 0;
-    bottom: -30;
-    animation: bounce 6s linear infinite;
-
-    img {
-      width: 200px;
-      height: 176px;
-
-      @media (max-width: 992px) {
-        width: 144px;
-        height: 130px;
-      }
-    }
-
-    @keyframes bounce {
-      0%, 100% {
-        transform: translateY(-25%);
-        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-      }
-      50% {
-        transform: translateY(0);
-        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-      }
-    }
-  }
+  // .spaceman {
+  //       position: absolute;
+  //       right: 0;
+  //       bottom: -30;
+  //       animation: bounce 6s linear infinite;
+    
+  //       img {
+  //         width: 200px;
+  //         height: 176px;
+    
+  //         @media (max-width: 992px) {
+  //           width: 144px;
+  //           height: 130px;
+  //         }
+  //       }
+    
+  //       @keyframes bounce {
+  //         0%, 100% {
+  //           transform: translateY(-25%);
+  //           animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  //         }
+  //         50% {
+  //           transform: translateY(0);
+  //           animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  //         }
+  //       }
+  //     }
 
   &__row {
     background-size: contain;
@@ -363,7 +356,7 @@
     text-align: center;
     justify-content: center;
     grid-gap: 0;
-
+    
     @media (min-width: 468px) {
       grid-template-columns: 330px;
       padding-right: 0;
@@ -413,23 +406,30 @@
         margin-left: -5px;
         margin-right: -5px;
         margin-bottom: 15px;
-        text-align: center;
       }
       @media (min-width: 992px) {
         font-size: 1.2vw;
         line-height: 2vw;
-        text-align: left;
+      }
+      @media (min-width: 1535px) {
+        font-size: 18px;
+        line-height: 180%;
       }
     }
 
-    .missionCTA {
-      @media (max-width: 992px) {
-        text-align: center;
+    h5 {
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    
+        @media (max-width: 992px) {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 140%;
+          margin-left: -5px;
+          margin-right: -5px;
+          margin-bottom: 15px;
+        }
     }
-    @media (min-width: 992px) {
-      text-align: left;
-  }
-}
 
     h4 {
       text-transform: uppercase;
@@ -504,16 +504,33 @@
     }
     .mission_astronaut {
       position: absolute;
-      top: 560px;
+      top: 600px;
       right: -953px;
+      animation: bounce 6s linear infinite;
+      scale: 0.7;
+   
+    @media (max-width: 1535px) {
+      top: 40vw;
+      right: -62vw;
+      scale: 0.6;
+    }
     @media (max-width: 992px) {
       display: none;
+      // scale: 0.5;
+      // right: -75vw;
+      // left: 0;
+      // top: 1050;
     }
-    @media (max-width: 1535px) {
-      top: 35vw;
-      right: -62vw;
-      scale: 0.8;
-    }
+    @keyframes bounce {
+            0%, 100% {
+              transform: translateY(-25%);
+              animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+            }
+            50% {
+              transform: translateY(0);
+              animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+            }
+          }
     }
 
     .join_mob {
