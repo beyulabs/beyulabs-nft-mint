@@ -887,15 +887,28 @@
 
     h2 {
       margin-bottom: 30px;
+
+      @media (max-width: 1200px) {
+        font-size: 28px;
+        margin-bottom: 15px;
+      } 
     }
 
     p {
       margin-bottom: 20px;
+
+      @media (max-width: 1535px) {
+        font-size: 14px;
+      } 
     }
 
     h5 {
       margin-bottom: 20px;
       text-transform: uppercase;
+
+      @media (max-width: 1535px) {
+        font-size: 14px;
+      } 
     }
 
     h4 {
