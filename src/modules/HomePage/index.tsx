@@ -131,70 +131,70 @@ const HomePage: FC = () => {
             <div className={s.circle_mission_third}></div>
           </div> */}
                 </section>
-               
-                <section className={cn(s.mission, theme === 'light' && s.light)}>
+
+                <section
+                    className={cn(s.mission, theme === "light" && s.light)}
+                >
                     <div className={s.conrainer_mission}>
                         <div className={s.mission__row}>
                             <div className={s.mission_imgages}>
                                 <div className={s.mission_saturn}>
                                     <Image
-                                        src={'/saturn-mob-left.svg'}
+                                        src={"/saturn-mob-left.svg"}
                                         width={127}
                                         height={96}
-                                        alt="Nexus Mission"
+                                        alt='Nexus Mission'
                                     />
                                 </div>
                                 <div className={s.mission_mars_bg_mob}>
                                     <Image
-                                        src={'/mars-lg.svg'}
+                                        src={"/mars-lg.svg"}
                                         width={312}
                                         height={318}
-                                        alt="Nexus Mission"
+                                        alt='Nexus Mission'
                                     />
                                 </div>
                                 <div className={s.mission_mars_bg_mob_sm}>
                                     <Image
-                                        src={'/mars-mission-bg-sm.svg'}
+                                        src={"/mars-mission-bg-sm.svg"}
                                         width={79}
                                         height={80}
-                                        alt="Planet"
+                                        alt='Planet'
                                     />
                                 </div>
                                 <div className={s.mission_astronaut}>
-
-                                    {theme === 'light' && (
+                                    {theme === "light" && (
                                         <Image
-                                            src={'/astronaut_light.svg'}
+                                            src={"/astronaut_light.svg"}
                                             width={269}
                                             height={223}
-                                            alt="Nexus Mission"
+                                            alt='Nexus Mission'
                                         />
                                     )}
-                                    {theme === 'dark' && (
+                                    {theme === "dark" && (
                                         <Image
-                                            src={'/astronaut_durk_desk.svg'}
+                                            src={"/astronaut_durk_desk.svg"}
                                             width={269}
                                             height={223}
-                                            alt="Nexus Mission"
+                                            alt='Nexus Mission'
                                         />
                                     )}
-
                                 </div>
                                 <div className={s.nexus_img}>
-                                    {theme === 'light' && (
+                                    {theme === "light" && (
                                         <Image
-                                            src={'/nexus-mission-light.svg'}
+                                            src={"/nexus-mission-light.svg"}
                                             width={552}
                                             height={728}
-                                            alt="Nexus Mission"
+                                            alt='Nexus Mission'
                                         />
                                     )}
-                                    {theme === 'dark' && (
+                                    {theme === "dark" && (
                                         <Image
-                                            src={'/nexus-mission.svg'}
+                                            src={"/nexus-mission.svg"}
                                             width={552}
                                             height={728}
-                                            alt="Nexus Mission"
+                                            alt='Nexus Mission'
                                         />
                                     )}
                                 </div>
@@ -230,25 +230,27 @@ const HomePage: FC = () => {
                                     vision of the future.
                                 </h5>
                                 <div className={s.join_mob}>
+                                    <h4>Are you mission ready?</h4>
                                     <h4>
-                                        Are you mission ready?
-                                    </h4>
-                                    <h4><a href="#">Join now!</a></h4>
-                                </div>
-                                <div className={s.join_descktop}>
-                                    <h4>
-                                        Are you mission ready? {' '}
-                                        <a href="#">Join now!</a>
+                                        <a href='#'>Join now!</a>
                                     </h4>
                                 </div>
-                                <div className={s.button}>
-                                    <Button
-                                        size="large"
-                                        text="Mint"
-                                        color="green"
-                                        icon={<Coins />}
-                                        disabled
-                                    />
+                                <div className={s.missionCTA}>
+                                    <div className={s.join_descktop}>
+                                        <h4>
+                                            Are you mission ready?{" "}
+                                            <a href='#'>Join now!</a>
+                                        </h4>
+                                    </div>
+                                    <div className={s.button}>
+                                        <Button
+                                            size='large'
+                                            text='Mint'
+                                            color='green'
+                                            icon={<Coins />}
+                                            disabled
+                                        />
+                                    </div>
                                 </div>
                             </div>
                             {/* <div className={s.spaceman}>

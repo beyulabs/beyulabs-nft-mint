@@ -406,10 +406,12 @@
         margin-left: -5px;
         margin-right: -5px;
         margin-bottom: 15px;
+        text-align: center;
       }
       @media (min-width: 992px) {
         font-size: 1.2vw;
         line-height: 2vw;
+        text-align: left;
       }
       @media (min-width: 1535px) {
         font-size: 18px;
@@ -420,7 +422,7 @@
     h5 {
       margin-bottom: 20px;
       text-transform: uppercase;
-    
+      text-align: left;
         @media (max-width: 992px) {
           font-weight: 500;
           font-size: 14px;
@@ -428,6 +430,7 @@
           margin-left: -5px;
           margin-right: -5px;
           margin-bottom: 15px;
+          text-align: center;
         }
     }
 
@@ -544,6 +547,14 @@
       }
     }
   }
+  .missionCTA {
+    @media (max-width: 992px) {
+      text-align: center;
+  }
+    @media (min-width: 992px) {
+    text-align: left;
+}
+}
 }
 
 
