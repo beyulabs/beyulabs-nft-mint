@@ -77,16 +77,17 @@
 }
 
 .hero {
+  background: url('../../../public/landscape-min.jpg') center no-repeat;
   position: relative;
-  width: 100vw;
+  background-size: cover;
+  height: 100vh;
 
   @media (max-width: 992px) {
     margin-top: 80px;
     margin-bottom: -80px;
   }
-  .hero_container {
-    width: 100%;
-    text-align: center;
+  &.light {
+    margin-bottom: 30px;
   }
 }
 
@@ -434,7 +435,8 @@
         font-size: 3.2vw;
         margin-bottom: 30px;
         margin-left: 0;
-      margin-right: 0;
+        margin-right: 0;
+        text-align: left;
       }
       @media (min-width: 1535px) {
         font-size: 50px;

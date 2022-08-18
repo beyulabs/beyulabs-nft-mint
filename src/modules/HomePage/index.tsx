@@ -72,16 +72,7 @@ const HomePage: FC = () => {
                     theme === "dark" && s.dark
                 )}
             >
-                <section className={s.hero}>
-                    <div className={s.hero_container}>
-                        <Image
-                            src={'/landscape-min.jpg'}
-                            width={1503}
-                            height={700}
-                            alt="Hero"
-                        />
-                    </div>
-                </section>
+                <section className={s.hero} />
                 <section className={s.head}>
                     <div className={s.container_head}>
                         <div className={s.head__row}>
@@ -205,7 +196,7 @@ const HomePage: FC = () => {
                                     )}
                                     {theme === "dark" && (
                                         <Image
-                                            src={"/nexus-mission.svg"}
+                                            src={"/mission-img.svg"}
                                             width={552}
                                             height={728}
                                             alt='Nexus Mission'
@@ -238,7 +229,7 @@ const HomePage: FC = () => {
                                     utility. Each of us will have a role to
                                     play.
                                 </p>
-                                <h5>
+                                <h5 className={s.nexush5}>
                                     Bridging the gap between dream and reality,
                                     virtual and real, we build a regenerative
                                     vision of the future.
@@ -259,7 +250,7 @@ const HomePage: FC = () => {
                                     <div className={s.button}>
                                         <Button
                                             size='large'
-                                            text='Mint'
+                                            text='Launch'
                                             color='green'
                                             icon={<Coins />}
                                             disabled
@@ -291,7 +282,7 @@ const HomePage: FC = () => {
                                         <span className={s.dot} />
                                     </div>
                                     <Image
-                                        src='/astromap_1.png'
+                                        src='/astromap-new-img/astromap-1.png'
                                         width={150}
                                         height={150}
                                         alt='NFT'
@@ -308,7 +299,7 @@ const HomePage: FC = () => {
                                         <span className={s.dot} />
                                     </div>
                                     <Image
-                                        src='/astromap_2.png'
+                                        src='/astromap-new-img/astromap-2.png'
                                         width={150}
                                         height={150}
                                         alt='Community Chest'
@@ -326,7 +317,7 @@ const HomePage: FC = () => {
                                         <span className={s.dot} />
                                     </div>
                                     <Image
-                                        src='/astromap_3.png'
+                                        src='/astromap-new-img/astromap-3.png'
                                         width={150}
                                         height={150}
                                         alt='Community Chest'
@@ -343,7 +334,7 @@ const HomePage: FC = () => {
                                         <span className={s.dot} />
                                     </div>
                                     <Image
-                                        src='/astromap_4.png'
+                                        src='/astromap-new-img/astromap-4.png'
                                         width={150}
                                         height={150}
                                         alt='Launchpad'
@@ -361,7 +352,7 @@ const HomePage: FC = () => {
                                         <span className={s.dot} />
                                     </div>
                                     <Image
-                                        src='/astromap_5.png'
+                                        src='/astromap-new-img/astromap-5.png'
                                         width={150}
                                         height={150}
                                         alt='Project Showcase'
@@ -382,7 +373,7 @@ const HomePage: FC = () => {
                                         <span className={s.dot} />
                                     </div>
                                     <Image
-                                        src='/astromap_6.png'
+                                        src='/astromap-new-img/astromap-6.png'
                                         width={150}
                                         height={150}
                                         alt='The Experience'
@@ -400,7 +391,7 @@ const HomePage: FC = () => {
                                         <span className={s.dot} />
                                     </div>
                                     <Image
-                                        src='/astromap_7.png'
+                                        src='/astromap-new-img/astromap-7.png'
                                         width={150}
                                         height={150}
                                         alt='Charity'
