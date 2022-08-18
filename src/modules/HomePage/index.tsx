@@ -162,7 +162,12 @@ const HomePage: FC = () => {
                                         alt='Planet'
                                     />
                                 </div>
-                                <div className={s.mission_astronaut}>
+                                <div
+                                    className={cn(
+                                        s.mission_astronaut,
+                                        theme === "light" && s.light
+                                    )}
+                                >
                                     {theme === "light" && (
                                         <Image
                                             src={"/astronaut_light.svg"}
