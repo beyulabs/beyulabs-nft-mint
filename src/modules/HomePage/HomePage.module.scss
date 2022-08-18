@@ -76,7 +76,7 @@
   }
 }
 
-.my_hero {
+.hero {
   position: relative;
   width: 100vw;
 
@@ -91,11 +91,38 @@
 }
 
 .head {
-  padding: 72px 0;
+  padding: 100px 0;
   overflow: hidden;
 
   @media (max-width: 992px) {
     padding-bottom: 0;
+  }
+  @media (max-width: 1503px) {
+    padding: 72px 0 5vw 0;
+  }
+
+  .container_head {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+  
+    @media (mix-width: 468px) {
+          padding-right: 0px;
+          padding-left: 0px;
+          }
+  
+    @media (min-width: 992px) {
+      max-width: 97vw;
+      padding-right: 5vw;
+      padding-left: 7vw;
+    }
+  
+    @media (min-width: 1535px) {
+      max-width: 1305px;
+      padding-right: 0;
+          padding-left: 0;
+    }
   }
 
   &__row {
@@ -110,6 +137,9 @@
       justify-content: center;
       text-align: center;
       padding-bottom: 0;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .image {
@@ -127,17 +157,41 @@
         max-width: 708px;
 
         @media (max-width: 1400px) {
-          max-width: 620px;
+          max-width: 50vw;
         }
 
         @media (max-width: 992px) {
           max-width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        @media (max-width: 468px) {
+          max-width: 110vw;
+          margin-left: auto;
+          margin-right: auto;
         }
       }
     }
 
     h1 {
       padding-top: 59px;
+      font-size: 40px;
+      line-height: 110%;
+      padding-left: 8vw;
+      padding-right: 8vw;
+      @media (min-width: 468px) {
+        font-size: 40px;
+      }
+      @media (min-width: 992px) {
+        font-size: 4.8vw;
+        padding-left: 0;
+        padding-right: 0;
+        line-height: 120%;
+      }
+      @media (min-width: 1503px) {
+        font-size: 73px;
+      }
+     
 
       .green {
         background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
@@ -244,13 +298,6 @@
       width: 6.46px;
       background-color: #99ECC4;
       border-radius: 50%;
-    }
-  }
-  
-
-  .mainTitle {
-    @media (min-width: 992px) {
-      margin-left: 70px;
     }
   }
 }
