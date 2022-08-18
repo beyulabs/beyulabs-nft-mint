@@ -72,7 +72,16 @@ const HomePage: FC = () => {
                     theme === "dark" && s.dark
                 )}
             >
-                <section className={s.hero} />
+                <section className={s.my_hero}>
+                    <div className={s.hero_container}>
+                        <Image
+                            src={'/landscape-min.jpg'}
+                            width={1503}
+                            height={700}
+                            alt="Hero"
+                        />
+                    </div>
+                </section>
                 <section className={s.head}>
                     <div className='container'>
                         <div className={s.head__row}>
