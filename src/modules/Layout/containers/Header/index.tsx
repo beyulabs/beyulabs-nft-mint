@@ -1,8 +1,6 @@
-/* eslint-disable max-len */
 import React, { useState } from "react"
 import Link from "next/link"
 import SocialIcons from "@components/SocalIcons/SocialIcons"
-
 import { Button } from "@components/Button/button"
 import { Coins, Wallet } from "@components/Icons/Icons"
 import cn from "classnames"
@@ -27,8 +25,13 @@ const Header = () => {
 
     const ToggleThemeMode = () => (
         <>
-            {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
-            <a onClick={SwitchLightMode} className={s.ToggleTheme}>
+            <a
+                onClick={SwitchLightMode}
+                onKeyPress={() => SwitchLightMode}
+                role='button'
+                tabIndex={0}
+                className={s.ToggleTheme}
+            >
                 {theme === "light" ? (
                     <img
                         src={"/dark-mode-page.svg"}
@@ -119,7 +122,13 @@ const Header = () => {
         <header className={s.header}>
             <div className='container'>
                 <div className={s.header__row}>
-                    <div className='logo'>
+                    <div
+                        className='logo'
+                        onClick={() => setActiveNav(false)}
+                        onKeyPress={() => setActiveNav(false)}
+                        role='button'
+                        tabIndex={0}
+                    >
                         {theme === "light" && (
                             <Link href='/'>
                                 <a>
@@ -150,8 +159,9 @@ const Header = () => {
                         )}
                     </div>
                     {isTablet ? (
-                        // eslint-disable-next-line jsx-a11y/no-redundant-roles,react/button-has-type
+                        // eslint-disable-next-line jsx-a11y/no-redundant-roles
                         <button
+                            type='button'
                             className={cn(
                                 s.nav_icon,
                                 activeNav && s.nav_icon_active
