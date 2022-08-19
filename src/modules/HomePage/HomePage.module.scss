@@ -472,15 +472,36 @@
       margin-bottom: 20px;
       text-transform: uppercase;
       text-align: left;
+      font-weight: 500;
+        
+        @media (max-width: 1535px) {
+          font-size: 1.2vw;
+          line-height: 150%;
+          margin-left: 0;
+          margin-right: 0;
+          margin-bottom: 1.1vw;
+          text-align: left;
+          padding-right: 8vw;
+        }
+        @media (min-width: 1535px) {
+          font-size: 18px;
+          line-height: 150%;
+          margin-left: 0;
+          margin-right: 0;
+          margin-bottom: 15px;
+          text-align: left;
+          padding-right: 150px;
+        }
         @media (max-width: 992px) {
-          font-weight: 500;
           font-size: 14px;
           line-height: 140%;
           margin-left: -5px;
           margin-right: -5px;
           margin-bottom: 15px;
           text-align: center;
+          padding-right: 0;
         }
+
     }
 
     h4 {
