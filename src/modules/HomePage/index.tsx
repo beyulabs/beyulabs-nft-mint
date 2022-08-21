@@ -73,6 +73,12 @@ const HomePage: FC = () => {
                 )}
             >
                 <section className={s.hero} />
+
+                <section className={s.background_planets_head}>
+                    <div className={s.container_planets_head}>
+                        <div className={s.circle_head_light}></div>
+                    </div>
+                </section>
                 <section className={s.head}>
                     <div className={s.container_head}>
                         <div className={s.head__row}>
@@ -108,28 +114,28 @@ const HomePage: FC = () => {
                     </div>
                 </section>
                 <section className={s.background_planets_mission}>
-                    {/* <div className={s.container_planets_mission}>
-            <div className={s.mars_lg_img}>
-              <Image
-                src={'/mars-lg.svg'}
-                width={853}
-                height={856}
-                alt="Nexus Mission"
-              />
-            </div>
-            <div className={s.mars_md_img}>
-              <Image
-                src={'/mars-md.svg'}
-                width={150}
-                height={150}
-                alt="Nexus Mission"
-              />
-            </div>
-            <div className={s.circle_mission_lg}></div>
-            <div className={s.circle_mission_sm_first}></div>
-            <div className={s.circle_mission_second}></div>
-            <div className={s.circle_mission_third}></div>
-          </div> */}
+                    <div className={s.container_planets_mission}>
+                        <div className={s.mars_lg_img}>
+                            <Image
+                                src={'/mars-lg.svg'}
+                                width={853}
+                                height={856}
+                                alt="Nexus Mission"
+                            />
+                        </div>
+                        <div className={s.mars_md_img}>
+                            <Image
+                                src={'/mars-md.svg'}
+                                width={150}
+                                height={150}
+                                alt="Nexus Mission"
+                            />
+                        </div>
+                        <div className={s.circle_mission_lg}></div>
+                        <div className={s.circle_mission_sm_first}></div>
+                        <div className={s.circle_mission_second}></div>
+                        <div className={s.circle_mission_third}></div>
+                    </div>
                 </section>
 
                 <section
@@ -262,6 +268,52 @@ const HomePage: FC = () => {
                                 <img src={"/spaceman.svg"} alt='spaceman' />
                             </div> */}
                         </div>
+                    </div>
+                </section>
+
+                <section className={s.background_planets_astromap}>
+                    <div className={s.container_planets_astromap}>
+                        <div className={s.planet_three_satelits}>
+                            <Image
+                                src={'/planet_three_satelits.svg'}
+                                width={853}
+                                height={856}
+                                alt="Nexus Mission"
+                            />
+                        </div>
+                        <div className={s.circle_astromap_sm_first}></div>
+                        <div className={s.circle_astromap_second}></div>
+                        <div className={s.circle_astromap_sm_second}></div>
+                        <div className={s.circle_astromap_sm_third}></div>
+                        <div className={s.circle_mission_lg_shine}></div>
+                        <div className={s.circle_astromap_third}></div>
+                        <div className={s.circle_astromap_sm_fourth}></div>
+                        <div className={s.circle_astromap_sm_fifth}></div>
+                        <div className={s.circle_astromap_sm_sixth}></div>
+                        <div className={s.circle_astromap_sm_seventh}></div>
+                        <div className={s.comet_astromap_img}>
+                            {theme === "light" && (
+                                <Image
+                                    src={'/comet-up-astromap-light.svg'}
+                                    width={70}
+                                    height={202}
+                                    alt="Nexus Mission"
+                                />
+                            )}
+                            {theme === "dark" && (
+                                <Image
+                                    src={'/comet-up-astromap-dark.svg'}
+                                    width={70}
+                                    height={202}
+                                    alt="Nexus Mission"
+                                />
+                            )}
+                        </div>
+                        <div className={s.circle_astromap_sm_eighth}></div>
+                        <div className={s.circle_astromap_sm_ninth}></div>
+                        <div className={s.circle_astromap_sm_tenth}></div>
+                        <div className={s.circle_astromap_sm_eleventh}></div>
+                        <div className={s.circle_astromap_sm_twelth}></div>
                     </div>
                 </section>
 
@@ -412,6 +464,30 @@ const HomePage: FC = () => {
                                 </Link>
                             </div>
                         </div>
+                    </div>
+                </section>
+
+                <section className={s.background_planets_boarding}>
+                    <div className={s.container_planets_boarding}>
+                        <div className={s.right_bg_puddle_boarding}>
+                            {theme === "light" && (
+                                <Image
+                                    src={'/bg-right-boarding-light.svg'}
+                                    width={287}
+                                    height={1303}
+                                    alt="right background"
+                                />
+                            )}
+                            {theme === "dark" && (
+                                <Image
+                                    src={'/bg-right-boarding-durk.svg'}
+                                    width={287}
+                                    height={1303}
+                                    alt="right background"
+                                />
+                            )}
+                        </div>
+                        <div className={s.circle_mission_boarding}></div>
                     </div>
                 </section>
 

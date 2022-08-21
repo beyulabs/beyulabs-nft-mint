@@ -31,7 +31,7 @@
       position: absolute;
       right: 0;
       top: 0;
-      background: url('../../../public/wrapper_bg_right.png') 0 110% no-repeat;
+      //background: url('../../../public/wrapper_bg_right.png') 0 110% no-repeat;
       background-size: cover;
       pointer-events: none;
 
@@ -65,7 +65,7 @@
       position: absolute;
       right: 0;
       top: 0;
-      background: url('../../../public/wrapper_bg_right_light.png') top right no-repeat;
+      //background: url('../../../public/wrapper_bg_right_light.png') top right no-repeat;
       background-size: cover;
       pointer-events: none;
 
@@ -88,6 +88,30 @@
   }
   &.light {
     margin-bottom: 30px;
+  }
+}
+
+.background_planets_head {
+  position: absolute;
+  @media (max-width: 992px) {
+    display: none;
+  }
+  .container_planets_head {
+    position: relative;
+    left: 50vw;
+  }
+  .circle_head_light {
+    position: absolute;
+    top: -10px;
+    left: 870px;
+    height: 689px;
+    width: 689px;
+    // background-color: #45A985;
+    // opacity: 0.2;
+    border-radius: 50%;
+    background: rgba(30, 173, 205, 0.5);
+opacity: 0.8;
+filter: blur(295px);
   }
 }
 
@@ -234,72 +258,72 @@
       }
     }
   }
+}
 
-  .background_planets_mission {
+.background_planets_mission {
+  position: absolute;
+  @media (max-width: 992px) {
+    display: none;
+  }
+
+  .container_planets_mission {
+    position: relative;
+    left: 50vw;
+  }
+
+  .mars_lg_img {
     position: absolute;
-    @media (max-width: 992px) {
-      display: none;
-    }
-  
-    .container_planets_mission {
-      position: relative;
-      left: 50vw;
-    }
-  
-    .mars_lg_img {
-      position: absolute;
-      top: 5vw;
-      left: 770px;
-      width: 163px;
-    }
-  
-    .mars_md_img {
-      position: absolute;
-      top: 500px;
-      left: 690px;
-      width: 135px;
-    }
-  
-    .circle_mission_lg {
-      position: absolute;
-      top: 610px;
-      left: 870px;
-      height: 116px;
-      width: 116px;
-      background-color: #45A985;
-      opacity: 0.2;
-      border-radius: 50%;
-    }
-  
-    .circle_mission_sm_first {
-      position: absolute;
-      top: 5px;
-      left: 820px;
-      height: 14.21px;
-      width: 14.21px;
-      background-color: #318265;
-     border-radius: 50%;
-    }
-  
-    .circle_mission_second {
-      position: absolute;
-      top: 420px;
-      left: 770px;
-      height: 29px;
-      width: 29px;
-      background-color: #318265;
-      border-radius: 50%;
-    }
-  
-    .circle_mission_third {
-      position: absolute;
-      top: 750px;
-      left: 850px;
-      height: 6.46px;
-      width: 6.46px;
-      background-color: #99ECC4;
-      border-radius: 50%;
-    }
+    top: 5vw;
+    left: 770px;
+    width: 163px;
+  }
+
+  .mars_md_img {
+    position: absolute;
+    top: 500px;
+    left: 690px;
+    width: 135px;
+  }
+
+  .circle_mission_lg {
+    position: absolute;
+    top: 610px;
+    left: 870px;
+    height: 116px;
+    width: 116px;
+    background-color: #45A985;
+    opacity: 0.2;
+    border-radius: 50%;
+  }
+
+  .circle_mission_sm_first {
+    position: absolute;
+    top: 5px;
+    left: 820px;
+    height: 14.21px;
+    width: 14.21px;
+    background-color: #318265;
+   border-radius: 50%;
+  }
+
+  .circle_mission_second {
+    position: absolute;
+    top: 420px;
+    left: 770px;
+    height: 29px;
+    width: 29px;
+    background-color: #318265;
+    border-radius: 50%;
+  }
+
+  .circle_mission_third {
+    position: absolute;
+    top: 750px;
+    left: 850px;
+    height: 6.46px;
+    width: 6.46px;
+    background-color: #99ECC4;
+    border-radius: 50%;
   }
 }
 
@@ -664,6 +688,191 @@
 }
 }
 
+.background_planets_astromap {
+  position: absolute;
+  @media (max-width: 992px) {
+    display: none;
+  }
+
+  .container_planets_astromap {
+    position: relative;
+    left: 50vw;
+  }
+
+  .planet_three_satelits {
+    position: absolute;
+    top: -30px;
+    left: 670px;
+    width: 154px;
+  }
+
+  .circle_astromap_sm_first {
+    position: absolute;
+    top: 200px;
+    left: 810px;
+    height: 11.63px;
+    width: 11.63px;
+    background-color: #49AF8A;
+   border-radius: 50%;
+  }
+
+  .circle_astromap_second {
+    position: absolute;
+    top: 600px;
+    left: 760px;
+    width: 29.72px;
+height: 28.43px;
+    background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
+    border-radius: 50%;
+  }
+
+  .circle_astromap_sm_second {
+    position: absolute;
+    top: 390px;
+    left: 850px;
+    height: 16.8px;
+    width: 16.8px;
+    background-color: #318265;
+   border-radius: 50%;
+  }
+
+  .circle_astromap_sm_third {
+    position: absolute;
+    top: 695px;
+    left: 920px;
+    height: 16.8px;
+    width: 16.8px;
+    background-color: #99ECC4;
+   border-radius: 50%;
+  }
+
+  .circle_mission_lg_shine {
+    position: absolute;
+    top: 570px;
+    left: 910px;
+    height: 648px;
+    width: 648px;
+    background: rgba(11, 200, 164, 0.95);
+filter: blur(382px);
+    border-radius: 50%;
+  }
+
+  .circle_astromap_third {
+    position: absolute;
+    top: 870px;
+    left: 640px;
+    width: 37px;
+height: 37px;
+background: #4EB691;
+opacity: 0.4;
+    border-radius: 50%;
+  }
+
+  .circle_astromap_sm_fourth {
+    position: absolute;
+    top: 955px;
+    left: 840px;
+    width: 12px;
+height: 12px;
+background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
+   border-radius: 50%;
+  }
+
+  .circle_astromap_sm_fifth {
+    position: absolute;
+    top: 1210px;
+    left: 860px;
+    width: 12px;
+height: 12px;
+background: #318265;
+opacity: 0.4;
+   border-radius: 50%;
+  }
+
+  .circle_astromap_sm_sixth {
+    position: absolute;
+    top: 1340px;
+    left: 740px;
+    width: 18px;
+height: 18px;
+background: #318265;
+   border-radius: 50%;
+  }
+
+  .circle_astromap_sm_seventh {
+    position: absolute;
+    top: 1510px;
+    left: 940px;
+    width: 5px;
+height: 5px;
+background: #D9D9D9;
+transform: matrix(1, 0, 0, -1, 0, 0);
+   border-radius: 50%;
+  }
+
+  .comet_astromap_img {
+    position: absolute;
+    top: 1460px;
+    left: 795px;
+      width: 145px;
+  }
+
+  .circle_astromap_sm_eighth {
+    position: absolute;
+    top: 1785px;
+    left: 820px;
+    width: 23px;
+height: 23px;
+background: #99ECC4;
+transform: matrix(1, 0, 0, -1, 0, 0);
+   border-radius: 50%;
+  }
+
+  .circle_astromap_sm_ninth {
+    position: absolute;
+    top: 1985px;
+    left: 840px;
+    width: 13px;
+height: 13px;
+background: #318265;
+transform: matrix(1, 0, 0, -1, 0, 0);
+   border-radius: 50%;
+  }
+
+  .circle_astromap_sm_tenth {
+    position: absolute;
+    top: 1970px;
+    left: 940px;
+    width: 7px;
+height: 7px;
+background: #99ECC4;
+transform: matrix(1, 0, 0, -1, 0, 0);
+   border-radius: 50%;
+  }
+
+  .circle_astromap_sm_eleventh {
+    position: absolute;
+    top: 2120px;
+    left: 790px;
+    width: 9px;
+height: 9px;
+background: #49AF8A;
+transform: matrix(1, 0, 0, -1, 0, 0);
+   border-radius: 50%;
+  }
+
+  .circle_astromap_sm_twelth {
+    position: absolute;
+    top: 1810px;
+    left: 750px;
+    width: 580px;
+height: 580px;
+border: 0.5px dashed #000000;
+opacity: 0.2;
+   border-radius: 50%;
+  }
+}
+
 .astromap {
   padding-top: 90px;
   padding-bottom: 75px;
@@ -909,6 +1118,59 @@
         }
       }
     }
+  }
+}
+
+.background_planets_boarding {
+  position: absolute;
+  @media (max-width: 992px) {
+    display: none;
+  }
+
+  .container_planets_boarding {
+    position: relative;
+    left: 50vw;
+  }
+
+  .right_bg_puddle_boarding {
+    position: absolute;
+    top: -10px;
+    left: 750px;
+    width: 287px;
+    @media (min-width: 2050px) {
+      left: 39vw;
+    }
+  }
+
+  .circle_mission_boarding {
+    position: absolute;
+    top: 85px;
+    left: 780px;
+    height: 23px;
+    width: 23px;
+    background: #99ECC4;
+transform: matrix(1, 0, 0, -1, 0, 0);
+   border-radius: 50%;
+  }
+
+  .circle_mission_second {
+    position: absolute;
+    top: 420px;
+    left: 770px;
+    height: 29px;
+    width: 29px;
+    background-color: #318265;
+    border-radius: 50%;
+  }
+
+  .circle_mission_third {
+    position: absolute;
+    top: 750px;
+    left: 850px;
+    height: 6.46px;
+    width: 6.46px;
+    background-color: #99ECC4;
+    border-radius: 50%;
   }
 }
 
