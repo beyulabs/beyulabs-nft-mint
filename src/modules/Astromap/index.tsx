@@ -4,9 +4,9 @@ import Image from 'next/image';
 import AstroCard from '@modules/Astromap/components/Card';
 import HtmlMeta from '@components/HtmlMeta';
 import { useTheme } from 'next-themes';
-import s from './Astromap.module.scss';
-import voyagerArrow from '../../../public/voyager-card-arrow.svg'
 import { DownArrow } from '@components/Icons/Icons';
+import s from './Astromap.module.scss';
+import voyagerArrow from '../../../public/voyager-card-arrow.svg';
 
 const AstromapPage = () => {
   const { theme } = useTheme();
@@ -20,7 +20,6 @@ const AstromapPage = () => {
   if (!mounted) {
     return null;
   }
-
 
   return (
     <div className={cn(s.astromap, theme === 'light' && s.light)}>

@@ -11,7 +11,7 @@ interface TeamUserProps {
   children?: ReactNode;
   isRight?: boolean;
   isGreen?: boolean;
-  arrow?: ReactNode
+  arrow?: ReactNode;
 }
 
 const AstroCard = ({
@@ -20,7 +20,7 @@ const AstroCard = ({
   children,
   isGreen,
   isRight,
-  arrow
+  arrow,
 }: TeamUserProps) => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const isTablet = useMediaQuery(992);
