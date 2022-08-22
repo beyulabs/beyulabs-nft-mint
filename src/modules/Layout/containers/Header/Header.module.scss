@@ -7,6 +7,11 @@
     flex-direction: column;
     align-items: start;
     gap: 0;
+    // width: 100%;
+    // height: 100%;
+    // // left: 0;
+    // z-index: 50;
+    // position: absolute;
   }
 
   .block {
@@ -15,7 +20,7 @@
       font-size: 16px;
       line-height: 100%;
       color: var(--theme-heading-color);
-      margin-bottom: 19px;
+      margin-bottom: 15px;
 
       @media (min-width: 992px) {
         display: none;
@@ -36,6 +41,11 @@
   }
 }
 
+.pageslist {
+  flex-direction: column;
+  margin-top: 15px;
+}
+
 .nav {
   &__links {
     display: flex;
@@ -44,7 +54,8 @@
 
     @media (max-width: 992px) {
       flex-direction: column;
-      gap: 15px;
+      gap: 5px;
+      align-items: flex-start;
     }
 
     a {
@@ -138,6 +149,7 @@
 
   @media (max-width: 992px) {
     flex-direction: column;
+    margin-top: 0;
     width: 100%;
     gap: 12px;
 

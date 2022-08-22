@@ -24,10 +24,17 @@
 .team {
   padding-top: 190px;
   position: relative;
+  background: url('../../../public/Background.svg');
 
   @media (max-width: 992px) {
     padding-top: 120px;
+    background: url('../../../public/mob-bg.svg');
   }
+
+  &.light {
+    background: url('../../../public/bg-team-light.svg') top center no-repeat;
+      background-size: cover;
+    }
 
   //&.dark {
   //  &:before {
@@ -116,6 +123,11 @@
 
       @media (max-width: 992px) {
         grid-template-columns: 1fr;
+        z-index: 100;
+      }
+
+      &.light {
+        box-shadow: -10px -10px 23px rgba(105, 136, 129, 0.25), 10px 10px 25px rgba(58, 160, 124, 0.11);
       }
 
       &:nth-child(2) {
@@ -134,11 +146,19 @@
         span {
           color: white;
         }
+        a {
+          color: white;
+        }
+
       }
 
       img {
         height: 100%;
         object-fit: cover;
+
+        @media (max-width: 992px) {
+          height: auto;
+        }
       }
 
       .text {
@@ -160,17 +180,9 @@
           line-height: 150%;
           font-size: 18px;
         }
-
       }
-      span {
-        color: var(--theme-green-color);
-        &:hover {
-          color:white;
-          }
-          
-      }
-      
     }
+
     .dont {
       text-transform: uppercase;
       color: var(--theme-green-color);
@@ -184,5 +196,36 @@
         color:white;
         }
     }
+  }
+}
+
+.link {
+  color: var(--theme-green-color);
+  &:hover {
+    color:white;
+    }
+    
+}
+
+.button {
+  @media (min-width: 992px) {
+  display:none;
+  }
+  @media (max-width: 992px) {
+    align-items: center;
+    padding: 17px 84px;
+    width: 100%;
+    margin-top: 25px;
+    gap: 10px;
+    font-size: 20px;
+    line-height: 19px;
+    width: 334px;
+    height: 53px;
+    border: 1px solid #41A380;
+    border-radius: 10px;
+    background: none;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
   }
 }

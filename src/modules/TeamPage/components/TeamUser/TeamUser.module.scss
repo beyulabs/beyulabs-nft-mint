@@ -13,6 +13,10 @@
     background: var(--team-card-bg);
   }
 
+  &.light {
+    box-shadow: -10px -10px 23px rgba(105, 136, 129, 0.25), 10px 10px 25px rgba(58, 160, 124, 0.11);
+  }
+
   &__body {
     border-radius: var(--bdrs);
     text-align: center;
@@ -34,6 +38,7 @@
         border-radius: 21px;
         transition: none;
         width: 100%;
+        height: auto;
         object-fit: cover;
 
         @media (max-width: 992px) {

@@ -84,12 +84,78 @@
   }
 }
 
+.hero {
+  background: url('../../../public/landscape-min.jpg') center no-repeat;
+  position: relative;
+  background-size: cover;
+  height: 100vh;
+
+  @media (max-width: 992px) {
+    margin-top: 80px;
+    margin-bottom: -80px;
+  }
+  &.light {
+    margin-bottom: 30px;
+  }
+}
+
+.background_planets_head {
+  position: absolute;
+  @media (max-width: 992px) {
+    display: none;
+  }
+  .container_planets_head {
+    position: relative;
+    left: 50vw;
+  }
+  .circle_head_light {
+    position: absolute;
+    top: -10px;
+    left: 870px;
+    height: 689px;
+    width: 689px;
+    // background-color: #45A985;
+    // opacity: 0.2;
+    border-radius: 50%;
+    background: rgba(30, 173, 205, 0.5);
+opacity: 0.8;
+filter: blur(295px);
+  }
+}
+
 .head {
-  padding: 72px 0;
+  padding: 100px 0;
   overflow: hidden;
 
   @media (max-width: 992px) {
     padding-bottom: 0;
+  }
+  @media (max-width: 1503px) {
+    padding: 72px 0 5vw 0;
+  }
+
+  .container_head {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+  
+    @media (mix-width: 468px) {
+          padding-right: 0px;
+          padding-left: 0px;
+          }
+  
+    @media (min-width: 992px) {
+      max-width: 97vw;
+      padding-right: 5vw;
+      padding-left: 7vw;
+    }
+  
+    @media (min-width: 1535px) {
+      max-width: 1305px;
+      padding-right: 0;
+          padding-left: 0;
+    }
   }
 
   &__row {
@@ -104,12 +170,16 @@
       justify-content: center;
       text-align: center;
       padding-bottom: 0;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .image {
       position: absolute;
       right: -67px;
       top: 0;
+      z-index: 100;
 
       @media (max-width: 992px) {
         position: relative;
@@ -120,17 +190,41 @@
         max-width: 708px;
 
         @media (max-width: 1400px) {
-          max-width: 620px;
+          max-width: 50vw;
         }
 
         @media (max-width: 992px) {
           max-width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        @media (max-width: 468px) {
+          max-width: 110vw;
+          margin-left: auto;
+          margin-right: auto;
         }
       }
     }
 
     h1 {
       padding-top: 59px;
+      font-size: 40px;
+      line-height: 110%;
+      padding-left: 8vw;
+      padding-right: 8vw;
+      @media (min-width: 468px) {
+        font-size: 40px;
+      }
+      @media (min-width: 992px) {
+        font-size: 4.8vw;
+        padding-left: 0;
+        padding-right: 0;
+        line-height: 120%;
+      }
+      @media (min-width: 1503px) {
+        font-size: 73px;
+      }
+     
 
       .green {
         background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
@@ -174,60 +268,276 @@
   }
 }
 
+.background_planets_mission {
+  position: absolute;
+  @media (max-width: 992px) {
+    display: none;
+  }
+
+  .container_planets_mission {
+    position: relative;
+    left: 50vw;
+  }
+
+  .mars_lg_img {
+    position: absolute;
+    top: 5vw;
+    left: 770px;
+    width: 163px;
+  }
+
+  .mars_md_img {
+    position: absolute;
+    top: 500px;
+    left: 690px;
+    width: 135px;
+  }
+
+  .circle_mission_lg {
+    position: absolute;
+    top: 610px;
+    left: 870px;
+    height: 116px;
+    width: 116px;
+    background-color: #45A985;
+    opacity: 0.2;
+    border-radius: 50%;
+  }
+
+  .circle_mission_sm_first {
+    position: absolute;
+    top: 5px;
+    left: 820px;
+    height: 14.21px;
+    width: 14.21px;
+    background-color: #318265;
+   border-radius: 50%;
+  }
+
+  .circle_mission_second {
+    position: absolute;
+    top: 420px;
+    left: 770px;
+    height: 29px;
+    width: 29px;
+    background-color: #318265;
+    border-radius: 50%;
+  }
+
+  .circle_mission_third {
+    position: absolute;
+    top: 750px;
+    left: 850px;
+    height: 6.46px;
+    width: 6.46px;
+    background-color: #99ECC4;
+    border-radius: 50%;
+  }
+}
+
 .mission {
-  background: url('../../../public/bg_mission_dark.svg') center no-repeat;
+  background: url('../../../public/bg_mission.svg') center no-repeat;
   background-size: 1629px 877px;
   min-height: 880px;
+  background-size: contain;
+  position: relative;
+  @media (min-width: 992px) {
+    min-height: 59vw;
+  }
+
+  @media (min-width: 1535px) {
+    min-height: 880px;
+  }
+
+    @media (max-width: 992px) {
+      background: url('../../../public/bg-mob-mission-durk.svg') center no-repeat;
+      background-size: 755px 1123px;
+      min-height: 1123px;
+    }
+
+.conrainer_mission {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+
+  @media (mix-width: 468px) {
+        padding-right: 0px;
+        padding-left: 0px;
+        }
+
+  @media (min-width: 992px) {
+    max-width: 97vw;
+    padding-right: 75px;
+    padding-left: 15px;
+  }
+
+  @media (min-width: 1535px) {
+    max-width: 1500px;
+    padding-right: 75px;
+        padding-left: 15px;
+  }
+}
 
   &.light {
-    background: url('../../../public/bg_mission_light.svg') no-repeat;
+    background: url('../../../public/bg-mission-light.svg') center no-repeat;
     background-size: 1629px 877px;
+  min-height: 880px;
+  background-size: contain;
+  position: relative;
+  @media (min-width: 992px) {
+    min-height: 59vw;
   }
+
+  @media (min-width: 1535px) {
+    min-height: 880px;
+  }
+
+    @media (max-width: 992px) {
+      background: url('../../../public/bg-mob-mission-light.svg') center no-repeat;
+      background-size: 755px 1123px;
+      min-height: 1123px;
+    }
+  }
+
+  // .spaceman {
+  //       position: absolute;
+  //       right: 0;
+  //       bottom: -30;
+  //       animation: bounce 6s linear infinite;
+    
+  //       img {
+  //         width: 200px;
+  //         height: 176px;
+    
+  //         @media (max-width: 992px) {
+  //           width: 144px;
+  //           height: 130px;
+  //         }
+  //       }
+    
+  //       @keyframes bounce {
+  //         0%, 100% {
+  //           transform: translateY(-25%);
+  //           animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  //         }
+  //         50% {
+  //           transform: translateY(0);
+  //           animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  //         }
+  //       }
+  //     }
 
   &__row {
     background-size: contain;
     display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    grid-gap: 60px;
-    padding-right: 10%;
-    padding-bottom: 10%;
-    padding-top: 80px;
-
-    @media (max-width: 992px) {
-      grid-template-columns: 1fr;
-      grid-gap: 30px;
+    grid-template-columns: 80vw;
+    padding-right: 0;
+    text-align: center;
+    justify-content: center;
+    grid-gap: 0;
+    
+    @media (min-width: 468px) {
+      grid-template-columns: 330px;
       padding-right: 0;
       text-align: center;
+      justify-content: center;
+      grid-gap: 0;
+    }
+
+    @media (min-width: 992px) {
+      grid-template-columns: 35vw 1fr;
+    align-items: center;
+    grid-gap: 3vw;
+    padding-top: 5vw;
+    }
+
+    @media (min-width: 1535px) {
+      grid-template-columns: 540px 1fr;
+      grid-gap: 60px;
+      padding-top: 68px;
     }
 
     h2 {
-      margin-bottom: 30px;
-      text-align: left;
-
-      @media (max-width: 992px) {
-        text-align: center;
+      margin-bottom: 15px;
+      margin-left: -10px;
+      margin-right: -10px;
+      margin-top: -30px;
+      @media (min-width: 992px) {
+        font-size: 3.2vw;
+        margin-bottom: 30px;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: left;
+      }
+      @media (min-width: 1535px) {
+        font-size: 50px;
+        margin-bottom: 30px;
       }
     }
 
     p {
       margin-bottom: 20px;
       font-size: 18px;
+      line-height: 180%;
+      font-weight: 400;
 
       @media (max-width: 992px) {
         font-size: 14px;
+        margin-left: -5px;
+        margin-right: -5px;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+      @media (min-width: 992px) {
+        font-size: 1.2vw;
+        line-height: 2vw;
+        text-align: left;
+      }
+      @media (min-width: 1535px) {
+        font-size: 18px;
+        line-height: 180%;
       }
     }
 
     .upper {
       margin-bottom: 20px;
       text-transform: uppercase;
+      text-align: left;
+      font-weight: 500;
+        
+        @media (max-width: 1535px) {
+          font-size: 1.2vw;
+          line-height: 150%;
+          margin-left: 0;
+          margin-right: 0;
+          margin-bottom: 1.1vw;
+          text-align: left;
+          padding-right: 8vw;
+        }
+        @media (min-width: 1535px) {
+          font-size: 18px;
+          line-height: 150%;
+          margin-left: 0;
+          margin-right: 0;
+          margin-bottom: 15px;
+          text-align: left;
+          padding-right: 150px;
+        }
+        @media (max-width: 992px) {
+          font-size: 14px;
+          line-height: 140%;
+          margin-left: -5px;
+          margin-right: -5px;
+          margin-bottom: 15px;
+          text-align: center;
+          padding-right: 0;
+        }
+
     }
 
     h4 {
       text-transform: uppercase;
-      margin-bottom: 20px;
-
       a {
         background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
         -webkit-background-clip: text;
@@ -240,6 +550,8 @@
     .button {
       position: relative;
       display: inline-flex;
+      margin-top: 20px;
+      margin-bottom: 25px;
 
       &:before {
         content: '';
@@ -251,8 +563,321 @@
         transform: translateX(100%);
         top: -50px;
         background-size: contain;
+        @media (max-width: 992px) {
+          background: url('../../../public/arrow-mission-mob.svg') no-repeat;
+          right: -7px;
+          top: -38px;
+        }
       }
     }
+    .mission_imgages {
+      position: relative;
+    }
+    .mission_saturn {
+      position: absolute;
+      top: 12px;
+      left: -25px;
+      @media (min-width: 992px) {
+        scale: 2.5;
+        top: 0px;
+        left: 10px;
+      }
+    }
+    .mission_mars_bg_mob {
+      position: absolute;
+      opacity: 0.2;
+      top: 490px;
+    right: -120px;
+    @media (min-width: 992px) {
+      display: none;
+    }
+    }
+
+    .mission_mars_bg_mob_sm {
+      position: absolute;
+      top: 1010px;
+      left: -42px;
+    @media (min-width: 992px) {
+      display: none;
+    }
+    }
+
+    .nexus_img {
+      @media (max-width: 992px) {
+        transform: scaleY(0.9);
+      }
+    }
+    .mission_astronaut {
+      position: absolute;
+      top: 600px;
+      right: -953px;
+      animation: bounce 6s linear infinite;
+      scale: 0.7;
+   
+    @media (max-width: 1535px) {
+      top: 40vw;
+      right: -62vw;
+      scale: 0.6;
+    }
+    @media (max-width: 992px) {
+      display: none;
+      // scale: 0.5;
+      // right: -75vw;
+      // left: 0;
+      // top: 1050;
+    }
+    @keyframes bounce {
+            0%, 100% {
+              transform: translateY(-25%);
+              animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+            }
+            50% {
+              transform: translateY(0);
+              animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+            }
+          }
+    }
+
+    .join_mob {
+      @media (min-width: 992px) {
+        display: none;
+      }
+    }
+    .join_descktop {
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+  }
+  .missionCTA {
+    @media (max-width: 992px) {
+      text-align: center;
+  }
+    @media (min-width: 992px) {
+    text-align: left;
+}
+}
+}
+
+
+.nexush5 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: left;
+
+  @media (max-width: 992px) {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  text-align: center;
+}
+}
+
+.boardingDescr {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 180%;
+
+  @media (max-width: 992px) {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+  }
+}
+
+.nexusTitle {
+  text-align: left;
+  @media (max-width: 992px) {
+  text-align: center;
+  // margin-top: 0;
+}
+}
+
+.background_planets_astromap {
+  position: absolute;
+  @media (max-width: 992px) {
+    display: none;
+  }
+
+  .container_planets_astromap {
+    position: relative;
+    left: 50vw;
+  }
+
+  .planet_three_satelits {
+    position: absolute;
+    top: -30px;
+    left: 670px;
+    width: 154px;
+  }
+
+  .circle_astromap_sm_first {
+    position: absolute;
+    top: 200px;
+    left: 810px;
+    height: 11.63px;
+    width: 11.63px;
+    background-color: #49AF8A;
+   border-radius: 50%;
+  }
+
+  .circle_astromap_second {
+    position: absolute;
+    top: 600px;
+    left: 760px;
+    width: 29.72px;
+height: 28.43px;
+    background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
+    border-radius: 50%;
+  }
+
+  .circle_astromap_sm_second {
+    position: absolute;
+    top: 390px;
+    left: 850px;
+    height: 16.8px;
+    width: 16.8px;
+    background-color: #318265;
+   border-radius: 50%;
+  }
+
+  .circle_astromap_sm_third {
+    position: absolute;
+    top: 695px;
+    left: 920px;
+    height: 16.8px;
+    width: 16.8px;
+    background-color: #99ECC4;
+   border-radius: 50%;
+  }
+
+  .circle_mission_lg_shine {
+    position: absolute;
+    top: 570px;
+    left: 910px;
+    height: 648px;
+    width: 648px;
+    background: rgba(11, 200, 164, 0.95);
+filter: blur(382px);
+    border-radius: 50%;
+  }
+
+  .circle_astromap_third {
+    position: absolute;
+    top: 870px;
+    left: 640px;
+    width: 37px;
+height: 37px;
+background: #4EB691;
+opacity: 0.4;
+    border-radius: 50%;
+  }
+
+  .circle_astromap_sm_fourth {
+    position: absolute;
+    top: 955px;
+    left: 840px;
+    width: 12px;
+height: 12px;
+background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
+   border-radius: 50%;
+  }
+
+  .circle_astromap_sm_fifth {
+    position: absolute;
+    top: 1210px;
+    left: 860px;
+    width: 12px;
+height: 12px;
+background: #318265;
+opacity: 0.4;
+   border-radius: 50%;
+  }
+
+  .circle_astromap_sm_sixth {
+    position: absolute;
+    top: 1340px;
+    left: 740px;
+    width: 18px;
+height: 18px;
+background: #318265;
+   border-radius: 50%;
+  }
+
+  .circle_astromap_sm_seventh {
+    position: absolute;
+    top: 1510px;
+    left: 940px;
+    width: 5px;
+height: 5px;
+background: #D9D9D9;
+transform: matrix(1, 0, 0, -1, 0, 0);
+   border-radius: 50%;
+  }
+
+  .comet_astromap_img {
+    position: absolute;
+    top: 1460px;
+    left: 795px;
+      width: 145px;
+  }
+
+  .circle_astromap_sm_eighth {
+    position: absolute;
+    top: 1785px;
+    left: 820px;
+    width: 23px;
+height: 23px;
+background: #99ECC4;
+transform: matrix(1, 0, 0, -1, 0, 0);
+   border-radius: 50%;
+  }
+
+  .circle_astromap_sm_ninth {
+    position: absolute;
+    top: 1985px;
+    left: 840px;
+    width: 13px;
+height: 13px;
+background: #318265;
+transform: matrix(1, 0, 0, -1, 0, 0);
+   border-radius: 50%;
+  }
+
+  .circle_astromap_sm_tenth {
+    position: absolute;
+    top: 1970px;
+    left: 940px;
+    width: 7px;
+height: 7px;
+background: #99ECC4;
+transform: matrix(1, 0, 0, -1, 0, 0);
+   border-radius: 50%;
+  }
+
+  .circle_astromap_sm_eleventh {
+    position: absolute;
+    top: 2120px;
+    left: 790px;
+    width: 9px;
+height: 9px;
+background: #49AF8A;
+transform: matrix(1, 0, 0, -1, 0, 0);
+   border-radius: 50%;
+  }
+
+  .circle_astromap_sm_twelth {
+    position: absolute;
+    top: 1810px;
+    left: 750px;
+    width: 580px;
+height: 580px;
+border: 0.5px dashed #000000;
+opacity: 0.2;
+   border-radius: 50%;
   }
 }
 
@@ -514,6 +1139,59 @@
   }
 }
 
+.background_planets_boarding {
+  position: absolute;
+  @media (max-width: 992px) {
+    display: none;
+  }
+
+  .container_planets_boarding {
+    position: relative;
+    left: 50vw;
+  }
+
+  .right_bg_puddle_boarding {
+    position: absolute;
+    top: -10px;
+    left: 750px;
+    width: 287px;
+    @media (min-width: 2050px) {
+      left: 39vw;
+    }
+  }
+
+  .circle_mission_boarding {
+    position: absolute;
+    top: 85px;
+    left: 780px;
+    height: 23px;
+    width: 23px;
+    background: #99ECC4;
+transform: matrix(1, 0, 0, -1, 0, 0);
+   border-radius: 50%;
+  }
+
+  .circle_mission_second {
+    position: absolute;
+    top: 420px;
+    left: 770px;
+    height: 29px;
+    width: 29px;
+    background-color: #318265;
+    border-radius: 50%;
+  }
+
+  .circle_mission_third {
+    position: absolute;
+    top: 750px;
+    left: 850px;
+    height: 6.46px;
+    width: 6.46px;
+    background-color: #99ECC4;
+    border-radius: 50%;
+  }
+}
+
 .boarding {
   padding-bottom: 120px;
 
@@ -533,6 +1211,7 @@
     > div {
       position: relative;
       z-index: 2;
+      
     }
 
     &:before {
@@ -545,6 +1224,7 @@
       top: 6%;
       border-radius: 60px;
       border: 1px solid #2C4B40;
+      background: var(--astro-card-bg) url('../../../public/boarding-pass-ellipsis.svg') right bottom no-repeat;
 
       @media (max-width: 992px) {
         width: 100%;
@@ -585,15 +1265,28 @@
 
     h2 {
       margin-bottom: 30px;
+
+      @media (max-width: 1200px) {
+        font-size: 28px;
+        margin-bottom: 15px;
+      } 
     }
 
     p {
       margin-bottom: 20px;
+
+      @media (max-width: 1535px) {
+        font-size: 14px;
+      } 
     }
 
     h5 {
       margin-bottom: 20px;
       text-transform: uppercase;
+
+      @media (max-width: 1535px) {
+        font-size: 14px;
+      } 
     }
 
     h4 {
@@ -613,6 +1306,7 @@
       @media (max-width: 992px) {
         display: flex;
         justify-content: center;
+        margin-bottom: 40px;
       }
     }
   }
@@ -633,7 +1327,31 @@
     }
 
     :global(.swiper) {
-      padding: 0 26px 29px;
+      padding: 20px 26px;
+    }
+
+    :global(.swiper-pagination) {
+      position: absolute;
+      text-align: center;
+      transition: 300ms opacity;
+      transform: translate3d(0, 0, 0);
+      bottom: -5px;
+    }
+
+    :global(.swiper-pagination-bullet) {
+      width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 8px));
+      height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
+      display: inline-block;
+      border-radius: 50%;
+      margin-top: 20px;
+      background: var(--swiper-pagination-bullet-inactive-color,cyan);
+      opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
+    }
+
+    :global(.swiper-pagination-bullet-active) {
+      transform: scale(1);
+      opacity: var(--swiper-pagination-bullet-opacity, 1);
+      background: var(--swiper-pagination-color, var(--swiper-theme-color));
     }
 
     .arrow {
@@ -666,6 +1384,10 @@
       text-align: center;
     }
 
+    &.light {
+      box-shadow: -10px -10px 23px rgba(105, 136, 129, 0.25), 10px 10px 25px rgba(58, 160, 124, 0.11);
+    }
+
     img {
       margin-bottom: 20px;
       width: 100%;
@@ -683,11 +1405,13 @@
     }
 
     h3 {
-      margin-bottom: 13px;
+      margin-bottom: 7px;
 
       @media (max-width: 992px) {
         font-size: 24px;
         line-height: 29px;
+        margin-bottom: 13px;
+
       }
     }
 
@@ -713,7 +1437,12 @@
       line-height: 180%;
       width: 100%;
       transition: 0.2s all;
-      padding-top: 15px;
+      line-height: 150%;
+      @media (min-width: 992px) {
+        font-size: 13px;
+        line-height: 180%;
+        display: none;
+      }
     }
 
     &:hover {
@@ -723,6 +1452,9 @@
       p {
         //height: auto;
         opacity: 1;
+        @media (min-width: 992px) {
+          display: block;
+        }
       }
     }
   }
@@ -744,6 +1476,17 @@
 
     @media (max-width: 992px) {
       margin-bottom: 40px;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 180%;
+    @media (max-width: 992px) {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
     }
   }
 
@@ -775,5 +1518,6 @@
     grid-gap: 20px;
     max-width: 847px;
     margin: 0 auto;
+    line-height: 150%;
   }
 }

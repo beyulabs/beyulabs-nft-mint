@@ -1,3 +1,3 @@
-import TeamPage from '@modules/TeamPage';
+import TeamPage from "@modules/TeamPage"
 
-export default TeamPage;
+export default TeamPage

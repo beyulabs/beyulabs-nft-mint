@@ -1,64 +1,69 @@
-import React, { ReactNode, useState } from 'react';
-import cn from 'classnames';
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+import React, { ReactNode, useState } from "react"
+import cn from "classnames"
 
-import { Close, DownArrow } from '@components/Icons/Icons';
-import useMediaQuery from '@modules/Layout/hooks/useMediaQuery';
-import s from './AstroCard.module.scss';
+import { Close, DownArrow } from "@components/Icons/Icons"
+import useMediaQuery from "@modules/Layout/hooks/useMediaQuery"
+import s from "./AstroCard.module.scss"
 
 interface TeamUserProps {
-  title: string;
-  description: string;
-  children?: ReactNode;
-  isRight?: boolean;
-  isGreen?: boolean;
-  arrow?: ReactNode
+    title: string
+    description: string
+    children?: ReactNode
+    isRight?: boolean
+    isGreen?: boolean
+    arrow?: ReactNode
 }
 
 const AstroCard = ({
-  title,
-  description,
-  children,
-  isGreen,
-  isRight,
-  arrow
+    title,
+    description,
+    children,
+    isGreen,
+    isRight,
+    arrow,
 }: TeamUserProps) => {
-  const [showModal, setShowModal] = useState<boolean>(false);
-  const isTablet = useMediaQuery(992);
+    const [showModal, setShowModal] = useState<boolean>(false)
+    const isTablet = useMediaQuery(992)
 
-  const showToggle = () => {
-    setShowModal((prev) => !prev);
-  };
-  return (
-    <>
-      {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
-      <div
-        onClick={showToggle}
-        className={cn(s.card, isGreen && s.green, isRight && s.right)}
-      >
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
-      <div className={cn(s.bg, showModal && s.active)} />
-      <div className={cn(s.modal, showModal && s.active)}>
-        <div className={s.modal__row}>
-          <div className={s.image}>
-            {!isTablet ? (
-              <img src={'/modal_image.png'} alt="" />
-            ) : (
-              <img src={'/modal_img_mobile.png'} alt="" />
-            )}
-          </div>
-          <div className={s.text}>
-            <h2>{title}</h2>
-            <div className={s.text__wrap}>{children}</div>
-          </div>
-        </div>
-        <button onClick={showToggle} type="button" className={s.close}>
-          <Close />
-        </button>
-      </div>
-    </>
-  );
-};
+    const showToggle = () => {
+        setShowModal((prev) => !prev)
+    }
+    return (
+        <>
+            {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
+            <div
+                className={cn(s.card, isGreen && s.green, isRight && s.right)}
+                onClick={showToggle}
+            >
+                <h3>{title}</h3>
+                <p>{description}</p>
+            </div>
+            <div
+                className={cn(s.bg, showModal && s.active)}
+                onClick={showToggle}
+            />
+            <div className={cn(s.modal, showModal && s.active)}>
+                <div className={s.modal__row}>
+                    <div className={s.image}>
+                        {!isTablet ? (
+                            <img src={"/modal_image.png"} alt='' />
+                        ) : (
+                            <img src={"/modal_img_mobile.png"} alt='' />
+                        )}
+                    </div>
+                    <div className={s.text}>
+                        <h2>{title}</h2>
+                        <div className={s.text__wrap}>{children}</div>
+                    </div>
+                </div>
+                <button onClick={showToggle} type='button' className={s.close}>
+                    <Close />
+                </button>
+            </div>
+        </>
+    )
+}
 
-export default AstroCard;
+export default AstroCard
