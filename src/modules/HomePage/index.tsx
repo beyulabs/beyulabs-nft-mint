@@ -343,12 +343,12 @@ const HomePage: FC = () => {
               </div>
               <div>
                 <h2>Boarding Pass</h2>
-                <h5>
+                <p className={s.desc}>
                   The Boarding Passes are separated by their contribution to the
                   new world of web3. Each character type will have a unique
                   challenge in order to ensure you align with that character,and
                   that you will be able to mint them during our presale.
-                </h5>
+                </p>
                 <p>
                   Keep your eyes on the #announcements and #boarding-pass
                   channels for these challenges, they will essentially guarantee
