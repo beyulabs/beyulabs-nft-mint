@@ -381,15 +381,10 @@ const HomePage: FC = () => {
                 effect="fade"
                 slidesPerView={1}
                 spaceBetween={30}
-                // observer={true}
                 observer
                 observeParents
                 pagination={pagination}
                 loop
-                // navigation={{
-                //   prevEl: prevRef?.current,
-                //   nextEl: nextRef?.current,
-                // }}
                 breakpoints={{
                   768: {
                     slidesPerView: 3,
