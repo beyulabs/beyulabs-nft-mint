@@ -95,13 +95,14 @@ const Header = () => {
   };
 
   return (
-    <header className={s.header}>
+    <header className={cn(s.header, activeNav && s.openNav)}>
       <div className="container">
         <div className={s.header__row}>
           <div className="logo">
             {theme === 'light' && (
               <Link href="/">
-                <a>
+                {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
+                <a onClick={() => setActiveNav(false)}>
                   <img
                     src={'/nexus-voyagers-logotype-green-dark.svg'}
                     alt="BeYu Labs logo"
@@ -113,7 +114,8 @@ const Header = () => {
             )}
             {theme === 'dark' && (
               <Link href="/">
-                <a>
+                {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
+                <a onClick={() => setActiveNav(false)}>
                   <img
                     src={'/nexus-voyagers-logotype-green-white.svg'}
                     alt="BeYu Labs logo"

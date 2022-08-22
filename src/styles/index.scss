@@ -76,3 +76,21 @@ img {
 #nprogress .bar {
   background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%) !important;
 }
+
+body {
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 0;
+  }
+
+  .swiper-pagination-bullet {
+    background: #51BEA7;
+    opacity: 0.3;
+
+    &-active {
+      opacity: 1;
+    }
+  }
+}

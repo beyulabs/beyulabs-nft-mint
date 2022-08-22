@@ -6,11 +6,12 @@ import cn from 'classnames';
 import Image from 'next/image';
 import HtmlMeta from '@components/HtmlMeta';
 import { Coins } from '@components/Icons/Icons';
-import Spoiler from '@components/Spoiler';
+import FAQ from '@components/FAQ';
 import { Button } from '@components/Button/button';
 import { faqs } from '@utils/constants';
 
 import 'swiper/css';
+import 'swiper/css/pagination';
 import s from './HomePage.module.scss';
 
 const HomePage: FC = () => {
@@ -137,10 +138,10 @@ const HomePage: FC = () => {
                   incentivized exchange of utility. Each of us will have a role
                   to play.
                 </p>
-                <h5>
+                <p className={s.upper}>
                   Bridging the gap between dream and reality, virtual and real,
                   we build a regenerative vision of the future.
-                </h5>
+                </p>
                 <h4>
                   Are you mission ready? <a href="#">Join now!</a>
                 </h4>
@@ -175,7 +176,9 @@ const HomePage: FC = () => {
                     alt="NFT"
                   />
                   <div>
-                    <h3>NFT</h3>
+                    <h3>
+                      <span>NFT</span>
+                    </h3>
                     <p>
                       To terraform Web3. An ecosystem cultivated by developers,
                       artists, enthusiasts, and investors.{' '}
@@ -195,7 +198,9 @@ const HomePage: FC = () => {
                     alt="Community Chest"
                   />
                   <div>
-                    <h3>Community Chest</h3>
+                    <h3>
+                      <span>Community</span> <span>Chest</span>
+                    </h3>
                     <p>
                       To terraform Web3. An ecosystem cultivated by developers,
                       artists, enthusiasts, and investors.
@@ -213,7 +218,9 @@ const HomePage: FC = () => {
                     alt="Community Chest"
                   />
                   <div>
-                    <h3>Mission Board</h3>
+                    <h3>
+                      <span>Mission Board</span>
+                    </h3>
                     <p>
                       To terraform Web3. An ecosystem cultivated by developers,
                       artists, enthusiasts, and investors.
@@ -233,7 +240,9 @@ const HomePage: FC = () => {
                     alt="Launchpad"
                   />
                   <div>
-                    <h3>Launchpad</h3>
+                    <h3>
+                      <span>Launchpad</span>
+                    </h3>
                     <p>
                       To terraform Web3. An ecosystem cultivated by developers,
                       artists, enthusiasts, and investors.
@@ -251,7 +260,9 @@ const HomePage: FC = () => {
                     alt="Project Showcase"
                   />
                   <div>
-                    <h3>Project Showcase</h3>
+                    <h3>
+                      <span>Project Showcase</span>
+                    </h3>
                     <p>
                       To terraform Web3. An ecosystem cultivated by developers,
                       artists, enthusiasts, and investors.
@@ -272,7 +283,9 @@ const HomePage: FC = () => {
                     alt="The Experience"
                   />
                   <div>
-                    <h3>The Experience</h3>
+                    <h3>
+                      <span>The Experience</span>
+                    </h3>
                     <p>
                       To terraform Web3. An ecosystem cultivated by developers,
                       artists, enthusiasts, and investors.
@@ -290,7 +303,9 @@ const HomePage: FC = () => {
                     alt="Charity"
                   />
                   <div>
-                    <h3>Charity</h3>
+                    <h3>
+                      <span>Charity</span>
+                    </h3>
                     <p>
                       To terraform Web3. An ecosystem cultivated by developers,
                       artists, enthusiasts, and investors.
@@ -309,12 +324,22 @@ const HomePage: FC = () => {
           <div className="container">
             <div className={cn(s.boarding__row, theme === 'light' && s.light)}>
               <div>
-                <Image
-                  src="/tickets.svg"
-                  width={532}
-                  height={701}
-                  alt="Boarding Pass"
-                />
+                {theme === 'light' && (
+                  <Image
+                    src="/tickets_light.svg"
+                    width={532}
+                    height={701}
+                    alt="Boarding Pass"
+                  />
+                )}
+                {theme === 'dark' && (
+                  <Image
+                    src="/tickets.svg"
+                    width={532}
+                    height={701}
+                    alt="Boarding Pass"
+                  />
+                )}
               </div>
               <div>
                 <h2>Boarding Pass</h2>
@@ -515,14 +540,7 @@ const HomePage: FC = () => {
       <section className={cn(s.faq, theme === 'light' && s.light)}>
         <div className="container">
           <h2>FAQ</h2>
-          <div className={s.faq__list}>
-            {faqs.map((faq, index) => (
-              // eslint-disable-next-line react/no-array-index-key
-              <Spoiler key={`faq-${index}`} title={faq.question}>
-                {faq.answer}
-              </Spoiler>
-            ))}
-          </div>
+          <FAQ questionsAnswers={faqs} />
         </div>
       </section>
     </div>
