@@ -254,7 +254,8 @@
   border-radius: 20px;
   position: relative;
   overflow: hidden;
-  transition: 0.2s all;
+  //transition: 0.2s all;
+  transition: 0.6s all;
 
   @media (max-width: 992px) {
     display: grid;
@@ -276,6 +277,10 @@
     padding: 20px 10px;
 
     h3 {
+      color: #fff;
+    }
+
+    p {
       color: #fff;
     }
 
@@ -342,7 +347,7 @@
     background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
+    //background-clip: text;
     text-fill-color: transparent;
     bottom: 0;
     left: 0;

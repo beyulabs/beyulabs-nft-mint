@@ -113,6 +113,7 @@
       backdrop-filter: blur(16px);
       border-radius: 20px;
       overflow: hidden;
+      transition: 0.5s;
 
       @media (max-width: 992px) {
         grid-template-columns: 1fr;
@@ -125,15 +126,16 @@
 
       &:hover {
           z-index: 4;
-          transition-timing-function: step-start;
+          //transition-timing-function: step-start;
           background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
-          border: 1px solid #FFFFFF;
+          //border: 1px solid #FFFFFF;
           border-bottom: 0;
           transform: scale(1.1);
           color: white;
-        span {
-          color: white;
-        }
+
+          span, p, a {
+            color: white;
+          }
       }
 
       img {

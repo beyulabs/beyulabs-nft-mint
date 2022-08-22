@@ -3,7 +3,7 @@
   align-items: center;
   gap: 50px;
 
-  @media (max-width: 992px) {
+  @media (max-width: 1200px) {
     flex-direction: column;
     align-items: start;
     gap: 0;
@@ -17,7 +17,7 @@
       color: var(--theme-heading-color);
       margin-bottom: 19px;
 
-      @media (min-width: 992px) {
+      @media (min-width: 1200px) {
         display: none;
       }
     }
@@ -30,7 +30,7 @@
     width: 100%;
     margin: 20px 0 30px;
 
-    @media (min-width: 992px) {
+    @media (min-width: 1200px) {
       display: none;
     }
   }
@@ -42,8 +42,14 @@
     align-items: center;
     gap: 70px;
 
-    @media (max-width: 992px) {
+    @media (max-width: 1600px) {
+      gap: 50px;
+    }
+
+    @media (max-width: 1200px) {
       flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
       gap: 15px;
     }
 
@@ -51,7 +57,7 @@
       color: var(--theme-links-color);
       font-size: 14px;
 
-      @media (max-width: 992px) {
+      @media (max-width: 1200px) {
         font-size: 18px;
         line-height: 180%;
         color: var(--theme-heading-color);
@@ -89,7 +95,7 @@
     position: relative;
     z-index: 3;
 
-    @media (max-width: 992px) {
+    @media (max-width: 1200px) {
       grid-template-columns: 1fr auto;
       padding: 20px 0;
     }
@@ -103,12 +109,12 @@
   align-items: center;
   gap: 5px;
 
-  @media (max-width: 992px) {
+  @media (max-width: 1200px) {
     gap: 20px;
   }
 
   &:hover {
-    @media (min-width: 992px) {
+    @media (min-width: 1200px) {
       transform: scale(1.05);
     }
   }
@@ -117,14 +123,14 @@
     font-size: 13px;
     line-height: 95.4%;
 
-    @media (max-width: 992px) {
+    @media (max-width: 1200px) {
       font-size: 18px;
       line-height: 180%;
       text-transform: uppercase;
     }
 
     > span {
-      @media (min-width: 992px) {
+      @media (min-width: 1200px) {
         display: block;
       }
     }
@@ -136,7 +142,7 @@
   align-items: center;
   gap: 30px;
 
-  @media (max-width: 992px) {
+  @media (max-width: 1200px) {
     flex-direction: column;
     width: 100%;
     gap: 12px;

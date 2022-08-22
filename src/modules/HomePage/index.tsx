@@ -70,20 +70,23 @@ const HomePage: FC = () => {
           theme === 'dark' && s.dark
         )}
       >
+        <section className={s.hero}>
+          <img src={'/landscape-min.jpg'} alt="" />
+        </section>
         <section className={s.head}>
           <div className="container">
             <div className={s.head__row}>
               <div>
                 <h1>
-                  <span className={s.line}>Become</span> a member of the{' '}
+                  <span className={s.line}>Become</span> a crew member of the{' '}
                   <span className={s.green}>Voyager</span> space{' '}
                   <span className={s.line}>mission</span>
                 </h1>
-                <p>
-                  Unforgettable adventures await you during the flight! Find
-                  friends and develop together creating, buying and selling NFTs
-                  collection!
-                </p>
+                {/* <p> */}
+                {/*  Unforgettable adventures await you during the flight! Find */}
+                {/*  friends and develop together creating, buying and selling NFTs */}
+                {/*  collection! */}
+                {/* </p> */}
               </div>
               <div className={s.image}>
                 {theme === 'light' && (
@@ -101,18 +104,18 @@ const HomePage: FC = () => {
             <div className={s.mission__row}>
               <div>
                 {theme === 'light' && (
-                  <Image
+                  <img
                     src={'/nexus-mission-light.svg'}
-                    width={524}
-                    height={679}
+                    // width={524}
+                    // height={679}
                     alt="Nexus Mission"
                   />
                 )}
                 {theme === 'dark' && (
-                  <Image
-                    src={'/nexus-mission.svg'}
-                    width={524}
-                    height={679}
+                  <img
+                    src={'/nexus_mission.png'}
+                    // width={524}
+                    // height={679}
                     alt="Nexus Mission"
                   />
                 )}
@@ -126,7 +129,7 @@ const HomePage: FC = () => {
                   To terraform Web3. An ecosystem cultivated by developers,
                   artists, enthusiasts, and investors. A Solarpunk utopia
                   powered by BeYu Labs and driven by radical optimism and
-                  sustainability.{' '}
+                  sustainability.
                 </p>
                 <p>
                   A collection of 10,119 crew members, primed for the genesis
@@ -162,7 +165,7 @@ const HomePage: FC = () => {
           <div className="container">
             <div className={cn(s.cards, theme === 'light' && s.light)}>
               <div className={s.title}>
-                <h2>Astromap</h2>
+                <h2>Benefits</h2>
               </div>
               <div className={s.cards__list}>
                 <div className={cn(s.card, s.left, s.card_1)}>
@@ -179,10 +182,7 @@ const HomePage: FC = () => {
                     <h3>
                       <span>NFT</span>
                     </h3>
-                    <p>
-                      To terraform Web3. An ecosystem cultivated by developers,
-                      artists, enthusiasts, and investors.{' '}
-                    </p>
+                    <p>Commercial Use</p>
                   </div>
                 </div>
                 <div className={s.empty} />
@@ -201,10 +201,7 @@ const HomePage: FC = () => {
                     <h3>
                       <span>Community</span> <span>Chest</span>
                     </h3>
-                    <p>
-                      To terraform Web3. An ecosystem cultivated by developers,
-                      artists, enthusiasts, and investors.
-                    </p>
+                    <p>Opportunity to be showcased at irl and virtual events</p>
                   </div>
                 </div>
                 <div className={cn(s.card, s.left, s.card_3)}>
@@ -221,10 +218,7 @@ const HomePage: FC = () => {
                     <h3>
                       <span>Mission Board</span>
                     </h3>
-                    <p>
-                      To terraform Web3. An ecosystem cultivated by developers,
-                      artists, enthusiasts, and investors.
-                    </p>
+                    <p>Lifetime Access to all Events</p>
                   </div>
                 </div>
                 <div className={s.empty} />
@@ -243,10 +237,7 @@ const HomePage: FC = () => {
                     <h3>
                       <span>Launchpad</span>
                     </h3>
-                    <p>
-                      To terraform Web3. An ecosystem cultivated by developers,
-                      artists, enthusiasts, and investors.
-                    </p>
+                    <p>Exclusive Voyager Perks by Character Types</p>
                   </div>
                 </div>
                 <div className={cn(s.card, s.left, s.card_5)}>
@@ -263,10 +254,7 @@ const HomePage: FC = () => {
                     <h3>
                       <span>Project Showcase</span>
                     </h3>
-                    <p>
-                      To terraform Web3. An ecosystem cultivated by developers,
-                      artists, enthusiasts, and investors.
-                    </p>
+                    <p>Community Lottery i.e. all expense trip to SXSW</p>
                   </div>
                 </div>
                 <div className={s.empty} />
@@ -286,10 +274,7 @@ const HomePage: FC = () => {
                     <h3>
                       <span>The Experience</span>
                     </h3>
-                    <p>
-                      To terraform Web3. An ecosystem cultivated by developers,
-                      artists, enthusiasts, and investors.
-                    </p>
+                    <p>Networking access to Web3 Hub of builders</p>
                   </div>
                 </div>
                 <div className={cn(s.card, s.left, s.card_7)}>
@@ -306,15 +291,18 @@ const HomePage: FC = () => {
                     <h3>
                       <span>Charity</span>
                     </h3>
-                    <p>
-                      To terraform Web3. An ecosystem cultivated by developers,
-                      artists, enthusiasts, and investors.
-                    </p>
+                    <p>Digital work profile - PFP</p>
                   </div>
                 </div>
               </div>
               <div className={s.button}>
-                <Button size="large" text="Explore Astromap" color="green" />
+                <Button
+                  size="large"
+                  link="/astromap"
+                  isLink
+                  text="Explore Astromap"
+                  color="green"
+                />
               </div>
             </div>
           </div>
@@ -325,29 +313,31 @@ const HomePage: FC = () => {
             <div className={cn(s.boarding__row, theme === 'light' && s.light)}>
               <div>
                 {theme === 'light' && (
-                  <Image
-                    src="/tickets_light.svg"
+                  <img
+                    src={'/tickets_light.svg'}
                     width={532}
                     height={701}
                     alt="Boarding Pass"
                   />
                 )}
                 {theme === 'dark' && (
-                  <Image
-                    src="/tickets.svg"
+                  <img
+                    src={'/tickets.svg'}
                     width={532}
                     height={701}
                     alt="Boarding Pass"
                   />
                 )}
               </div>
-              <div>
+              <div className={s.text}>
                 <h2>Boarding Pass</h2>
                 <p className={s.desc}>
                   The Boarding Passes are separated by their contribution to the
                   new world of web3. Each character type will have a unique
-                  challenge in order to ensure you align with that character,and
-                  that you will be able to mint them during our presale.
+                  challenge in order to cultivate a diverse list of creators .
+                  This list will give you access to the Boarding Pass NFT and
+                  its exclusive perks. Stay alert and don’t get left behind in
+                  the deteriorating space of Web2.
                 </p>
                 <p>
                   Keep your eyes on the #announcements and #boarding-pass
@@ -399,96 +389,99 @@ const HomePage: FC = () => {
               >
                 <SwiperSlide>
                   <div className={s.card}>
-                    <img src={'/mechanic2.png'} alt="Mechanic" />
-                    <h3>Mechanic</h3>
-                    <span className={s.tag}>Dev</span>
-                    <div className={s.description}>
-                      <p>
-                        The creatives that take ideas and bring them to life in
-                        a beautiful way - the artists. Without grace in the
-                        design. The creatives that take ideas and bring them to
-                        life in a beautiful way - the artists. Without grace in
-                        the design.
-                      </p>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className={s.card}>
-                    <img src={'/mechanic2.png'} alt="Mechanic" />
-                    <h3>Mechanic</h3>
-                    <span className={s.tag}>Dev</span>
-                    <div className={s.description}>
-                      <p>
-                        The creatives that take ideas and bring them to life in
-                        a beautiful way - the artists. Without grace in the
-                        design. The creatives that take ideas and bring them to
-                        life in a beautiful way - the artists. Without grace in
-                        the design.
-                      </p>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className={s.card}>
-                    <img src={'/Rectangle2.svg'} alt="Architect " />
-                    <h3>Architect</h3>
-                    <span className={s.tag}>Artist</span>
-                    <div className={s.description}>
-                      <p>
-                        The creatives that take ideas and bring them to life in
-                        a beautiful way - the artists. Without grace in the
-                        design. The creatives that take ideas and bring them to
-                        life in a beautiful way - the artists. Without grace in
-                        the design.
-                      </p>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className={s.card}>
-                    <img src={'/mechanic2.png'} alt="Mechanic" />
-                    <h3>Mechanic</h3>
-                    <span className={s.tag}>Dev</span>
-                    <div className={s.description}>
-                      <p>
-                        The creatives that take ideas and bring them to life in
-                        a beautiful way - the artists. Without grace in the
-                        design. The creatives that take ideas and bring them to
-                        life in a beautiful way - the artists. Without grace in
-                        the design.
-                      </p>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className={s.card}>
-                    <img src={'/Cap.png'} alt="Captain" />
+                    <img src={'/captain.png'} alt="Mechanic" />
                     <h3>Captain</h3>
                     <span className={s.tag}>Founder</span>
                     <div className={s.description}>
                       <p>
-                        The creatives that take ideas and bring them to life in
-                        a beautiful way - the artists. Without grace in the
-                        design. The creatives that take ideas and bring them to
-                        life in a beautiful way - the artists. Without grace in
-                        the design.
+                        Pulling together the pieces of the puzzle and ensuring
+                        the community is working in harmony to terraform the
+                        planet in the same direction - the founders. The
+                        captain’s vision is brought to life by those to see the
+                        light at the end of at the end of the tunnel.
                       </p>
                     </div>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className={s.card}>
-                    <img src={'/Rectangle2.svg'} alt="Architect " />
+                    <img src={'/mechanic.png'} alt="Mechanic" />
+                    <h3>Mechanic</h3>
+                    <span className={s.tag}>Dev</span>
+                    <div className={s.description}>
+                      <p>
+                        The brains behind the ideas - the engineers/developers.
+                        Creating technical solutions to the complex challenges
+                        that come with terraforming a new world; they build
+                        quietly in the back-end and help connect the dots to
+                        bring innovation to life.
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className={s.card}>
+                    <img src={'/architect.png'} alt="Architect " />
                     <h3>Architect</h3>
                     <span className={s.tag}>Artist</span>
                     <div className={s.description}>
                       <p>
                         The creatives that take ideas and bring them to life in
                         a beautiful way - the artists. Without grace in the
-                        design. The creatives that take ideas and bring them to
-                        life in a beautiful way - the artists. Without grace in
-                        the design.
+                        design of a of a new world, it would become nothing more
+                        than a lifeless land of chrome structures. structures.
+                        The architects breathe life into the planet and create
+                        an aesthetic that makes it worth populating.
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className={s.card}>
+                    <img src={'/journalist.png'} alt="Journalist" />
+                    <h3>Journalist</h3>
+                    <span className={s.tag}>Influencer</span>
+                    <div className={s.description}>
+                      <p>
+                        On a mission to spread ideas and share news of
+                        innovations and creation - the marketers. A new business
+                        - a beautiful piece of art - an innovative idea; do they
+                        really exist if the people of the planet don’t KNOW they
+                        exist? The journalists spread the word to ensure the
+                        population is aware of what’s happening on the planet.
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className={s.card}>
+                    <img src={'/merchant.png'} alt="Merchant" />
+                    <h3>Merchant</h3>
+                    <span className={s.tag}>Investor</span>
+                    <div className={s.description}>
+                      <p>
+                        The driving force behind the economy of the new world -
+                        the investors. Those who decide what the direction of
+                        the market looks like, support businesses and create
+                        financial abundance for the builders and community
+                        alike.
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className={s.card}>
+                    <img src={'/explorer.png'} alt="Explorer" />
+                    <h3>Explorer</h3>
+                    <span className={s.tag}>Collector</span>
+                    <div className={s.description}>
+                      <p>
+                        Like true mavens, stimulating the economy as the
+                        backbone to all initiatives of the new world - the
+                        collector. All innovations, projects, and progress of
+                        this terraformed society would be all for naught if not
+                        for these community members actively participating and
+                        engaging in the wild world of web3.
                       </p>
                     </div>
                   </div>
@@ -531,13 +524,14 @@ const HomePage: FC = () => {
             </div>
           </div>
         </section>
+
+        <section className={cn(s.faq, theme === 'light' && s.light)}>
+          <div className="container">
+            <h2>FAQ</h2>
+            <FAQ questionsAnswers={faqs} />
+          </div>
+        </section>
       </div>
-      <section className={cn(s.faq, theme === 'light' && s.light)}>
-        <div className="container">
-          <h2>FAQ</h2>
-          <FAQ questionsAnswers={faqs} />
-        </div>
-      </section>
     </div>
   );
 };

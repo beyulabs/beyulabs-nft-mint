@@ -79,6 +79,11 @@ export const routes: NavRoute[] = [
     title: 'Our team',
     enabled: true,
   },
+  {
+    path: '/whitepaper',
+    title: 'Whitepaper',
+    enabled: true,
+  },
 ];
 
 export const beyuSocialIcons: SocialIcon[] = [

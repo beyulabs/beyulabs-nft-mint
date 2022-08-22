@@ -16,7 +16,7 @@ import s from './Header.module.scss';
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
-  const isTablet = useMediaQuery(992);
+  const isTablet = useMediaQuery(1200);
   const nextRouter = useRouter();
   const [activeNav, setActiveNav] = useState<boolean>(false);
 

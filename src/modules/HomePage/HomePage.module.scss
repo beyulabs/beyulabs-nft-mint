@@ -1,3 +1,15 @@
+.hero {
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+
+  &.light {
+    margin-bottom: 30px;
+  }
+}
+
 .bg_wrapper {
   position: relative;
   padding-top: 109px;
@@ -7,8 +19,8 @@
     position: relative;
   }
 
-  @media (max-width: 992px) {
-    padding-top: 0;
+  @media (max-width: 1200px) {
+    padding-top: 87px;
   }
 
   &.dark {
@@ -20,7 +32,7 @@
       left: 0;
       top: 0;
       background: url('../../../public/wrapper_bg_left.png') 0 0 no-repeat;
-      background-size: 62.5% 101%;
+      background-size: 72.5% 101%;
       pointer-events: none;
       z-index: -1;
 
@@ -131,6 +143,11 @@
 
     h1 {
       padding-top: 59px;
+      margin-bottom: 0;
+
+      @media (max-width: 1200px) {
+        padding-top: 0;
+      }
 
       .green {
         background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
@@ -175,24 +192,46 @@
 }
 
 .mission {
-  background: url('../../../public/bg_mission_dark.svg') center no-repeat;
-  background-size: 1629px 877px;
-  min-height: 880px;
+  background: url('../../../public/bg_mission_dark.svg') no-repeat;
+  background-size: contain;
+  background-position: 10% 45%;
+  //min-height: 880px;
+
+  @media (max-width: 1600px) {
+    background-size: 97%;
+    background-position: 10% 15%;
+  }
+
+  //@media (max-width: 1200px) {
+  //  background: url('../../../public/bg_mission_dark_mobile.svg') no-repeat;
+  //}
 
   &.light {
     background: url('../../../public/bg_mission_light.svg') no-repeat;
-    background-size: 1629px 877px;
+    background-size: contain;
   }
 
   &__row {
     background-size: contain;
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 40% 1fr;
     align-items: center;
     grid-gap: 60px;
     //padding-right: 10%;
     padding-bottom: 10%;
     padding-top: 80px;
+
+    @media (max-width: 1600px) {
+      grid-gap: 10px;
+      padding-right: 3%;
+      img {
+        max-width: 90%;
+      }
+    }
+
+    @media (max-width: 1500px) {
+      padding-right: 6%;
+    }
 
     @media (max-width: 992px) {
       grid-template-columns: 1fr;
@@ -214,6 +253,10 @@
       margin-bottom: 20px;
       font-size: 18px;
       line-height: 180%;
+
+      @media (max-width: 1600px) {
+        font-size: 16px;
+      }
 
       @media (max-width: 992px) {
         font-size: 14px;
@@ -531,21 +574,41 @@
     padding-right:5%;
     position: relative;
 
+    @media (max-width: 1400px) {
+      grid-template-columns: 35% 1fr;
+      grid-gap: 30px;
+    }
+
     > div {
       position: relative;
-      z-index: 2;
+      z-index: 3;
+    }
+
+    .text {
+      padding-right: 5%;
     }
 
     &:before {
       content: '';
       position: absolute;
-      left: 5%;
-      width: 95%;
-      height: 87%;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background: #232424 url('../../../public/boarding_elipse.svg') no-repeat 97% 97%;
-      top: 6%;
+      top: 0;
       border-radius: 60px;
       border: 1px solid #2C4B40;
+
+      @media (max-width: 1600px) {
+        width: 96%;
+        left: 2%;
+      }
+
+      @media (max-width: 1400px) {
+        width: 92%;
+        border-radius: 40px;
+        left: 4%;
+      }
 
       @media (max-width: 992px) {
         width: 100%;
@@ -567,6 +630,14 @@
       background: url('../../../public/boarding_planet.svg') center no-repeat;
       background-size: contain;
       transform: translate(36%, -16%);
+
+      @media (max-width: 1600px) {
+        right: 2%;
+      }
+
+      @media (max-width: 1400px) {
+        right: 4%;
+      }
     }
 
     @media (max-width: 992px) {
@@ -593,7 +664,7 @@
       font-size: 18px;
       line-height: 180%;
 
-      @media (max-width: 992px) {
+      @media (max-width: 1600px) {
         font-size: 16px;
       }
 
@@ -649,6 +720,11 @@
       padding: 0 26px 29px;
     }
 
+    :global(.swiper-slide) {
+      display: flex;
+      height: auto;
+    }
+
     .arrow {
       position: absolute;
       top: 50%;
@@ -674,6 +750,8 @@
     border-radius: 20px;
     padding: 15px;
     position: relative;
+    //display: flex;
+    //flex-direction: column;
 
     @media (max-width: 992px) {
       text-align: center;
@@ -684,11 +762,11 @@
       width: 100%;
       object-fit: cover;
       border-radius: 20px;
-      height: 320px;
+      height: 280px;
 
-      @media (max-width: 1400px) {
-        height: 280px;
-      }
+      //@media (max-width: 1400px) {
+      //  height: 280px;
+      //}
 
       @media (max-width: 1100px) {
         height: 260px;
