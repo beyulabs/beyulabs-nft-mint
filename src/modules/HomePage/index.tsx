@@ -344,7 +344,9 @@ const HomePage: FC = () => {
                                             alt='NFT'
                                         />
                                         <div>
-                                            <h3>NFT</h3>
+                                            <h3>
+                                                <span>NFT</span>
+                                            </h3>
                                             <p>Commercial Use </p>
                                         </div>
                                     </div>
@@ -367,7 +369,10 @@ const HomePage: FC = () => {
                                             alt='Community Chest'
                                         />
                                         <div>
-                                            <h3>Community Chest</h3>
+                                            <h3>
+                                                <span>Community</span>{" "}
+                                                <span>Chest</span>
+                                            </h3>
                                             <p>
                                                 Opportunity to be showcased at
                                                 irl and virtual events
@@ -387,7 +392,9 @@ const HomePage: FC = () => {
                                             alt='Community Chest'
                                         />
                                         <div>
-                                            <h3>Mission Board</h3>
+                                            <h3>
+                                                <span>Mission Board</span>
+                                            </h3>
                                             <p>Lifetime Access to all Events</p>
                                         </div>
                                     </div>
@@ -410,7 +417,9 @@ const HomePage: FC = () => {
                                             alt='Launchpad'
                                         />
                                         <div>
-                                            <h3>Launchpad</h3>
+                                            <h3>
+                                                <span>Launchpad</span>
+                                            </h3>
                                             <p>
                                                 Exclusive Voyager Perks by
                                                 Character Types
@@ -430,7 +439,9 @@ const HomePage: FC = () => {
                                             alt='Project Showcase'
                                         />
                                         <div>
-                                            <h3>Project Showcase</h3>
+                                            <h3>
+                                                <span>Project Showcase</span>
+                                            </h3>
                                             <p>
                                                 Community Lottery i.e. all
                                                 expense trip to SXSW
@@ -457,7 +468,9 @@ const HomePage: FC = () => {
                                             alt='The Experience'
                                         />
                                         <div>
-                                            <h3>The Experience</h3>
+                                            <h3>
+                                                <span>The Experience</span>
+                                            </h3>
                                             <p>
                                                 Networking access to Web3 Hub of
                                                 builders
@@ -477,7 +490,9 @@ const HomePage: FC = () => {
                                             alt='Charity'
                                         />
                                         <div>
-                                            <h3>Charity</h3>
+                                            <h3>
+                                                <span>Charity</span>
+                                            </h3>
                                             <p>Digital work profile - PFP</p>
                                         </div>
                                     </div>
