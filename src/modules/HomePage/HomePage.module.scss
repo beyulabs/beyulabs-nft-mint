@@ -15,7 +15,7 @@
       position: absolute;
       left: 0;
       top: 0;
-      background: url('../../../public/wrapper_bg_left.png') 0 0 no-repeat;
+      //background: url('../../../public/wrapper_bg_left.png') 0 0 no-repeat;
       background-size: cover;
       pointer-events: none;
 
@@ -49,7 +49,7 @@
       position: absolute;
       left: 0;
       top: 0;
-      background: url('../../../public/wrapper_bg_left_light.png') top left no-repeat;
+      //background: url('../../../public/wrapper_bg_left_light.png') top left no-repeat;
       background-size: cover;
       pointer-events: none;
 
@@ -112,6 +112,37 @@
     background: rgba(30, 173, 205, 0.5);
 opacity: 0.8;
 filter: blur(295px);
+  }
+  .circle_head_left_first {
+    position: absolute;
+    top: 115px;
+    right: 900px;
+    height: 118px;
+    width: 119px;
+    background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
+transform: rotate(-180deg);
+    border-radius: 50%;
+  }
+  .circle_head_left_second {
+    position: absolute;
+    top: 605px;
+    right: 860px;
+    height: 34px;
+    width: 35px;
+    background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
+opacity: 0.5;
+transform: rotate(-180deg);
+    border-radius: 50%;
+  }
+  .circle_head_left_shine {
+    position: absolute;
+    top: 665px;
+    right: 50px;
+    height: 530px;
+    width: 530px;
+    background: rgba(11, 200, 164, 0.34);
+    filter: blur(292px);
+    border-radius: 50%;
   }
 }
 
@@ -325,6 +356,82 @@ filter: blur(295px);
     background-color: #99ECC4;
     border-radius: 50%;
   }
+
+  .circle_mission_left_first {
+    position: absolute;
+    top: 100px;
+    right: 870px;
+    height: 23px;
+    width: 23px;
+    background-color: #99ECC4;
+    border-radius: 50%;
+  }
+
+  .circle_mission_left_second {
+    position: absolute;
+    top: 250px;
+    right: 800px;
+    height: 9px;
+    width: 9px;
+    background: #49AF8A;
+    border-radius: 50%;
+  }
+
+  .saturn_left_mission_img {
+    position: absolute;
+    top: 610px;
+    right: 730px;
+    width: 135px;
+  }
+
+  .mars_left_img {
+    position: absolute;
+    top: 680px;
+    right: 615px;
+    width: 135px;
+    opacity: 0.4;
+  }
+
+  .circle_mission_left_third {
+    position: absolute;
+    top: 850px;
+    right: 870px;
+    height: 13px;
+    width: 13px;
+    background: #318265;
+    border-radius: 50%;
+  }
+
+  .circle_mission_left_fourth {
+    position: absolute;
+    top: 910px;
+    right: 820px;
+    height: 9px;
+    width: 8px;
+    background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
+    border-radius: 50%;
+  }
+
+  .circle_mission_left_fifth {
+    position: absolute;
+    top: 900px;
+    right: 670px;
+    height: 5px;
+    width: 5px;
+    background: #D9D9D9;
+    border-radius: 50%;
+  }
+
+  .circle_mission_left_sixth {
+    position: absolute;
+    top: 1010px;
+    right: 770px;
+    height: 3px;
+    width: 4px;
+    background: #D9D9D9;
+    border-radius: 50%;
+  }
+  
 }
 
 .mission {
@@ -871,6 +978,164 @@ border: 0.5px dashed #000000;
 opacity: 0.2;
    border-radius: 50%;
   }
+
+  .comet_left_astromap_img {
+    position: absolute;
+    top: 210px;
+    right: 670px;
+      width: 145px;
+  }
+
+  .circle_astromap_left_shine {
+    position: absolute;
+    top: 205px;
+    right: 680px;
+    width: 408px;
+height: 408px;
+background: rgba(11, 200, 164, 0.74);
+    filter: blur(342px);
+   border-radius: 50%;
+  }
+
+  .bg_astromap_right {
+    position: absolute;
+    top: 330px;
+    right: 550px;
+    width: 547.16px;
+    z-index: -5;
+    @media (min-width: 2050px) {
+      right: 28vw;
+    }
+  }
+
+  .circle_astromap_left_first {
+    position: absolute;
+    top: 585px;
+    right: 780px;
+    width: 14.21px;
+height: 14.21px;
+background: #318265;
+   border-radius: 50%;
+  }
+
+  .saturn_astromap_left {
+    position: absolute;
+    top: 780px;
+    right: 700px;
+      width: 156px;
+  }
+
+  .circle_astromap_left_second {
+    position: absolute;
+    top: 975px;
+    right: 900px;
+    width: 22px;
+height: 22px;
+background: #318265;
+   border-radius: 50%;
+  }
+
+  .circle_astromap_left_third {
+    position: absolute;
+    top: 1105px;
+    right: 940px;
+    width: 58.2px;
+height: 58.2px;
+background: #45A985;
+opacity: 0.2;
+   border-radius: 50%;
+  }
+
+  .planet_three_satelits_astromap_left {
+    position: absolute;
+    top: 1260px;
+    right: 780px;
+      width: 136px;
+  }
+
+  .circle_astromap_left_shine_second {
+    position: absolute;
+    top: 1345px;
+    right: 640px;
+    width: 340px;
+height: 340px;
+background: #0B6DC8;
+filter: blur(276px);
+   border-radius: 50%;
+  }
+
+  .circle_astromap_left_fourth {
+    position: absolute;
+    top: 1645px;
+    right: 730px;
+    width: 424px;
+height: 424px;
+opacity: 0.4;
+border: 1px dashed #52BB96;
+   border-radius: 50%;
+  }
+
+  .circle_astromap_left_fifth {
+    position: absolute;
+    top: 1658px;
+    right: 850px;
+    width: 12px;
+height: 12px;
+background: #49AF8A;
+   border-radius: 50%;
+  }
+
+  .circle_astromap_left_sixth {
+    position: absolute;
+    top: 1868px;
+    right: 722px;
+    width: 17px;
+height: 17px;
+background: #318265;
+   border-radius: 50%;
+  }
+
+  .circle_astromap_left_seventh {
+    position: absolute;
+    top: 1892px;
+    right: 622px;
+    width: 9.1px;
+height: 9.1px;
+background: #99ECC4;
+   border-radius: 50%;
+  }
+
+  .circle_astromap_left_eighth {
+    position: absolute;
+    top: 1592px;
+    right: 322px;
+    width: 648px;
+height: 648px;
+background: rgba(11, 200, 164, 0.55);
+filter: blur(482px);
+   border-radius: 50%;
+  }
+
+  .circle_astromap_left_ninth {
+    position: absolute;
+    top: 2055px;
+    right: 790px;
+    width: 30px;
+height: 29px;
+background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
+   border-radius: 50%;
+  }
+
+  .circle_astromap_left_tenth {
+    position: absolute;
+    top: 2195px;
+    right: 870px;
+    width: 17px;
+height: 17px;
+background: #4EB691;
+opacity: 0.4;
+   border-radius: 50%;
+  }
 }
 
 .astromap {
@@ -1153,24 +1418,55 @@ transform: matrix(1, 0, 0, -1, 0, 0);
    border-radius: 50%;
   }
 
-  .circle_mission_second {
+  .circle_boarding_left_first {
     position: absolute;
-    top: 420px;
-    left: 770px;
-    height: 29px;
-    width: 29px;
-    background-color: #318265;
-    border-radius: 50%;
+    top: 165px;
+    right: 820px;
+    height: 12px;
+    width: 10.3px;
+    background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
+   border-radius: 50%;
   }
 
-  .circle_mission_third {
+  .circle_boarding_left_second {
     position: absolute;
-    top: 750px;
-    left: 850px;
-    height: 6.46px;
-    width: 6.46px;
-    background-color: #99ECC4;
-    border-radius: 50%;
+    top: 365px;
+    right: 760px;
+    height: 4px;
+    width: 5.2px;
+    background: #D9D9D9;
+     border-radius: 50%;
+  }
+
+  .circle_boarding_left_third {
+    position: absolute;
+    top: 435px;
+    right: 440px;
+    height: 242px;
+    width: 242px;
+    opacity: 0.2;
+border: 5px solid #41A380;
+border-radius: 10px;
+transform: rotate(-180deg);
+     border-radius: 50%;
+  }
+
+  .comet_right_boarding {
+    position: absolute;
+    top: 660px;
+    right: 660px;
+    width: 120px;
+  }
+
+  .circle_boarding_left_shine {
+    position: absolute;
+    top: 1255px;
+    right: 750px;
+    height: 648px;
+    width: 648px;
+    background: #0BC8A4;
+    filter: blur(407px);
+     border-radius: 50%;
   }
 }
 

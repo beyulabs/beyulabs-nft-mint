@@ -77,6 +77,9 @@ const HomePage: FC = () => {
                 <section className={s.background_planets_head}>
                     <div className={s.container_planets_head}>
                         <div className={s.circle_head_light}></div>
+                        <div className={s.circle_head_left_first}></div>
+                        <div className={s.circle_head_left_second}></div>
+                        <div className={s.circle_head_left_shine}></div>
                     </div>
                 </section>
                 <section className={s.head}>
@@ -135,6 +138,28 @@ const HomePage: FC = () => {
                         <div className={s.circle_mission_sm_first}></div>
                         <div className={s.circle_mission_second}></div>
                         <div className={s.circle_mission_third}></div>
+                        <div className={s.circle_mission_left_first}></div>
+                        <div className={s.circle_mission_left_second}></div>
+                        <div className={s.saturn_left_mission_img}>
+                            <Image
+                                src={'/saturn-sm-left-mission.svg'}
+                                width={110}
+                                height={70}
+                                alt="Nexus Mission"
+                            />
+                        </div>
+                        <div className={s.mars_left_img}>
+                            <Image
+                                src={'/mars-lg.svg'}
+                                width={146}
+                                height={146}
+                                alt="Nexus Mission"
+                            />
+                        </div>
+                        <div className={s.circle_mission_left_third}></div>
+                        <div className={s.circle_mission_left_fourth}></div>
+                        <div className={s.circle_mission_left_fifth}></div>
+                        <div className={s.circle_mission_left_sixth}></div>
                     </div>
                 </section>
 
@@ -314,6 +339,70 @@ const HomePage: FC = () => {
                         <div className={s.circle_astromap_sm_tenth}></div>
                         <div className={s.circle_astromap_sm_eleventh}></div>
                         <div className={s.circle_astromap_sm_twelth}></div>
+                        <div className={s.comet_left_astromap_img}>
+                            {theme === "light" && (
+                                <Image
+                                    src={'/comet-up-astromap-light.svg'}
+                                    width={70}
+                                    height={202}
+                                    alt="Nexus Mission"
+                                />
+                            )}
+                            {theme === "dark" && (
+                                <Image
+                                    src={'/comet-left-astromap-dark.svg'}
+                                    width={57}
+                                    height={176}
+                                    alt="Nexus Mission"
+                                />
+                            )}
+                        </div>
+                        <div className={s.circle_astromap_left_shine}></div>
+                        <div className={s.bg_astromap_right}>
+                            {theme === "light" && (
+                                <Image
+                                    src={'/bg-astromap-left-light.svg'}
+                                    width={547.16}
+                                    height={1980}
+                                    alt="left background"
+                                />
+                            )}
+                            {theme === "dark" && (
+                                <Image
+                                    src={'/bg-astromap-left-dark.svg'}
+                                    width={547.16}
+                                    height={1980}
+                                    alt="left background"
+                                />
+                            )}
+                        </div>
+                        <div className={s.circle_astromap_left_first}></div>
+                        <div className={s.saturn_astromap_left}>
+                            <Image
+                                src={'/saturn-astromap-left.svg'}
+                                width={196}
+                                height={137}
+                                alt="left background"
+                            />
+                        </div>
+                        <div className={s.circle_astromap_left_second}></div>
+                        <div className={s.circle_astromap_left_third}></div>
+                        <div className={s.planet_three_satelits_astromap_left}>
+                            <Image
+                                src={'/planet_three_satelits_astromap_left.svg'}
+                                width={155}
+                                height={95}
+                                alt="left background"
+                            />
+                        </div>
+                        <div className={s.circle_astromap_left_shine_second}></div>
+                        <div className={s.circle_astromap_left_fourth}></div>
+                        <div className={s.circle_astromap_left_fifth}></div>
+                        <div className={s.circle_astromap_left_sixth}></div>
+                        <div className={s.circle_astromap_left_seventh}></div>
+                        <div className={s.circle_astromap_left_eighth}></div>
+                        <div className={s.circle_astromap_left_ninth}></div>
+                        <div className={s.circle_astromap_left_tenth}></div>
                     </div>
                 </section>
 
@@ -488,6 +577,28 @@ const HomePage: FC = () => {
                             )}
                         </div>
                         <div className={s.circle_mission_boarding}></div>
+                        <div className={s.circle_boarding_left_first}></div>
+                        <div className={s.circle_boarding_left_second}></div>
+                        <div className={s.circle_boarding_left_third}></div>
+                        <div className={s.comet_right_boarding}>
+                            {theme === "light" && (
+                                <Image
+                                    src={'/comet_right_boarding.svg'}
+                                    width={120}
+                                    height={120}
+                                    alt="right background"
+                                />
+                            )}
+                            {theme === "dark" && (
+                                <Image
+                                    src={'/comet_right_boarding.svg'}
+                                    width={120}
+                                    height={120}
+                                    alt="right background"
+                                />
+                            )}
+                        </div>
+                        <div className={s.circle_boarding_left_shine}></div>
                     </div>
                 </section>
 
