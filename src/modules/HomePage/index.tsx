@@ -219,7 +219,7 @@ const HomePage: FC = () => {
                                 <div className={s.nexus_img}>
                                     {theme === "light" && (
                                         <Image
-                                            src={"/nexus-mission-light.svg"}
+                                            src={"/nexus-mission-light-airplane.svg"}
                                             width={552}
                                             height={728}
                                             alt='Nexus Mission'
