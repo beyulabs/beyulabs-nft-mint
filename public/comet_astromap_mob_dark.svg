@@ -1,0 +1,28 @@
+<svg width="38" height="102" viewBox="0 0 38 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<path d="M1.49267 16.0951C0.66829 8.85478 5.86941 2.31706 13.1097 1.49269C20.35 0.66831 26.8877 5.86944 27.7121 13.1097L33.2078 61.3773L6.98839 64.3626L1.49267 16.0951Z" fill="#72E8BD"/>
+<rect x="6.64941" y="61.3833" width="2.39898" height="20.9911" rx="1.19949" transform="rotate(-6.4957 6.64941 61.3833)" fill="#72E8BD"/>
+<rect x="10.3311" y="51.3062" width="2.39898" height="38.9835" rx="1.19949" transform="rotate(-6.4957 10.3311 51.3062)" fill="#72E8BD"/>
+<rect x="14.0801" y="41.8247" width="2.39898" height="23.3901" rx="1.19949" transform="rotate(-6.4957 14.0801 41.8247)" fill="#72E8BD"/>
+<rect x="16.998" y="67.4482" width="2.39898" height="7.19695" rx="1.19949" transform="rotate(-6.4957 16.998 67.4482)" fill="#72E8BD"/>
+<rect x="18.084" y="76.9824" width="2.39898" height="23.9898" rx="1.19949" transform="rotate(-6.4957 18.084 76.9824)" fill="#72E8BD"/>
+<rect x="23.3936" y="81.207" width="2.39898" height="4.79797" rx="1.19949" transform="rotate(-6.4957 23.3936 81.207)" fill="#72E8BD"/>
+<rect x="20.4082" y="54.9873" width="2.39898" height="23.9898" rx="1.19949" transform="rotate(-6.4957 20.4082 54.9873)" fill="#72E8BD"/>
+<rect x="25.6504" y="58.6162" width="2.39898" height="21.5909" rx="1.19949" transform="rotate(-6.4957 25.6504 58.6162)" fill="#72E8BD"/>
+<rect x="28.2959" y="81.856" width="2.39898" height="11.3952" rx="1.19949" transform="rotate(-6.4957 28.2959 81.856)" fill="#72E8BD"/>
+<rect x="32.1133" y="72.9707" width="2.39898" height="5.99746" rx="1.19949" transform="rotate(-6.4957 32.1133 72.9707)" fill="#72E8BD"/>
+<rect x="30.1455" y="55.6899" width="2.39898" height="16.1931" rx="1.19949" transform="rotate(-6.4957 30.1455 55.6899)" fill="#72E8BD"/>
+<rect x="8.08301" y="52.769" width="2.39898" height="37.784" rx="1.19949" transform="rotate(-6.4957 8.08301 52.769)" fill="white"/>
+<rect x="12.9863" y="53.418" width="2.39898" height="32.986" rx="1.19949" transform="rotate(-6.4957 12.9863 53.418)" fill="white"/>
+<rect x="16.125" y="38.5737" width="2.39898" height="27.5883" rx="1.19949" transform="rotate(-6.4957 16.125 38.5737)" fill="white"/>
+<rect x="22.5205" y="52.3325" width="2.39898" height="16.7929" rx="1.19949" transform="rotate(-6.4957 22.5205 52.3325)" fill="white"/>
+<rect x="28.1016" y="58.9404" width="2.39898" height="11.9949" rx="1.19949" transform="rotate(-6.4957 28.1016 58.9404)" fill="white"/>
+<circle cx="14.6707" cy="15.1984" r="11.3952" transform="rotate(-6.4957 14.6707 15.1984)" fill="url(#paint0_linear_314_3602)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_314_3602" x1="19.0817" y1="2.7005" x2="15.9498" y2="24.6752" gradientUnits="userSpaceOnUse">
+<stop stop-color="#41A380"/>
+<stop offset="1" stop-color="#63D5AC"/>
+</linearGradient>
+</defs>
+</svg>

@@ -146,6 +146,45 @@ transform: rotate(-180deg);
   }
 }
 
+.background_planets_head_mob {
+  position: absolute;
+  @media (min-width: 992px) {
+    display: none;
+  }
+  .container_planets_head_mob {
+    position: relative;
+    left: 50vw;
+  }
+  .circle_head_light_mob_right {
+    position: absolute;
+    top: 30px;
+    left: 12vw;
+    height: 258px;
+    width: 258px;
+    border-radius: 50%;
+    background: rgba(30, 173, 205, 0.9);
+    filter: blur(155px);
+  }
+.circle_head_mob_first {
+  position: absolute;
+  top: 690px;
+  right: 18vw;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #EDF2F1;
+transform: rotate(-154deg);
+}
+.planet_head_mob {
+  position: absolute;
+    top: 683px;
+    left: 33vw;
+    width: 143px;
+    opacity: 0.5;
+}
+ 
+}
+
 .head {
   padding: 100px 0;
   overflow: hidden;
@@ -1138,12 +1177,92 @@ opacity: 0.4;
   }
 }
 
+.background_planets_astromap_mob {
+  position: absolute;
+  @media (min-width: 992px) {
+    display: none;
+  }
+  .container_planets_astromap_mob {
+    position: relative;
+    left: 50vw;
+  }
+.circle_astromap_mob_first {
+  position: absolute;
+  top: 30px;
+  left: 38vw;
+  height: 28px;
+  width: 27px;
+  border-radius: 50%;
+  background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
+}
+.circle_astromap_mob_second {
+  position: absolute;
+  top: 50px;
+    right: 28vw;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background: #4EB691;
+opacity: 0.4;
+}
+.circle_astromap_mob_third {
+  position: absolute;
+  top: 120px;
+    right: 12vw;
+  height: 166px;
+  width: 166px;
+  border-radius: 50%;
+  background: #0BC8A4;
+  filter: blur(83px);
+}
+.comet_astromap_mob {
+  position: absolute;
+  top: 140px;
+  left: 37vw;
+    width: 110px;
+}
+.bg_astromap_left_mob {
+  position: absolute;
+  top: 115px;
+    left: -65vw;
+    width: 219px;
+    @media (min-width: 400px) {
+      left: -50vw;
+    }
+}
+.bg_astromap_right_mob {
+  position: absolute;
+  top: 625px;
+  right: -50vw;
+    width: 167px;
+    @media (min-width: 400px) {
+      right: -50vw;
+    }
+}
+.circle_astromap_mob_fourht {
+  position: absolute;
+  top: 1060px;
+    right: 0;
+  height: 166px;
+  width: 166px;
+  border-radius: 50%;
+  background: #0BC8A4;
+  filter: blur(83px);
+}
+.comet_astromap_left_mob {
+  position: absolute;
+  top: 1040px;
+    right: 19vw;
+    width: 110px;
+} 
+}
+
 .astromap {
   padding-top: 90px;
   padding-bottom: 75px;
 
   @media (max-width: 992px) {
-    padding-bottom: 60px;
+    padding-bottom: 130px;
   }
 
   .cards {
@@ -1470,11 +1589,112 @@ transform: rotate(-180deg);
   }
 }
 
+.background_planets_boarding_mob {
+  position: absolute;
+  @media (min-width: 992px) {
+    display: none;
+  }
+  .container_planets_boarding_mob {
+    position: relative;
+    left: 50vw;
+  }
+.circle_boarding_mob_first {
+  position: absolute;
+  top: -90px;
+  left: 3vw;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background: #318265;
+  transform: matrix(0.63, 0.78, 0.78, -0.63, 0, 0);
+}
+.circle_boarding_mob_second {
+  position: absolute;
+  top: -50px;
+  right: 8vw;
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  background: #49AF8A;
+transform: matrix(0.63, 0.78, 0.78, -0.63, 0, 0);
+}
+.circle_boarding_mob_third {
+  position: absolute;
+  top: -30px;
+  right: 41vw;
+  height: 23px;
+  width: 23px;
+  border-radius: 50%;
+  background: #99ECC4;
+transform: matrix(0.63, 0.78, 0.78, -0.63, 0, 0);
+}
+.circle_boarding_mob_fourth {
+  position: absolute;
+  top: 208px;
+  right: 46vw;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #49AF8A;
+}
+.circle_boarding_mob_fifth {
+  position: absolute;
+  top: 142px;
+  right: 16vw;
+  height: 166px;
+  width: 166px;
+  border-radius: 50%;
+  background: #0BC8A4;
+  filter: blur(83px);
+}
+.circle_boarding_mob_sixth {
+  position: absolute;
+  top: 708px;
+  right: 43vw;
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background: #318265;
+transform: rotate(67.8deg);
+}
+.circle_boarding_mob_seventh {
+  position: absolute;
+  top: 625px;
+  left: 42vw;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background: #99ECC4;
+transform: matrix(0.63, 0.78, 0.78, -0.63, 0, 0);
+}
+.comet_boarding_mob {
+  position: absolute;
+  top: 840px;
+    right: 22vw;
+    width: 110px;
+}
+.circle_boarding_mob_eighth {
+  position: absolute;
+  top: 1065px;
+  right: 17vw;
+  height: 28.4px;
+  width: 30px;
+  border-radius: 50%;
+  background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
+}
+.saturn_boarding_mob {
+  position: absolute;
+  top: 1000px;
+  left: 28vw;
+    width: 190px;
+}
+}
+
 .boarding {
   padding-bottom: 120px;
 
   @media (max-width: 992px) {
-    padding-bottom: 80px;
+    padding-bottom: 120px;
   }
 
   &__row {
@@ -1594,6 +1814,9 @@ transform: rotate(-180deg);
   h2 {
     text-align: center;
     margin-bottom: 40px;
+    @media (max-width: 992px) {
+      margin-bottom: 10px;
+    }
   }
 
   .slider {
@@ -1723,6 +1946,37 @@ transform: rotate(-180deg);
       }
     }
   }
+}
+
+.background_planets_voyagers_mob {
+  position: absolute;
+  @media (min-width: 992px) {
+    display: none;
+  }
+  .container_planets_voyagers_mob {
+    position: relative;
+    left: 50vw;
+  }
+.circle_voyagers_mob_first {
+  position: absolute;
+  top: 66px;
+  right: 43vw;
+  height: 16px;
+  width: 17px;
+  border-radius: 50%;
+  background: #4EB691;
+opacity: 0.4;
+}
+.circle_voyagers_mob_second {
+  position: absolute;
+  top: 460px;
+  left: 43vw;
+  height: 11.6px;
+  width: 10.3px;
+  border-radius: 50%;
+  background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
+transform: rotate(-139.38deg);
+}
 }
 
 .faq {
