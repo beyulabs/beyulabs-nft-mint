@@ -370,7 +370,7 @@ const HomePage: FC = () => {
                 modules={[Pagination, Navigation]}
                 effect="fade"
                 slidesPerView={1}
-                spaceBetween={30}
+                spaceBetween={17}
                 observer
                 observeParents
                 pagination={pagination}

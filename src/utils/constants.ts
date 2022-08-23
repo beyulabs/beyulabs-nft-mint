@@ -114,7 +114,7 @@ export const beyuSocialIcons: SocialIcon[] = [
   {
     name: 'opensea',
     image: openSeaLogo,
-    enabled: false,
+    enabled: true,
     url: '',
   },
   {

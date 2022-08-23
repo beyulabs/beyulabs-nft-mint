@@ -202,13 +202,22 @@
     background-position: 10% 15%;
   }
 
-  //@media (max-width: 1200px) {
-  //  background: url('../../../public/bg_mission_dark_mobile.svg') no-repeat;
-  //}
+  @media (max-width: 992px) {
+    background: url('../../../public/bg_mission_mobile.png') no-repeat;
+    background-size: cover;
+  }
+
+  //bg_mission_mobile.png
+  //bg_mission_mobile_light.png
 
   &.light {
     background: url('../../../public/bg_mission_light.svg') no-repeat;
     background-size: contain;
+
+    @media (max-width: 992px) {
+      background: url('../../../public/bg_mission_mobile_light.png') no-repeat;
+      background-size: cover;
+    }
   }
 
   &__row {
@@ -717,7 +726,7 @@
     }
 
     :global(.swiper) {
-      padding: 0 26px 29px;
+      padding: 0 16px 29px;
     }
 
     :global(.swiper-slide) {
