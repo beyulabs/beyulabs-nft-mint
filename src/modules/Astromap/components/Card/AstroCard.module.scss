@@ -331,7 +331,11 @@
       }
 
       &:before {
-        opacity: 0;
+        //opacity: 0;
+        background: transparent;
+        color: #fff;
+        -webkit-text-fill-color: #fff;
+        opacity: 0.1;
       }
     }
   }
@@ -353,7 +357,7 @@
     left: 0;
     transform: translateX(-20%);
     opacity: 0.8;
-    transition: 0.2s all;
+    //transition: 0.2s all;
 
     @media (max-width: 992px) {
       position: relative;
