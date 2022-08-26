@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+// @ts-ignore
+import Slide from 'react-reveal/Slide';
 import FAQItem from './FAQItem';
 
 import s from './faq.module.scss';
@@ -20,16 +22,18 @@ const FAQ = ({ questionsAnswers }: any) => {
       const fontWeightBold = index === activeIndex ? 'font-weight-bold' : '';
       const ariaExpanded = index === activeIndex ? 'true' : 'false';
       return (
-        <FAQItem
-          showDescription={showDescription}
-          fontWeightBold={fontWeightBold}
-          ariaExpanded={ariaExpanded}
-          item={item}
-          index={index}
-          onClick={() => spoilerToggle(index)}
-          /* eslint-disable-next-line react/no-array-index-key */
-          key={`faq__item__${index}`}
-        />
+        <Slide bottom ssrFadeout>
+          <FAQItem
+            showDescription={showDescription}
+            fontWeightBold={fontWeightBold}
+            ariaExpanded={ariaExpanded}
+            item={item}
+            index={index}
+            onClick={() => spoilerToggle(index)}
+            /* eslint-disable-next-line react/no-array-index-key */
+            key={`faq__item__${index}`}
+          />
+        </Slide>
       );
     }
   );

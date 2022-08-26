@@ -194,7 +194,7 @@
 .mission {
   background: url('../../../public/bg_mission_dark.svg') no-repeat;
   background-size: contain;
-  background-position: 10% 45%;
+  background-position: 30% 45%;
   //min-height: 880px;
 
   @media (max-width: 1600px) {
@@ -213,6 +213,7 @@
   &.light {
     background: url('../../../public/bg_mission_light.svg') no-repeat;
     background-size: contain;
+    background-position: 30% 45%;
 
     @media (max-width: 992px) {
       background: url('../../../public/bg_mission_mobile_light.png') no-repeat;

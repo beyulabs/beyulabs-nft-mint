@@ -9,7 +9,7 @@ import {
 } from '../types/common';
 
 // @ts-ignore
-import openSeaLogo from '../../public/opensea-logo.svg';
+import openSeaLogo from '../../public/open-sea-icon.svg';
 // @ts-ignore
 import etherscanLogo from '../../public/etherscan-logo.svg';
 // @ts-ignore
