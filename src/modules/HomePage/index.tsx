@@ -81,13 +81,13 @@ const HomePage: FC = () => {
           <div className="container">
             <div className={s.head__row}>
               <div>
-                <Slide duration={800} left ssrFadeout>
-                  <h1>
-                    <span className={s.line}>Become</span> a crew member of the{' '}
-                    <span className={s.green}>Voyager</span> space{' '}
-                    <span className={s.line}>mission</span>
-                  </h1>
-                </Slide>
+                {/* <Slide duration={800} left ssrFadeout> */}
+                <h1>
+                  <span className={s.line}>Become</span> a crew member of the{' '}
+                  <span className={s.green}>Voyager</span> space{' '}
+                  <span className={s.line}>mission</span>
+                </h1>
+                {/* </Slide> */}
                 {/* <p> */}
                 {/*  Unforgettable adventures await you during the flight! Find */}
                 {/*  friends and develop together creating, buying and selling NFTs */}
@@ -96,14 +96,14 @@ const HomePage: FC = () => {
               </div>
               <div className={s.image}>
                 {theme === 'light' && (
-                  <Slide duration={1200} right ssrFadeout>
-                    <img src={'/head_img_light_c.png'} alt="Nexus Mission" />
-                  </Slide>
+                  // <Slide duration={1200} right ssrFadeout>
+                  <img src={'/head_img_light_c.png'} alt="Nexus Mission" />
+                  // </Slide>
                 )}
                 {theme === 'dark' && (
-                  <Slide duration={1200} right ssrFadeout>
-                    <img src={'/head_img_dark_c.png'} alt="Nexus Mission" />
-                  </Slide>
+                  // <Slide duration={1200} right ssrFadeout>
+                  <img src={'/head_img_dark_c.png'} alt="Nexus Mission" />
+                  // </Slide>
                 )}
               </div>
             </div>
@@ -134,7 +134,7 @@ const HomePage: FC = () => {
                   </Slide>
                 )}
               </div>
-              <Slide right duration={1200} ssrFadeout>
+              <Slide right duration={1500} ssrFadeout>
                 <div>
                   <h2>
                     The Nexus <br />
