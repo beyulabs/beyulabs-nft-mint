@@ -105,7 +105,7 @@ const HomePage: FC = () => {
               <div>
                 {theme === 'light' && (
                   <img
-                    src={'/nexus-mission-light.svg'}
+                    src={'/nexus-mission-light.png'}
                     // width={524}
                     // height={679}
                     alt="Nexus Mission"
