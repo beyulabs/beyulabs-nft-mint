@@ -112,6 +112,29 @@ const HomePage: FC = () => {
         <section className={cn(s.mission, theme === 'light' && s.light)}>
           <div className="container">
             <div className={s.mission__row}>
+              <div
+                className={cn(
+                  s.mission_astronaut,
+                  theme === 'light' && s.light
+                )}
+              >
+                {theme === 'light' && (
+                  <Image
+                    src={'/astronaut_light.svg'}
+                    width={269}
+                    height={223}
+                    alt="Nexus Mission"
+                  />
+                )}
+                {theme === 'dark' && (
+                  <Image
+                    src={'/astronaut_durk_desk.svg'}
+                    width={269}
+                    height={223}
+                    alt="Nexus Mission"
+                  />
+                )}
+              </div>
               <div>
                 {theme === 'light' && (
                   // <Slide left duration={800} ssrFadeout>

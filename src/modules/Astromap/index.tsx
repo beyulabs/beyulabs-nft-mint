@@ -27,17 +27,14 @@ const AstromapPage = () => {
           <div className={cn(s.card, s.card_1)}>
             <AstroCard
               title="Genesis Voyage"
-              description="Boarding Passes, channel Unlocks, Launch Party
-                            "
+              description="Boarding Passes, channel Unlocks, Launch Party"
               arrow={DownArrow}
             >
-              <p>
-                <ul>
-                  <li>Boarding passes</li>
-                  <li>Channel Unlocks</li>
-                  <li>Launch Party</li>
-                </ul>
-              </p>
+              <ul>
+                <li>Boarding passes</li>
+                <li>Channel Unlocks</li>
+                <li>Launch Party</li>
+              </ul>
             </AstroCard>
           </div>
           <div className={cn(s.card, s.card_2)}>
@@ -51,15 +48,15 @@ const AstromapPage = () => {
                 layering the physical and virtual worlds together to showcase
                 the community talent and network. Fusing both worlds to rival
                 even Web2.
-                <ul>
-                  <li>Art Gallery Showcase</li>
-                  <li>Project Launchpad</li>
-                  <li>Web3 Hackathon</li>
-                  <li>WhalesTank</li>
-                  <li>Secret Gameshow</li>
-                  <li>Community Festival</li>
-                </ul>
               </p>
+              <ul>
+                <li>Art Gallery Showcase</li>
+                <li>Project Launchpad</li>
+                <li>Web3 Hackathon</li>
+                <li>WhalesTank</li>
+                <li>Secret Gameshow</li>
+                <li>Community Festival</li>
+              </ul>
             </AstroCard>
           </div>
           <div className={cn(s.card, s.card_3)}>
@@ -76,21 +73,21 @@ const AstromapPage = () => {
                 Holders have priority access to a marketplace of talent, powered
                 by partnerships and individual professionals who are invested in
                 the space (and its growth).
-                <ul>
-                  <li>Bounty Listing Unlock - [Early Access]</li>
-                  <li>Nexus Work Visa</li>
-                  <li>Network Expansion</li>
-                  <li>Work Visa Profile</li>
-                  <li>LFG Unlock</li>
-                  <li>Enterprise Recruiting Unlock</li>
-                </ul>
               </p>
+              <ul>
+                <li>Bounty Listing Unlock - [Early Access]</li>
+                <li>Nexus Work Visa</li>
+                <li>Network Expansion</li>
+                <li>Work Visa Profile</li>
+                <li>LFG Unlock</li>
+                <li>Enterprise Recruiting Unlock</li>
+              </ul>
             </AstroCard>
           </div>
           <div className={cn(s.card, s.card_4)}>
             <AstroCard
               title="Launchpad"
-              description=" When engineering this new world of web3 and
+              description="When engineering this new world of web3 and
                             creating a business, not every vessel will reach
                             its final destination."
             >
@@ -100,11 +97,11 @@ const AstromapPage = () => {
                 Team is here to guide you on your journey via project advisory,
                 consultations, and continued support from ideation through
                 project launch. A navigation system to launch your own mission.
-                <ul>
-                  <li>Advisory Board</li>
-                  <li>Intimate Project Team Sessions</li>
-                </ul>
               </p>
+              <ul>
+                <li>Advisory Board</li>
+                <li>Intimate Project Team Sessions</li>
+              </ul>
             </AstroCard>
           </div>
           <div className={cn(s.card, s.card_5)}>
@@ -122,11 +119,11 @@ const AstromapPage = () => {
                 build innovative projects, and want to showcase these projects
                 to our community and partner communities. A win for you is a win
                 for all.
-                <ul>
-                  <li>Nifty Nomads Podcast</li>
-                  <li>Community Spotlight</li>
-                </ul>
               </p>
+              <ul>
+                <li>Nifty Nomads Podcast</li>
+                <li>Community Spotlight</li>
+              </ul>
             </AstroCard>
           </div>
           <div className={cn(s.card, s.card_6)}>
@@ -144,12 +141,12 @@ const AstromapPage = () => {
                 bringing continued value to the community. Some options include:
                 investing into blue chip projects, metaverse land, conferences,
                 or project teams that are incubated from our ecosystem.
-                <ul>
-                  <li>Voting Mechanism</li>
-                  <li>Appointed Leadership</li>
-                  <li>Recap/Newsletter/Updates</li>
-                </ul>
               </p>
+              <ul>
+                <li>Voting Mechanism</li>
+                <li>Appointed Leadership</li>
+                <li>Recap/Newsletter/Updates</li>
+              </ul>
             </AstroCard>
           </div>
           <div className={cn(s.card, s.card_7)}>
@@ -166,15 +163,15 @@ const AstromapPage = () => {
                 we donate to will be decided by the community to ensure that
                 everyone is aligned with the cause and we are giving back to the
                 greater community in a huge way.
-                <ul>
-                  <li>
-                    NY PACE (https://www.nypace.org/), supporting
-                    under-represented, under-resourced entrepreneurs to get
-                    their business endeavors off the ground.{' '}
-                  </li>
-                  <li>BitBullies Charity Partner</li>
-                </ul>
               </p>
+              <ul>
+                <li>
+                  NY PACE (https://www.nypace.org/), supporting
+                  under-represented, under-resourced entrepreneurs to get their
+                  business endeavors off the ground.
+                </li>
+                <li>BitBullies Charity Partner</li>
+              </ul>
             </AstroCard>
           </div>
           <div className={cn(s.card, s.card_8)}>
@@ -183,15 +180,13 @@ const AstromapPage = () => {
               description="Growth Opportunities"
               isGreen
             >
-              <p>
-                Growth Opportunities
-                <ul>
-                  <li>Token</li>
-                  <li>Nifty Nomads DAO</li>
-                  <li>Future Drops</li>
-                  <li>Metaverse</li>
-                </ul>
-              </p>
+              <p>Growth Opportunities</p>
+              <ul>
+                <li>Token</li>
+                <li>Nifty Nomads DAO</li>
+                <li>Future Drops</li>
+                <li>Metaverse</li>
+              </ul>
             </AstroCard>
           </div>
         </div>

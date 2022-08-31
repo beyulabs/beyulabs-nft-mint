@@ -207,8 +207,46 @@
     background-size: cover;
   }
 
-  //bg_mission_mobile.png
-  //bg_mission_mobile_light.png
+
+
+
+  .mission_imgages {
+    position: relative;
+  }
+
+  .nexus_img {
+    @media (max-width: 992px) {
+      transform: scaleY(0.9);
+    }
+  }
+  .mission_astronaut {
+    position: absolute;
+    top: 600px;
+    right: 0;
+    animation: bounce 6s linear infinite;
+    scale: 0.7;
+
+    @media (max-width: 1535px) {
+      top: 40vw;
+      right: 0;
+      scale: 0.6;
+    }
+    @media (max-width: 992px) {
+      display: none;
+    }
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(-25%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+      }
+      50% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      }
+    }
+  }
+
+
 
   &.light {
     background: url('../../../public/bg_mission_light.svg') no-repeat;
@@ -230,6 +268,7 @@
     //padding-right: 10%;
     padding-bottom: 10%;
     padding-top: 80px;
+    position: relative;
 
     @media (max-width: 1600px) {
       grid-gap: 10px;
