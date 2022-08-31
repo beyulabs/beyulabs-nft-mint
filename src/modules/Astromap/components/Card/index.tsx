@@ -43,7 +43,7 @@ const AstroCard = ({
         <div className={s.modal__row}>
           <div className={s.image}>
             {!isTablet ? (
-              <img src={'/modal_image.png'} alt="" />
+              <img src={'/Photo_modal.png'} alt="" />
             ) : (
               <img src={'/modal_img_mobile.png'} alt="" />
             )}
