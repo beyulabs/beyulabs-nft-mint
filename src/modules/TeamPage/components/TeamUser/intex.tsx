@@ -83,14 +83,16 @@ const TeamUser = ({
       </div>
     </div>
     <div className={cn(s.card__box, ariaExpanded && s.active)}>
-      <div className={s.card__footer}>
-        <h5>Skillset:</h5>
-        <ul className={s.skills}>
-          {skillset?.map((item) => (
-            <li key={`item-${item.toLowerCase()}`}>{item}</li>
-          ))}
-        </ul>
-      </div>
+      {skillset && (
+        <div className={s.card__footer}>
+          <h5>Skillset:</h5>
+          <ul className={s.skills}>
+            {skillset?.map((item) => (
+              <li key={`item-${item.toLowerCase()}`}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
     <button
       type="button"

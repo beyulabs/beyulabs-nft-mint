@@ -222,14 +222,14 @@
   .mission_astronaut {
     position: absolute;
     top: 600px;
-    right: 0;
+    right: -12%;
     animation: bounce 6s linear infinite;
-    scale: 0.7;
+    scale: 0.9;
 
     @media (max-width: 1535px) {
       top: 40vw;
-      right: 0;
-      scale: 0.6;
+      right: -7%;
+      scale: 0.8;
     }
     @media (max-width: 992px) {
       display: none;
