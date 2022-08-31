@@ -376,6 +376,7 @@
       padding: 17px;
       display: grid;
       grid-template-columns: 150px 1fr;
+      align-items: center;
       grid-gap: 20px;
       position: relative;
 
@@ -455,14 +456,15 @@
       }
 
       p {
+        //font-size: 16px;
+        //line-height: 150%;
+        color: var(--theme-heading-color);
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 120%;
+
         @media (max-width: 768px) {
           font-size: 12px;
-          line-height: 150%;
-        }
-      }
-      p {
-        @media (min-width: 768px) {
-          font-size: 16px;
           line-height: 150%;
         }
       }
