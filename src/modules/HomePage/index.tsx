@@ -189,7 +189,7 @@ const HomePage: FC = () => {
                 <div className={s.button}>
                   <Button
                     size="large"
-                    text="Mint"
+                    text="Launch"
                     color="green"
                     icon={<Coins />}
                     disabled
@@ -401,7 +401,7 @@ const HomePage: FC = () => {
                   <div className={s.button}>
                     <Button
                       size="large"
-                      text="Get it"
+                      text="FREE MINT"
                       color="green"
                       icon={<Coins />}
                       disabled
