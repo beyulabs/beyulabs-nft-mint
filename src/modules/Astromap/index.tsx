@@ -28,6 +28,7 @@ const AstromapPage = () => {
             <AstroCard
               title="Genesis Voyage"
               description="Boarding Passes, channel Unlocks, Launch Party"
+              image="/modal_img_1.png"
               arrow={DownArrow}
             >
               <ul>
@@ -41,6 +42,7 @@ const AstromapPage = () => {
             <AstroCard
               title="The Experience"
               description="It takes more than just grinding behind the scenes to grow an ecosystem."
+              image="/modal_img_2.png"
             >
               <p>
                 It takes more than just grinding behind the scenes to grow an
@@ -64,6 +66,7 @@ const AstromapPage = () => {
               title="Mission Board"
               description="A bounty hub empowering freelancers, project teams, and agencies
               alike."
+              image="/modal_img_3.png"
             >
               <p>
                 A bounty hub empowering freelancers, project teams, and agencies
@@ -90,6 +93,7 @@ const AstromapPage = () => {
               description="When engineering this new world of web3 and
                             creating a business, not every vessel will reach
                             its final destination."
+              image="/modal_img_4.png"
             >
               <p>
                 When engineering this new world of web3 and creating a business,
@@ -111,6 +115,7 @@ const AstromapPage = () => {
                             Projects via Panels, Interviews, Podcast,
                             Collabs, and Dedicated Discord channels."
               isRight
+              image="/modal_img_5.png"
             >
               <p>
                 A spotlight on some of our Holder&apos;s Top Projects via
@@ -133,6 +138,7 @@ const AstromapPage = () => {
                             Chest to be re-invested as decided by our
                             Holders."
               isRight
+              image="/modal_img_6.png"
             >
               <p>
                 A percentage of the mint will go to a Community Chest to be
@@ -156,6 +162,7 @@ const AstromapPage = () => {
                             mint to a charity that’s aligned with our
                             overall vision"
               isRight
+              image="/modal_img_7.png"
             >
               <p>
                 We’ll be donating a percentage of proceeds from mint to a
@@ -179,6 +186,7 @@ const AstromapPage = () => {
               title="Future"
               description="Growth Opportunities"
               isGreen
+              image="/Photo_modal.png"
             >
               <p>Growth Opportunities</p>
               <ul>

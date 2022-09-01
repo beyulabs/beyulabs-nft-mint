@@ -167,11 +167,16 @@
         background-color: #41A380;
         border: 0;
       }
+    }
 
-      .image {
-        img {
-          width: 100%;
-          object-fit: cover;
+    .image {
+      position: relative;
+      img {
+        width: 100%;
+        object-fit: cover;
+
+        @media (min-width: 992px) {
+          max-width: 296px;
         }
       }
     }

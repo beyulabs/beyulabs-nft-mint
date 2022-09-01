@@ -8,6 +8,7 @@ import s from './AstroCard.module.scss';
 interface TeamUserProps {
   title: string;
   description: string;
+  image: string;
   children?: ReactNode;
   isRight?: boolean;
   isGreen?: boolean;
@@ -17,6 +18,7 @@ interface TeamUserProps {
 const AstroCard = ({
   title,
   description,
+  image,
   children,
   isGreen,
   isRight,
@@ -42,11 +44,12 @@ const AstroCard = ({
       <div className={cn(s.modal, showModal && s.active)}>
         <div className={s.modal__row}>
           <div className={s.image}>
-            {!isTablet ? (
-              <img src={'/Photo_modal.png'} alt="" />
-            ) : (
-              <img src={'/modal_img_mobile.png'} alt="" />
-            )}
+            {/* {!isTablet ? ( */}
+            {/*  <img src={'/Photo_modal.png'} alt="" /> */}
+            {/* ) : ( */}
+            {/*  <img src={'/modal_img_mobile.png'} alt="" /> */}
+            {/* )} */}
+            <img src={image} alt="" />
           </div>
           <div className={s.text}>
             <h2>{title}</h2>
