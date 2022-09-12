@@ -524,7 +524,7 @@ const HomePage: FC = () => {
                     <div className={s.card}>
                       <img src={'/merchant.png'} alt="Merchant" />
                       <h3>Merchant</h3>
-                      <ul className={s.tag}>
+                      <ul className={s.tags}>
                         <li>Investor</li>
                         <li>Advisor</li>
                       </ul>
@@ -543,7 +543,7 @@ const HomePage: FC = () => {
                     <div className={s.card}>
                       <img src={'/explorer.png'} alt="Explorer" />
                       <h3>Explorer</h3>
-                      <ul className={s.tag}>
+                      <ul className={s.tags}>
                         <li>Collector</li>
                         <li>Degen</li>
                       </ul>
