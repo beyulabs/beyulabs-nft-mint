@@ -28,6 +28,10 @@ body {
   background: var(--theme-body-color) url('../../public/body_bg.png') repeat;
   font-family: 'Montserrat', sans-serif;
   color: var(--theme-text-color);
+
+  &.light-mode {
+    background: var(--theme-body-color) url('../../public/body_bg_light.png') repeat;
+  }
 }
 
 a {
