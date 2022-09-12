@@ -444,7 +444,10 @@ const HomePage: FC = () => {
                     <div className={s.card}>
                       <img src={'/captain.png'} alt="Mechanic" />
                       <h3>Captain</h3>
-                      <span className={s.tag}>Founder</span>
+                      <ul className={s.tags}>
+                        <li>Founder</li>
+                        <li>Manager</li>
+                      </ul>
                       <div className={s.description}>
                         <p>
                           Pulling together the pieces of the puzzle and ensuring
@@ -460,7 +463,10 @@ const HomePage: FC = () => {
                     <div className={s.card}>
                       <img src={'/mechanic.png'} alt="Mechanic" />
                       <h3>Mechanic</h3>
-                      <span className={s.tag}>Dev</span>
+                      <ul className={s.tags}>
+                        <li>Developer</li>
+                        <li>Engineer</li>
+                      </ul>
                       <div className={s.description}>
                         <p>
                           The brains behind the ideas - the
@@ -476,7 +482,10 @@ const HomePage: FC = () => {
                     <div className={s.card}>
                       <img src={'/architect.png'} alt="Architect " />
                       <h3>Architect</h3>
-                      <span className={s.tag}>Artist</span>
+                      <ul className={s.tags}>
+                        <li>Artist</li>
+                        <li>Designer</li>
+                      </ul>
                       <div className={s.description}>
                         <p>
                           The creatives that take ideas and bring them to life
@@ -494,7 +503,10 @@ const HomePage: FC = () => {
                     <div className={s.card}>
                       <img src={'/journalist.png'} alt="Journalist" />
                       <h3>Journalist</h3>
-                      <span className={s.tag}>Influencer</span>
+                      <ul className={s.tags}>
+                        <li>Influencer</li>
+                        <li>Marketer</li>
+                      </ul>
                       <div className={s.description}>
                         <p>
                           On a mission to spread ideas and share news of
@@ -512,7 +524,10 @@ const HomePage: FC = () => {
                     <div className={s.card}>
                       <img src={'/merchant.png'} alt="Merchant" />
                       <h3>Merchant</h3>
-                      <span className={s.tag}>Investor</span>
+                      <ul className={s.tag}>
+                        <li>Investor</li>
+                        <li>Advisor</li>
+                      </ul>
                       <div className={s.description}>
                         <p>
                           The driving force behind the economy of the new world
@@ -528,7 +543,10 @@ const HomePage: FC = () => {
                     <div className={s.card}>
                       <img src={'/explorer.png'} alt="Explorer" />
                       <h3>Explorer</h3>
-                      <span className={s.tag}>Collector</span>
+                      <ul className={s.tag}>
+                        <li>Collector</li>
+                        <li>Degen</li>
+                      </ul>
                       <div className={s.description}>
                         <p>
                           Like true mavens, stimulating the economy as the
