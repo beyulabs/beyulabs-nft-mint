@@ -28,8 +28,17 @@ const AstromapPage = () => {
             <AstroCard
               title="Genesis Voyage"
               description="Boarding Passes, channel Unlocks, Launch Party"
-              image="/modal_img_1.png"
+              image="/Photo_modal.png"
               arrow={DownArrow}
+            >
+              <p>Boarding Passes, channel Unlocks, Launch Party</p>
+            </AstroCard>
+          </div>
+          <div className={cn(s.card, s.card_2)}>
+            <AstroCard
+              title="The Experience"
+              description="It takes more than just grinding behind the scenes to grow an ecosystem."
+              image="/modal_img_1.png"
             >
               <ul>
                 <li>Boarding passes</li>
@@ -38,10 +47,11 @@ const AstromapPage = () => {
               </ul>
             </AstroCard>
           </div>
-          <div className={cn(s.card, s.card_2)}>
+          <div className={cn(s.card, s.card_3)}>
             <AstroCard
-              title="The Experience"
-              description="It takes more than just grinding behind the scenes to grow an ecosystem."
+              title="Mission Board"
+              description="A bounty hub empowering freelancers, project teams, and agencies
+              alike."
               image="/modal_img_2.png"
             >
               <p>
@@ -61,11 +71,12 @@ const AstromapPage = () => {
               </ul>
             </AstroCard>
           </div>
-          <div className={cn(s.card, s.card_3)}>
+          <div className={cn(s.card, s.card_4)}>
             <AstroCard
-              title="Mission Board"
-              description="A bounty hub empowering freelancers, project teams, and agencies
-              alike."
+              title="Launchpad"
+              description="When engineering this new world of web3 and
+                            creating a business, not every vessel will reach
+                            its final destination."
               image="/modal_img_3.png"
             >
               <p>
@@ -87,12 +98,13 @@ const AstromapPage = () => {
               </ul>
             </AstroCard>
           </div>
-          <div className={cn(s.card, s.card_4)}>
+          <div className={cn(s.card, s.card_5)}>
             <AstroCard
-              title="Launchpad"
-              description="When engineering this new world of web3 and
-                            creating a business, not every vessel will reach
-                            its final destination."
+              title="Project Showcase"
+              description="A spotlight on some of our Holders Top
+                            Projects via Panels, Interviews, Podcast,
+                            Collabs, and Dedicated Discord channels."
+              isRight
               image="/modal_img_4.png"
             >
               <p>
@@ -108,12 +120,12 @@ const AstromapPage = () => {
               </ul>
             </AstroCard>
           </div>
-          <div className={cn(s.card, s.card_5)}>
+          <div className={cn(s.card, s.card_6)}>
             <AstroCard
-              title="Project Showcase"
-              description="A spotlight on some of our Holders Top
-                            Projects via Panels, Interviews, Podcast,
-                            Collabs, and Dedicated Discord channels."
+              title="The Tribunal"
+              description="A percentage of the mint will go to a Community
+                            Chest to be re-invested as decided by our
+                            Holders."
               isRight
               image="/modal_img_5.png"
             >
@@ -131,12 +143,12 @@ const AstromapPage = () => {
               </ul>
             </AstroCard>
           </div>
-          <div className={cn(s.card, s.card_6)}>
+          <div className={cn(s.card, s.card_7)}>
             <AstroCard
-              title="The Tribunal"
-              description="A percentage of the mint will go to a Community
-                            Chest to be re-invested as decided by our
-                            Holders."
+              title="Charity"
+              description="We’ll be donating a percentage of proceeds from
+                            mint to a charity that’s aligned with our
+                            overall vision"
               isRight
               image="/modal_img_6.png"
             >
@@ -155,13 +167,11 @@ const AstromapPage = () => {
               </ul>
             </AstroCard>
           </div>
-          <div className={cn(s.card, s.card_7)}>
+          <div className={cn(s.card, s.card_8)}>
             <AstroCard
-              title="Charity"
-              description="We’ll be donating a percentage of proceeds from
-                            mint to a charity that’s aligned with our
-                            overall vision"
-              isRight
+              title="Future"
+              description="Growth Opportunities"
+              isGreen
               image="/modal_img_7.png"
             >
               <p>
@@ -179,22 +189,13 @@ const AstromapPage = () => {
                 </li>
                 <li>BitBullies Charity Partner</li>
               </ul>
-            </AstroCard>
-          </div>
-          <div className={cn(s.card, s.card_8)}>
-            <AstroCard
-              title="Future"
-              description="Growth Opportunities"
-              isGreen
-              image="/Photo_modal.png"
-            >
-              <p>Growth Opportunities</p>
-              <ul>
-                <li>Token</li>
-                <li>Nifty Nomads DAO</li>
-                <li>Future Drops</li>
-                <li>Metaverse</li>
-              </ul>
+              {/* <p>Growth Opportunities</p> */}
+              {/* <ul> */}
+              {/*  <li>Token</li> */}
+              {/*  <li>Nifty Nomads DAO</li> */}
+              {/*  <li>Future Drops</li> */}
+              {/*  <li>Metaverse</li> */}
+              {/* </ul> */}
             </AstroCard>
           </div>
         </div>

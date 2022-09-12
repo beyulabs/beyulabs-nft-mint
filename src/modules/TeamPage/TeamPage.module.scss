@@ -24,9 +24,11 @@
 .team {
   padding-top: 190px;
   position: relative;
+  padding-bottom: 80px;
 
   @media (max-width: 992px) {
     padding-top: 120px;
+    padding-bottom: 60px;
   }
 
   //&.dark {
@@ -228,7 +230,7 @@
         &:hover {
           color:white;
           }
-          
+
       }
 
       &:nth-child(2) {
@@ -243,7 +245,7 @@
           }
         }
       }
-      
+
     }
     .dont {
       text-transform: uppercase;

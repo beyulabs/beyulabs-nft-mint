@@ -26,37 +26,37 @@ const TeamPage = () => {
         <div className="container">
           <HtmlMeta title="Team" />
           <TeamList />
-          <div className={s.partners}>
-            <h2>Partners:</h2>
-            <div className={s.cards}>
-              <div className={cn(s.card, theme === 'light' && s.light)}>
-                <img src={'/WeDream.png'} alt="" />
-                <div className={s.text}>
-                  <h3>WeDream</h3>
-                  <p>
-                    <a href="https://www.wedream.world/">
-                      Link to the project website
-                    </a>
-                  </p>
-                </div>
-              </div>
-              <div className={cn(s.card, theme === 'light' && s.light)}>
-                {isTablet ? (
-                  <img src={'/team_partner_2.png'} alt="" />
-                ) : (
-                  <img src={'/team_partner_2_desktop.png'} alt="" />
-                )}
-                <div className={s.text}>
-                  <h3>ThinkNFT</h3>
-                  <p>
-                    <a href="https://thinknft.art/">
-                      Link to the project website
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* <div className={s.partners}> */}
+          {/*  <h2>Partners:</h2> */}
+          {/*  <div className={s.cards}> */}
+          {/*    <div className={cn(s.card, theme === 'light' && s.light)}> */}
+          {/*      <img src={'/WeDream.png'} alt="" /> */}
+          {/*      <div className={s.text}> */}
+          {/*        <h3>WeDream</h3> */}
+          {/*        <p> */}
+          {/*          <a href="https://www.wedream.world/"> */}
+          {/*            Link to the project website */}
+          {/*          </a> */}
+          {/*        </p> */}
+          {/*      </div> */}
+          {/*    </div> */}
+          {/*    <div className={cn(s.card, theme === 'light' && s.light)}> */}
+          {/*      {isTablet ? ( */}
+          {/*        <img src={'/team_partner_2.png'} alt="" /> */}
+          {/*      ) : ( */}
+          {/*        <img src={'/team_partner_2_desktop.png'} alt="" /> */}
+          {/*      )} */}
+          {/*      <div className={s.text}> */}
+          {/*        <h3>ThinkNFT</h3> */}
+          {/*        <p> */}
+          {/*          <a href="https://thinknft.art/"> */}
+          {/*            Link to the project website */}
+          {/*          </a> */}
+          {/*        </p> */}
+          {/*      </div> */}
+          {/*    </div> */}
+          {/*  </div> */}
+          {/* </div> */}
         </div>
       </div>
     </>

@@ -49,7 +49,7 @@ const TeamUser = ({
       </div>
       <div className={s.cont}>
         <h3>{name}</h3>
-        <div>
+        <div className={s.position__wrap}>
           <div className={s.position}>
             <span>{position}</span>
           </div>
