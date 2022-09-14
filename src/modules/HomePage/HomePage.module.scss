@@ -32,7 +32,7 @@
       left: 0;
       top: 0;
       background: url('../../../public/wrapper_bg_left.png') 0 0 no-repeat;
-      background-size: 100% 100%;
+      background-size: cover;
       pointer-events: none;
       z-index: -1;
 
@@ -67,8 +67,8 @@
       position: absolute;
       left: 0;
       top: 0;
-      background: url('../../../public/wrapper_bg_left_light.png') top left no-repeat;
-      background-size: 62.5% 101%;
+      background: url('../../../public/wrapper_bg_left_light.png') 0 0 no-repeat;
+      background-size: cover;
       pointer-events: none;
       z-index: -1;
 

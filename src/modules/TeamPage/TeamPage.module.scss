@@ -31,39 +31,78 @@
     padding-bottom: 60px;
   }
 
-  //&.dark {
-  //  &:before {
-  //    content: '';
-  //    height: 100%;
-  //    width: 30%;
-  //    position: absolute;
-  //    left: 0;
-  //    top: 0;
-  //    background: url('../../../public/team_bg_left.png') top left no-repeat;
-  //    background-size: cover;
-  //    pointer-events: none;
-  //
-  //    @media (max-width: 992px) {
-  //      display: none;
-  //    }
-  //  }
-  //
-  //  &:after {
-  //    content: '';
-  //    width: 30%;
-  //    height: 100%;
-  //    position: absolute;
-  //    right: 0;
-  //    top: 0;
-  //    background: url('../../../public/team_bg_right.png') top right no-repeat;
-  //    background-size: cover;
-  //    pointer-events: none;
-  //
-  //    @media (max-width: 992px) {
-  //      display: none;
-  //    }
-  //  }
-  //}
+  &.dark {
+   &:before {
+     content: '';
+     height: 100%;
+     width: 100%;
+     position: absolute;
+     left: 0;
+     top: 0;
+     background: url('../../../public/team_bg_left.png') top left no-repeat;
+     background-size: cover;
+     pointer-events: none;
+     z-index: -1;
+  
+     @media (max-width: 992px) {
+       display: none;
+     }
+   }
+  
+   &:after {
+     content: '';
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     right: 0;
+     top: 0;
+     background: url('../../../public/team_bg_right.png') top left no-repeat;
+     background-size: cover;
+     pointer-events: none;
+     z-index: -1;
+     @media (max-width: 992px) {
+       display: none;
+     }
+   }
+  }
+
+   &.light {
+    &:before {
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: url('../../../public/wrapper_bg_left_light.png') top right no-repeat;
+      background-size: cover;
+      pointer-events: none;
+      z-index: -1;
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: url('../../../public/wrapper_bg_right_light.png') top right no-repeat;
+      background-size: cover;
+      pointer-events: none;
+      z-index: -1;
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+  }
+
+  
 
   &__list {
     display: grid;

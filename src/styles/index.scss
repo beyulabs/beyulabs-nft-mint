@@ -8,6 +8,8 @@
 
 html, body {
   height: 100%;
+  // background-color: #000;
+  // background-color: #ff0000;
 }
 
 #__next {
@@ -30,9 +32,12 @@ body {
   color: var(--theme-text-color);
 
   &.light-mode {
-    background: var(--theme-body-color) url('../../public/body_bg_light.png') repeat;
+    background: var(--theme-body-color) url('../../public/noise_bg_light.png') repeat;
+    color: var(--theme-text-color);
   }
 }
+// '../../public/noise_bg_light.png'
+// ../../public/body_bg_light.png
 
 a {
   text-decoration: none;

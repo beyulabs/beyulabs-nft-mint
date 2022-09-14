@@ -200,6 +200,8 @@ const HomePage: FC = () => {
             </div>
           </div>
         </section>
+
+        {/* section Benefits */}
         <section className={s.astromap}>
           <div className="container">
             <div className={cn(s.cards, theme === 'light' && s.light)}>

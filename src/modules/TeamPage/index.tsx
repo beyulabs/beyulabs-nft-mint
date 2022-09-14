@@ -22,7 +22,13 @@ const TeamPage = () => {
 
   return (
     <>
-      <div className={cn(s.team, theme === 'dark' && s.dark)}>
+      <div
+        className={cn(
+          s.team,
+          theme === 'light' && s.light,
+          theme === 'dark' && s.dark
+        )}
+      >
         <div className="container">
           <HtmlMeta title="Team" />
           <TeamList />
