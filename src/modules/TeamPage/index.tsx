@@ -84,9 +84,9 @@ const TeamPage = () => {
             <li>
               <img src="/partnerlogos5.jpg" alt="" />
             </li>
-            <li>
+<!--             <li>
               <img src="/partnerlogos6.jpg" alt="" />
-            </li>
+            </li> -->
             <li>
               <img src="/partnerlogos7.jpg" alt="" />
             </li>
