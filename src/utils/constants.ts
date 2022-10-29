@@ -69,7 +69,8 @@ import Ryan7 from '../team-images/team16.png';
 
 export const beyuLabsTwitterURL: string = 'https://twitter.com/Beyu_labs';
 export const discordInviteURL: string = 'https://discord.gg/Ye6pQqJes7';
-export const RarityDropURL: string = 'https://raritysniper.com/nft-drops-calendar';
+export const RarityDropURL: string =
+  'https://raritysniper.com/nft-drops-calendar';
 
 export const routes: NavRoute[] = [
   // {
