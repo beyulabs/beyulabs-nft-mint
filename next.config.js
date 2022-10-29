@@ -1,9 +1,31 @@
-/** @type {import('next').NextConfig} */
+// /* eslint-disable */
+// eslint-disable-next-line import/no-extraneous-dependencies
+const withPlugins = require('next-compose-plugins');
+// eslint-disable-next-line import/no-extraneous-dependencies
+// const Swiper = require('swiper/core');
+
 const nextConfig = {
-  reactStrictMode: true,
+  dir: 'src',
   images: {
-    domains: ["ikzttp.mypinata.cloud"],
+    domains: ['ikzttp.mypinata.cloud'],
   },
 };
 
-module.exports = nextConfig;
+module.exports = withPlugins(
+  [
+    [
+      {
+        cssLoaderOptions: {
+          esModule: true,
+          sourceMap: false,
+          modules: {
+            mode: 'local',
+          },
+        },
+      },
+    ],
+  ],
+  nextConfig,
+  // withSentryConfig(nextConfig, SentryWebpackPluginOptions),
+  // Swiper
+);

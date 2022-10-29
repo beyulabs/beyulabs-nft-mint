@@ -1,0 +1,73 @@
+// Colors
+$bodyBgDark: #16171B;
+$astromapGrayText: #BBBBBB;
+$nexusGreen: #41A380;
+$nexusGradientGreen: #63D4AC;
+$nexusBlack: #202020;
+$nexusGray: #4F4F4F;
+$nexusGrayText: #989898;
+$nexusFooterDivider: #FCF9F9;
+$nexusHeaderDivider: #ACC2BD;
+$nexusDarkBg: #232424;
+$discordBlue: #7289da;
+$twitterBlue: #1da1f2;
+$calloutBorderGreen: #2C4B40;
+$cardBorder: #2C4B40;
+$walletIconBorder: #41A380;
+$faqBg: #232424;
+
+// Breakpoints
+$xs_bp: 468px;
+$sm_bp: 576px;
+$sp_bp: 768px;
+$tb_bp: 992px;
+$dt_bp: 1200px;
+$bdt_bp: 1330px;
+
+:root {
+  --theme-body-color: #16171B;
+  --theme-text-color: #BBB;
+  --theme-green-color: #41A380;
+  --theme-links-color: #fff;
+  --theme-btn-green-color: #fff;
+  --theme-btn-green-bg: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
+  --theme-btn-green-bg-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
+  --theme-btn-transparent-color: #FFFFFF;
+  --theme-btn-transparent-bg: transparent;
+  --theme-btn-transparent-border: #41A380;
+  --theme-heading-color: #FFFFFF;
+  --team-card-bg: #232424;
+  --team-card-border: #2C4B40;
+  --spoiler-bg: #1A1A1A;
+  --astro-card-bg: #232424;
+  --astro-card-border: #2C4B40;
+  --bg-mobile-menu: #202020;
+  --line-hr-bg: #444;
+  --modal-bg: #222322;
+  --modal-shadow: 0px 42px 73px rgba(19, 35, 29, 0.6);
+  --astromap-card-color: #BBBBBB;
+}
+
+.light-mode {
+  --theme-body-color: #fff;
+  --theme-text-color: #4F4F4F;
+  --theme-green-color: #41A380;
+  --theme-links-color: #000;
+  --theme-btn-green-color: #fff;
+  --theme-btn-green-bg: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
+  --theme-btn-green-bg-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
+  --theme-btn-transparent-color: #397A63;
+  --theme-btn-transparent-bg: transparent;
+  --theme-btn-transparent-border: #41A380;
+  --theme-heading-color: #202020;
+  --team-card-bg: #FFFFFF;
+  --team-card-border: #FFFFFF;
+  --spoiler-bg: #FCF9F9;
+  --astro-card-bg: #FFFFFF;
+  --astro-card-border: #fff;
+  --bg-mobile-menu: #fff;
+  --line-hr-bg: #ACC2BD;
+  --modal-bg: #fff;
+  --modal-shadow: 0px 29px 58px rgba(45, 115, 90, 0.24);
+  --astromap-card-color: #4F4F4F;
+}
