@@ -29,6 +29,8 @@ import SecondMechanic from '../../public/SecondMechanic.png';
 // @ts-ignore
 import Architector from '../../public/Rectangle2.svg';
 // @ts-ignore
+import Raritydrop from '../../public/RarityDrop.png';
+// @ts-ignore
 import Ryan1 from '../team-images/team1.png';
 // @ts-ignore
 import Ryan2 from '../team-images/team2.png';
@@ -67,13 +69,14 @@ import Ryan7 from '../team-images/team16.png';
 
 export const beyuLabsTwitterURL: string = 'https://twitter.com/Beyu_labs';
 export const discordInviteURL: string = 'https://discord.gg/Ye6pQqJes7';
+export const RarityDropURL: string = 'https://raritysniper.com/nft-drops-calendar';
 
 export const routes: NavRoute[] = [
-  {
-    path: '/astromap',
-    title: 'Astromap',
-    enabled: true,
-  },
+  // {
+  //   path: '/astromap',
+  //   title: 'Astromap',
+  //   enabled: true,
+  // },
   {
     path: '/team',
     title: 'Our team',
@@ -84,6 +87,16 @@ export const routes: NavRoute[] = [
     title: 'Whitepaper',
     enabled: true,
   },
+  {
+    path: '/WorldTour',
+    title: 'World Tour',
+    enabled: true,
+  },
+  // {
+  //   path: 'https://raritysniper.com/nft-drops-calendar',
+  //   title: 'NFT Drops',
+  //   enabled: true,
+  // },
 ];
 
 export const beyuSocialIcons: SocialIcon[] = [
@@ -117,6 +130,12 @@ export const beyuSocialIcons: SocialIcon[] = [
     enabled: true,
     url: '',
   },
+  // {
+  //   name: 'RarityDrop',
+  //   image: Raritydrop,
+  //   enabled: true,
+  //   url: 'https://raritysniper.com/nft-drops-calendar',
+  // },
   {
     name: 'etherscan',
     image: etherscanLogo,
@@ -339,7 +358,7 @@ export const voyagers: Voyager[] = [
 export const teamMembers: TeamMember[] = [
   {
     nexusName: 'Ben Yurcisin',
-    irlName: 'Commander | Biz Dev',
+    irlName: 'Commander | Vibe Master Worldwide',
     image: 'Team_Ben.png',
     linkedin: 'https://www.linkedin.com/in/benyurcisin',
     twitter: 'https://twitter.com/beyuworldwide',
@@ -350,6 +369,34 @@ export const teamMembers: TeamMember[] = [
       'Skateboarder',
       'loves overpriced jpegs and metal shows',
     ],
+  },
+  {
+    nexusName: 'Frank Casale',
+    irlName: 'Founder | Partner, Co-Creator, Resident Shaman',
+    image: 'Team_Ben.png',
+    linkedin: 'https://www.linkedin.com/in/fcasale/',
+    // twitter: 'https://twitter.com/beyuworldwide',
+    // skillset: [
+    //   'Entrepreneur',
+    //   'Networker',
+    //   'Project Manager/Engineer',
+    //   'Skateboarder',
+    //   'loves overpriced jpegs and metal shows',
+    // ],
+  },
+  {
+    nexusName: 'James Bazakos',
+    irlName: 'Journalist | Innovations Lead',
+    image: 'Team_Ben.png',
+    linkedin: 'https://www.linkedin.com/in/james-bazakos/',
+    twitter: 'https://twitter.com/JamesBazakos',
+    // skillset: [
+    //   'Entrepreneur',
+    //   'Networker',
+    //   'Project Manager/Engineer',
+    //   'Skateboarder',
+    //   'loves overpriced jpegs and metal shows',
+    // ],
   },
   {
     nexusName: 'Miles Colon',

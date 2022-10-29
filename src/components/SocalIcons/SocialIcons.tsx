@@ -29,8 +29,8 @@ const SocialIcons = () => (
               <Image
                 src={icon.image}
                 alt={`${icon.name} logo`}
-                width={28}
-                height={28}
+                width={22}
+                height={22}
                 className="hover:shadow"
                 quality={100}
               />

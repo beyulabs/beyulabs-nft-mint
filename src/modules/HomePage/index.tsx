@@ -82,10 +82,12 @@ const HomePage: FC = () => {
             <div className={s.head__row}>
               <div>
                 {/* <Slide duration={800} left ssrFadeout> */}
-                <h1>
-                  <span className={s.line}>Become</span> a Crew member of the{' '}
-                  <span className={s.green}>Voyager</span> space{' '}
-                  <span className={s.line}>mission</span>
+                <h1 className={s.h1Head}>
+                  <span className={s.line}>NFT Builders</span> Unite{' '}<br/>
+                  <span className={s.green}>Join</span> the Movement{' '}<br/>
+                  <span className={s.green}>Join</span> the Resurgence{' '}<br/>
+                  <span className={s.green}>Join</span> the Nexus Voyagers{' '}
+                  <span className={s.line}>Network</span>
                 </h1>
                 {/* </Slide> */}
                 {/* <p> */}
@@ -164,20 +166,13 @@ const HomePage: FC = () => {
                   Voyagers mission
                 </h2>
                 <p>
-                  To terraform Web3. An ecosystem cultivated by developers,
-                  artists, enthusiasts, and investors. A Solarpunk utopia
-                  powered by BeYu Labs and driven by radical optimism and
-                  sustainability.
+                  To accelerate the resurgence of the NFT market by supporting and empowering a global network of creators. An ecosystem cultivated by founders, developers, artists, marketers, enthusiasts, and investors.
                 </p>
                 <p>
-                  A collection of 10,119 crew members, primed for the genesis
-                  mission launch. On this voyage, crew members will have access
-                  to epic shared experiences, meaningful collabs, one of a kind
-                  NFT drops, and a future built for the community over time.
-                  With the focus on empowering Web3 entrepreneurship the
-                  ecosystem will fill the underlying gaps on contribution with
-                  incentivized exchange of utility. Each of us will have a role
-                  to play.
+                  To terraform Web3. An ecosystem cultivated by developers, artists, enthusiasts, and investors. A Solarpunk utopia powered by BeYu Labs and driven by radical optimism and sustainability.
+                </p>
+                <p>
+                  A collection of 10,119 crew members, primed for the genesis mission launch. On this voyage, crew members will have access to epic shared experiences, meaningful collabs, one of a kind NFT drops, and a future built for the community over time. With the focus on empowering Web3 entrepreneurship the ecosystem will fill the underlying gaps on contribution with incentivized exchange of utility. Each of us will have a role to play.
                 </p>
                 <p className={s.upper}>
                   Bridging the gap between dream and reality, virtual and real,
@@ -225,6 +220,7 @@ const HomePage: FC = () => {
                       {/*  <span>NFT</span> */}
                       {/* </h3> */}
                       <p>Commercial Use</p>
+                      <span>Leverage the NVN brand and global network to get your own venture or product off the ground.</span>
                     </div>
                   </div>
                 </Slide>
@@ -246,8 +242,11 @@ const HomePage: FC = () => {
                       {/*  <span>Community</span> <span>Chest</span> */}
                       {/* </h3> */}
                       <p>
-                        Opportunity to be showcased at irl and virtual events
+                       Founder Profiles shared to Global Network
                       </p>
+                      <span>
+                        Join the NVN's global reach of  1 million+ professionals who share your interests and connect with entrepreneurs, creators and investors alike.
+                      </span>
                     </div>
                   </div>
                 </Slide>
@@ -266,7 +265,10 @@ const HomePage: FC = () => {
                       {/* <h3> */}
                       {/*  <span>Mission Board</span> */}
                       {/* </h3> */}
-                      <p>Lifetime Access to all Events</p>
+                      <p>Access to IRL and Hybrid Experiences</p>
+                      <span>
+                      It takes more than just grinding behind the scenes to grow an ecosystem. Exclusive hybrid experiences for crew members, layering the physical and virtual worlds together to showcase the community talent and network. Fusing both worlds to rival even Web2.
+                      </span>
                     </div>
                   </div>
                 </Slide>
@@ -287,7 +289,10 @@ const HomePage: FC = () => {
                       {/* <h3> */}
                       {/*  <span>Launchpad</span> */}
                       {/* </h3> */}
-                      <p>Exclusive Voyager Perks by Character Types</p>
+                      <p>Marketing NEXcelerator</p>
+                      <span>
+                        The Nexus is a space for tackling one of the most pressing issues in the industry: lack of visibility. This resource provides profiles and projects that give users an opportunity to be seen by others, as well voting rights on what gets showcased through events series, podcast interviews, promotions, and more.
+                      </span>
                     </div>
                   </div>
                 </Slide>
@@ -306,7 +311,10 @@ const HomePage: FC = () => {
                       {/* <h3> */}
                       {/*  <span>Project Showcase</span> */}
                       {/* </h3> */}
-                      <p>Community Lottery i.e. all expense trip to SXSW</p>
+                      <p>Builder’s Toolkit</p>
+                      <span> 
+                        Why spend time reinventing the wheel when you can just leverage our dynamic collection of builder templates and how-to guides that will help get your project off the ground? Everything from resource payment guidelines, to sample partnership presentations.
+                      </span>
                     </div>
                   </div>
                 </Slide>
@@ -327,7 +335,10 @@ const HomePage: FC = () => {
                       {/* <h3> */}
                       {/*  <span>The Experience</span> */}
                       {/* </h3> */}
-                      <p>Networking access to Web3 Hub of builders</p>
+                      <p>NFT Creator Peer to Peer Network</p>
+                      <span>
+                        The NVN community is a network for creators to share insights and ask questions about their projects. Whether it's token-gated platforms, smart contract auditing or best platforms for community management; vast perspectives from various stages of business who can contribute towards your build journey!
+                      </span>
                     </div>
                   </div>
                 </Slide>
@@ -356,7 +367,7 @@ const HomePage: FC = () => {
                   size="large"
                   link="/astromap"
                   isLink
-                  text="Explore Astromap"
+                  text="Astromap Coming Soon"
                   color="green"
                 />
               </div>
@@ -381,7 +392,7 @@ const HomePage: FC = () => {
               </div>
               <Slide right ssrFadeout>
                 <div className={s.text}>
-                  <h2>Boarding Pass</h2>
+                  <h2><br/>Boarding Pass</h2>
                   <p className={s.desc}>
                     The Boarding Passes are separated by their contribution to
                     the new world of web3. Each character type will have a
@@ -407,7 +418,7 @@ const HomePage: FC = () => {
                       color="green"
                       icon={<Coins />}
                       disabled
-                    />
+                    /><br/><br/>
                   </div>
                 </div>
               </Slide>
