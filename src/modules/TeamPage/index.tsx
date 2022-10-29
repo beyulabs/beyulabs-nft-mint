@@ -64,6 +64,37 @@ const TeamPage = () => {
           {/*  </div> */}
           {/* </div> */}
         </div>
+        <div className="container" id='topSpacing'>
+          <h1>
+            <span className={"green"}>Join</span> the Movement{' '}
+          </h1>
+           <ul className="image-gallery">
+            <li>
+              <img src="/partnerlogos1.jpg" alt="" />
+            </li>
+            <li>
+              <img src="/partnerlogos2.jpg" alt="" />
+            </li>
+            <li>
+              <img src="/partnerlogos3.jpg" alt="" />
+            </li>
+            <li>
+              <img src="/partnerlogos4.jpg" alt="" />
+            </li>
+            <li>
+              <img src="/partnerlogos5.jpg" alt="" />
+            </li>
+            <li>
+              <img src="/partnerlogos6.jpg" alt="" />
+            </li>
+            <li>
+              <img src="/partnerlogos7.jpg" alt="" />
+            </li>
+            <li>
+              <img src="/partnerlogos8.jpg" alt="" />
+            </li>
+          </ul>
+        </div>
       </div>
     </>
   );
