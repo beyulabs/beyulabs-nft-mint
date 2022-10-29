@@ -20,7 +20,7 @@ module.exports = {
     __PROD__: true,
   },
   rules: {
-    'max-len': [2, { code: 140, ignorePattern: '^import .*' }],
+    'max-len': [2, { code: 500, ignorePattern: '^import .*' }],
     'no-console': 0,
     'import/no-cycle': 0,
     'import/prefer-default-export': 0,
