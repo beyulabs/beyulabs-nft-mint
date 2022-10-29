@@ -64,11 +64,11 @@ const TeamPage = () => {
           {/*  </div> */}
           {/* </div> */}
         </div>
-        <div className="container" id='topSpacing'>
+        <div className="container" id="topSpacing">
           <h1>
-            <span className={"green"}>Join</span> the Movement{' '}
+            <span className={'green'}>Join</span> the Movement{' '}
           </h1>
-           <ul className="image-gallery">
+          <ul className="image-gallery">
             <li>
               <img src="/partnerlogos1.jpg" alt="" />
             </li>
