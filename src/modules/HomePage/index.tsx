@@ -81,7 +81,7 @@ const HomePage: FC = () => {
         <section className={s.head}>
           <div className="container">
             <div className={s.head__row}>
-              <div>
+              <div className={s.h1HeadRow}>
                 {/* <Slide duration={800} left ssrFadeout> */}
                 <h1 className={s.h1Head}>
                   <div>
