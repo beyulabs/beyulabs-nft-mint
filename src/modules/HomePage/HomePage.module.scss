@@ -98,28 +98,26 @@
 
 .head {
   padding: 72px 0;
-  overflow: hidden;
 
   @media (max-width: 992px) {
     padding-bottom: 0;
   }
 
   &__row {
-    display: grid;
-    grid-template-columns: 58% 1fr;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    position: relative;
-    padding-bottom: 203px;
 
     @media (max-width: 992px) {
-      grid-template-columns: 1fr;
-      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
       padding-bottom: 0;
     }
 
     .image {
-      position: absolute;
+      position: relative;
       right: -67px;
       top: 0;
 
@@ -129,16 +127,18 @@
       }
 
       img {
-        max-width: 708px;
-
-        @media (max-width: 1400px) {
-          max-width: 620px;
-        }
-
+        width: 50%;
         @media (max-width: 992px) {
-          max-width: 90%;
-        }
+            width: 100%;
+          }
       }
+    }
+    
+    .h1HeadRow{
+      width: 50%;
+      @media (max-width: 992px) {
+          width: 100%;
+        }
     }
     
     h1.h1Head{
