@@ -87,16 +87,16 @@ const HomePage: FC = () => {
                   <div>
                     <span className={s.line}>NFT Builders</span> Unite{' '}
                   </div>
-                  <div>
+                  <div className={s.h1Para}>
                     <span className={s.green}>Join</span> the Movement{' '}
                   </div>
-                  <div>
+                  <div className={s.h1Para}>
                     <span className={s.green}>Join</span> the Resurgence{' '}
                   </div>
-                  <div>
+                  <div className={s.h1Para}>
                     <span className={s.green}>Join</span> the Nexus Voyagers{' '}
                   </div>
-                  <div>
+                  <div className={s.h1Para}>
                     <span className={s.line}>Network</span>
                   </div>
                 </h1>
