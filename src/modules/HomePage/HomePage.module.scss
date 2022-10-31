@@ -137,16 +137,37 @@
     }
     
     h1.h1Head{
-      font-size:55px;
+      font-size:47px;
       @media (max-width: 920px) {
         font-size:45px;
+      }
+      
+      @media (max-width: 470px) {
+        font-size:35px;
       }
     }
     
     .h1Para{
-      font-size:45px;
+      font-size:90%;
+      margin-top: -10px;
+      
+      @media (max-width: 1200px) {
+        font-size:77%;
+      }
+      
       @media (max-width: 920px) {
-        font-size:22px;
+        font-size:90%;
+        margin-top: 0;
+      }
+      
+      @media (max-width: 768px) {
+        font-size:90%;
+        margin-top: 0;
+      }
+      
+      @media (max-width: 470px) {
+        margin-top: -5px;
+        font-size: 85%;
       }
     }
 
