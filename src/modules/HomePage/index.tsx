@@ -84,11 +84,11 @@ const HomePage: FC = () => {
               <div>
                 {/* <Slide duration={800} left ssrFadeout> */}
                 <h1 className={s.h1Head}>
-                  <span className={s.line}>NFT Builders</span> Unite{' '}
-                  <span className={s.green}>Join</span> the Movement{' '}
-                  <span className={s.green}>Join</span> the Resurgence{' '}
-                  <span className={s.green}>Join</span> the Nexus Voyagers{' '}
-                  <span className={s.line}>Network</span>
+                  <div><span className={s.line}>NFT Builders</span> Unite{' '}</div>
+                  <div><span className={s.green}>Join</span> the Movement{' '}</div>
+                  <div><span className={s.green}>Join</span> the Resurgence{' '}</div>
+                  <div><span className={s.green}>Join</span> the Nexus Voyagers{' '}</div>
+                  <div><span className={s.line}>Network</span></div>
                 </h1>
                 {/* </Slide> */}
                 {/* <p> */}
