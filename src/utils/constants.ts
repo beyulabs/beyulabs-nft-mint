@@ -388,7 +388,7 @@ export const teamMembers: TeamMember[] = [
   {
     nexusName: 'James Bazakos',
     irlName: 'Journalist | Innovations Lead',
-    image: 'jamesBazakos.png',
+    image: 'jamesBazakos.PNG',
     linkedin: 'https://www.linkedin.com/in/james-bazakos/',
     twitter: 'https://twitter.com/JamesBazakos',
     // skillset: [
