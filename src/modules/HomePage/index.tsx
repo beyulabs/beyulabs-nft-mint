@@ -270,9 +270,9 @@ const HomePage: FC = () => {
                       {/* </h3> */}
                       <p>Founder Profiles shared to Global Network</p>
                       <span>
-                        Join the NVN's global network of professionals
-                        who share your interests and connect with entrepreneurs,
-                        creators and investors alike.
+                        Join the NVN's global network of professionals who share
+                        your interests and connect with entrepreneurs, creators
+                        5and investors alike.
                       </span>
                     </div>
                   </div>
