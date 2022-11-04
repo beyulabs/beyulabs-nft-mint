@@ -380,8 +380,8 @@ const HomePage: FC = () => {
                         Looking to scale and build your team but limited on
                         funding like most NFT project teams out there in this
                         market? Find resources to partner and work with in the
-                        network who are open to “creative financing” i.e. paid post-mint
-                        , equity, etc.as well as traditional paid resources.
+                        network who are open to “creative financing” i.e. paid
+                        post-mint, equity, etc.as well as traditional paid resources.
                       </span>
                     </div>
                   </div>
