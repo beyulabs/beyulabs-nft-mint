@@ -131,7 +131,6 @@
     
     .h1HeadRow{
       width: 50%;
-      font-weight: 500;
       @media (max-width: 992px) {
           width: 100%;
         }
@@ -151,6 +150,7 @@
     .h1Para{
       font-size:90%;
       margin-top: -10px;
+      font-weight: 500;
       
       @media (max-width: 1200px) {
         font-size:77%;
