@@ -84,12 +84,12 @@ export const routes: NavRoute[] = [
     enabled: true,
   },
   {
-    path: '/whitepaper',
+    path: 'http://bit.ly/nvnwhitepaper',
     title: 'Whitepaper',
     enabled: true,
   },
   {
-    path: '/WorldTour',
+    path: 'http://nexusvoyagers.com/nvnworldtour',
     title: 'World Tour',
     enabled: true,
   },
