@@ -375,14 +375,14 @@ const HomePage: FC = () => {
                       {/* <h3> */}
                       {/*  <span>The Experience</span> */}
                       {/* </h3> */}
-                      <p>Access to “Creative Financing” Resource Directory</p>
+                      <p>NFT Creator Peer to Peer Network</p>
                       <span>
-                        Looking to scale and build your team but limited on
-                        funding like most NFT project teams out there in this
-                        market? Find resources to partner and work with in the
-                        network who are open to “creative financing” i.e. paid
-                        post-mint, equity, etc.as well as traditional paid
-                        resources.
+                        The NVN community is a network for creators to share
+                        insights and ask questions about their projects. Whether
+                        it's token-gated platforms, smart contract auditing or
+                        best platforms for community management; vast
+                        perspectives from various stages of business who can
+                        contribute towards your build journey!
                       </span>
                     </div>
                   </div>
@@ -402,7 +402,15 @@ const HomePage: FC = () => {
                       {/* <h3> */}
                       {/*  <span>Charity</span> */}
                       {/* </h3> */}
-                      <p>Digital work profile - PFP</p>
+                      <p>Access to “Creative Financing” Resource Directory</p>
+                      <span>
+                        Looking to scale and build your team but limited on
+                        funding like most NFT project teams out there in this
+                        market? Find resources to partner and work with in the
+                        network who are open to “creative financing” i.e. paid
+                        post-mint, equity, etc.as well as traditional paid
+                        resources.
+                      </span>
                     </div>
                   </div>
                 </Slide>
