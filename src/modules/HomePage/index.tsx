@@ -418,8 +418,6 @@ const HomePage: FC = () => {
               <div className={s.button}>
                 <Button
                   size="large"
-                  link="/astromap"
-                  isLink
                   text="Astromap Coming Soon"
                   color="green"
                 />
