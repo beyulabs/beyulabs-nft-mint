@@ -80,7 +80,7 @@ const Header = () => {
         <div className={s.buttons}>
           <Button text="Mint" color="green" icon={<Coins />} disabled />
           <Button
-            text="Conect wallet"
+            text="Connect wallet"
             color="transparent"
             icon={<Wallet />}
             disabled
