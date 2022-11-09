@@ -243,10 +243,14 @@ const HomePage: FC = () => {
                       {/* <h3> */}
                       {/*  <span>NFT</span> */}
                       {/* </h3> */}
-                      <p>Commercial Use</p>
+                      <p>Access to “Creative Financing” Resource Directory</p>
                       <span>
-                        Leverage the NVN brand and global network to get your
-                        own venture or product off the ground.
+                        Looking to scale and build your team but limited on
+                        funding like most NFT project teams out there in this
+                        market? Find resources to partner and work with in the
+                        network who are open to “creative financing” i.e. paid
+                        post-mint, equity, etc.as well as traditional paid
+                        resources.
                       </span>
                     </div>
                   </div>
@@ -272,7 +276,7 @@ const HomePage: FC = () => {
                       <span>
                         Join the NVN's global network of professionals who share
                         your interests and connect with entrepreneurs, creators
-                        5and investors alike.
+                        and investors alike.
                       </span>
                     </div>
                   </div>
@@ -402,14 +406,10 @@ const HomePage: FC = () => {
                       {/* <h3> */}
                       {/*  <span>Charity</span> */}
                       {/* </h3> */}
-                      <p>Access to “Creative Financing” Resource Directory</p>
+                      <p>Commercial Use</p>
                       <span>
-                        Looking to scale and build your team but limited on
-                        funding like most NFT project teams out there in this
-                        market? Find resources to partner and work with in the
-                        network who are open to “creative financing” i.e. paid
-                        post-mint, equity, etc.as well as traditional paid
-                        resources.
+                        Leverage the NVN brand and global network to get your
+                        own venture or product off the ground.
                       </span>
                     </div>
                   </div>
