@@ -89,7 +89,7 @@ export const routes: NavRoute[] = [
     enabled: true,
   },
   {
-    path: 'http://nexusvoyagers.com/nvnworldtour',
+    path: 'https://www.nexusvoyagers.events/',
     title: 'World Tour',
     enabled: true,
   },
