@@ -93,6 +93,11 @@ export const routes: NavRoute[] = [
     title: 'World Tour',
     enabled: true,
   },
+  {
+    path: 'http://bit.ly/nvnmightynetworks',
+    title: 'Join the Network',
+    enabled: true,
+  },
   // {
   //   path: 'https://raritysniper.com/nft-drops-calendar',
   //   title: 'NFT Drops',
