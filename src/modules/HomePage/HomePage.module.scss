@@ -138,6 +138,7 @@
     
     h1.h1Head{
       font-size:47px;
+      font-weight: 500;
       @media (max-width: 920px) {
         font-size:45px;
       }
@@ -150,6 +151,7 @@
     .h1Para{
       font-size:90%;
       margin-top: 0px;
+      font-weight: 500;
       
       @media (max-width: 1200px) {
         font-size:77%;
@@ -185,7 +187,6 @@
 
       .line {
         position: relative;
-        font-weight: 500;
 
         &:before {
           content: '';
@@ -557,7 +558,7 @@
         &:before {
           counter-increment: itemnum;
           content: counters(itemnum, "", decimal-leading-zero);
-          font-weight: 700;
+          font-weight: 500;
           font-size: 26px;
           line-height: 32px;
           text-align: right;
