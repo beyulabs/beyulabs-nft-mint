@@ -374,7 +374,7 @@ export const teamMembers: TeamMember[] = [
   {
     nexusName: 'Frank Casale',
     irlName: 'Founder | Partner, Co-Creator, Resident Shaman',
-    image: 'frankCasale.PNG',
+    image: 'Frank-PFP.png',
     linkedin: 'https://www.linkedin.com/in/fcasale/',
     // twitter: 'https://twitter.com/beyuworldwide',
     // skillset: [
@@ -388,7 +388,7 @@ export const teamMembers: TeamMember[] = [
   {
     nexusName: 'James Bazakos',
     irlName: 'Journalist | Innovations Lead',
-    image: 'jamesBazakos.PNG',
+    image: 'James-PFP.png',
     linkedin: 'https://www.linkedin.com/in/james-bazakos/',
     twitter: 'https://twitter.com/JamesBazakos',
     // skillset: [
