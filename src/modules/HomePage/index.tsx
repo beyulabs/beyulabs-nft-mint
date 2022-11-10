@@ -85,19 +85,13 @@ const HomePage: FC = () => {
                 {/* <Slide duration={800} left ssrFadeout> */}
                 <h1 className={s.h1Head}>
                   <div>
-                    <span className={s.line}>NFT Builders</span> Unite{' '}
+                    <span className={s.line}>Creators:</span> Revitalize,{' '}
                   </div>
                   <div className={s.h1Para}>
-                    <span className={s.green}>Join</span> the Movement{' '}
+                    <span className={s.green}>Re</span>-energize, <span className={s.green}>Re</span>vamp{' '}
                   </div>
                   <div className={s.h1Para}>
-                    <span className={s.green}>Join</span> the Resurgence{' '}
-                  </div>
-                  <div className={s.h1Para}>
-                    <span className={s.green}>Join</span> the Nexus Voyagers{' '}
-                  </div>
-                  <div className={s.h1Para}>
-                    <span className={s.line}>Network</span>
+                    Your <span className={s.green}>NFT </span>Projects{' '}
                   </div>
                 </h1>
                 {/* </Slide> */}
