@@ -88,8 +88,8 @@ const HomePage: FC = () => {
                     <span className={s.line}>Creators:</span> Revitalize,{' '}
                   </div>
                   <div className={s.h1Para}>
-                    <span className={s.green}>Re</span>-energize, <span className={s.green}>Re</span>vamp{' '}
-                    
+                    <span className={s.green}>Re</span>-energize, 
+                    <span className={s.green}>Re</span>vamp{' '}
                   </div>
                   <div className={s.h1Para}>
                     Your <span className={s.green}>NFT </span>Projects{' '}
