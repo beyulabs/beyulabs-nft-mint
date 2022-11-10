@@ -150,7 +150,6 @@
     .h1Para{
       font-size:90%;
       margin-top: 0px;
-      font-weight: 500;
       
       @media (max-width: 1200px) {
         font-size:77%;
@@ -186,6 +185,7 @@
 
       .line {
         position: relative;
+        font-weight: 500;
 
         &:before {
           content: '';
