@@ -68,7 +68,7 @@ import Ryan7 from '../team-images/team16.png';
 // import merchantAvatar from "./public/architect.png";
 
 export const beyuLabsTwitterURL: string = 'https://twitter.com/Beyu_labs';
-export const discordInviteURL: string = 'https://discord.gg/Ye6pQqJes7';
+export const discordInviteURL: string = 'https://bit.ly/beyulabsdiscord';
 export const RarityDropURL: string =
   'https://raritysniper.com/nft-drops-calendar';
 
