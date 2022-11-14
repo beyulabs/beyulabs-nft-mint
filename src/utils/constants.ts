@@ -116,7 +116,7 @@ export const beyuSocialIcons: SocialIcon[] = [
     name: 'discord',
     image: discordLogo,
     enabled: true,
-    url: 'https://discord.gg/3NXV2J3S7M',
+    url: 'https://bit.ly/beyulabsdiscord',
   },
   {
     name: 'light',
