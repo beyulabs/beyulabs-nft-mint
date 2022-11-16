@@ -1,0 +1,128 @@
+.astromap {
+  padding-top: 190px;
+  padding-bottom: 120px;
+  background: url('../../../public/astromap_bg_desktop.png') top center no-repeat;
+  background-size: cover;
+  height: 100%;
+
+  @media (max-width: 992px) {
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+
+  &.light {
+    background: url('../../../public/astromap_bg_desktop_light.png') top center no-repeat;
+    background-size: cover;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 25px 1fr 0.5fr;
+    grid-template-rows: 1fr 1fr 25px 1fr 1fr;
+    grid-gap: 20px;
+    counter-reset: itemnum;
+    height: 800px;
+
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      height: auto;
+    }
+
+    > .card {
+      padding: 0;
+      display: grid;
+
+      &.card_1 {
+        @media (min-width: 992px) {
+          grid-area: 1 / 1 / span 3 / span 1;
+        }
+      }
+
+      &.card_2 {
+        @media (min-width: 992px) {
+          grid-area: 4 / 1 / span 2 / span 1;
+        }
+      }
+
+      &.card_3 {
+        @media (min-width: 992px) {
+          grid-area: 1 / 2 / span 2 / span 2;
+        }
+      }
+
+      &.card_4 {
+        @media (min-width: 992px) {
+          grid-area: 3 / 2 / span 3 / span 1;
+        }
+      }
+
+      &.card_5 {
+        @media (min-width: 992px) {
+          grid-area: 1 / 4 / span 2 / span 1;
+        }
+      }
+
+      &.card_6 {
+        @media (min-width: 992px) {
+          grid-area: 3 / 3 / span 2 / span 2;
+        }
+      }
+
+      &.card_7 {
+        @media (min-width: 992px) {
+          grid-area: 5 / 3 / span 1 / span 3;
+        }
+      }
+
+      &.card_8 {
+        @media (min-width: 992px) {
+          grid-area: 1 / 5 / span 4 / span 1;
+          color:white;
+        }
+      }
+    }
+  }
+
+  p {
+    color: var(--astromap-card-color);
+  }
+
+  .arrow {
+    @media (min-width: 992px) {
+    display: none;
+    }
+
+    @media (max-width: 992px) {
+      display: block;
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      background: none;
+      border: 0;
+      cursor: pointer;
+      color: var(--theme-heading-color);
+
+      svg {
+        opacity: 0.5;
+        position: relative;
+  
+        @media (max-width: 992px) {
+          opacity: 0.8;
+          left: 60px;
+        }
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 128px;
+        height: 128px;
+        background: linear-gradient(90.42deg, #41A380 0.29%, #63D5AC 100.54%);
+        border-radius: 50%;
+        bottom: -80px;
+        right: -85px;
+      }
+    }
+  }
+}

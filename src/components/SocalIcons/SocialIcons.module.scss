@@ -1,0 +1,33 @@
+.socials {
+  display: flex;
+  gap: 30px;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  svg {
+    max-width: 24px;
+    max-height: 24px;
+  }
+
+  li {
+    a {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      span {
+        font-size: 18px;
+        line-height: 180%;
+        text-transform: uppercase;
+
+        @media (min-width: 1200px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
