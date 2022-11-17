@@ -134,7 +134,7 @@ export const beyuSocialIcons: SocialIcon[] = [
     name: 'opensea',
     image: openSeaLogo,
     enabled: true,
-    url: '#0',
+    url: 'https://opensea.io/collection/nexus-voyagers-network-official',
   },
   // {
   //   name: 'RarityDrop',
