@@ -120,9 +120,6 @@ const Header = () => {
       value: String(amount * preCost)
     }
 
-    console.log(presale)
-    console.log(proofCheck)
-
     if(presale && proofCheck){
       contract.preMint(
         amount,
