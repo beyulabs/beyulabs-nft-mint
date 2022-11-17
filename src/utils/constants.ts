@@ -67,7 +67,7 @@ import Ryan7 from '../team-images/team16.png';
 // import journalistAvatar from "./public/journalist.png";
 // import merchantAvatar from "./public/architect.png";
 
-export const beyuLabsTwitterURL: string = 'https://twitter.com/Beyu_labs';
+export const beyuLabsTwitterURL: string = 'https://twitter.com/nexusvoyagers';
 export const discordInviteURL: string = 'https://discord.gg/Ye6pQqJes7';
 export const RarityDropURL: string =
   'https://raritysniper.com/nft-drops-calendar';
@@ -110,7 +110,7 @@ export const beyuSocialIcons: SocialIcon[] = [
     name: 'twitter',
     image: twitterLogo,
     enabled: true,
-    url: 'https://twitter.com/beyu_labs',
+    url: 'https://twitter.com/nexusvoyagers',
   },
   {
     name: 'discord',
@@ -134,7 +134,7 @@ export const beyuSocialIcons: SocialIcon[] = [
     name: 'opensea',
     image: openSeaLogo,
     enabled: true,
-    url: '',
+    url: '#0',
   },
   // {
   //   name: 'RarityDrop',
