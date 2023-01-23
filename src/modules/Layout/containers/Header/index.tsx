@@ -285,9 +285,6 @@ const Header = () => {
         <div className={cn(s.modal)}>
           <div className={cn(s.modalComponent)}>
             <img src={logo.src} className={cn(s.modalLogo)}/>
-            <p className={cn(s.modalText)}>PRESALE: {ethers.utils.formatEther(String(preCost))} ETH</p>
-            <p className={cn(s.modalText)}>11/17/2022 12PM EST</p>
-            <br/><br/>
             <p className={cn(s.modalText)}>PUBLIC SALE: {ethers.utils.formatEther(String(pubCost))} ETH</p>
             <p className={cn(s.modalText)}>11/18/2022 12PM EST</p>
             <div className={cn(s.amountContainer)}>
