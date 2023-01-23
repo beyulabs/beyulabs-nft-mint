@@ -1,0 +1,365 @@
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+  }
+
+  .block {
+    h5 {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 100%;
+      color: var(--theme-heading-color);
+      margin-bottom: 19px;
+
+      @media (min-width: 1200px) {
+        display: none;
+      }
+    }
+  }
+
+  hr {
+    height: 1px;
+    border: 0;
+    background: var(--line-hr-bg);
+    width: 100%;
+    margin: 20px 0 30px;
+
+    @media (min-width: 1200px) {
+      display: none;
+    }
+  }
+}
+
+.nav {
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+
+    @media (max-width: 1600px) {
+      gap: 20px;
+    }
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    a {
+      color: var(--theme-links-color);
+      font-size: 14px;
+
+      @media (max-width: 1200px) {
+        font-size: 18px;
+        line-height: 180%;
+        color: var(--theme-heading-color);
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .active {
+    a {
+      font-weight: bold;
+    }
+  }
+}
+
+.header {
+  height: 109px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+
+  &.openNav {
+    position: fixed;
+    transform: translate3d(0,0,0);
+  }
+
+  &__row {
+    padding: 32px 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 50px;
+    align-items: center;
+    border-bottom: 1px solid #ACC2BD40;
+    position: relative;
+    z-index: 3;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: 1fr auto;
+      padding: 20px 0;
+    }
+  }
+}
+
+.ToggleTheme {
+  cursor: pointer;
+  transition: 0.2s all;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  @media (max-width: 1200px) {
+    gap: 20px;
+  }
+
+  &:hover {
+    @media (min-width: 1200px) {
+      transform: scale(1.05);
+    }
+  }
+
+  span {
+    font-size: 13px;
+    line-height: 95.4%;
+
+    @media (max-width: 1200px) {
+      font-size: 18px;
+      line-height: 180%;
+      text-transform: uppercase;
+    }
+
+    > span {
+      @media (min-width: 1200px) {
+        display: block;
+      }
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+
+    a, button {
+      width: 100%;
+    }
+  }
+}
+
+.nav {
+  &_icon {
+    width: 22px;
+    padding: 0;
+    background: transparent;
+    height: 18px;
+    position: relative;
+    z-index: 33;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    border: 0;
+    top: 2px;
+
+    &:hover, &:focus {
+      background: transparent;
+
+      span {
+        position: absolute;
+      }
+    }
+
+    @media (min-width: 1331px) {
+      display: none;
+    }
+
+    &:active, &:focus, &:hover {
+      border: 0;
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: var(--theme-heading-color);
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: 0.25s ease-in-out;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        top: 6px;
+      }
+
+      &:nth-child(4) {
+        top: 12px;
+      }
+    }
+
+    &_active {
+      span {
+        &:nth-child(1) {
+          top: 6px;
+          width: 0;
+          left: 50%;
+        }
+
+        &:nth-child(2) {
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+
+        &:nth-child(4) {
+          top: 6px;
+          width: 0;
+          left: 50%;
+        }
+      }
+    }
+  }
+}
+
+.mobileNav {
+  background: var(--bg-mobile-menu);
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  top: 0;
+  padding-top: 125px;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: 0.2s all;
+
+  &.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.622);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalComponent{
+  width: 400px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(248, 239, 239);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  position: relative;
+
+  @media (max-width: 415px) {
+    width: 95%;
+    text-align: center;
+  }
+}
+
+.modalLogo{
+  width: 100%;
+  height: auto;
+}
+
+.modalText{
+  font-weight: bold;
+  font-size: 21px;
+  color: black;
+  margin-top: 20px;
+}
+
+.amountContainer{
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.amountButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #212222;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  width: 25px;
+  height: 25px;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.amountButton:not(:first-child){
+  margin-left: 6px;
+}
+
+.amount{
+  color:black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.mintButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #212222;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 15px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+.close{
+  position: absolute;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #212222;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}

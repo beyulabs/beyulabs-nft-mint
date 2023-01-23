@@ -1,0 +1,28 @@
+.footer {
+  background: var(--theme-green-color);
+  padding: 24px 0 11px;
+  color: #fff;
+
+  &__row {
+    display: grid;
+    justify-content: center;
+    padding-bottom: 30px;
+
+    .logos {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+
+      @media (max-width: 992px) {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  }
+
+  .copy {
+    text-align: center;
+    border-top: 1px solid #FCF9F930;
+    padding-top: 13px;
+  }
+}
